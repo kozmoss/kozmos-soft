@@ -1,8 +1,9 @@
+import  "../../app/globals.css"
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import MainLayout from "@/layout/sidebar";
-
+import { ThemeProvider } from "@/components/theme-provider";
 
 export default async function LocaleLayout({
   children,
@@ -18,10 +19,17 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider>
-          <MainLayout>{children}</MainLayout>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <MainLayout>{children}</MainLayout>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

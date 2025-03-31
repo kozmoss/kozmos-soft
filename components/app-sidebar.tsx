@@ -8,7 +8,7 @@ import {
   Send,
   Palette,
   Smartphone,
-  Bot
+  Bot,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -36,55 +36,52 @@ const data = {
       items: [
         {
           title: "3ddesign",
-          url: "products/web/3ddesign",
+          url: "/products/web/design",
         },
-        {
-          title: "saas",
-          url: "products/web/saas",
-        },
+
         {
           title: "projectmanagment",
-          url: "products/web/projectmanagment",
+          url: "/products/web/projectmanagment",
         },
         {
           title: "ecommerce",
-          url: "products/web/e-commerce",
+          url: "/products/web/e-commerce",
         },
         {
           title: "crm",
-          url: "products/web/crm",
+          url: "/products/web/crm",
         },
         {
           title: "erp",
-          url: "products/web/erp",
+          url: "/products/web/erp",
         },
       ],
     },
     {
       title: "Mobile",
-      url: "products/mobile",
+      url: "/products/mobile",
       icon: Smartphone,
     },
     {
       title: "AI integration",
-      url: "products/ai-entegration",
+      url: "/products/ai-entegration",
       icon: BookOpen,
     },
     {
       title: "UI/UX Design",
-      url: "products/ui-ux",
+      url: "/products/ui-ux",
       icon: Palette,
     },
     {
       title: "AI Agent",
-      url: "products/ai-agent",
+      url: "/products/ai-agent",
       icon: Bot,
     },
   ],
   navSecondary: [
     {
       title: "Contact",
-      url: "#",
+      url: "contact",
       icon: Send,
     },
     {
@@ -97,7 +94,6 @@ const data = {
       url: "#",
       icon: Send,
     },
-
   ],
 };
 
