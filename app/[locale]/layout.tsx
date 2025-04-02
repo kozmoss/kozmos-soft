@@ -19,8 +19,8 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body>
+    <html lang={locale} suppressHydrationWarning className="w-full">
+      <body className="bg-background overscroll-none antialiased">
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"

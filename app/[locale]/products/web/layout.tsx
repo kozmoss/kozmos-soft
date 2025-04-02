@@ -9,9 +9,9 @@ export default function WebLayoutPage({
   children: React.ReactNode;
 }) {
   return (
-    <div className="m-5">
+    <div className="">
       <SidebarProvider>
-        <AppSidebar collapsible="none" />
+        <AppSidebar collapsible="icon" />
         <SidebarInset>
           <SiteHeader />
           {children}
