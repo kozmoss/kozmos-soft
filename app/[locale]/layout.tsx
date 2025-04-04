@@ -1,9 +1,10 @@
-import  "../../app/globals.css"
+import "../../app/globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import MainLayout from "@/layout/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/footer";
 
 export default async function LocaleLayout({
   children,
@@ -20,7 +21,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className="w-full">
-      <body className="bg-background overscroll-none antialiased">
+      <body className="min-h-svh bg-background font-sans antialiased __variable_3a0388 __variable_c1e5c9">
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"
@@ -28,7 +29,18 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <MainLayout>{children}</MainLayout>
+            <div vaul-drawer-wrapper="">
+              <div className="relative flex min-h-svh flex-col bg-background">
+                <div
+                  data-wrapper=""
+                  className="border-grid flex flex-1 flex-col"
+                >
+                  <SiteHeader />
+                  <main className="flex flex-1 flex-col">{children}</main>
+                  <SiteFooter />
+                </div>
+              </div>
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
