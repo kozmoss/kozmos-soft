@@ -6,8 +6,6 @@ import Image from "next/image";
 import kozmosPNG from "@/public/image/kozmos.png";
 import { cn } from "@/lib/utils";
 
-
-
 export function MainNav() {
   const pathname = usePathname();
 
@@ -19,19 +17,7 @@ export function MainNav() {
       </Link>
       <nav className="flex items-center gap-4 text-sm xl:gap-6">
         <Link
-          href="/docs/installation"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/docs/installation"
-              ? "text-foreground"
-              : "text-foreground/80",
-          )}
-        >
-          Docs
-        </Link>
-
-        <Link
-          href="/products"
+          href="/products/web"
           className={cn(
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/products/web")

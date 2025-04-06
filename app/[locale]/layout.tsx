@@ -3,8 +3,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/theme-provider";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/footer";
+
 
 export default async function LocaleLayout({
   children,
@@ -31,14 +30,7 @@ export default async function LocaleLayout({
           >
             <div vaul-drawer-wrapper="">
               <div className="relative flex min-h-svh flex-col bg-background">
-                <div
-                  data-wrapper=""
-                  className="border-grid flex flex-1 flex-col"
-                >
-                  <SiteHeader />
-                  <main className="flex flex-1 flex-col">{children}</main>
-                  <SiteFooter />
-                </div>
+                {children}
               </div>
             </div>
           </ThemeProvider>

@@ -1,55 +1,50 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useLocale } from "next-intl"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 
-import { ScrollArea, ScrollBar } from "./ui/scroll-area"
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
-import { registryCategories } from "@/contants/web"
+import { registryCategories } from "@/contants/web";
 
 export function BlocksNav() {
-  const pathname = usePathname()
+  const pathname = usePathname();
   const locale = useLocale();
-  console.log(pathname === `/${locale}/products/web/e-commerce`)
-  console.log(`/${locale}/products/web/e-commerce`,"asdasdasda")
-  console.log(pathname)
-
 
   return (
     <div className="relative overflow-hidden">
-    <ScrollArea className="max-w-none">
-      <div className="flex items-center">
-        <BlocksNavLink
-          category={{ name: "E Commerce", slug: "e-commerce", hidden: false }}
-          isActive={pathname === `/${locale}/products/web/e-commerce`}
-        />
-        {registryCategories.map((category) => (
+      <ScrollArea className="max-w-none">
+        <div className="flex items-center">
           <BlocksNavLink
-            key={category.slug}
-            category={category}
-            isActive={pathname === `/${locale}/products/web/${category.slug}`}
+            category={{ name: "E Commerce", slug: "e-commerce", hidden: false }}
+            isActive={pathname === `/${locale}/products/web/e-commerce`}
           />
-        ))}
-      </div>
-      <ScrollBar orientation="horizontal" className="invisible" />
-    </ScrollArea>
-  </div>
-    
-  )
+          {registryCategories.map((category) => (
+            <BlocksNavLink
+              key={category.slug}
+              category={category}
+              isActive={pathname === `/${locale}/products/web/${category.slug}`}
+            />
+          ))}
+        </div>
+        <ScrollBar orientation="horizontal" className="invisible" />
+      </ScrollArea>
+    </div>
+  );
 }
 
 function BlocksNavLink({
   category,
   isActive,
 }: {
-  category: (typeof registryCategories)[number]
-  isActive: boolean
+  category: (typeof registryCategories)[number];
+  isActive: boolean;
 }) {
   if (category.hidden) {
-    return null
+    return null;
   }
-  
+
   return (
     <Link
       href={`/products/web/${category.slug}`}
@@ -59,5 +54,5 @@ function BlocksNavLink({
     >
       {category.name}
     </Link>
-  )
+  );
 }
