@@ -13,11 +13,11 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              shadcn
+              KozmosSoft
             </a>
             . The source code is available on{" "}
             <a
-              href=""
+              href="https://github.com/kozmoss"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"

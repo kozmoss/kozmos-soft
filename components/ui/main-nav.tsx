@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import kozmosPNG from "@/public/image/kozmos.png";
+import kozmosPNG from "@/public/static/image/kozmos.png";
 import { cn } from "@/lib/utils";
 
 export function MainNav() {
