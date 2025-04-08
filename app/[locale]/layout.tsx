@@ -19,7 +19,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning className="w-full">
+    <html lang={locale} suppressHydrationWarning >
       <body className="min-h-svh bg-background font-sans antialiased __variable_3a0388 __variable_c1e5c9">
         <NextIntlClientProvider>
           <ThemeProvider
