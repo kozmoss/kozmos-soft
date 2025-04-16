@@ -41,7 +41,7 @@ export const Index: Record<string, any> = {
     },
     "product-details": {
       name: "product-details",
-      description: "A modern e-commerce dashboard with charts, tables, and navigation components.",
+      description: "Detailed product view with specifications, pricing, and inventory information.",
       type: "registry:block",
       registryDependencies: [
         "sidebar",
@@ -73,7 +73,7 @@ export const Index: Record<string, any> = {
     },
     "order-tracking": {
       name: "order-tracking",
-      description: "A modern e-commerce dashboard with charts, tables, and navigation components.",
+      description: "A live dashboard to monitor the status and progress of customer orders.",
       type: "registry:block",
       registryDependencies: [
         "sidebar",
@@ -105,7 +105,7 @@ export const Index: Record<string, any> = {
     },
     "order-confirmation": {
       name: "order-confirmation",
-      description: "A modern e-commerce dashboard with charts, tables, and navigation components.",
+      description: "Displays confirmation and payment details after successful order placement.",
       type: "registry:block",
       registryDependencies: [
         "sidebar",
@@ -169,7 +169,7 @@ export const Index: Record<string, any> = {
     },
     "project-managment": {
       name: "project-managment",
-      description: "A user-friendly project management dashboard to track tasks and timelines.",
+      description: "A project management panel to track tasks, milestones, and team collaboration.",
       type: "registry:block",
       registryDependencies: [
         "sidebar",
@@ -265,7 +265,7 @@ export const Index: Record<string, any> = {
     },
     "inventory": {
       name: "inventory",
-      description: "A comprehensive CRM dashboard designed to manage customer relationships efficiently.",
+      description: "Inventory management interface for tracking stock levels, items, and warehouses.",
       type: "registry:block",
       registryDependencies: [
         "sidebar",
@@ -297,7 +297,7 @@ export const Index: Record<string, any> = {
     },
     "hr": {
       name: "hr",
-      description: "A comprehensive CRM dashboard designed to manage customer relationships efficiently.",
+      description: "Human Resources dashboard to manage employee data, hiring, and organizational structure.",
       type: "registry:block",
       registryDependencies: [
         "sidebar",

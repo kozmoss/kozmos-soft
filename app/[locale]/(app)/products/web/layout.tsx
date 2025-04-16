@@ -7,9 +7,10 @@ import {
 import { BlocksNav } from "@/components/block-nav";
 
 
-const title = "Building Blocks for the Web";
+const title = "Ideas Beyond the Horizon";
 const description =
-  "Clean, modern building blocks. Copy and paste into your apps. Works with all React frameworks. Open Source. Free forever.";
+  "From sleek designs to intelligent systems, we craft digital experiences powered by creativity and code. Web, mobile, and AI—built to inspire.";
+
 
 export default function WebLayoutPage({
   children,
