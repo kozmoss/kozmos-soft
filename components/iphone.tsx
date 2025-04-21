@@ -41,7 +41,7 @@ export function Iphone16Pro({
         rx="24.62"
         ry="24.62"
       />
-      {src ?? video ? (
+      { video ? (
         <foreignObject
           x="14.08"
           y="12.81"
@@ -72,17 +72,18 @@ export function Iphone16Pro({
           </div>
         </foreignObject>
       ) : (
+        
         <image
-          href={src}
-          x="14.08"
-          y="12.81"
-          width="171.98"
-          height="374.37"
-          rx="24.62"
-          ry="24.62"
-          preserveAspectRatio="xMidYMid slice"
-          clipPath="url(#roundedCorners)"
-        />
+        href={src}
+        x="14.08"
+        y="12.81"
+        width="171.98"
+        height="374.37"
+        rx="24.62"
+        ry="24.62"
+        preserveAspectRatio="xMidYMid slice"
+        clipPath="url(#roundedCorners)"
+      />
       )}
 
       <path
