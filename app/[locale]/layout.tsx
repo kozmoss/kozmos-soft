@@ -3,7 +3,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import { cn } from "@/lib/utils";
 
 export default async function LocaleLayout({
   children,
@@ -19,8 +19,12 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning >
-      <body className="min-h-svh bg-background font-sans antialiased __variable_3a0388 __variable_c1e5c9">
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={cn(
+          "bg-background overscroll-none font-sans antialiased",
+        )}
+      >
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"

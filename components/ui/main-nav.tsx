@@ -39,17 +39,8 @@ export function MainNav() {
         >
           Mobile
         </Link>
-        <Link
-          href="/design"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/design")
-              ? "text-foreground"
-              : "text-foreground/80",
-          )}
-        >
-          AI
-        </Link>
+    
+     
         <Link
           href="/ai"
           className={cn(
@@ -59,7 +50,7 @@ export function MainNav() {
               : "text-foreground/80",
           )}
         >
-          AI
+          AI & AI Agent
         </Link>
         <Link
           href="/about-us"

@@ -3,105 +3,110 @@ import React from "react";
 
 export default function DashboarbWebSection() {
   return (
-    <div className="min-h-screen w-full flex flex-col md:flex-row relative ">
-      {/* Sol taraf içerik bölümü - scrollable */}
+    <div className="min-h-screen w-full flex flex-col md:flex-row relative">
       <div className="w-full md:w-1/2 p-6 md:p-12 z-10 relative">
-        <div className="mb-12">
-          <h1 className="text-5xl font-extrabold mb-6">
-            Mobil Uygulama Tasarımı ve Teknolojisi
-          </h1>
-          <p className="text-lg ">
-            Kullanıcı deneyimini merkeze alan mobil uygulama çözümlerimiz,
-            modern tasarım ilkeleri ve ileri seviye yazılım teknolojileriyle
-            geliştirilmektedir. Hız, güvenlik, kullanıcı odaklılık ve estetik;
-            tüm mobil projelerimizin temel taşlarını oluşturur.
-          </p>
-        </div>
-
-        {/* Scroll edilebilir içerik */}
-        <div className="space-y-16">
-          <div className="">
-            <h2 className="text-3xl font-bold mb-4">Kolay Navigasyon</h2>
-            <p className="">
-              Kullanıcılar için sezgisel ve sade bir gezinme deneyimi sunuyoruz.
-              Menü yapıları, kullanıcı alışkanlıklarına uygun şekilde
-              düzenlenerek her özelliğe hızlıca erişim sağlanır.
-            </p>
+        <div className="space-y-16 snap-y snap-mandatory">
+          <div className="snap-start h-screen items-center flex p-6 md:p-12">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold mb-4">
+                Kullanıcı Deneyimi ve Arayüz Tasarımı
+              </h2>
+              <p className="text-md lg:text-xl">
+                Web uygulamalarımız, kullanıcı odaklı tasarım prensipleriyle
+                geliştirilmiş olup sezgisel gezinme deneyimi sunar. Modern UI/UX
+                standartlarına uygun şekilde tasarlanan arayüzler, estetik
+                görünümün yanı sıra yüksek kullanılabilirlik sağlar. Responsive
+                tasarım yaklaşımıyla tüm cihazlarda tutarlı bir deneyim
+                sunarken, erişilebilirlik standartlarına uygun olarak
+                geliştirilmiştir. Kullanıcı akışları detaylı analizlerle
+                optimize edilerek, işlemlerin minimum tıklamayla
+                tamamlanabilmesi sağlanmıştır. Arayüz bileşenleri, kullanıcı
+                alışkanlıkları dikkate alınarak konumlandırılmıştır.
+              </p>
+            </div>
           </div>
 
-          <div className="">
+          <div className="snap-start h-screen items-center flex p-6 md:p-12">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold mb-4">
+                Teknolojik Altyapı ve Performans Optimizasyonu
+              </h2>
+              <p className="text-md lg:text-xl">
+                Next.js, React ve modern web teknolojileri kullanılarak
+                geliştirilen uygulamalarımız, yüksek performans ve
+                ölçeklenebilirlik sunar. Server-side rendering ve static
+                generation özellikleriyle hızlı yüklenme süreleri sağlanırken,
+                lazy loading teknikleriyle kaynak kullanımı optimize edilmiştir.
+                CDN entegrasyonu ve caching mekanizmaları sayesinde global
+                ölçekte düşük gecikme süreleri hedeflenir. Performans metriklere
+                dayalı sürekli iyileştirmeler yapılırken, Lighthouse skorları
+                düzenli olarak takip edilir. Veritabanı sorguları ve API
+                çağrıları optimize edilerek sunucu yükü minimize edilmiştir.
+              </p>
+            </div>
+          </div>
+
+          <div className="snap-start h-screen items-center flex p-6 md:p-12">
+            <div className="space-y-4">
             <h2 className="text-3xl font-bold mb-4">
-              Estetik ve İşlevsel Arayüz
+              Güvenlik ve Veri Yönetimi
             </h2>
-            <p className="">
-              Modern UI/UX prensiplerine göre hazırlanan arayüzlerimiz, görsel
-              olarak dikkat çekici olduğu kadar fonksiyonel kullanım da sağlar.
-              Her ekran farklı çözünürlüklere uyumlu olacak şekilde optimize
-              edilir.
+            <p className="text-md lg:text-xl">
+              Web uygulamalarımız OWASP Top 10 güvenlik standartlarına uygun
+              olarak geliştirilmiştir. Veri iletiminde end-to-end şifreleme,
+              CSRF koruması, XSS önlemleri ve diğer güvenlik katmanları
+              uygulanmıştır. Rol tabanlı erişim kontrolü (RBAC) ile kullanıcı
+              yetkilendirmeleri yönetilirken, tüm girişler validation&apos;dan
+              geçirilir. Düzenli güvenlik denetimleri ve penetrasyon testleri
+              yapılarak olası açıklar önceden tespit edilir. GDPR ve KVKK
+              uyumluluğu sağlanarak kullanıcı verilerinin güvenliği ve
+              mahremiyeti garanti altına alınmıştır. Veri yedekleme ve felaket
+              kurtarma prosedürleri otomatize edilmiştir.
             </p>
+            </div>
+       
           </div>
 
-          <div className="">
-            <h2 className="text-3xl font-bold mb-4">Yüksek Performans</h2>
-            <p className="">
-              React Native, Flutter ve Swift gibi modern teknolojiler kullanarak
-              geliştirilen uygulamalarımız, cihaz kaynaklarını verimli
-              kullanarak yüksek performans sunar.
-            </p>
-          </div>
-
-          <div className="">
+          <div className="snap-start h-screen items-center flex p-6 md:p-12">
+            <div className="space-y-4">
             <h2 className="text-3xl font-bold mb-4">
-              Kişiselleştirilebilir Deneyim
+              Sürekli Entegrasyon ve Geliştirme Süreci
             </h2>
-            <p className="">
-              Uygulamalarımızda kullanıcıların tercihlerine göre temalar,
-              bildirim ayarları ve kullanım alışkanlıkları doğrultusunda
-              kişiselleştirme yapılabilir.
+            <p className="text-md lg:text-xl">
+              Agile metodolojisiyle yönetilen geliştirme sürecimiz, kullanıcı
+              geri bildirimlerini hızla ürüne yansıtmayı hedefler. CI/CD
+              pipeline&apos;ları sayesinde günde birden fazla production deploy&apos;ı
+              yapabilme esnekliğine sahibiz. A/B testing mekanizmalarıyla yeni
+              özelliklerin etkisi ölçülürken, feature flag&apos;ler ile kontrollü
+              roll-out stratejileri uygulanır. Uygulama sağlığı ve kullanım
+              istatistikleri gerçek zamanlı olarak izlenir, performans
+              anomalileri otomatik alarmlarla bildirilir. Dokümantasyon ve
+              developer portalı ile tüm API&apos;ler standartlaştırılmıştır.
+              Mikroservis mimarisi sayesinde sistem bileşenleri bağımsız olarak
+              ölçeklendirilebilir.
             </p>
-          </div>
-
-          <div className="">
-            <h2 className="text-3xl font-bold mb-4">
-              Gelişmiş Güvenlik Önlemleri
-            </h2>
-            <p className="">
-              Veri şifreleme, kimlik doğrulama, oturum yönetimi gibi güvenlik
-              önlemleriyle kullanıcı verileri korunur. Mobil uygulamalarımız
-              OWASP standartlarına uygun şekilde geliştirilir.
-            </p>
-          </div>
-
-          <div className="">
-            <h2 className="text-3xl font-bold mb-4">
-              Sürekli Güncellenen Yapı
-            </h2>
-            <p className="">
-              Geri bildirimlere dayalı güncellemelerle uygulamalarımızı sürekli
-              iyileştiriyoruz. Yeni özellikler, performans artışları ve güvenlik
-              yamaları düzenli olarak yayınlanır.
-            </p>
+            </div>
+        
           </div>
         </div>
       </div>
 
-      <div className="hidden md:block md:w-1/2 sticky inset-0 h-full p-5">
+      <div className="hidden md:block md:w-1/2 sticky  top-30 right-0 h-full p-5">
         <video
           src="/static/videos/dashboard/dashboard.mp4"
           autoPlay
           muted
           loop
-          style={{
-            width: "100%",
-            height: "100%",
-    
-          }}
+      
         />
       </div>
 
-      {/* Mobil görünüm için iPhone bileşeni (sadece mobil ekranlarda görünür) */}
+     
       <div className="md:hidden w-full flex justify-center py-12 z-10">
-        <Iphone16Pro src={"/static/videos/dashboard/dashboard.mp4"} video={true} />
+        <Iphone16Pro
+          src={"/static/videos/dashboard/dashboard.mp4"}
+          video={true}
+        />
       </div>
     </div>
   );
