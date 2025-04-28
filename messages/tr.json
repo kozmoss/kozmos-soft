@@ -76,5 +76,20 @@
         "Stratejik kararları bilgilendiren ayrıntılı analizlerle finansal ekosisteninize derin bir görünürlük kazanın"
       ]
     }
+  },  "AboutUs": {
+    "title": "HAKKIMIZDA",
+    "companyDescription": "Kozmos Soft olarak 3 yılı aşkın süredir yazılım dünyasında; web geliştirme, mobil uygulama ve yapay zeka çözümleri sunuyoruz. Yaratıcılığı, güvenilirliği ve sürekli gelişimi esas alarak, müşterilerimizin iş hedeflerine ulaşmalarını sağlıyoruz.",
+    "projects": "PROJE",
+    "clients": "MÜŞTERİ",
+    "experience": "YIL DENEYİM",
+    "satisfaction": "MEMNUNİYET",
+    "technologies": "TEKNOLOJİ",
+    "support": "DESTEK",
+    "repeatClients": "TEKRAR MÜŞTERİ",
+    "deliveryTime": "ORT. TESLİMAT SÜRESİ",
+    "countries": "ÜLKE",
+    "openSource": "AÇIK KAYNAK KATKI",
+    "uptime": "ÇALIŞMA SÜRESİ",
+    "responseTime": "CEVAP SÜRESİ"
   }
 }

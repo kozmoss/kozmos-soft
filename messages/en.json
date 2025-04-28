@@ -6,7 +6,6 @@
     },
     "heroTitle": "Unleash Your Business Potential, Anywhere, Anytime",
     "heroDescription": "Transform your mobile device into a powerful business command center. The Wix app puts your entire operation at your fingertips, empowering you to build, manage, and grow without boundaries.",
-    
     "section1": {
       "title": "Your Website's Command Center in Your Pocket",
       "description": "Experience the freedom of managing your digital presence from anywhere. With powerful mobile tools at your disposal, your website becomes a dynamic asset that evolves with your vision—no desk required.",
@@ -16,7 +15,6 @@
         "Orchestrate targeted email campaigns that transform casual visitors into loyal customers"
       ]
     },
-    
     "section2": {
       "title": "Cultivate Meaningful Customer Connections, Instantly",
       "description": "In today's rapid business landscape, responsiveness is everything. Transform fleeting interactions into lasting relationships with communication tools designed for the modern entrepreneur.",
@@ -26,7 +24,6 @@
         "Build customer loyalty through consistent, thoughtful engagement that resonates"
       ]
     },
-    
     "section3": {
       "title": "Illuminate Your Business Performance with Real-Time Insights",
       "description": "Data becomes your strategic advantage when it's accessible anywhere. Gain crystal-clear visibility into your business operations with powerful mobile analytics that reveal opportunities others might miss.",
@@ -36,7 +33,6 @@
         "Generate comprehensive performance reports with a few simple taps, perfect for meetings on the go"
       ]
     },
-    
     "section4": {
       "title": "Seamless Order Fulfillment from Palm to Doorstep",
       "description": "Transform your supply chain into a competitive advantage with mobile inventory management that ensures you're always one step ahead. Keep your promises to customers with precision that builds trust and loyalty.",
@@ -46,7 +42,6 @@
         "Provide customers with transparency through real-time shipping updates they can trust"
       ]
     },
-    
     "section5": {
       "title": "Orchestrate Your Schedule with Elegant Precision",
       "description": "Time is your most precious resource. Our mobile scheduling system transforms chaotic calendars into harmonious symphonies of productivity, helping you maximize every moment while delighting your clients.",
@@ -56,7 +51,6 @@
         "Empower clients with self-service booking that feels personal and attentive"
       ]
     },
-    
     "section6": {
       "title": "Cultivate a Thriving Digital Community",
       "description": "In the digital age, community is currency. Build a vibrant ecosystem around your brand that fosters loyalty, sparks conversation, and creates advocates who amplify your message organically.",
@@ -66,7 +60,6 @@
         "Craft exclusive content journeys that reward your most dedicated followers"
       ]
     },
-    
     "section7": {
       "title": "Frictionless Financial Transactions, Anywhere",
       "description": "Convert opportunities into revenue without missing a beat. Our mobile payment solutions eliminate geographical boundaries, allowing you to close deals with professional finesse whether you're in the office or across the globe.",
@@ -76,5 +69,21 @@
         "Gain profound visibility into your financial ecosystem with detailed analytics that inform strategic decisions"
       ]
     }
+  },
+  "AboutUs": {
+    "title": "ABOUT US",
+    "companyDescription": "At Kozmos Soft, we have been providing web development, mobile application, and artificial intelligence solutions in the software world for over 3 years. By focusing on creativity, reliability, and continuous improvement, we help our clients achieve their business goals.",
+    "projects": "PROJECTS",
+    "clients": "CLIENTS",
+    "experience": "YEARS EXP",
+    "satisfaction": "SATISFACTION",
+    "technologies": "TECH STACK",
+    "support": "SUPPORT",
+    "repeatClients": "REPEAT CLIENTS",
+    "deliveryTime": "AVG DELIVERY TIME",
+    "countries": "COUNTRIES",
+    "openSource": "OPEN SOURCE",
+    "uptime": "UPTIME",
+    "responseTime": "RESPONSE TIME"
   }
 }
