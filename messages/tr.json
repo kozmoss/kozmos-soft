@@ -1,6 +1,80 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+  "mobile": {
+    "hero": {
+      "title": "Cebinizdeki İş Evreniniz",
+      "description": "Kozmos'un gücünü kullanarak mobil cihazınızı dünyanın her yerinde işletme komuta merkezinize dönüştürün."
+    },
+    "heroTitle": "İşletmenizin Potansiyelini Her Yerde, Her Zaman Serbest Bırakın",
+    "heroDescription": "Mobil cihazınızı güçlü bir işletme komuta merkezine dönüştürün. Wix uygulaması tüm operasyonunuzu parmaklarınızın ucuna getirerek, sınır tanımadan kurmanızı, yönetmenizi ve büyütmenizi sağlar.",
+    
+    "section1": {
+      "title": "Web Sitenizin Komuta Merkezi Cebinizde",
+      "description": "Dijital varlığınızı her yerden yönetme özgürlüğünü yaşayın. Güçlü mobil araçlarla donatılmış olarak, web siteniz masabaşına bağlı kalmadan vizyonunuzla birlikte gelişen dinamik bir varlığa dönüşür.",
+      "features": [
+        "Kapsamlı kontrol paneli özelliklerine erişerek web sitenizi hareket halindeyken bile mükemmelleştirin",
+        "Markanızın sesini ve erişimini güçlendiren etkileyici sosyal medya içerikleri oluşturun",
+        "Sıradan ziyaretçileri sadık müşterilere dönüştüren hedefli e-posta kampanyaları düzenleyin"
+      ]
+    },
+    
+    "section2": {
+      "title": "Anlamlı Müşteri Bağlantıları Anında Kurulur",
+      "description": "Günümüzün hızlı iş dünyasında, hızlı yanıt vermek her şeydir. Modern girişimci için tasarlanmış iletişim araçlarıyla geçici etkileşimleri kalıcı ilişkilere dönüştürün.",
+      "features": [
+        "Sezgisel canlı sohbet işlevselliği sayesinde müşterilerle kesintisiz sohbetler gerçekleştirin",
+        "En önemli olanı öne çıkaran akıllı bir gelen kutusuyla iletişimlerinizi düzenleyin",
+        "Tutarlı ve düşünceli etkileşimlerle müşteri sadakatini kalıcı hale getirin"
+      ]
+    },
+    
+    "section3": {
+      "title": "Gerçek Zamanlı İçgörülerle İşletme Performansınızı Aydınlatın",
+      "description": "Her yerden erişilebilir olduğunda, veriler stratejik avantajınıza dönüşür. Başkalarının gözden kaçırabileceği fırsatları ortaya çıkaran güçlü mobil analizlerle işletme faaliyetlerinize kristal netliğinde bir görünürlük kazanın.",
+      "features": [
+        "Başarı hikayenizi tek bakışta anlatan sezgisel bir kontrol paneli aracılığıyla hayati iş metriklerini izleyin",
+        "Müşteri deneyimi stratejinizi geliştirmek için ziyaretçi yolculuklarını ve dönüşüm modellerini çözümleyin",
+        "Birkaç basit dokunuşla, hareket halindeki toplantılar için mükemmel olan kapsamlı performans raporları oluşturun"
+      ]
+    },
+    
+    "section4": {
+      "title": "Avuç İçinden Kapıya Kusursuz Sipariş Tamamlama",
+      "description": "Her zaman bir adım önde olmanızı sağlayan mobil envanter yönetimiyle tedarik zincirinizi rekabet avantajına dönüştürün. Güven ve sadakat oluşturan hassasiyetle müşterilerinize verdiğiniz sözleri tutun.",
+      "features": [
+        "Nerede olursanız olun, parmağınızın tek dokunuşuyla tüm teslimat sürecinizi yönetin",
+        "İşletmenizin nabzıyla bağlantıda kalmanızı sağlayan anlık uyarılarla bilgilendirilmiş kalın",
+        "Müşterilere güvenebilecekleri gerçek zamanlı kargo güncellemeleriyle şeffaflık sağlayın"
+      ]
+    },
+    
+    "section5": {
+      "title": "Programınızı Zarif Bir Hassasiyetle Yönetin",
+      "description": "Zaman en değerli kaynağınızdır. Mobil planlama sistemimiz, kaotik takvimleri, müşterilerinizi memnun ederken her anı en üst düzeye çıkarmanıza yardımcı olan uyumlu üretkenlik senfonilerine dönüştürür.",
+      "features": [
+        "Ritminize uyum sağlayan sezgisel takvim yönetimiyle profesyonel programınızın kontrolünü elinize alın",
+        "Hem sizin hem de müşterilerinizin zamanına saygı duyan otomatik hatırlatıcılarla maliyetli katılım eksikliklerini ortadan kaldırın",
+        "Müşterileri kişisel ve özenli hissettiren self-servis rezervasyon imkanıyla güçlendirin"
+      ]
+    },
+    
+    "section6": {
+      "title": "Gelişen Bir Dijital Topluluk Oluşturun",
+      "description": "Dijital çağda topluluk bir değer birimidir. Sadakati teşvik eden, sohbeti ateşleyen ve mesajınızı organik olarak yükselten savunucular yaratan markanız etrafında canlı bir ekosistem oluşturun.",
+      "features": [
+        "Sıradan müşterileri marka elçilerine dönüştüren üyelik deneyimleri tasarlayın ve geliştirin",
+        "Topluluk uyumunu oluşturan moderasyonlu tartışmalar aracılığıyla gerçek bağlantılar kurun",
+        "En sadık takipçilerinizi ödüllendiren özel içerik yolculukları oluşturun"
+      ]
+    },
+    
+    "section7": {
+      "title": "Her Yerde Pürüzsüz Finansal İşlemler",
+      "description": "Bir vuruş kaçırmadan fırsatları gelire dönüştürün. Mobil ödeme çözümlerimiz coğrafi sınırları ortadan kaldırarak, ofiste veya dünyanın öbür ucunda olsanız da profesyonel incelikle anlaşmaları kapatmanızı sağlar.",
+      "features": [
+        "Mobil cihazınızı müşteri güveni uyandıran sofistike bir satış noktası sistemine dönüştürün",
+        "Markanızın profesyonel imajını yükselten cilalanmış finansal belgeleri anında oluşturun",
+        "Stratejik kararları bilgilendiren ayrıntılı analizlerle finansal ekosisteninize derin bir görünürlük kazanın"
+      ]
     }
   }
+}

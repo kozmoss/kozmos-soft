@@ -1,6 +1,80 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+  "mobile": {
+    "hero": {
+      "title": "Your Business Universe in Your Pocket",
+      "description": "Harness the power of Kozmos to transform your mobile device into your business command center, anywhere in the world."
+    },
+    "heroTitle": "Unleash Your Business Potential, Anywhere, Anytime",
+    "heroDescription": "Transform your mobile device into a powerful business command center. The Wix app puts your entire operation at your fingertips, empowering you to build, manage, and grow without boundaries.",
+    
+    "section1": {
+      "title": "Your Website's Command Center in Your Pocket",
+      "description": "Experience the freedom of managing your digital presence from anywhere. With powerful mobile tools at your disposal, your website becomes a dynamic asset that evolves with your vision—no desk required.",
+      "features": [
+        "Access comprehensive dashboard controls to fine-tune your website on the move",
+        "Craft compelling social media content that amplifies your brand's voice and reach",
+        "Orchestrate targeted email campaigns that transform casual visitors into loyal customers"
+      ]
+    },
+    
+    "section2": {
+      "title": "Cultivate Meaningful Customer Connections, Instantly",
+      "description": "In today's rapid business landscape, responsiveness is everything. Transform fleeting interactions into lasting relationships with communication tools designed for the modern entrepreneur.",
+      "features": [
+        "Engage in seamless conversations with customers through intuitive live chat functionality",
+        "Orchestrate your communications with an intelligent inbox that prioritizes what matters most",
+        "Build customer loyalty through consistent, thoughtful engagement that resonates"
+      ]
+    },
+    
+    "section3": {
+      "title": "Illuminate Your Business Performance with Real-Time Insights",
+      "description": "Data becomes your strategic advantage when it's accessible anywhere. Gain crystal-clear visibility into your business operations with powerful mobile analytics that reveal opportunities others might miss.",
+      "features": [
+        "Monitor vital business metrics through an intuitive dashboard that tells your success story at a glance",
+        "Decode visitor journeys and conversion patterns to refine your customer experience strategy",
+        "Generate comprehensive performance reports with a few simple taps, perfect for meetings on the go"
+      ]
+    },
+    
+    "section4": {
+      "title": "Seamless Order Fulfillment from Palm to Doorstep",
+      "description": "Transform your supply chain into a competitive advantage with mobile inventory management that ensures you're always one step ahead. Keep your promises to customers with precision that builds trust and loyalty.",
+      "features": [
+        "Orchestrate your entire fulfillment process with the tap of a finger, no matter where you are",
+        "Stay informed with instant alerts that keep you connected to your business's pulse",
+        "Provide customers with transparency through real-time shipping updates they can trust"
+      ]
+    },
+    
+    "section5": {
+      "title": "Orchestrate Your Schedule with Elegant Precision",
+      "description": "Time is your most precious resource. Our mobile scheduling system transforms chaotic calendars into harmonious symphonies of productivity, helping you maximize every moment while delighting your clients.",
+      "features": [
+        "Take command of your professional schedule with intuitive calendar management that adapts to your rhythm",
+        "Eliminate costly no-shows with automated reminders that respect both your time and your clients'",
+        "Empower clients with self-service booking that feels personal and attentive"
+      ]
+    },
+    
+    "section6": {
+      "title": "Cultivate a Thriving Digital Community",
+      "description": "In the digital age, community is currency. Build a vibrant ecosystem around your brand that fosters loyalty, sparks conversation, and creates advocates who amplify your message organically.",
+      "features": [
+        "Design and nurture membership experiences that transform casual customers into brand ambassadors",
+        "Foster genuine connections through moderated discussions that build community cohesion",
+        "Craft exclusive content journeys that reward your most dedicated followers"
+      ]
+    },
+    
+    "section7": {
+      "title": "Frictionless Financial Transactions, Anywhere",
+      "description": "Convert opportunities into revenue without missing a beat. Our mobile payment solutions eliminate geographical boundaries, allowing you to close deals with professional finesse whether you're in the office or across the globe.",
+      "features": [
+        "Transform your mobile device into a sophisticated point-of-sale system that inspires customer confidence",
+        "Create polished financial documentation instantly, elevating your brand's professional image",
+        "Gain profound visibility into your financial ecosystem with detailed analytics that inform strategic decisions"
+      ]
     }
   }
+}
