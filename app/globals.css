@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 @custom-variant dark (&:is(.dark *));
 
 @import "../styles/themes.css";
@@ -88,7 +87,23 @@
   --chart-5: 212 97% 87%;
   --sky-400: #38bdf8;
   --sky-500: #0ea5e9;
+  --duration: 20;
+
 }
+
+@theme {
+  --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
+  @keyframes orbit {
+    
+    100% {
+      transform: rotate(0deg) translateY(calc(var(--radius) * 1px));
+    }
+    0% {
+      transform: rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg);
+    }
+  }
+}
+
 
 .dark {
   --background: oklch(0.141 0.005 285.823);
@@ -209,15 +224,20 @@
   .container {
     @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
   }
-}
 
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+  .animate-rainbow {
+    animation: rainbow var(--speed, 2s) infinite linear;
+    background-size: 200% auto;
   }
-  body {
-    @apply bg-background text-foreground;
+  .animate-move {
+    animation: move 5s linear infinite;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(200px);
   }
 }

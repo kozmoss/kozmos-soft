@@ -6,7 +6,6 @@
     },
     "heroTitle": "İşletmenizin Potansiyelini Her Yerde, Her Zaman Serbest Bırakın",
     "heroDescription": "Mobil cihazınızı güçlü bir işletme komuta merkezine dönüştürün. Wix uygulaması tüm operasyonunuzu parmaklarınızın ucuna getirerek, sınır tanımadan kurmanızı, yönetmenizi ve büyütmenizi sağlar.",
-    
     "section1": {
       "title": "Web Sitenizin Komuta Merkezi Cebinizde",
       "description": "Dijital varlığınızı her yerden yönetme özgürlüğünü yaşayın. Güçlü mobil araçlarla donatılmış olarak, web siteniz masabaşına bağlı kalmadan vizyonunuzla birlikte gelişen dinamik bir varlığa dönüşür.",
@@ -16,7 +15,6 @@
         "Sıradan ziyaretçileri sadık müşterilere dönüştüren hedefli e-posta kampanyaları düzenleyin"
       ]
     },
-    
     "section2": {
       "title": "Anlamlı Müşteri Bağlantıları Anında Kurulur",
       "description": "Günümüzün hızlı iş dünyasında, hızlı yanıt vermek her şeydir. Modern girişimci için tasarlanmış iletişim araçlarıyla geçici etkileşimleri kalıcı ilişkilere dönüştürün.",
@@ -26,7 +24,6 @@
         "Tutarlı ve düşünceli etkileşimlerle müşteri sadakatini kalıcı hale getirin"
       ]
     },
-    
     "section3": {
       "title": "Gerçek Zamanlı İçgörülerle İşletme Performansınızı Aydınlatın",
       "description": "Her yerden erişilebilir olduğunda, veriler stratejik avantajınıza dönüşür. Başkalarının gözden kaçırabileceği fırsatları ortaya çıkaran güçlü mobil analizlerle işletme faaliyetlerinize kristal netliğinde bir görünürlük kazanın.",
@@ -36,7 +33,6 @@
         "Birkaç basit dokunuşla, hareket halindeki toplantılar için mükemmel olan kapsamlı performans raporları oluşturun"
       ]
     },
-    
     "section4": {
       "title": "Avuç İçinden Kapıya Kusursuz Sipariş Tamamlama",
       "description": "Her zaman bir adım önde olmanızı sağlayan mobil envanter yönetimiyle tedarik zincirinizi rekabet avantajına dönüştürün. Güven ve sadakat oluşturan hassasiyetle müşterilerinize verdiğiniz sözleri tutun.",
@@ -46,7 +42,6 @@
         "Müşterilere güvenebilecekleri gerçek zamanlı kargo güncellemeleriyle şeffaflık sağlayın"
       ]
     },
-    
     "section5": {
       "title": "Programınızı Zarif Bir Hassasiyetle Yönetin",
       "description": "Zaman en değerli kaynağınızdır. Mobil planlama sistemimiz, kaotik takvimleri, müşterilerinizi memnun ederken her anı en üst düzeye çıkarmanıza yardımcı olan uyumlu üretkenlik senfonilerine dönüştürür.",
@@ -56,7 +51,6 @@
         "Müşterileri kişisel ve özenli hissettiren self-servis rezervasyon imkanıyla güçlendirin"
       ]
     },
-    
     "section6": {
       "title": "Gelişen Bir Dijital Topluluk Oluşturun",
       "description": "Dijital çağda topluluk bir değer birimidir. Sadakati teşvik eden, sohbeti ateşleyen ve mesajınızı organik olarak yükselten savunucular yaratan markanız etrafında canlı bir ekosistem oluşturun.",
@@ -66,7 +60,6 @@
         "En sadık takipçilerinizi ödüllendiren özel içerik yolculukları oluşturun"
       ]
     },
-    
     "section7": {
       "title": "Her Yerde Pürüzsüz Finansal İşlemler",
       "description": "Bir vuruş kaçırmadan fırsatları gelire dönüştürün. Mobil ödeme çözümlerimiz coğrafi sınırları ortadan kaldırarak, ofiste veya dünyanın öbür ucunda olsanız da profesyonel incelikle anlaşmaları kapatmanızı sağlar.",
@@ -76,7 +69,8 @@
         "Stratejik kararları bilgilendiren ayrıntılı analizlerle finansal ekosisteninize derin bir görünürlük kazanın"
       ]
     }
-  },  "AboutUs": {
+  },
+  "AboutUs": {
     "title": "HAKKIMIZDA",
     "companyDescription": "Kozmos Soft olarak 3 yılı aşkın süredir yazılım dünyasında; web geliştirme, mobil uygulama ve yapay zeka çözümleri sunuyoruz. Yaratıcılığı, güvenilirliği ve sürekli gelişimi esas alarak, müşterilerimizin iş hedeflerine ulaşmalarını sağlıyoruz.",
     "projects": "PROJE",
@@ -91,5 +85,380 @@
     "openSource": "AÇIK KAYNAK KATKI",
     "uptime": "ÇALIŞMA SÜRESİ",
     "responseTime": "CEVAP SÜRESİ"
+  },
+  "AIPage": {
+    "hero": {
+      "title": "AI Agent",
+      "subtitle": "İşinizi otomatikleştirmek, verimliliği artırmak ve rekabet avantajı elde etmek için gelişmiş yapay zeka ajanlarımızla tanışın.",
+      "demoButton": "Demo İzle",
+      "learnMoreButton": "Daha Fazla Bilgi",
+      "demoTitle": "AI Agent Demo",
+      "userQuery": "Geçen ayki satış raporunu analiz et ve önemli noktaları özetle.",
+      "agentResponse": "Geçen ay satışlarınız %12 artış gösterdi. En çok satılan ürün X olurken, Y bölgesinde %15 düşüş yaşandı. Müşteri memnuniyeti puanı 4.8/5 ile rekor kırdı.",
+      "responseTime": "Yanıt süresi: 3.2 saniye",
+      "fullDemo": "Tam demo gör",
+      "headline1": "İçerik, araştırma ve strateji için hazır AI ajanları",
+      "desc1": "Anında sonuç, öğrenme süreci yok — sadece çalışmaya başla.",
+      "headline2": "Mevcut altyapınıza sorunsuz entegrasyon",
+      "desc2": "Kod yazmadan hızlı kurulum ve anında kullanım.",
+      "headline3": "Yetenek açığını yapay zeka ile kapatın",
+      "desc3": "SEO içerikten pazar analizine kadar tüm yazı ve araştırma ihtiyaçlarınız için akıllı çözümler.",
+      "headline4": "7/24 çalışan akıllı ajanlar",
+      "desc4": "Onboarding derdi yok, kesinti yok — her zaman üretken.",
+      "headline5": "Ölçeklenebilir ve güvenli otomasyon",
+      "desc5": "Kurumsal güvenlik standartlarına uygun, gizliliğe öncelik veren AI çözümleri."
+    },
+    "whatIs": {
+      "title": "AI Agent Nedir?",
+      "subtitle": "AI ajanları, karmaşık görevleri bağımsız olarak yerine getirebilen, verilerinizden öğrenen ve işlerinizi otomatikleştiren akıllı yazılım sistemleridir.",
+      "point1": "AI ajanları, doğal dil işleme, makine öğrenimi ve yapay zeka teknolojilerini kullanarak işletmenizin verimliliğini artıran gelişmiş yazılım çözümleridir.",
+      "point2": "Mevcut sistemlerinize sorunsuz entegre olur, veri tabanlarınızla ve iş akışlarınızla etkileşime girerek gerçek zamanlı kararlar alabilir.",
+      "point3": "Müşteri hizmetleri, satış, pazarlama ve operasyonel süreçler dahil olmak üzere çeşitli alanlarda görevleri otomatikleştirebilir.",
+      "point4": "Zaman içinde işletmenizin benzersiz ihtiyaçlarına göre öğrenir ve adapte olur, sürekli iyileşen performans ve sonuçlar sağlar."
+    },
+    "features": {
+      "intelligence": {
+        "title": "Gelişmiş Yapay Zeka",
+        "description": "Ajanlarımız, en son doğal dil işleme ve makine öğrenimi teknolojileriyle donatılmış olup, karmaşık sorunları çözebilir ve zamanla öğrenebilir."
+      },
+      "integration": {
+        "title": "Kolay Entegrasyon",
+        "description": "Mevcut iş uygulamalarınızla sorunsuz entegrasyon için tasarlanmış, minimum kurulum ve bakım gerektiren çözümler."
+      },
+      "automation": {
+        "title": "Gerçek Zamanlı Yapay Zeka İşbirliği",
+        "description": "Gerçek zamanlı yardım deneyimi yaşayın. AI Temsilcinizden görevleri koordine etmesini, soruları yanıtlamasını ve ekip uyumunu korumasını isteyin."
+      },
+      "communication": {
+        "title": "Akıllı İletişim",
+        "description": "Müşteriler ve ekip üyeleriyle doğal ve etkili iletişim kuran, iletişim süreçlerinizi geliştiren ajanlar."
+      }
+    },
+    "capabilities": {
+      "title": "AI Ajanları Neler Yapabilir?",
+      "subtitle": "Ajanlarımız, işletmenizin tüm departmanlarında verimlilik ve etkinliği artırmak için tasarlanmıştır.",
+      "tabs": {
+        "sales": {
+          "label": "Satış",
+          "title": "Satış Süreçlerinizi Güçlendirin",
+          "aitools": {
+            "hrResumeComparer": {
+              "title": "İK: Özgeçmiş/İş Tanımı Karşılaştırıcı",
+              "description": "İK: Özgeçmiş/İş Tanımı Karşılaştırıcı aracı, bir adayın özgeçmişinin iş tanımıyla ne kadar uyuştuğunu analiz etmenize yardımcı olur."
+            },
+            "hrLinkedinComparer": {
+              "title": "İK: LinkedIn/İş Tanımı Karşılaştırıcı",
+              "description": "İK: LinkedIn/İş Tanımı Karşılaştırıcı aracı, bir adayın LinkedIn profilinin iş tanımıyla ne kadar uyuştuğunu analiz etmenize yardımcı olur."
+            },
+            "personalizedMsgGenerator": {
+              "title": "Kişiselleştirilmiş Mesaj Oluşturucu - Yıllık Rapor",
+              "description": "Kişiselleştirilmiş Mesaj Oluşturucu - Yıllık Rapor aracı, yıllık raporunuz için kişiselleştirilmiş bir açılış cümlesi oluşturmanıza yardımcı olur."
+            },
+            "extractTranscriptData": {
+              "title": "Transkriptlerden Belirli Verileri Çıkar",
+              "description": "Transkriptlerden Belirli Verileri Çıkar aracı, toplantı transkriptlerinden önemli bilgileri çekmenize yardımcı olur."
+            },
+            "spinSelling": {
+              "title": "SPIN Satış Tekniği",
+              "description": "SPIN Satış Tekniği aracı, SPIN satış çerçevesini kullanarak etkili satış soruları oluşturmanıza yardımcı olur."
+            },
+            "keyBenefits": {
+              "title": "3 Ana Fayda - LinkedIn Profiliyle Kişiselleştirilmiş",
+              "description": "3 Ana Fayda - LinkedIn Profiliyle Kişiselleştirilmiş aracı, kişiselleştirilmiş tanıtım mesajları oluşturmanıza yardımcı olur."
+            },
+            "improveCopy": {
+              "title": "Yazınızı Geliştirin",
+              "description": "\"Yazınızı Geliştirin\" aracı, satış ve pazarlama metinlerinizi geliştirmeniz için beş uygulanabilir öneri sunar."
+            },
+            "industryResearch": {
+              "title": "Sektör Araştırması",
+              "description": "Sektör Araştırması aracı, belirli bir sektördeki en son trendleri toplamanıza ve özetlemenize yardımcı olur."
+            },
+            "leadEnrichment": {
+              "title": "Aday Zenginleştirme Aracı",
+              "description": "Aday Zenginleştirme Aracı, bir aday veya potansiyel müşteri hakkında ayrıntılı bilgi bulmanıza ve çıkarmanıza yardımcı olur."
+            },
+            "researchCompany": {
+              "title": "Bir Şirketi Araştır ve Potansiyel Müşteri Bul",
+              "description": "\"Bir Şirketi Araştır ve Potansiyel Müşteri Bul\" aracı, tanıtım için bir şirketteki önemli kişileri belirlemenize yardımcı olur."
+            },
+            "companyResearchWebsite": {
+              "title": "Web Sitesi ile Şirket Araştırması",
+              "description": "Web Sitesi ile Şirket Araştırması aracı, bir şirketin web sitesinden temel bilgileri toplamanıza ve özetlemenize yardımcı olur."
+            },
+            "summarizeMeeting": {
+              "title": "Toplantı Transkriptini Özetle",
+              "description": "Toplantı Transkriptini Özetle aracı, toplantı transkriptlerinden hızlıca önemli bilgileri çıkarmanıza yardımcı olur."
+            },
+            "coldCallScript": {
+              "title": "Soğuk Arama Senaryosu",
+              "description": "Soğuk Arama Senaryosu aracı, şirket bilgilerini kullanarak kişiselleştirilmiş soğuk arama senaryoları oluşturmanıza yardımcı olur."
+            },
+            "leadScoring": {
+              "title": "Basit Aday Skorlama Aracı",
+              "description": "Basit Aday Skorlama Aracı, potansiyel iş adaylarını bulmanıza ve değerlendirmenize yardımcı olur."
+            },
+            "companyResearchLinkedin": {
+              "title": "LinkedIn ile Şirket Araştırması",
+              "description": "LinkedIn ile Şirket Araştırması aracı, bir şirketin LinkedIn profilinden temel bilgileri toplamanıza ve özetlemenize yardımcı olur."
+            }
+          }
+        },
+        "marketing": {
+          "label": "Pazarlama",
+          "title": "Pazarlama Stratejilerinizi Geliştirin",
+          "description": "Pazarlama kampanyalarınızı optimize eden ve daha fazla potansiyel müşteri üreten akıllı ajanlar.",
+          "aitools": {
+            "linkedinPosts": {
+              "title": "LinkedIn Gönderilerini Geliştir",
+              "description": "LinkedIn Gönderilerini Geliştir aracı, hedef kitlenize ve iş hedeflerinize göre gönderilerinizi geliştirmenize yardımcı olur."
+            },
+            "compareWebpages": {
+              "title": "Web Sitelerini Karşılaştır",
+              "description": "Web Sitelerini Karşılaştır aracı, iki farklı web sitesinin içeriğini analiz edip karşılaştırarak güçlü ve zayıf yönleri belirlemenize yardımcı olur."
+            },
+            "youtubeVideo": {
+              "title": "YouTube videosu -> Blog",
+              "description": "YouTube videosu → Blog aracı, YouTube video içeriğini SEO'ya uygun, yapılandırılmış bir blog yazısına dönüştürmenize yardımcı olur."
+            },
+            "propertyListing": {
+              "title": "Emlak İlanı Oluşturucu",
+              "description": "Emlak İlanı Oluşturucu aracı, temel özelliklere ve faydalara göre detaylı ve etkileyici emlak ilanları oluşturmanıza yardımcı olur."
+            },
+            "getFeedback": {
+              "title": "Web Sayfası Metnine Geri Bildirim Al",
+              "description": "Web Sayfası Metnine Geri Bildirim Al aracı, web sayfası içeriğiniz hakkında yapıcı geri bildirim toplayarak etkinliğini artırmanıza yardımcı olur."
+            },
+            "socialShare": {
+              "title": "GPT İçin Özel Eylemlerle Sosyal Paylaşım",
+              "description": "GPT İçin Özel Eylemlerle Sosyal Paylaşım aracı, GPT özel eylemlerinizi tanıtmak için etkileyici sosyal medya gönderileri oluşturmanıza yardımcı olur."
+            },
+            "brandIdentity": {
+              "title": "Web Sitesinden Marka Kimliği",
+              "description": "Web Sitesinden Marka Kimliği aracı, bir web sitesinin marka yönergelerini çıkararak tutarlılığı korumanıza yardımcı olur."
+            },
+            "aidaFramework": {
+              "title": "AIDA Çerçevesi",
+              "description": "AIDA Çerçevesi aracı, Dikkat, İlgi, Arzu ve Eylem adımlarına ayrılmış etkili pazarlama içerikleri oluşturmanıza yardımcı olur."
+            },
+            "wordpressToolkit": {
+              "title": "WordPress Araç Seti",
+              "description": "WordPress Araç Seti, blog yazılarını yönetmenize, mevcut içerikleri listelemenize ve yeni içerik planlamanıza olanak tanır."
+            },
+            "pasFramework": {
+              "title": "PAS Çerçevesi",
+              "description": "PAS Çerçevesi aracı, Mesele-Yoğunlaştırma-Çözüm modelini kullanarak etkili pazarlama içerikleri oluşturmanıza yardımcı olur."
+            },
+            "webflowToolkit": {
+              "title": "Webflow Araç Seti",
+              "description": "Webflow Araç Seti, Webflow sitenizdeki blog yazılarını yönetmenizi sağlar. Mevcut yazıları listeleyebilir ve yeni içerikler planlayabilirsiniz."
+            },
+            "babFramework": {
+              "title": "BAB Çerçevesi",
+              "description": "BAB Çerçevesi aracı, Önce-Sonra-Köprü modeliyle dönüşümü vurgulayan etkili pazarlama içerikleri oluşturmanıza yardımcı olur."
+            }
+          }
+        },
+        "research": {
+          "label": "Araştırma",
+          "title": "Veri Analizi ve Araştırma",
+          "description": "Büyük veri kümelerini analiz eden ve değerli içgörüler üreten güçlü araştırma araçları.",
+          "aitools": {
+            "googleSearch": {
+              "title": "Google Arama",
+              "description": "Google Arama aracı, bir arama sorgusu girerek internet üzerinde bilgi bulmanıza yardımcı olur.",
+              "category": "araştırma"
+            },
+            "categorizeText": {
+              "title": "Metni Kategorize Et",
+              "description": "Metni Kategorize Et aracı, metni önceden tanımlanmış bir konu listesiyle etiketlemenize yardımcı olarak bilgiyi düzenlemeyi kolaylaştırır.",
+              "category": "araştırma"
+            },
+            "steamReviewAnalysis": {
+              "title": "Steam Oyun Yorumları Analizi",
+              "description": "Steam Oyun Yorumları Analizi aracı, Steam'deki herhangi bir oyun için kullanıcı yorumlarını analiz ederek ortak temaları ve duygu durumunu belirlemenize yardımcı olur.",
+              "category": "araştırma"
+            },
+            "surveyGenerator": {
+              "title": "Anket Oluşturucu",
+              "description": "Anket Oluşturucu aracı, verilen bir bağlam ve hedefe göre anket soruları oluşturmanıza yardımcı olur.",
+              "category": "araştırma"
+            },
+            "audioTranscription": {
+              "title": "Ses Transkripsiyonu + Yüksek Seviye Analiz",
+              "description": "Ses Transkripsiyonu + Yüksek Seviye Analiz aracı, ses dosyalarını metne dönüştürmenizi ve yüksek seviyede analiz yapmanızı sağlar.",
+              "category": "araştırma"
+            },
+            "detectSurveyBiases": {
+              "title": "Anket Yanlılıklarını Tespit Et",
+              "description": "Anket Yanlılıklarını Tespit Et aracı, anket sorularındaki herhangi bir yanlılıkları tespit etmenize ve açıklamanıza yardımcı olur.",
+              "category": "araştırma"
+            },
+            "gptOnFiles": {
+              "title": "Dosyalarımda GPT",
+              "description": "Dosyalarımda GPT aracı, yüklediğiniz belirli dosyaların içeriğiyle ilgili soruları cevaplamanızı sağlar.",
+              "category": "araştırma"
+            },
+            "syntheticUserResearch": {
+              "title": "Sentetik Kullanıcı Araştırması",
+              "description": "Sentetik Kullanıcı Araştırması aracı, belirli kullanıcı profillerine dayalı anket yanıtları üreterek geri bildirim simülasyonu yapmanıza yardımcı olur.",
+              "category": "araştırma"
+            },
+            "emotionAnalysis": {
+              "title": "Duygu Analizi",
+              "description": "Duygu Analizi aracı, metindeki duyguları önceden belirlenmiş bir duygu kategorileri listesine göre tespit etmenize ve etiketlemenize yardımcı olur.",
+              "category": "araştırma"
+            },
+            "convertSpelling": {
+              "title": "Amerikan İngilizcesi ile Britanya İngilizcesi Arasında Yazım Değiştirme",
+              "description": "Amerikan İngilizcesi ile Britanya İngilizcesi arasında yazım değiştirme aracı, kelimelerin Amerikan ve Britanya İngilizcesi yazım kuralları arasında dönüşümünü sağlar.",
+              "category": "araştırma"
+            },
+            "extractTopics": {
+              "title": "Görüşme Transkriptlerinden Konuları Çıkar",
+              "description": "Görüşme Transkriptlerinden Konuları Çıkar aracı, görüşme transkriptlerinden ana temaları ve konuları tespit etmenize yardımcı olur.",
+              "category": "araştırma"
+            },
+            "iOSReviewAnalysis": {
+              "title": "iOS App Store Yorumları Analizi",
+              "description": "iOS App Store Yorumları Analizi aracı, Apple App Store'daki herhangi bir uygulamanın kullanıcı yorumlarını analiz etmenize yardımcı olur.",
+              "category": "araştırma"
+            },
+            "extractCategories": {
+              "title": "Verilerde Kategoriler Çıkar",
+              "description": "Verilerde Kategoriler Çıkar aracı, bir veri kümesinden ana temaları ve kategorileri tespit etmenize yardımcı olur.",
+              "category": "araştırma"
+            },
+            "googlePlaystoreAnalysis": {
+              "title": "Google Play Store Yorumları Analizi",
+              "description": "Google Play Store Yorumları Analizi aracı, belirli bir uygulama hakkında Google Play Store'daki kullanıcı geri bildirimlerini anlamanıza yardımcı olur.",
+              "category": "araştırma"
+            },
+            "anonymizeText": {
+              "title": "Metin Anonimleştirme",
+              "description": "Metin Anonimleştirme aracı, verilen bir metindeki hassas kişisel bilgileri gizleyerek gizliliği korumanıza yardımcı olur.",
+              "category": "araştırma"
+            }
+          }
+        },
+        "featured": {
+          "label": "Destek",
+          "title": "Müşteri Desteğini Otomatikleştirin",
+          "aitools": {
+            "youtubeVideoFile": {
+              "title": "YouTube: Video Dosyası",
+              "description": "YouTube: Video Dosyası aracı, bir YouTube videosunun doğrudan video dosyası bağlantısını kolayca almanızı sağlar."
+            },
+            "youtubeVideoTranscript": {
+              "title": "YouTube: Video Transkripti",
+              "description": "YouTube: Video Transkripti aracı, bir YouTube videosunun konuşma içeriğini okunabilir metne dönüştürmenize yardımcı olur."
+            },
+            "linearTickets": {
+              "title": "Linear: Son Biletleri Getir",
+              "description": "Linear: Son Biletleri Getir aracı, Linear’daki belirli bir ekipten en son biletleri almanıza yardımcı olur."
+            },
+            "azureFormRecognizer": {
+              "title": "Microsoft Azure: Form Tanıma OCR",
+              "description": "Microsoft Azure: Form Tanıma OCR aracı, belgelerden metin ve veri çıkarmanıza yardımcı olur."
+            },
+            "snowflakeSql": {
+              "title": "Snowflake: SQL Sorgusu",
+              "description": "Snowflake: SQL Sorgusu aracı, bir Snowflake veritabanında doğrudan SQL sorguları çalıştırmanızı sağlar."
+            },
+            "escalateSlack": {
+              "title": "Slack Üzerinden Yöneticilere Bildir",
+              "description": "Slack Üzerinden Yöneticilere Bildir aracı, önemli e-postaları veya konuları hızlıca yöneticilere bildirmenizi sağlar."
+            },
+            "googleCloudVision": {
+              "title": "Google Cloud: Cloud Vision OCR",
+              "description": "Google Cloud: Cloud Vision OCR aracı, PDF dosyalarındaki metinleri Google Cloud Vision API kullanarak çıkarmanıza yardımcı olur."
+            },
+            "airtableToolkit": {
+              "title": "Airtable Araç Seti",
+              "description": "Airtable Araç Seti, Airtable veritabanınızdaki kayıtları yönetmenize yardımcı olur. Mevcut kayıtları listeleyebilir veya yenilerini ekleyebilirsiniz."
+            },
+            "postToSlack": {
+              "title": "Slack'e Mesaj Gönder",
+              "description": "Slack'e Mesaj Gönder aracı, doğrudan bir Slack kanalına mesaj göndermenizi sağlar. Otomatik bildirimler için kullanışlıdır."
+            }
+          }
+        }
+      }
+    },
+    "howWorks": {
+      "title": "AI Ajanları Nasıl Çalışır?",
+      "subtitle": "AI ajanlarımızın gücünü ve iş akışınızı nasıl dönüştürdüğünü keşfedin.",
+      "step1": {
+        "title": "Veri İşleme",
+        "description": "Ajanlarımız, şirketinizin verilerini işler, analiz eder ve önemli içgörüler elde eder."
+      },
+      "step2": {
+        "title": "Öğrenme ve Adaptasyon",
+        "description": "Benzersiz iş süreçlerinize uyum sağlar ve zamanla performansını sürekli olarak iyileştirir."
+      },
+      "step3": {
+        "title": "Akıllı Otomasyon",
+        "description": "Tekrarlayan görevleri otomatikleştirir ve karar vermeyi destekleyerek verimliliği artırır."
+      },
+      "integration": {
+        "title": "Mevcut Sistemlerinizle Sorunsuz Entegrasyon",
+        "description": "AI ajanlarımız, mevcut iş yazılımlarınız ve süreçlerinizle sorunsuz bir şekilde çalışır. Minimum yapılandırma ile hızlı entegrasyon.",
+        "system1": {
+          "title": "CRM Entegrasyonu",
+          "description": "Satış ve pazarlama süreçlerinizi otomatikleştirin."
+        },
+        "system2": {
+          "title": "ERP Entegrasyonu",
+          "description": "İş operasyonlarınızı ve kaynak planlamanızı geliştirin."
+        },
+        "system3": {
+          "title": "Özel Yazılım",
+          "description": "Özel çözümlerinizle entegre olabilen esnek API'lar."
+        }
+      },
+      "stats": {
+        "title": "Performans Metrikleri",
+        "metric1": {
+          "label": "Verimlilik Artışı",
+          "value": "85%"
+        },
+        "metric2": {
+          "label": "Müşteri Memnuniyeti",
+          "value": "92%"
+        },
+        "metric3": {
+          "label": "Maliyet Tasarrufu",
+          "value": "78%"
+        }
+      }
+    },
+    "faq": {
+      "title": "AI Ajanları Hakkında Sık Sorulan Sorular",
+      "subtitle": "AI ajanlarımız ve iş akışınızı nasıl dönüştürebilecekleri hakkında bilmeniz gereken her şey.",
+      "left": {
+        "q1": "AI ajanlarınız hangi dilleri destekliyor?",
+        "a1": "AI ajanlarımız, Türkçe, İngilizce, Almanca, Fransızca, İspanyolca ve daha birçok dili destekler. Çoklu dil desteği, global müşterilerinize hizmet vermenizi kolaylaştırır.",
+        "q2": "AI ajanlarınızı kullanmak için teknik bilgi gerekiyor mu?",
+        "a2": "Hayır, kullanıcı dostu arayüzümüz sayesinde teknik bilgi gerekmez. Kurulum ve entegrasyon süreçlerinde teknik ekibimiz size destek olacaktır.",
+        "q3": "AI ajanlarınız özel verileri nasıl korur?",
+        "a3": "En yüksek düzeyde güvenlik protokolleri uyguluyoruz. Tüm veriler şifrelenir, güvenli sunucularda saklanır ve KVKK ile GDPR gibi düzenlemelere tam uyumluluk sağlanır.",
+        "q4": "Ajanlarınız zamanla öğrenebilir mi?",
+        "a4": "Evet, AI ajanlarımız makine öğrenimi teknolojisini kullanarak zamanla öğrenir ve adapte olur. İşletmenizin benzersiz ihtiyaçlarına göre giderek daha akıllı hale gelir.",
+        "q5": "Şirketim için özelleştirilmiş çözümler sunuyor musunuz?",
+        "a5": "Kesinlikle. Her işletmenin benzersiz ihtiyaçlarını karşılamak için AI ajanlarımızı özelleştiriyoruz. Uzman ekibimiz, ihtiyaçlarınıza en uygun çözümü tasarlamak için sizinle yakın çalışır."
+      },
+      "right": {
+        "q1": "Hizmetlerinizin fiyatlandırması nasıl?",
+        "a1": "Farklı işletme büyüklükleri ve ihtiyaçlar için çeşitli fiyatlandırma planlarımız mevcuttur. Temel, Profesyonel ve Kurumsal paketlerimiz hakkında detaylı bilgi için satış ekibimizle iletişime geçebilirsiniz.",
+        "q2": "Ajanlarınızın kurulumu ne kadar sürer?",
+        "a2": "Entegrasyon karmaşıklığına bağlı olarak kurulum genellikle 2-4 hafta sürer. Hızlı başlangıç paketlerimizle, bazı çözümlerimizi birkaç gün içinde çalışır hale getirebilirsiniz.",
+        "q3": "AI ajanlarınız hangi sektörlerde kullanılabilir?",
+        "a3": "Ajanlarımız, perakende, finans, sağlık, eğitim, üretim ve daha birçok sektöre uyarlanabilir. Her sektöre özel çözümler sunuyoruz.",
+        "q4": "7/24 teknik destek sunuyor musunuz?",
+        "a4": "Evet, tüm müşterilerimize 7/24 teknik destek sağlıyoruz. Acil durumlarda her zaman yanınızdayız ve sorunlarınızı hızlı bir şekilde çözüyoruz.",
+        "q5": "Ajanlarınızı deneme imkanı var mı?",
+        "a5": "Evet, potansiyel müşterilerimize 14 günlük ücretsiz deneme süresi sunuyoruz. Bu süre içinde AI ajanlarımızın tüm özelliklerini test edebilir ve işletmenize nasıl fayda sağlayacağını görebilirsiniz."
+      }
+    }
   }
 }

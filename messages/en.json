@@ -85,5 +85,379 @@
     "openSource": "OPEN SOURCE",
     "uptime": "UPTIME",
     "responseTime": "RESPONSE TIME"
+  },
+  "AIPage": {
+    "hero": {
+      "title": "AI Agent Solutions",
+      "subtitle": "Meet our advanced artificial intelligence agents designed to automate your business, increase efficiency, and give you a competitive edge.",
+      "demoButton": "Watch Demo",
+      "learnMoreButton": "Learn More",
+      "demoTitle": "AI Agent Demo",
+      "userQuery": "Analyze last month's sales report and summarize the key points.",
+      "agentResponse": "Last month your sales increased by 12%. Product X was the bestseller, while region Y experienced a 15% decrease. Customer satisfaction score reached a record 4.8/5.",
+      "responseTime": "Response time: 3.2 seconds",
+      "fullDemo": "See full demo",
+      "headline1": "Plug-and-play AI agents for content, research & strategy",
+      "desc1": "On-demand execution, no ramp-up — just results.",
+      "headline2": "Seamless integration with your existing tech stack",
+      "desc2": "No-code setup with instant deployment.",
+      "headline3": "Fill skill gaps with AI-powered writing & analysis",
+      "desc3": "From SEO content to market research — intelligent support for your needs.",
+      "headline4": "Always-on AI agents for 24/7 productivity",
+      "desc4": "No onboarding, no downtime — always productive.",
+      "headline5": "Secure AI automation built for scale",
+      "desc5": "Enterprise-grade security with privacy-first AI solutions."
+    },
+    "whatIs": {
+      "title": "What is an AI Agent?",
+      "subtitle": "AI agents are intelligent software systems that can independently perform complex tasks, learn from your data, and automate your operations.",
+      "point1": "AI agents are advanced software solutions that enhance your business efficiency using natural language processing, machine learning, and artificial intelligence technologies.",
+      "point2": "They seamlessly integrate with your existing systems, interacting with your databases and workflows to make real-time decisions.",
+      "point3": "They can automate tasks across various areas including customer service, sales, marketing, and operational processes.",
+      "point4": "They learn and adapt to your business's unique needs over time, providing continuously improving performance and results."
+    },
+    "features": {
+      "intelligence": {
+        "title": "Advanced Artificial Intelligence",
+        "description": "Our agents are equipped with the latest natural language processing and machine learning technologies, capable of solving complex problems and learning over time."
+      },
+      "integration": {
+        "title": "Real-time AI Collaboration",
+        "description": "Designed for seamless integration with your existing business applications, requiring minimal setup and maintenance."
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "Experience real-time assistance. Ask your AI Agent to coordinate tasks, answer questions, and maintain team alignment."
+      },
+      "communication": {
+        "title": "Intelligent Communication",
+        "description": "Agents that communicate naturally and effectively with customers and team members, enhancing your communication processes."
+      }
+    },
+    "capabilities": {
+      "title": "What Can AI Agents Do?",
+      "subtitle": "Our agents are designed to increase productivity and efficiency across all departments of your business.",
+      "tabs": {
+        "sales": {
+          "label": "Sales",
+          "title": "Empower Your Sales Processes",
+          "aitools": {
+            "hrResumeComparer": {
+              "title": "HR: Resume/Job Description Comparer",
+              "description": "The HR: Resume/Job Description Comparer tool helps you analyze how well a candidate's resume matches a job description."
+            },
+            "hrLinkedinComparer": {
+              "title": "HR: LinkedIn/Job Description Comparer",
+              "description": "The HR: LinkedIn/Job Description Comparer tool helps you analyze how well a candidate's LinkedIn profile matches a job description."
+            },
+            "personalizedMsgGenerator": {
+              "title": "Personalized msg generator - Annual report",
+              "description": "The Personalized msg generator - Annual report tool helps you craft a personalized opening line for your annual report."
+            },
+            "extractTranscriptData": {
+              "title": "Extract specific data from transcripts",
+              "description": "The Extract specific data from transcripts tool helps you pull out important information from meeting transcripts."
+            },
+            "spinSelling": {
+              "title": "SPIN Selling",
+              "description": "The SPIN Selling tool helps you create effective sales questions using the SPIN selling framework."
+            },
+            "keyBenefits": {
+              "title": "3 key benefits - personalised w/ LI profile",
+              "description": "The 3 key benefits - personalised w/ LI profile tool helps you create personalized outreach messages highlighting three key benefits."
+            },
+            "improveCopy": {
+              "title": "Improve your copy",
+              "description": "The \"Improve your copy\" tool helps you enhance your sales and marketing text by providing five actionable suggestions."
+            },
+            "industryResearch": {
+              "title": "Industry Research",
+              "description": "The Industry Research tool helps you gather and summarize the latest trends in a specific industry."
+            },
+            "leadEnrichment": {
+              "title": "Lead Enrichment Tool",
+              "description": "The Lead Enrichment Tool helps you find and extract detailed information about a prospect or lead."
+            },
+            "researchCompany": {
+              "title": "Research a company and find leads",
+              "description": "The \"Research a company and find leads\" tool helps you identify key contacts within a company for outreach."
+            },
+            "companyResearchWebsite": {
+              "title": "Company Research w/ website",
+              "description": "The Company Research w/ website tool helps you gather and summarize key information about a company from its website."
+            },
+            "summarizeMeeting": {
+              "title": "Summarize meeting transcript",
+              "description": "The Summarize meeting transcript tool helps you quickly extract key information from meeting transcripts."
+            },
+            "coldCallScript": {
+              "title": "Cold Call Script",
+              "description": "The Cold Call Script tool helps you create personalized cold call scripts by leveraging company information."
+            },
+            "leadScoring": {
+              "title": "Simple Lead Scoring Tool",
+              "description": "The Simple Lead Scoring Tool helps you find and evaluate potential business leads by extracting key information."
+            },
+            "companyResearchLinkedin": {
+              "title": "Company Research w/ LinkedIn",
+              "description": "The Company Research w/ LinkedIn tool helps you gather and summarize key information from a company's LinkedIn profile."
+            }
+          }
+        },
+        "marketing": {
+          "label": "Marketing",
+          "title": "Enhance Your Marketing Strategies",
+          "description": "Intelligent agents that optimize your marketing campaigns and generate more leads.",
+          "aitools": {
+            "linkedinPosts": {
+              "title": "Improve LinkedIn posts",
+              "description": "The Improve LinkedIn posts tool helps you enhance LinkedIn posts by tailoring them to your target audience and business goals."
+            },
+            "compareWebpages": {
+              "title": "Compare webpages",
+              "description": "The Compare webpages tool helps you analyze and compare the content of two different websites to identify strengths and weaknesses."
+            },
+            "youtubeVideo": {
+              "title": "Youtube video -> Blog",
+              "description": "The Youtube video → Blog tool helps you transform YouTube video content into a well-structured blog post optimized for SEO."
+            },
+            "propertyListing": {
+              "title": "Property listing generator",
+              "description": "The Property Listing Generator tool helps you create detailed and appealing property listings based on key features and benefits."
+            },
+            "getFeedback": {
+              "title": "Get feedback to webpage copy",
+              "description": "The Get feedback to webpage copy tool helps you gather constructive feedback on the content of a web page to improve its effectiveness."
+            },
+            "socialShare": {
+              "title": "Social Share for Custom Actions for GPT",
+              "description": "The Social Share for Custom Actions for GPT tool helps you create engaging social media posts to promote your custom GPT actions."
+            },
+            "brandIdentity": {
+              "title": "Website to brand identity",
+              "description": "The Website to brand identity tool helps you extract and understand the branding guidelines of a website to maintain consistency."
+            },
+            "aidaFramework": {
+              "title": "AIDA framework",
+              "description": "The AIDA framework tool helps you create compelling marketing content by breaking it down into Attention, Interest, Desire, and Action."
+            },
+            "wordpressToolkit": {
+              "title": "Wordpress toolkit",
+              "description": "The Wordpress toolkit tool helps you manage your WordPress blog by allowing you to list all existing posts and plan new content."
+            },
+            "pasFramework": {
+              "title": "PAS framework",
+              "description": "The PAS framework tool helps you create effective marketing content using the Problem-Agitate-Solution framework to engage customers."
+            },
+            "webflowToolkit": {
+              "title": "Webflow toolkit",
+              "description": "The Webflow toolkit helps you manage blog posts on your Webflow site. It allows you to list all existing posts and plan new content."
+            },
+            "babFramework": {
+              "title": "BAB framework",
+              "description": "The BAB framework tool helps you create effective marketing content using the Before-After-Bridge framework to showcase transformation."
+            }
+          }
+        },
+        "research": {
+          "label": "Research",
+          "title": "Data Analysis and Research",
+         "aitools": {
+          "googleSearch": {
+            "title": "Google Search",
+            "description": "The Google Search tool helps you find information on the internet by allowing you to input a search query.",
+            "category": "research"
+          },
+          "categorizeText": {
+            "title": "Categorize text",
+            "description": "The Categorize text tool helps you label text with relevant topics from a predefined list, making it easier to organize information.",
+            "category": "research"
+          },
+          "steamReviewAnalysis": {
+            "title": "Steam game review analysis",
+            "description": "The Steam game review analysis tool helps you analyze user reviews for any game on Steam by identifying common themes and sentiment.",
+            "category": "research"
+          },
+          "surveyGenerator": {
+            "title": "Survey generator",
+            "description": "The Survey Generator tool helps you create survey questions based on a given context and goal.",
+            "category": "research"
+          },
+          "audioTranscription": {
+            "title": "Audio Transcription + High level analysis",
+            "description": "The Audio Transcription + High level analysis tool is designed to help you convert audio files into text and provide high-level analysis.",
+            "category": "research"
+          },
+          "detectSurveyBiases": {
+            "title": "Detect survey biases",
+            "description": "The Detect survey biases tool helps you identify and explain any biases present in survey questions to improve data quality.",
+            "category": "research"
+          },
+          "gptOnFiles": {
+            "title": "GPT on my files",
+            "description": "The GPT on my files tool helps you answer questions based on the content of specific files you've uploaded.",
+            "category": "research"
+          },
+          "syntheticUserResearch": {
+            "title": "Synthetic user research",
+            "description": "The Synthetic user research tool helps you generate survey responses based on specific user personas to simulate feedback.",
+            "category": "research"
+          },
+          "emotionAnalysis": {
+            "title": "Emotion analysis",
+            "description": "The Emotion Analysis tool helps you identify and label emotions in text based on a predefined list of emotional categories.",
+            "category": "research"
+          },
+          "convertSpelling": {
+            "title": "Convert American from/to British spelling",
+            "description": "The Convert American from/to British spelling tool helps you change the spelling of words between American and British English conventions.",
+            "category": "research"
+          },
+          "extractTopics": {
+            "title": "Extract topics from interview transcripts",
+            "description": "The Extract topics from interview transcripts tool helps you identify the main themes and topics from interview transcripts.",
+            "category": "research"
+          },
+          "iOSReviewAnalysis": {
+            "title": "iOS appstore review analysis",
+            "description": "The iOS appstore review analysis tool helps you analyze user reviews for any app available on the Apple App Store.",
+            "category": "research"
+          },
+          "extractCategories": {
+            "title": "Extract categories in data",
+            "description": "The Extract categories in data tool helps you identify the main themes and topics from a set of data.",
+            "category": "research"
+          },
+          "googlePlaystoreAnalysis": {
+            "title": "Google playstore review analysis",
+            "description": "The Google playstore review analysis tool helps you understand user feedback on a specific app from the Google Play Store.",
+            "category": "research"
+          },
+          "anonymizeText": {
+            "title": "Anonymize Text",
+            "description": "The Anonymize Text tool helps you mask sensitive personal information in any given text to protect privacy.",
+            "category": "research"
+          }
+        }
+        },
+        "featured": {
+          "label": "Support",
+          "title": "Automate Customer Support",
+          "aitools": {
+            "youtubeVideoFile": {
+              "title": "Youtube: Video file",
+              "description": "The Youtube: Video file tool helps you easily obtain the direct URL of a video file from a YouTube video."
+            },
+            "youtubeVideoTranscript": {
+              "title": "Youtube: Video transcript",
+              "description": "The Youtube: Video transcript tool helps you convert the spoken content of a YouTube video into readable text."
+            },
+            "linearTickets": {
+              "title": "Linear: Retrieve recent tickets",
+              "description": "The Linear: Retrieve recent tickets tool helps you fetch the latest tickets from a specific team within Linear."
+            },
+            "azureFormRecognizer": {
+              "title": "Microsoft Azure: Form Recognizer OCR",
+              "description": "The Microsoft Azure: Form Recognizer OCR tool helps you extract text and data from documents using Azure's OCR technology."
+            },
+            "snowflakeSql": {
+              "title": "Snowflake: SQL Query",
+              "description": "The Snowflake: SQL Query tool allows you to run SQL queries on a Snowflake database directly."
+            },
+            "escalateSlack": {
+              "title": "Escalate To Managers via Slack",
+              "description": "The Escalate To Managers via Slack tool helps you quickly notify managers about important emails or issues through Slack."
+            },
+            "googleCloudVision": {
+              "title": "Google Cloud: Cloud Vision OCR",
+              "description": "The Google Cloud: Cloud Vision OCR tool helps you extract text from PDF files by converting them using Google's Cloud Vision API."
+            },
+            "airtableToolkit": {
+              "title": "Airtable toolkit",
+              "description": "The Airtable toolkit helps you manage records in an Airtable database. You can use it to list all existing records or add new ones."
+            },
+            "postToSlack": {
+              "title": "Post to Slack",
+              "description": "The Post to Slack tool allows you to send messages directly to a Slack channel. This is useful for automated notifications."
+            }
+          }
+        }
+      }
+    },
+    "howWorks": {
+      "title": "How Do AI Agents Work?",
+      "subtitle": "Discover the power of our AI agents and how they transform your workflow.",
+      "step1": {
+        "title": "Data Processing",
+        "description": "Our agents process and analyze your company's data, extracting important insights."
+      },
+      "step2": {
+        "title": "Learning and Adaptation",
+        "description": "They adapt to your unique business processes and continuously improve their performance over time."
+      },
+      "step3": {
+        "title": "Intelligent Automation",
+        "description": "They automate repetitive tasks and support decision-making, increasing efficiency."
+      },
+      "integration": {
+        "title": "Seamless Integration with Your Existing Systems",
+        "description": "Our AI agents work seamlessly with your existing business software and processes. Quick integration with minimal configuration.",
+        "system1": {
+          "  title": "CRM Integration",
+          "  description": "Automate your sales and marketing processes."
+        },
+        "system2": {
+          "  title": "ERP Integration",
+          "  description": "Enhance your business operations and resource planning."
+        },
+        "system3": {
+          "  title": "Custom Software",
+          "  description": "Flexible APIs that can integrate with your custom solutions."
+        }
+      },
+      "stats": {
+        "  title": "Performance Metrics",
+        "  metric1": {
+          "    label": "Efficiency Increase",
+          "    value": "85%"
+        },
+        "metric2": {
+          "  label": "Customer Satisfaction",
+          "  value": "92%"
+        },
+        "metric3": {
+          "  label": "Cost Savings",
+          "  value": "78%"
+        }
+      }
+    },
+    "faq": {
+      "  title": "Frequently Asked Questions About AI Agents",
+      "  subtitle": "Everything you need to know about our AI agents and how they can transform your workflow.",
+      "  left": {
+        "    q1": "What languages do your AI agents support?",
+        "    a1": "Our AI agents support multiple languages including English, Turkish, German, French, Spanish, and many more. Multi-language support makes it easy to serve your global customers.",
+        "    q2": "Do I need technical knowledge to use your AI agents?",
+        "    a2": "No, our user-friendly interface means technical knowledge is not required. Our technical team will support you during the setup and integration processes.",
+        "    q3": "How do your AI agents protect sensitive data?",
+        "    a3": "We implement the highest level of security protocols. All data is encrypted, stored on secure servers, and complies fully with regulations such as GDPR and local data protection laws.",
+        "    q4": "Can your agents learn over time?",
+        "    a4": "Yes, our AI agents use machine learning technology to learn and adapt over time. They become increasingly intelligent based on your business's unique needs.",
+        "    q5": "Do you offer customized solutions for my company?",
+        "    a5": "Absolutely. We customize our AI agents to meet each business's unique needs. Our expert team works closely with you to design the solution that best fits your requirements."
+      },
+      "right": {
+        "  q1": "How is your service priced?",
+        "  a1": "We have various pricing plans for different business sizes and needs. You can contact our sales team for detailed information about our Basic, Professional, and Enterprise packages.",
+        "  q2": "How long does it take to set up your agents?",
+        "  a2": "Setup typically takes 2-4 weeks depending on integration complexity. With our quick-start packages, some solutions can be operational within days.",
+        "  q3": "In which industries can your AI agents be used?",
+        "  a3": "Our agents can be adapted to retail, finance, healthcare, education, manufacturing, and many other sectors. We offer specialized solutions for each industry.",
+        "  q4": "Do you provide 24/7 technical support?",
+        "  a4": "Yes, we provide 24/7 technical support to all our customers. We're always there for you in emergencies and resolve your issues quickly.",
+        "  q5": "Is there a trial option for your agents?",
+        "  a5": "Yes, we offer a 14-day free trial period for potential customers. During this time, you can test all the features of our AI agents and see how they will benefit your business."
+      }
+    }
   }
 }
