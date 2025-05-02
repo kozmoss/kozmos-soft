@@ -7,58 +7,71 @@ import {
 } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
-import { LineChart, Brain } from "lucide-react";
 import { AnimatedCardDemo } from "@/components/animation-card";
 import ChatPage from "@/components/ai-input";
 import { OrbitingCirclesDemo } from "@/components/orbiting-demos";
 import { Typewriter } from "@/components/ui/typewriter-text";
 import Image from "next/image";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
 import { toolRegistry } from "@/contants/tabContant";
 import { useState } from "react";
 
-
-type Category = 'sales' | 'research' | 'featured' | 'marketing';
+type Category = "sales" | "research" | "featured" | "marketing";
 
 export default function AIPage() {
   const t = useTranslations("AIPage");
-  const [activeTab, setActiveTab] = useState("marketing"); 
+  const [activeTab, setActiveTab] = useState("marketing");
+
+  const images = Array.from(
+    { length: 9 },
+    (_, i) => `/static/image/ai/ai-${i + 1}.svg`,
+  );
 
   const generateToolKeysByCategory = (): { [key: string]: string[] } => {
     const categories: { [key: string]: string[] } = {
       sales: [],
       research: [],
       featured: [],
-      marketing: []
+      marketing: [],
     };
-    
+
     Object.entries(toolRegistry).forEach(([key, details]) => {
       if (categories[details.category]) {
         categories[details.category].push(key);
       }
     });
-    
+
     return categories;
   };
-  
 
   const getIconForTool = (key: string): string => {
-    return toolRegistry[key]?.icon || '❓'; // Araç bulunamazsa varsayılan ikon
+    return toolRegistry[key]?.icon || "❓"; // Araç bulunamazsa varsayılan ikon
   };
-  
+
   const getCategoryDisplayName = (category: Category): string => {
     const displayNames: Record<Category, string> = {
       sales: "Sales",
       research: "Research",
       featured: "Featured",
-      marketing: "Marketing"
+      marketing: "Marketing",
     };
-    return displayNames[category] || category;  // Burada "category" her zaman geçerli olacak, ancak fallback olarak da "category" dönebiliriz.
+    return displayNames[category] || category; // Burada "category" her zaman geçerli olacak, ancak fallback olarak da "category" dönebiliriz.
   };
 
-
   const categories = generateToolKeysByCategory();
-  const categoryKeys: Category[] = ['sales', 'research', 'featured', 'marketing'];
+  const categoryKeys: Category[] = [
+    "sales",
+    "research",
+    "featured",
+    "marketing",
+  ];
 
   return (
     <div className=" mx-auto max-w-screen-2xl flex flex-col border-x border-dashed h-full">
@@ -213,42 +226,56 @@ export default function AIPage() {
         </div>
 
         <div className="mt-10">
-        <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="w-full">
-      <div className="flex justify-center mb-6">
-        <TabsList>
-          {categoryKeys.map((category) => (
-            <TabsTrigger key={category} value={category}>
-              {getCategoryDisplayName(category)}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-      </div>
-      
-      {categoryKeys.map((category) => (
-        <TabsContent key={category} value={category} className="p-4 text-center text-xs text-muted-foreground">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories[category].map((toolKey) => (
-              <Card
-                key={toolKey}
-                className="hover:border-gray-500 transition-colors"
+          <Tabs
+            defaultValue={activeTab}
+            onValueChange={setActiveTab}
+            className="w-full"
+          >
+            <div className="flex justify-center mb-6">
+              <TabsList>
+                {categoryKeys.map((category) => (
+                  <TabsTrigger key={category} value={category}>
+                    {getCategoryDisplayName(category)}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+
+            {categoryKeys.map((category) => (
+              <TabsContent
+                key={category}
+                value={category}
+                className="p-4 text-center text-xs text-muted-foreground"
               >
-                <CardHeader className="flex flex-row items-center gap-2 pb-2">
-                  <span className="text-xl">{getIconForTool(toolKey)}</span>
-                  <CardTitle className="text-lg">
-                    {t(`capabilities.tabs.${category}.aitools.${toolKey}.title`)}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-sm text-gray-600">
-                    {t(`capabilities.tabs.${category}.aitools.${toolKey}.description`)}
-                  </p>
-                </CardContent>
-              </Card>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {categories[category].map((toolKey) => (
+                    <Card
+                      key={toolKey}
+                      className="hover:border-gray-500 transition-colors"
+                    >
+                      <CardHeader className="flex flex-row items-center gap-2 pb-2">
+                        <span className="text-xl">
+                          {getIconForTool(toolKey)}
+                        </span>
+                        <CardTitle className="text-lg">
+                          {t(
+                            `capabilities.tabs.${category}.aitools.${toolKey}.title`,
+                          )}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <p className="text-sm text-gray-600">
+                          {t(
+                            `capabilities.tabs.${category}.aitools.${toolKey}.description`,
+                          )}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
             ))}
-          </div>
-        </TabsContent>
-      ))}
-    </Tabs>
+          </Tabs>
         </div>
       </section>
 
@@ -263,140 +290,102 @@ export default function AIPage() {
         </div>
 
         <div className="divide-border divide-y border-dashed">
-          <div className="divide-border border-dashed grid grid-cols-1 divide-y md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="divide-border border-dashed grid grid-cols-1 divide-y md:grid-cols-2 md:divide-x md:divide-y-0">
             <div className="border-dashed border-b md:border-b-0 p-8">
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-primary/10 p-3 rounded-full mb-6">
-                  <Brain className="text-primary" size={32} />
-                </div>
-                <h3 className="text-xl font-medium mb-3">
-                  {t("howWorks.step1.title")}
-                </h3>
-                <p className="text-muted-foreground">
-                  {t("howWorks.step1.description")}
-                </p>
-              </div>
+              <Card>
+                <CardHeader>
+                  <CardTitle> {t("howWorks.step1.title")}</CardTitle>
+                </CardHeader>
+                <CardContent className="justify-center flex">
+                  <Image
+                    src={"/static/image/brain.png"}
+                    width={150}
+                    height={150}
+                    alt="brain"
+                  ></Image>
+                </CardContent>
+                <CardFooter>
+                  <CardDescription>
+                    {" "}
+                    {t("howWorks.step3.description")}
+                  </CardDescription>
+                </CardFooter>
+              </Card>
             </div>
-            <div className="border-dashed border-b md:border-b-0 p-8">
-              <div className="flex flex-col items-center text-center">
-                <div className="bg-primary/10 p-3 rounded-full mb-6">
-                  <LineChart className="text-primary" size={32} />
-                </div>
-                <h3 className="text-xl font-medium mb-3">
-                  {t("howWorks.step2.title")}
-                </h3>
-                <p className="text-muted-foreground">
-                  {t("howWorks.step2.description")}
-                </p>
-              </div>
-            </div>
-            <div className="p-8">
-              <div className="flex flex-col items-center text-center">
-               
 
-                <h3 className="text-xl font-medium mb-3">
-                  {t("howWorks.step3.title")}
-                </h3>
-                <p className="text-muted-foreground">
-                  {t("howWorks.step3.description")}
-                </p>
-              </div>
+            <div className="border-dashed border-b md:border-b-0 p-8 ">
+              <Card>
+                <CardHeader>
+                  <CardTitle> {t("howWorks.step3.title")}</CardTitle>
+                </CardHeader>
+                <h3 className="text-xl font-medium "></h3>
+                <CardContent>
+                  <div className="grid grid-cols-3 gap-4">
+                    {images.map((src, index) => (
+                      <div className="flex justify-center" key={index}>
+                        <Image
+                          src={src}
+                          alt={`ai-${index + 1}`}
+                          width={36}
+                          height={36}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <CardDescription>
+                    {" "}
+                    {t("howWorks.step3.description")}
+                  </CardDescription>
+                </CardFooter>
+              </Card>
             </div>
           </div>
 
-          <div className="divide-border border-dashed grid grid-cols-1 divide-y md:grid-cols-4 md:divide-x md:divide-y-0">
-            <div className="border-dashed border-b md:col-span-3 md:border-b-0 p-8">
-              <div className="flex flex-col h-full justify-center">
-                <h3 className="text-2xl font-medium mb-4">
-                  {t("howWorks.integration.title")}
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  {t("howWorks.integration.description")}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-muted p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">
-                      {t("howWorks.integration.system1.title")}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {t("howWorks.integration.system1.description")}
-                    </p>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">
-                      {t("howWorks.integration.system2.title")}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {t("howWorks.integration.system2.description")}
-                    </p>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">
-                      {t("howWorks.integration.system3.title")}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {t("howWorks.integration.system3.description")}
-                    </p>
-                  </div>
+          <div className="flex flex-col md:flex-row md:divide-x md:divide-dashed  ">
+            <div className="w-full md:w-1/2 p-4">
+              <Card className="flex flex-col h-full">
+                <CardHeader>
+                  <CardTitle>{t("howWorks.tools.title")}</CardTitle>
+                </CardHeader>
+                <div className="relative w-full h-[300px]">
+                  <Image
+                    src={"/static/image/tools.png"}
+                    fill
+                    alt="tools"
+                    className="rounded-lg object-contain"
+                  />
                 </div>
-              </div>
+
+                <CardFooter>
+                  <CardDescription>
+                    {t("howWorks.tools.description")}
+                  </CardDescription>
+                </CardFooter>
+              </Card>
             </div>
-            <div className="md:col-span-1 p-8 flex flex-col justify-center">
-              <div className="bg-primary/10 p-4 rounded-lg">
-                <h4 className="font-medium mb-3 text-center">
-                  {t("howWorks.stats.title")}
-                </h4>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm">
-                        {t("howWorks.stats.metric1.label")}
-                      </span>
-                      <span className="text-sm font-medium">
-                        {t("howWorks.stats.metric1.value")}
-                      </span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div
-                        className="bg-primary h-2 rounded-full"
-                        style={{ width: "85%" }}
-                      ></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm">
-                        {t("howWorks.stats.metric2.label")}
-                      </span>
-                      <span className="text-sm font-medium">
-                        {t("howWorks.stats.metric2.value")}
-                      </span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div
-                        className="bg-primary h-2 rounded-full"
-                        style={{ width: "92%" }}
-                      ></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm">
-                        {t("howWorks.stats.metric3.label")}
-                      </span>
-                      <span className="text-sm font-medium">
-                        {t("howWorks.stats.metric3.value")}
-                      </span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div
-                        className="bg-primary h-2 rounded-full"
-                        style={{ width: "78%" }}
-                      ></div>
-                    </div>
-                  </div>
+
+            <div className="w-full md:w-1/2 p-4">
+              <Card className="flex flex-col h-full">
+                <CardHeader>
+                  <CardTitle>{t("howWorks.persona.title")}</CardTitle>
+                </CardHeader>
+                <div className="relative w-full h-[300px]">
+                  <Image
+                    src={"/static/image/persona.png"}
+                    fill
+                    alt="persona"
+                    className="rounded-lg object-contain"
+                  />
                 </div>
-              </div>
+
+                <CardFooter>
+                  <CardDescription>
+                    {t("howWorks.persona.description")}
+                  </CardDescription>
+                </CardFooter>
+              </Card>
             </div>
           </div>
         </div>

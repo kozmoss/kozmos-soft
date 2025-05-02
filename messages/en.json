@@ -388,32 +388,21 @@
       "title": "How Do AI Agents Work?",
       "subtitle": "Discover the power of our AI agents and how they transform your workflow.",
       "step1": {
-        "title": "Data Processing",
-        "description": "Our agents process and analyze your company's data, extracting important insights."
+        "title": "Memory",
+        "description": "The agent is equipped in general with short term, long term, consensus, and episodic memory. Short term memory for immediate interactions, long-term memory for historical data and conversations, episodic memory for past interactions, and consensus memory for shared information among agents. The agent can maintain context, learn from experiences, and improve performance by recalling past interactions and adapting to new situations."
       },
-      "step2": {
-        "title": "Learning and Adaptation",
-        "description": "They adapt to your unique business processes and continuously improve their performance over time."
+      "tools": {
+        "title": "Tools",
+        "description": "Tools are functions or external resources that an agent can utilize to interact with its environment and enhance its capabilities. They allow agents to perform complex tasks by accessing information, manipulating data, or controlling external systems, and can be categorized based on their user interface, including physical, graphical, and program-based interfaces. Tool learning involves teaching agents how to effectively use these tools by understanding their functionalities and the context in which they should be applied."
       },
       "step3": {
-        "title": "Intelligent Automation",
+        "title": "Model",
         "description": "They automate repetitive tasks and support decision-making, increasing efficiency."
       },
-      "integration": {
-        "title": "Seamless Integration with Your Existing Systems",
-        "description": "Our AI agents work seamlessly with your existing business software and processes. Quick integration with minimal configuration.",
-        "system1": {
-          "  title": "CRM Integration",
-          "  description": "Automate your sales and marketing processes."
-        },
-        "system2": {
-          "  title": "ERP Integration",
-          "  description": "Enhance your business operations and resource planning."
-        },
-        "system3": {
-          "  title": "Custom Software",
-          "  description": "Flexible APIs that can integrate with your custom solutions."
-        }
+      "persona": {
+        "title": "Persona",
+        "description": "A well defined persona allows an agent to maintain a consistent character and behave in a manner appropriate to its assigned role, evolving as the agent gains experience and interacts with its environment."
+      
       },
       "stats": {
         "  title": "Performance Metrics",

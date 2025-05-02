@@ -389,48 +389,23 @@
       "title": "AI Ajanları Nasıl Çalışır?",
       "subtitle": "AI ajanlarımızın gücünü ve iş akışınızı nasıl dönüştürdüğünü keşfedin.",
       "step1": {
-        "title": "Veri İşleme",
-        "description": "Ajanlarımız, şirketinizin verilerini işler, analiz eder ve önemli içgörüler elde eder."
+        "title": "Hafıza",
+        "description": "Ajan genel olarak kısa vadeli, uzun vadeli, fikir birliği ve epizodik hafıza ile donatılmıştır. Anlık etkileşimler için kısa vadeli hafıza, tarihsel veriler ve konuşmalar için uzun vadeli hafıza, geçmiş etkileşimler için epizodik hafıza ve ajanlar arasında paylaşılan bilgiler için fikir birliği hafızası. Ajan bağlamı koruyabilir, deneyimlerden ders çıkarabilir ve geçmiş etkileşimleri hatırlayarak ve yeni durumlara uyum sağlayarak performansı iyileştirebilir."
       },
-      "step2": {
-        "title": "Öğrenme ve Adaptasyon",
-        "description": "Benzersiz iş süreçlerinize uyum sağlar ve zamanla performansını sürekli olarak iyileştirir."
+      "tools": {
+        "title": "Tools",
+        "description": "Araçlar, bir etkenin çevresiyle etkileşime girmek ve yeteneklerini geliştirmek için kullanabileceği işlevler veya harici kaynaklardır. Etkenlerin bilgiye erişerek, verileri işleyerek veya harici sistemleri kontrol ederek karmaşık görevleri gerçekleştirmelerine olanak tanırlar ve fiziksel, grafiksel ve program tabanlı arayüzler dahil olmak üzere kullanıcı arayüzlerine göre kategorize edilebilirler. Araç öğrenimi, etkene bu araçların işlevselliklerini ve uygulanmaları gereken bağlamı anlayarak etkili bir şekilde nasıl kullanılacağını öğretmeyi içerir."
       },
       "step3": {
-        "title": "Akıllı Otomasyon",
-        "description": "Tekrarlayan görevleri otomatikleştirir ve karar vermeyi destekleyerek verimliliği artırır."
+        "title": "Model",
+        "description": "Büyük dil modelleri (LLM'ler), AI ajanları oluşturmak için temel görevi görür ve onlara anlama, akıl yürütme ve hareket etme yeteneği sağlar. LLM'ler, bir ajanın 'beyni' gibi davranarak dili işlemesini ve üretmesini sağlarken, diğer bileşenler akıl yürütmeyi ve hareketi kolaylaştırır."
       },
-      "integration": {
-        "title": "Mevcut Sistemlerinizle Sorunsuz Entegrasyon",
-        "description": "AI ajanlarımız, mevcut iş yazılımlarınız ve süreçlerinizle sorunsuz bir şekilde çalışır. Minimum yapılandırma ile hızlı entegrasyon.",
-        "system1": {
-          "title": "CRM Entegrasyonu",
-          "description": "Satış ve pazarlama süreçlerinizi otomatikleştirin."
-        },
-        "system2": {
-          "title": "ERP Entegrasyonu",
-          "description": "İş operasyonlarınızı ve kaynak planlamanızı geliştirin."
-        },
-        "system3": {
-          "title": "Özel Yazılım",
-          "description": "Özel çözümlerinizle entegre olabilen esnek API'lar."
-        }
-      },
-      "stats": {
-        "title": "Performans Metrikleri",
-        "metric1": {
-          "label": "Verimlilik Artışı",
-          "value": "85%"
-        },
-        "metric2": {
-          "label": "Müşteri Memnuniyeti",
-          "value": "92%"
-        },
-        "metric3": {
-          "label": "Maliyet Tasarrufu",
-          "value": "78%"
-        }
+      "persona": {
+        "title": "Kişilik",
+        "description": "İyi tanımlanmış bir kişilik, bir etkenin tutarlı bir karaktere sahip olmasını ve kendisine atanan role uygun bir şekilde davranmasını, etkenin deneyim kazanması ve çevresiyle etkileşime girmesiyle birlikte gelişmesini sağlar."
+  
       }
+ 
     },
     "faq": {
       "title": "AI Ajanları Hakkında Sık Sorulan Sorular",
