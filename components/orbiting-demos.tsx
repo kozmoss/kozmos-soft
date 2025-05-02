@@ -6,7 +6,7 @@ export function OrbitingCirclesDemo() {
   
   return (
     <div className="relative flex w-full ">
-      <div className="relative h-[400px] w-full bottom-10 flex items-center justify-center">
+      <div className="relative h-[400px] scale-70 md:scale-100 w-full flex items-center justify-center">
         {/* Inner Circles */}
         <OrbitingCircles
           className="size-[30px] border-none bg-transparent"

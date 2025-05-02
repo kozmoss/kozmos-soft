@@ -75,7 +75,7 @@ export default function AIPage() {
 
   return (
     <div className=" mx-auto max-w-screen-2xl flex flex-col border-x border-dashed h-full">
-      <section className="flex w-full flex-col md:flex-row h-screen ">
+      <section className="flex w-full flex-col md:flex-row h-full ">
         <div className="border-dashed dark:border-border w-full space-y-4 border-0 md:w-1/2 md:border-r">
           <div className="text-foreground flex flex-col gap-4 p-8 text-left md:gap-8 md:p-10 lg:p-16">
             <h1 className="md:text-5xl font-bold ">{t("hero.title")}</h1>
@@ -120,7 +120,7 @@ export default function AIPage() {
           </div>
         </div>
 
-        <div className="flex flex-col  max-w-4xl  p-4 w-full border-dashed border-t md:h-auto md:w-1/2 md:border-0 md:p-8 ">
+        <div className="flex flex-col  max-w-4xl p-4 w-full border-dashed border-t md:h-auto md:w-1/2 md:border-0 md:p-8 ">
           <ChatPage />
         </div>
       </section>
@@ -166,7 +166,8 @@ export default function AIPage() {
           </div>
           <div className="p-8 flex flex-col  border-dashed md:border-r">
             <div className="w-full  space-y-4">
-              {/* Kullanıcı mesajı */}
+
+              <Card className="p-4 md:p-8">
               <div className="bg-muted text-sm p-3 rounded-2xl shadow border w-fit max-w-[80%] ml-auto">
                 <p className="text-muted-foreground">
                   Web sitemi hızlıca nasıl kurabilirim?
@@ -185,6 +186,9 @@ export default function AIPage() {
                   className="text-sm"
                 />
               </div>
+              </Card>
+       
+         
             </div>
 
             {/* Sabit metin başlık ve açıklama */}
@@ -291,7 +295,7 @@ export default function AIPage() {
 
         <div className="divide-border divide-y border-dashed">
           <div className="divide-border border-dashed grid grid-cols-1 divide-y md:grid-cols-2 md:divide-x md:divide-y-0">
-            <div className="border-dashed border-b md:border-b-0 p-8">
+            <div className="border-dashed border-b md:border-b-0 p-4">
               <Card>
                 <CardHeader>
                   <CardTitle> {t("howWorks.step1.title")}</CardTitle>
@@ -299,8 +303,8 @@ export default function AIPage() {
                 <CardContent className="justify-center flex">
                   <Image
                     src={"/static/image/brain.png"}
-                    width={150}
-                    height={150}
+                    width={160}
+                    height={160}
                     alt="brain"
                   ></Image>
                 </CardContent>
@@ -313,7 +317,7 @@ export default function AIPage() {
               </Card>
             </div>
 
-            <div className="border-dashed border-b md:border-b-0 p-8 ">
+            <div className="border-dashed border-b md:border-b-0 p-4 ">
               <Card>
                 <CardHeader>
                   <CardTitle> {t("howWorks.step3.title")}</CardTitle>
@@ -349,12 +353,12 @@ export default function AIPage() {
                 <CardHeader>
                   <CardTitle>{t("howWorks.tools.title")}</CardTitle>
                 </CardHeader>
-                <div className="relative w-full h-[300px]">
+                <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px]">
                   <Image
-                    src={"/static/image/tools.png"}
+                    src="/static/image/tools.png"
                     fill
                     alt="tools"
-                    className="rounded-lg object-contain"
+                    className="rounded-lg object-contain object-center"
                   />
                 </div>
 
@@ -371,7 +375,7 @@ export default function AIPage() {
                 <CardHeader>
                   <CardTitle>{t("howWorks.persona.title")}</CardTitle>
                 </CardHeader>
-                <div className="relative w-full h-[300px]">
+                <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px]">
                   <Image
                     src={"/static/image/persona.png"}
                     fill
