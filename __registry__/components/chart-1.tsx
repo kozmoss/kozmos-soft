@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart } from "recharts"
+import * as React from "react";
+import { TrendingUp } from "lucide-react";
+import { Label, Pie, PieChart } from "recharts";
+import { useTranslations } from "next-intl";
 
 import {
   Card,
@@ -11,65 +12,25 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
-
-
-const chartData = [
-  { source: "Website", leads: 450, fill: "var(--color-website)" },
-  { source: "Referral", leads: 300, fill: "var(--color-referral)" },
-  { source: "Ads", leads: 275, fill: "var(--color-ads)" },
-  { source: "Social Media", leads: 180, fill: "var(--color-socialmedia)" },
-  { source: "Events", leads: 95, fill: "var(--color-events)" },
-]
-
-const chartConfig = {
-  leads: {
-    label: "Leads",
-  },
-  website: {
-    label: "Website",
-    color: "hsl(var(--chart-1))",
-  },
-  referral: {
-    label: "Referral",
-    color: "hsl(var(--chart-2))",
-  },
-  ads: {
-    label: "Ads",
-    color: "hsl(var(--chart-3))",
-  },
-  socialmedia: {
-    label: "Social Media",
-    color: "hsl(var(--chart-4))",
-  },
-  events: {
-    label: "Events",
-    color: "hsl(var(--chart-5))",
-  },
-} satisfies ChartConfig
-
-
-
-
-
-
+} from "@/components/ui/chart";
+import { chartConfig, chartData } from "@/contants/web";
 
 export function Chart1() {
+  const t = useTranslations("Web.crm");
   const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.leads, 0)
-  }, [])
+    return chartData.reduce((acc, curr) => acc + curr.leads, 0);
+  }, []);
 
   return (
     <Card className="flex flex-col">
-       <CardHeader className="items-center pb-0">
-        <CardTitle>Lead Sources</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+      <CardHeader className="items-center pb-0">
+        <CardTitle>{t('leadSources.title')}</CardTitle>
+        <CardDescription>{t('leadSources.dateRange')}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -110,10 +71,10 @@ export function Chart1() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Leads
+                          {t('leadSources.totalLeads')}
                         </tspan>
                       </text>
-                    )
+                    );
                   }
                 }}
               />
@@ -122,13 +83,14 @@ export function Chart1() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
-      <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 6.5% this month <TrendingUp className="h-4 w-4" />
+        <div className="flex items-center gap-2 font-medium leading-none">
+          {t('leadSources.trendingUp', { percentage: "6.5%" })}
+          <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total lead sources for the last 6 months
+          {t('leadSources.description')}
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

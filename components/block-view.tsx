@@ -18,6 +18,7 @@ import { Separator } from "./ui/separator";
 
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 import { Style } from "@/contants/styles";
+import { useTranslations } from "next-intl";
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>;
@@ -78,6 +79,7 @@ function BlockViewerProvider({
 
 function BlockViewerToolbar() {
   const { item, resizablePanelRef } = useBlockViewer();
+  const t = useTranslations("Web.view");
 
   return (
     <div className="flex w-full items-center gap-2 md:pr-[14px]">
@@ -86,7 +88,7 @@ function BlockViewerToolbar() {
         href={`#${item.name}`}
         className="text-sm font-medium underline-offset-2 hover:underline"
       >
-        {item.description}
+        {t(`${item.description}`)}
       </a>
       <div className="ml-auto hidden items-center gap-2 md:flex">
         <div className="hidden h-7 items-center gap-1.5 rounded-md border p-[2px] shadow-none lg:flex">

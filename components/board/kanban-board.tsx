@@ -39,6 +39,7 @@ import {
 import { IssueCard } from "./issue-card";
 import { SortableIssueCard } from "./sortable-issue-card";
 import { Droppable } from "@/__registry__/components/drobable";
+import { useTranslations } from "next-intl";
 
 interface Issue {
   id: string;
@@ -56,14 +57,15 @@ interface Column {
 }
 
 export function KanbanBoard() {
+  const t = useTranslations("Web.projectManager")
   const [columns, setColumns] = useState<Column[]>([
     {
       id: "todo",
-      title: "To Do",
+      title: "columns.todo",
       issues: [
         {
           id: "PROJ-123",
-          title: "Implement user authentication",
+          title: "kanban.issues.implementAuth",
           type: "task",
           priority: "high",
           assignee: "AS",
@@ -71,7 +73,7 @@ export function KanbanBoard() {
         },
         {
           id: "PROJ-124",
-          title: "Design landing page mockups",
+          title: "kanban.issues.designMockups",
           type: "task",
           priority: "medium",
           assignee: "TK",
@@ -79,7 +81,7 @@ export function KanbanBoard() {
         },
         {
           id: "PROJ-125",
-          title: "Research payment gateway options",
+          title: "kanban.issues.researchPayments",
           type: "story",
           priority: "low",
           assignee: "JD",
@@ -89,11 +91,11 @@ export function KanbanBoard() {
     },
     {
       id: "in-progress",
-      title: "In Progress",
+      title: "columns.inProgress",
       issues: [
         {
           id: "PROJ-120",
-          title: "Fix login page responsiveness",
+          title: "kanban.issues.fixResponsiveness",
           type: "bug",
           priority: "high",
           assignee: "AS",
@@ -101,7 +103,7 @@ export function KanbanBoard() {
         },
         {
           id: "PROJ-121",
-          title: "Implement product filtering",
+          title: "kanban.issues.implementFiltering",
           type: "story",
           priority: "medium",
           assignee: "JD",
@@ -111,11 +113,11 @@ export function KanbanBoard() {
     },
     {
       id: "review",
-      title: "Review",
+      title: "columns.review",
       issues: [
         {
           id: "PROJ-118",
-          title: "Add product search functionality",
+          title: "kanban.issues.addSearch",
           type: "story",
           priority: "high",
           assignee: "AS",
@@ -125,11 +127,11 @@ export function KanbanBoard() {
     },
     {
       id: "done",
-      title: "Done",
+      title: "columns.done",
       issues: [
         {
           id: "PROJ-115",
-          title: "Setup project repository",
+          title: "kanban.issues.setupRepo",
           type: "task",
           priority: "high",
           assignee: "JD",
@@ -137,7 +139,7 @@ export function KanbanBoard() {
         },
         {
           id: "PROJ-116",
-          title: "Create database schema",
+          title: "kanban.issues.createSchema",
           type: "task",
           priority: "medium",
           assignee: "AS",
@@ -145,7 +147,7 @@ export function KanbanBoard() {
         },
         {
           id: "PROJ-117",
-          title: "Implement basic user registration",
+          title: "kanban.issues.implementRegistration",
           type: "story",
           priority: "high",
           assignee: "JD",
@@ -311,8 +313,6 @@ export function KanbanBoard() {
         return;
       }
 
-      console.log(activeColumnId, "activeColumnId");
-      console.log(overColumnId, "overColumnId");
       if (activeColumnId !== overColumnId) {
         // Moving between columns
         setColumns((columns) => {
@@ -380,10 +380,10 @@ export function KanbanBoard() {
                 <CardHeader className="px-4 py-3 flex flex-row items-center justify-between space-y-0">
                   <div>
                     <CardTitle className="text-sm font-medium">
-                      {column.title}
+                    {t(`kanban.${column.title}`)}
                     </CardTitle>
                     <CardDescription className="text-xs">
-                      {column.issues.length} issues
+                    {t('kanban.ui.issuesCount', { count: column.issues.length })}
                     </CardDescription>
                   </div>
                   <div className="flex items-center gap-1">
@@ -394,13 +394,13 @@ export function KanbanBoard() {
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon" className="h-7 w-7">
                           <MoreHorizontal className="h-4 w-4" />
-                          <span className="sr-only">More options</span>
+                          <span className="sr-only">{t('kanban.ui.moreOptions')}</span>
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuItem>Add Issue</DropdownMenuItem>
-                        <DropdownMenuItem>Edit Column</DropdownMenuItem>
-                        <DropdownMenuItem>Clear Column</DropdownMenuItem>
+                      <DropdownMenuItem>{t('kanban.ui.addIssue')}</DropdownMenuItem>
+                        <DropdownMenuItem>{t('kanban.ui.editColumn')}</DropdownMenuItem>
+                        <DropdownMenuItem>{t('kanban.ui.clearColumn')}</DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
@@ -431,7 +431,8 @@ export function KanbanBoard() {
                     className="w-full justify-start"
                   >
                     <Plus className="mr-2 h-4 w-4" />
-                    Add Issue
+                    {t('kanban.ui.addIssue')}
+
                   </Button>
                 </CardFooter>
               </Card>

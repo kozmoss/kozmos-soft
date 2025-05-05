@@ -19,6 +19,7 @@ export function NavMain({
     icon?: LucideIcon;
   }[];
 }) {
+
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2">

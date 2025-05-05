@@ -166,29 +166,20 @@ export default function AIPage() {
           </div>
           <div className="p-8 flex flex-col  border-dashed md:border-r">
             <div className="w-full  space-y-4">
+              <Card className="p-4 md:p-8 min-h-[300px]">
+                <div className="bg-muted text-sm p-3 rounded-2xl shadow border w-fit max-w-[80%] ml-auto">
+                  <p className="text-muted-foreground">{t("chat.userQuestion")}</p>
+                </div>
 
-              <Card className="p-4 md:p-8">
-              <div className="bg-muted text-sm p-3 rounded-2xl shadow border w-fit max-w-[80%] ml-auto">
-                <p className="text-muted-foreground">
-                  Web sitemi hızlıca nasıl kurabilirim?
-                </p>
-              </div>
-
-              {/* Yapay zekâ cevabı - Typewriter efekti */}
-              <div className="bg-primary text-primary-foreground text-sm p-3 rounded-2xl shadow w-fit max-w-[80%]">
-                <Typewriter
-                  text={[
-                    "Merhaba! 🚀 kişisel yapay zeka ile sadece birkaç adımda modern bir web sitesi oluşturabilirsin.",
-                    "Bileşenleri sürükleyip bırak, stilleri özelleştir ve yayınla!",
-                  ]}
-                  speed={60}
-                  loop={true}
-                  className="text-sm"
-                />
-              </div>
+                <div className="bg-primary text-primary-foreground text-sm p-3 rounded-2xl shadow w-fit max-w-[80%]">
+                  <Typewriter
+                    text={[t("chat.aiResponse1"), t("chat.aiResponse2")]}
+                    speed={60}
+                    loop={true}
+                    className="text-sm"
+                  />
+                </div>
               </Card>
-       
-         
             </div>
 
             {/* Sabit metin başlık ve açıklama */}
@@ -209,7 +200,7 @@ export default function AIPage() {
               />
             </div>
 
-            <h3 className="text-xl font-medium mb-2">
+            <h3 className="text-xl font-medium m-2">
               {t("features.communication.title")}
             </h3>
             <p className="text-sm font-normal text-neutral-600 dark:text-neutral-400 max-w-sm">

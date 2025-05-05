@@ -2,22 +2,27 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts"
-
-const data = [
-  { name: "Achieved", value: 75 },
-  { name: "Remaining", value: 25 },
-]
+import { useTranslations } from "next-intl"
 
 const COLORS = ["hsl(12, 76%, 61%)", "hsl(220, 14%, 96%)"]
 
 export function SalesTargetGauge() {
+  const t = useTranslations("Web.crm")
+  
+  const data = [
+    { name: t('salesTarget.labels.achieved'), value: 75 },
+    { name: t('salesTarget.labels.remaining'), value: 25 },
+  ]
+
   const percentage = data[0].value
+  const targetAmount = "1,200,000"
+  const achievedAmount = "900,000"
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Sales Target</CardTitle>
-        <CardDescription>Progress towards quarterly sales goal</CardDescription>
+        <CardTitle>{t('salesTarget.title')}</CardTitle>
+        <CardDescription>{t('salesTarget.description')}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col items-center">
@@ -45,16 +50,26 @@ export function SalesTargetGauge() {
           </div>
           <div className="mt-2 text-center">
             <div className="text-4xl font-bold">{percentage}%</div>
-            <div className="text-sm text-muted-foreground">of quarterly target</div>
+            <div className="text-sm text-muted-foreground">
+              {t('salesTarget.percentageLabel')}
+            </div>
           </div>
           <div className="mt-4 grid w-full grid-cols-2 gap-4">
             <div className="flex flex-col items-center rounded-lg border p-3">
-              <div className="text-sm font-medium text-muted-foreground">Target</div>
-              <div className="text-xl font-bold">$1,200,000</div>
+              <div className="text-sm font-medium text-muted-foreground">
+                {t('salesTarget.metrics.target')}
+              </div>
+              <div className="text-xl font-bold">
+                {t('salesTarget.currency')}{targetAmount}
+              </div>
             </div>
             <div className="flex flex-col items-center rounded-lg border p-3">
-              <div className="text-sm font-medium text-muted-foreground">Achieved</div>
-              <div className="text-xl font-bold">$900,000</div>
+              <div className="text-sm font-medium text-muted-foreground">
+                {t('salesTarget.metrics.achieved')}
+              </div>
+              <div className="text-xl font-bold">
+                {t('salesTarget.currency')}{achievedAmount}
+              </div>
             </div>
           </div>
         </div>
@@ -62,4 +77,3 @@ export function SalesTargetGauge() {
     </Card>
   )
 }
-

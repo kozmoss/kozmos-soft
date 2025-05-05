@@ -5,11 +5,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header";
 import { BlocksNav } from "@/components/block-nav";
-
-
-const title = "Ideas Beyond the Horizon";
-const description =
-  "From sleek designs to intelligent systems, we craft digital experiences powered by creativity and code. Web, mobile, and AI—built to inspire.";
+import { useTranslations } from "next-intl";
 
 
 export default function WebLayoutPage({
@@ -17,11 +13,12 @@ export default function WebLayoutPage({
 }: {
   children: React.ReactNode;
 }) {
+   const t = useTranslations("Web")
   return (
     <>
       <PageHeader>
-        <PageHeaderHeading>{title}</PageHeaderHeading>
-        <PageHeaderDescription>{description}</PageHeaderDescription>
+        <PageHeaderHeading>{t("title")}</PageHeaderHeading>
+        <PageHeaderDescription>{t("description")}</PageHeaderDescription>
       </PageHeader>
       <div id="products" className="border-grid scroll-mt-24 border-b">
         <div className="container-wrapper">

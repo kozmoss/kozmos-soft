@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { categories, featuredProducts } from "@/data/productData"
+import { useTranslations } from "next-intl"
 
 export default function Home() {
+  const t = useTranslations("Web")
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-10 border-b bg-background">
@@ -15,7 +17,7 @@ export default function Home() {
             <span>KosmozShop</span>
           </Link>
           <div className="hidden md:flex md:flex-1 md:items-center md:justify-center">
-            <Input type="search" placeholder="Search products..." className="max-w-sm" />
+            <Input type="search" placeholder={t("e-commerce.common.search")} className="max-w-sm" />
           </div>
           <div className="flex items-center gap-4">
             <Link href="">
@@ -26,14 +28,14 @@ export default function Home() {
                 </span>
               </Button>
             </Link>
-            <Button>Sign In</Button>
+            <Button>{t("e-commerce.common.signIn")}</Button>
           </div>
         </div>
       </header>
       <main className="flex-1">
         <section className="py-12">
           <div className="container">
-            <h1 className="text-3xl font-bold mb-8">Featured Products</h1>
+            <h1 className="text-3xl font-bold mb-8">{t("e-commerce.home.featuredProducts")}</h1>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {featuredProducts.map((product) => (
                 <Link href={""} key={product.id}>
@@ -46,14 +48,14 @@ export default function Home() {
                       />
                     </div>
                     <CardHeader className="p-4">
-                      <CardTitle className="line-clamp-1">{product.name}</CardTitle>
+                      <CardTitle className="line-clamp-1">{t(`e-commerce.products.${product.name}`)}</CardTitle>
                     </CardHeader>
                     <CardContent className=" pl-4 ">
-                      <p className="text-sm text-muted-foreground">{product.category}</p>
+                      <p className="text-sm text-muted-foreground">{t(`e-commerce.categories.${product.category}`)}</p>
                     </CardContent>
                     <CardFooter className="pl-4 flex items-center justify-between">
                       <p className="font-medium">${product.price.toFixed(2)}</p>
-                      <Button size="sm">Add to Cart</Button>
+                      <Button size="sm">{t("e-commerce.common.addToCart")}</Button>
                     </CardFooter>
                   </Card>
                 </Link>
@@ -63,7 +65,7 @@ export default function Home() {
         </section>
         <section className="py-12 ">
           <div className="container">
-            <h2 className="text-3xl font-bold mb-8">Categories</h2>
+            <h2 className="text-3xl font-bold mb-8">{t("e-commerce.home.categories")}</h2>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
               {categories.map((category) => (
                 <Link href={""} key={category.id}>
@@ -76,7 +78,7 @@ export default function Home() {
                       />
                     </div>
                     <CardHeader className="p-4">
-                      <CardTitle className="text-center">{category.name}</CardTitle>
+                      <CardTitle className="text-center">{t(`e-commerce.categories.${category.name}`)}</CardTitle>
                     </CardHeader>
                   </Card>
                 </Link>
@@ -88,17 +90,17 @@ export default function Home() {
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} ShopSmart. All rights reserved.
+          {t('e-commerce.common.copyright', { year: "2025" })}
           </p>
           <div className="flex gap-4">
             <Link href="" className="text-sm text-muted-foreground hover:underline">
-              Terms
+             {t("e-commerce.common.terms")}
             </Link>
             <Link href="" className="text-sm text-muted-foreground hover:underline">
-              Privacy
+              {t("e-commerce.common.privacy")}
             </Link>
             <Link href="" className="text-sm text-muted-foreground hover:underline">
-              Contact
+             {t("e-commerce.common.contact")}
             </Link>
           </div>
         </div>

@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { InventoryTrendsChart } from "./Inventory-trends-chart"
 import { InventoryCategoryChart } from "./Inventory-category-chart"
+import { useTranslations } from "next-intl"
 
 // Sample inventory data
 const inventoryItems = [
@@ -98,6 +99,7 @@ const inventoryItems = [
 
 export function InventoryPageComponent() {
   const [searchTerm, setSearchTerm] = useState("")
+  const t = useTranslations("Web.erp")
 
   const filteredItems = inventoryItems.filter(
     (item) =>
@@ -110,18 +112,18 @@ export function InventoryPageComponent() {
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Inventory Management</h1>
-          <p className="text-muted-foreground">Manage your product inventory and stock levels</p>
+        <h1 className="text-3xl font-bold tracking-tight">{t("inventoryManagement")}</h1>
+        <p className="text-muted-foreground">{t("inventoryDescription")}</p>
         </div>
         <Button>
-          <Plus className="mr-2 h-4 w-4" /> Add Product
+        <Plus className="mr-2 h-4 w-4" /> {t("addProduct")}
         </Button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Products</CardTitle>
+          <CardTitle className="text-sm font-medium">{t("totalProducts")}</CardTitle>
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -137,7 +139,7 @@ export function InventoryPageComponent() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Low Stock Items</CardTitle>
+          <CardTitle className="text-sm font-medium">{t("lowStockItems")}</CardTitle>
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -155,7 +157,7 @@ export function InventoryPageComponent() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Out of Stock</CardTitle>
+          <CardTitle className="text-sm font-medium">{t("outOfStock")}</CardTitle>
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -173,7 +175,7 @@ export function InventoryPageComponent() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Inventory Value</CardTitle>
+          <CardTitle className="text-sm font-medium">{t("inventoryValue")}</CardTitle>
             <BarChart3 className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -184,16 +186,16 @@ export function InventoryPageComponent() {
 
       <Tabs defaultValue="products" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="products">Products</TabsTrigger>
-          <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          <TabsTrigger value="warehouses">Warehouses</TabsTrigger>
+        <TabsTrigger value="products">{t("products")}</TabsTrigger>
+          <TabsTrigger value="analytics">{t("analytics")}</TabsTrigger>
+          <TabsTrigger value="warehouses">{t("warehouses")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="products" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Inventory Items</CardTitle>
-              <CardDescription>Manage your product inventory and stock levels</CardDescription>
+            <CardTitle>{t("inventoryItems")}</CardTitle>
+            <CardDescription>{t("inventoryItemDescription")}</CardDescription>
               <div className="flex items-center gap-2 pt-4">
                 <Search className="h-4 w-4 text-muted-foreground" />
                 <Input
@@ -208,13 +210,12 @@ export function InventoryPageComponent() {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>ID</TableHead>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Category</TableHead>
-                    <TableHead>Location</TableHead>
-                    <TableHead>Stock</TableHead>
-                    <TableHead>Price</TableHead>
-                    <TableHead>Status</TableHead>
+                  <TableHead>{t("name")}</TableHead>
+                    <TableHead>{t("category")}</TableHead>
+                    <TableHead>{t("location")}</TableHead>
+                    <TableHead>{t("stock")}</TableHead>
+                    <TableHead>{t("price")}</TableHead>
+                    <TableHead>{t("status")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -251,8 +252,8 @@ export function InventoryPageComponent() {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
             <Card className="col-span-1">
               <CardHeader>
-                <CardTitle>Inventory Trends</CardTitle>
-                <CardDescription>Stock level trends over time</CardDescription>
+              <CardTitle>{t("inventoryTrends")}</CardTitle>
+              <CardDescription>{t("inventoryTrendsDesc")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <InventoryTrendsChart />
@@ -260,8 +261,8 @@ export function InventoryPageComponent() {
             </Card>
             <Card className="col-span-1">
               <CardHeader>
-                <CardTitle>Inventory by Category</CardTitle>
-                <CardDescription>Distribution across categories</CardDescription>
+              <CardTitle>{t("inventoryCategory")}</CardTitle>
+              <CardDescription>{t("inventoryCategoryDesc")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <InventoryCategoryChart />
@@ -273,16 +274,14 @@ export function InventoryPageComponent() {
         <TabsContent value="warehouses" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Warehouse Management</CardTitle>
-              <CardDescription>Manage warehouse locations and inventory distribution</CardDescription>
+            <CardTitle>{t("warehouseManagement")}</CardTitle>
+            <CardDescription>{t("warehouseManagementDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="h-[400px] flex items-center justify-center">
               <div className="flex flex-col items-center text-center">
                 <Package className="h-16 w-16 text-muted-foreground mb-4" />
-                <h3 className="text-lg font-medium">Warehouse Management</h3>
-                <p className="text-sm text-muted-foreground max-w-md">
-                  Manage warehouse locations, track inventory across locations, and optimize storage.
-                </p>
+                <h3 className="text-lg font-medium">{t("warehouseManagement")}</h3>
+                <p className="text-sm text-muted-foreground max-w-md">{t("warehousePlaceholder")}</p>
               </div>
             </CardContent>
           </Card>

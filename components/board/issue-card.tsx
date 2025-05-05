@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { useTranslations } from "next-intl"
 
 interface Issue {
   id: string
@@ -20,6 +21,7 @@ interface IssueCardProps {
 }
 
 export function IssueCard({ issue }: IssueCardProps) {
+  const t = useTranslations("Web.projectManager")
   const getTypeIcon = (type: string) => {
     switch (type) {
       case "bug":
@@ -71,7 +73,7 @@ export function IssueCard({ issue }: IssueCardProps) {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div className="text-sm font-medium">{issue.title}</div>
+        <div className="text-sm font-medium">{t(issue.title)}</div>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
             <Badge variant="outline" className="text-[10px] h-5 px-1">

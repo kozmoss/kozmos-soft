@@ -18,128 +18,128 @@ import {
   SettingsIcon,
   UsersIcon,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { NavDocuments } from "./nav-documents"
 import { NavMain } from "./nav-main"
 import { NavSecondary } from "./nav-secondary"
 import { Sidebar, SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar"
 
-
-
-const data = {
-
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "#",
-      icon: LayoutDashboardIcon,
-    },
-    {
-      title: "Lifecycle",
-      url: "#",
-      icon: ListIcon,
-    },
-    {
-      title: "Analytics",
-      url: "#",
-      icon: BarChartIcon,
-    },
-    {
-      title: "Projects",
-      url: "#",
-      icon: FolderIcon,
-    },
-    {
-      title: "Team",
-      url: "#",
-      icon: UsersIcon,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: CameraIcon,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: FileTextIcon,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: FileCodeIcon,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: SettingsIcon,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: HelpCircleIcon,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: SearchIcon,
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: DatabaseIcon,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: ClipboardListIcon,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: FileIcon,
-    },
-  ],
-}
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const t = useTranslations("sidebar")
+
+  const data = {
+    navMain: [
+      {
+        title: t("navMain.dashboard"),
+        url: "#",
+        icon: LayoutDashboardIcon,
+      },
+      {
+        title: t("navMain.lifecycle"),
+        url: "#",
+        icon: ListIcon,
+      },
+      {
+        title: t("navMain.analytics"),
+        url: "#",
+        icon: BarChartIcon,
+      },
+      {
+        title: t("navMain.projects"),
+        url: "#",
+        icon: FolderIcon,
+      },
+      {
+        title: t("navMain.team"),
+        url: "#",
+        icon: UsersIcon,
+      },
+    ],
+    navClouds: [
+      {
+        title: t("navClouds.capture"),
+        icon: CameraIcon,
+        isActive: true,
+        url: "#",
+        items: [
+          {
+            title: t("navClouds.activeProposals"),
+            url: "#",
+          },
+          {
+            title: t("navClouds.archived"),
+            url: "#",
+          },
+        ],
+      },
+      {
+        title: t("navClouds.proposal"),
+        icon: FileTextIcon,
+        url: "#",
+        items: [
+          {
+            title: t("navClouds.activeProposals"),
+            url: "#",
+          },
+          {
+            title: t("navClouds.archived"),
+            url: "#",
+          },
+        ],
+      },
+      {
+        title: t("navClouds.prompts"),
+        icon: FileCodeIcon,
+        url: "#",
+        items: [
+          {
+            title: t("navClouds.activeProposals"),
+            url: "#",
+          },
+          {
+            title: t("navClouds.archived"),
+            url: "#",
+          },
+        ],
+      },
+    ],
+    navSecondary: [
+      {
+        title: t("navSecondary.settings"),
+        url: "#",
+        icon: SettingsIcon,
+      },
+      {
+        title: t("navSecondary.getHelp"),
+        url: "#",
+        icon: HelpCircleIcon,
+      },
+      {
+        title: t("navSecondary.search"),
+        url: "#",
+        icon: SearchIcon,
+      },
+    ],
+    documents: [
+      {
+        name: t("documents.dataLibrary"),
+        url: "#",
+        icon: DatabaseIcon,
+      },
+      {
+        name: t("documents.reports"),
+        url: "#",
+        icon: ClipboardListIcon,
+      },
+      {
+        name: t("documents.wordAssistant"),
+        url: "#",
+        icon: FileIcon,
+      },
+    ],
+  }
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -151,7 +151,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Kozmos Inc.</span>
+                <span className="text-base font-semibold">
+                  {t("companyName")}
+                </span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -162,7 +164,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
-   
     </Sidebar>
   )
 }

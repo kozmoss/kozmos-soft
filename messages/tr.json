@@ -87,6 +87,11 @@
     "responseTime": "CEVAP SÜRESİ"
   },
   "AIPage": {
+    "chat": {
+      "userQuestion": "Web sitemi hızlıca nasıl kurabilirim?",
+      "aiResponse1": "Merhaba! 🚀 kişisel yapay zeka ile sadece birkaç adımda modern bir web sitesi oluşturabilirsin.",
+      "aiResponse2": "Bileşenleri sürükleyip bırak, stilleri özelleştir ve yayınla!"
+    },
     "hero": {
       "title": "AI Agent",
       "subtitle": "İşinizi otomatikleştirmek, verimliliği artırmak ve rekabet avantajı elde etmek için gelişmiş yapay zeka ajanlarımızla tanışın.",
@@ -403,9 +408,7 @@
       "persona": {
         "title": "Kişilik",
         "description": "İyi tanımlanmış bir kişilik, bir etkenin tutarlı bir karaktere sahip olmasını ve kendisine atanan role uygun bir şekilde davranmasını, etkenin deneyim kazanması ve çevresiyle etkileşime girmesiyle birlikte gelişmesini sağlar."
-  
       }
- 
     },
     "faq": {
       "title": "AI Ajanları Hakkında Sık Sorulan Sorular",
@@ -434,6 +437,520 @@
         "q5": "Ajanlarınızı deneme imkanı var mı?",
         "a5": "Evet, potansiyel müşterilerimize 14 günlük ücretsiz deneme süresi sunuyoruz. Bu süre içinde AI ajanlarımızın tüm özelliklerini test edebilir ve işletmenize nasıl fayda sağlayacağını görebilirsiniz."
       }
+    }
+  },
+  "Dashboard": {
+    "mobileComponent": {
+      "section1": {
+        "title": "Kullanıcı Deneyimi ve Arayüz",
+        "content": "Mobil uygulamalarımız, kullanıcıların ihtiyaçlarına özel olarak tasarlan sezgisel bir gezinme yapısı sunar. Modern UI/UX prensipleri doğrultusunda oluşturulan arayüzler, hem estetik açıdan çekici hem de son derece fonksiyonel bir kullanım sağlar. Kullanıcı alışkanlıklarını analiz ederek geliştirdiğimiz menü yapıları sayesinde tüm özelliklere kolayca ulaşılabilir. Responsive tasarım anlayışıyla her ekran boyutuna ve çözünürlüğe uyumlu şekilde optimize edilen arayüzlerimiz, tutarlı bir deneyim sunar."
+      },
+      "section2": {
+        "title": "Teknik Altyapı ve Performans",
+        "content": "React Native, Flutter ve Swift gibi güncel teknolojiler kullanarak geliştirdiğimiz uygulamalar, cihaz kaynaklarını verimli kullanarak optimum performans sunar. Arka planda çalışan gelişmiş optimizasyon teknikleri sayesinde düşük güç tüketimi ile yüksek performansı bir arada sunuyoruz. Uygulamalarımız, yoğun kullanım senaryolarında bile akıcı çalışma performansını korurken, arka plan işlemlerini minimum düzeyde tutarak pil ömrünü uzatır. Periyodik performans testleri ve güncellemelerle bu standardı sürekli olarak koruyoruz."
+      },
+      "section3": {
+        "title": "Kişiselleştirme ve Güvenlik",
+        "content": "Kullanıcılarımıza sunduğumuz geniş kişiselleştirme seçenekleri sayesinde herkes kendi tercihlerine göre bir deneyim oluşturabilir. Tema renkleri, bildirim ayarları, kullanım alışkanlıklarına yönelik öneriler gibi birçok alanda esnek yapılandırma imkanı sunuyoruz. Güvenlik konusunda ise OWASP standartlarına uygun olarak geliştirilen uygulamalarımızda veri şifreleme, çift faktörlü kimlik doğrulama, oturum yönetimi gibi birçok koruma katmanı bulunur. Kullanıcı verilerinin güvenliği için düzenli güvenlik denetimleri ve güncellemeler yapıyoruz."
+      },
+      "section4": {
+        "title": "Sürekli Gelişim ve Destek",
+        "content": "Uygulamalarımızı kullanıcı geri bildirimleri ve teknolojik gelişmeler doğrultusunda sürekli olarak iyileştiriyoruz. Düzenli aralıklarla yayınladığımız güncellemelerle yeni özellikler ekliyor, performans iyileştirmeleri yapıyor ve güvenlik açıklarını kapatıyoruz. Canlı destek ekibimiz, kullanıcılarımızın karşılaştığı sorunları hızlıca çözmek için 7/24 hizmet veriyor. Ayrıca kapsamlı dokümantasyon ve nasıl yapılır rehberleriyle kullanıcıların uygulamalarımızdan maksimum verim almalarını sağlıyoruz."
+      }
+    },
+    "webComponent": {
+      "section1": {
+        "title": "Kullanıcı Deneyimi ve Arayüz Tasarımı",
+        "content": "Web uygulamalarımız, kullanıcı odaklı tasarım prensipleriyle geliştirilmiş olup sezgisel gezinme deneyimi sunar. Modern UI/UX standartlarına uygun şekilde tasarlanan arayüzler, estetik görünümün yanı sıra yüksek kullanılabilirlik sağlar. Responsive tasarım yaklaşımıyla tüm cihazlarda tutarlı bir deneyim sunarken, erişilebilirlik standartlarına uygun olarak geliştirilmiştir. Kullanıcı akışları detaylı analizlerle optimize edilerek, işlemlerin minimum tıklamayla tamamlanabilmesi sağlanmıştır. Arayüz bileşenleri, kullanıcı alışkanlıkları dikkate alınarak konumlandırılmıştır."
+      },
+      "section2": {
+        "title": "Teknolojik Altyapı ve Performans Optimizasyonu",
+        "content": "Next.js, React ve modern web teknolojileri kullanılarak geliştirilen uygulamalarımız, yüksek performans ve ölçeklenebilirlik sunar. Server-side rendering ve static generation özellikleriyle hızlı yüklenme süreleri sağlanırken, lazy loading teknikleriyle kaynak kullanımı optimize edilmiştir. CDN entegrasyonu ve caching mekanizmaları sayesinde global ölçekte düşük gecikme süreleri hedeflenir. Performans metriklere dayalı sürekli iyileştirmeler yapılırken, Lighthouse skorları düzenli olarak takip edilir. Veritabanı sorguları ve API çağrıları optimize edilerek sunucu yükü minimize edilmiştir."
+      },
+      "section3": {
+        "title": "Güvenlik ve Veri Yönetimi",
+        "content": "Web uygulamalarımız OWASP Top 10 güvenlik standartlarına uygun olarak geliştirilmiştir. Veri iletiminde end-to-end şifreleme, CSRF koruması, XSS önlemleri ve diğer güvenlik katmanları uygulanmıştır. Rol tabanlı erişim kontrolü (RBAC) ile kullanıcı yetkilendirmeleri yönetilirken, tüm girişler validation'dan geçirilir. Düzenli güvenlik denetimleri ve penetrasyon testleri yapılarak olası açıklar önceden tespit edilir. GDPR ve KVKK uyumluluğu sağlanarak kullanıcı verilerinin güvenliği ve mahremiyeti garanti altına alınmıştır. Veri yedekleme ve felaket kurtarma prosedürleri otomatize edilmiştir."
+      },
+      "section4": {
+        "title": "Sürekli Entegrasyon ve Geliştirme Süreci",
+        "content": "Agile metodolojisiyle yönetilen geliştirme sürecimiz, kullanıcı geri bildirimlerini hızla ürüne yansıtmayı hedefler. CI/CD pipeline'ları sayesinde günde birden fazla production deploy'ı yapabilme esnekliğine sahibiz. A/B testing mekanizmalarıyla yeni özelliklerin etkisi ölçülürken, feature flag'ler ile kontrollü roll-out stratejileri uygulanır. Uygulama sağlığı ve kullanım istatistikleri gerçek zamanlı olarak izlenir, performans anomalileri otomatik alarmlarla bildirilir. Dokümantasyon ve developer portalı ile tüm API'ler standartlaştırılmıştır. Mikroservis mimarisi sayesinde sistem bileşenleri bağımsız olarak ölçeklendirilebilir."
+      }
+    },
+    "aiComponent": {
+      "section1": {
+        "title": "Akıllı AI Agent Entegrasyonu",
+        "content": "Uygulamalarınıza entegre ettiğimiz AI agent'ler, kullanıcı deneyimini yeni nesil seviyelere taşır. Doğal dil işleme (NLP) ve makine öğrenimi tabanlı agent'lerimiz, kullanıcı etkileşimlerini anında analiz ederek kişiselleştirilmiş yanıtlar üretir. Multi-agent sistemlerimizle karmaşık iş akışlarını otomatize ediyor, gerçek zamanlı karar destek sistemleri sunuyoruz. Agent'leriniz veri kaynaklarınızla sürekli öğrenerek kendini geliştirir ve iş süreçlerinize akıllı optimizasyonlar getirir."
+      },
+      "section2": {
+        "title": "Özel AI Modelleri ve Finetuning",
+        "content": "Sektörünüze özel fine-tune edilmiş AI modelleri geliştiriyoruz. LLM'lerinizi (Large Language Models) kendi verilerinizle eğiterek şirketinizin bilgi birikimini dijital asistanlarınıza aktarıyoruz. RAG (Retrieval Augmented Generation) mimarileriyle gerçek zamanlı veri erişimi sağlayan, hallüsinasyona düşmeyen akıllı chatbot'lar oluşturuyoruz. Özel embedding'ler ve vektör veritabanları kullanarak kurumsal bilgi yönetiminizi dönüştürüyoruz. Model performansını sürekli izleyerek otomatik retraining pipeline'ları kuruyoruz."
+      },
+      "section3": {
+        "title": "Otonom İş Süreçleri ve Otomasyon",
+        "content": "AI agent'lerimizle rutin iş süreçlerinizi tam otonom hale getiriyoruz. Doküman işleme, veri analizi, müşteri hizmetleri gibi alanlarda kendi kendine karar verebilen dijital çalışanlar yaratıyoruz. Workflow otomasyonu ile insan-AI işbirliğini optimize ediyor, operasyonel verimliliğinizi katlıyoruz. Agent'leriniz API'ler aracılığıyla mevcut sistemlerinizle sorunsuz entegre olurken, güvenli veri paylaşımı için gelişmiş yetkilendirme mekanizmaları sunuyoruz."
+      },
+      "section4": {
+        "title": "Gerçek Zamanlı Analiz ve Öngörüler",
+        "content": "AI destekli analitik platformumuzla verilerinizden anlamlı öngörüler çıkarıyoruz. Anomali tespiti, trend analizi ve tahminleme modelleriyle proaktif karar alma süreçlerinizi destekliyoruz. Multimodal AI yaklaşımımızla metin, ses ve görüntü verilerinizi birlikte analiz ederek bütünsel bir bakış açısı sunuyoruz. Özelleştirilebilir dashboard'lar ve otomatik raporlama araçlarıyla karmaşık verileri anlaşılır hale getiriyoruz. Agent'leriniz kritik değişiklikleri anında tespit ederek ilgili ekiplere bildirim gönderir."
+      }
+    },
+    "mainImage": {
+      "alt": "Görsel"
+    },
+    "mainHeading": {
+      "line1": "Ideas",
+      "line2": "Beyond",
+      "line3": "the Horizon",
+      "subtitle": "Dijital varlığınızı dönüştüren fikirler"
+    },
+    "mobile": {
+      "title": "Mobil",
+      "description": "Kullanıcı deneyimini merkeze alan mobil uygulama çözümlerimiz, modern tasarım ilkeleri ve ileri seviye yazılım teknolojileriyle geliştirilmektedir. Hız, güvenlik, kullanıcı odaklılık ve estetik; tüm mobil projelerimizin temel taşlarını oluşturur."
+    },
+    "web": {
+      "title": "Web",
+      "description": "Modern web çözümlerimiz; performans, güvenlik ve kullanıcı deneyimini teknolojinin sınırlarını zorlayarak bir araya getiriyor. Next.js ve React tabanlı mimarimizle ölçeklenebilir, hızlı ve etkileyici dijital deneyimler sunuyoruz."
+    },
+    "3d": {
+      "title": "3D Design",
+      "description": "İş süreçlerinizi yapay zekâ ile daha akıllı hale getirin. Veri analizi, otomasyon ve karar destek sistemleriyle işletmenizin verimliliğini en üst düzeye taşıyoruz."
+    },
+    "ai": {
+      "title": "AI & AI Agent",
+      "description": "Tekrarlayan görevleri otomatikleştirmekten karmaşık iş akışlarını devrimleştirmeye kadar, yapay zeka ajanları yarının işletmeleri için verimliliği ve yeniliği yeniden tanımlıyor."
+    },
+    "colors": {
+      "title": "Alternatif Renkler",
+      "description": "Her bir renk tonunun, bir duyguyu yansıttığına inanıyoruz. Sizin için özenle oluşturduğumuz alternatif renk paletleri, markanızın ruhunu en doğru şekilde yansıtmak için tasarlandı. İster cesur ve dinamik, ister sade ve zarif bir dokunuş arayın, burada her zevke ve her vizyona hitap eden bir renk hikâyesi bulacaksınız. Şimdi renklerin büyüsüne adım atın ve markanıza yeni bir soluk kazandırın."
+    },
+    "seo": {
+      "title": "SEO controls",
+      "description": "Sadece dijitalde var olmak yetmez, bulunabilir olmak gerekir! Biz, web uygulamalarınızı yalnızca estetik açıdan etkileyici kılmakla kalmıyor, aynı zamanda arama motorlarında kolayca keşfedilebilir bir altyapıyla inşa ediyoruz. SEO uyumlu yapılarımız sayesinde potansiyel müşterileriniz tam da ihtiyaç duydukları anda size ulaşır. Gelin, görünürlüğünüzü artıralım ve işinizi büyütelim!",
+      "imageAlt": "SEO İllüstrasyonu"
+    }
+  },
+  "Web": {
+    "title": "Ufkun Ötesindeki Fikirler",
+    "description": "Şık tasarımlardan akıllı sistemlere kadar, yaratıcılık ve kod gücüyle dijital deneyimler geliştiriyoruz. Web, mobil ve yapay zeka—ilham vermek için tasarlandı.",
+    "view": {
+      "description1": "Grafikler, tablolar ve gezinme bileşenleri içeren modern bir e-ticaret kontrol paneli.",
+      "description2": "Ürün özellikleri, fiyatlandırma ve stok bilgileriyle detaylı ürün görüntüleme.",
+      "description3": "Müşteri siparişlerinin durumunu ve ilerlemesini canlı olarak izleyen bir kontrol paneli.",
+      "description4": "Başarılı sipariş sonrasında onay ve ödeme bilgilerini gösterir.",
+      "description5": "Müşteri ilişkilerini verimli bir şekilde yönetmek için tasarlanmış kapsamlı bir CRM kontrol paneli.",
+      "description6": "Görevleri, kilometre taşlarını ve ekip işbirliğini takip etmek için bir proje yönetim paneli.",
+      "description7": "Görevleri ve zaman çizelgelerini takip etmek için kullanıcı dostu bir proje yönetim paneli.",
+      "description8": "Kurumsal kaynakları etkili bir şekilde yönetmek için entegre bir ERP kontrol paneli.",
+      "description9": "Stok seviyelerini, ürünleri ve depoları takip etmek için envanter yönetim arayüzü.",
+      "description10": "Çalışan verilerini, işe alım süreçlerini ve organizasyon yapısını yönetmek için İnsan Kaynakları kontrol paneli."
+    },
+    "e-commerce": {
+      "common": {
+        "search": "Ürünleri ara...",
+        "signIn": "Giriş Yap",
+        "addToCart": "Sepete Ekle",
+        "cart": "Sepet",
+        "terms": "Koşullar",
+        "privacy": "Gizlilik",
+        "contact": "İletişim",
+        "copyright": "© {year} KosmozShop. Tüm hakları saklıdır."
+      },
+      "header": {
+        "title": "KosmozShop"
+      },
+      "home": {
+        "featuredProducts": "Öne Çıkan Ürünler",
+        "categories": "Kategoriler"
+      },
+      "products": {
+        "wirelessHeadphones": "Kablosuz Kulaklık",
+        "smartWatch": "Akıllı Saat",
+        "runningShoes": "Koşu Ayakkabısı",
+        "coffeeMaker": "Kahve Makinesi",
+        "backpack": "Sırt Çantası",
+        "smartphone": "Akıllı Telefon",
+        "yogaMat": "Yoga Matı",
+        "deskLamp": "Masa Lambası",
+        "bluetoothSpeaker": "Bluetooth Hoparlör",
+        "wirelessEarbuds": "Kablosuz Kulakiçi Kulaklık"
+      },
+      "categories": {
+        "electronics": "Elektronik",
+        "fashion": "Moda",
+        "homeKitchen": "Ev & Mutfak",
+        "sportsOutdoors": "Spor & Outdoor"
+      },
+      "cart": {
+        "yourCart": "Sepetiniz",
+        "emptyCart": "Sepetiniz boş",
+        "continueShopping": "Alışverişe Devam Et",
+        "subtotal": "Ara Toplam",
+        "shipping": "Kargo",
+        "tax": "Vergi",
+        "total": "Toplam",
+        "checkout": "Ödeme",
+        "remove": "Kaldır"
+      },
+      "checkout": {
+        "shippingAddress": "Teslimat Adresi",
+        "billingAddress": "Fatura Adresi",
+        "paymentMethod": "Ödeme Yöntemi",
+        "placeOrder": "Siparişi Tamamla",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "address": "Adres",
+        "city": "Şehir",
+        "country": "Ülke",
+        "postalCode": "Posta Kodu",
+        "phoneNumber": "Telefon Numarası"
+      },
+      "account": {
+        "profile": "Profil",
+        "orders": "Siparişler",
+        "wishlist": "Favoriler",
+        "settings": "Ayarlar",
+        "signOut": "Çıkış Yap"
+      },
+      "error": {
+        "pageNotFound": "Sayfa Bulunamadı",
+        "backToHome": "Ana Sayfaya Dön"
+      }
+    },
+    "erp": {
+      "hr": {
+        "title": "İnsan Kaynakları",
+        "subtitle": "Çalışanları, departmanları ve İK süreçlerini yönetin",
+        "export": "Dışa Aktar",
+        "add_employee": "Çalışan Ekle",
+        "total_employees": "Toplam Çalışan",
+        "from_last_year": "geçen yıldan bu yana",
+        "departments": "Departmanlar",
+        "new_hires": "Yeni Alımlar",
+        "this_quarter": "Bu çeyrek",
+        "turnover_rate": "Devir Oranı",
+        "annual_rate": "Yıllık oran",
+        "tabs": {
+          "employees": "Çalışanlar",
+          "departments": "Departmanlar",
+          "recruitment": "İşe Alım",
+          "payroll": "Maaş"
+        },
+        "directory": {
+          "title": "Çalışan Rehberi",
+          "description": "Şirketinizin çalışanlarını yönetin",
+          "search_placeholder": "Çalışanlarda ara..."
+        },
+        "table": {
+          "employee": "Çalışan",
+          "position": "Pozisyon",
+          "department": "Departman",
+          "join_date": "Katılım Tarihi",
+          "status": "Durum"
+        },
+        "status": {
+          "active": "Aktif",
+          "on-leave": "İzinli",
+          "inactive": "Pasif"
+        },
+        "departments": {
+          "title": "Departman Yönetimi",
+          "description": "Şirket departmanlarını ve yapısını yönetin",
+          "heading": "Departman Yapısı",
+          "body": "Departman oluşturun ve yönetin, yöneticiler atayın ve şirket yapısını organize edin."
+        },
+        "recruitment": {
+          "title": "İşe Alım",
+          "description": "İş ilanlarını ve başvuruları yönetin",
+          "heading": "İşe Alım Süreci",
+          "body": "İş ilanları yayınlayın, başvuruları takip edin, görüşmeler planlayın ve işe alım sürecini yönetin."
+        },
+        "payroll": {
+          "title": "Maaş Yönetimi",
+          "description": "Çalışan maaşlarını ve yan haklarını yönetin",
+          "heading": "Maaş İşlemleri",
+          "body": "Maaşları işleyin, yan hakları yönetin, izinleri takip edin ve maaş raporları oluşturun."
+        }
+      },
+      "dashboard": "Kontrol Paneli",
+      "overviewDescription": "İş performansınız ve metriklerinizin genel görünümü",
+      "tabs": {
+        "overview": "Genel Bakış",
+        "sales": "Satışlar",
+        "inventory": "Stok",
+        "finance": "Finans"
+      },
+      "inventoryManagement": "Stok Yönetimi",
+      "inventoryDescription": "Ürün stoğunuzu ve stok seviyelerini yönetin",
+      "addProduct": "Ürün Ekle",
+      "outOfStock": "Stokta Yok",
+      "products": "Ürünler",
+      "analytics": "Analizler",
+      "warehouses": "Depolar",
+      "searchInventory": "Stokta ara...",
+      "inventoryItems": "Stok Ürünleri",
+      "inventoryItemDescription": "Ürün stoğunuzu ve stok seviyelerini yönetin",
+      "inventoryTrends": "Stok Trendleri",
+      "inventoryTrendsDesc": "Zaman içindeki stok seviyeleri",
+      "inventoryCategory": "Kategoriye Göre Stok",
+      "inventoryCategoryDesc": "Kategorilere göre dağılım",
+      "warehouseManagement": "Depo Yönetimi",
+      "warehouseManagementDesc": "Depo konumlarını ve stok dağılımını yönetin",
+      "warehousePlaceholder": "Depo konumlarını yönetin, stokları takip edin ve depolamayı optimize edin.",
+      "id": "ID",
+      "name": "Ad",
+      "category": "Kategori",
+      "location": "Konum",
+      "stock": "Stok",
+      "price": "Fiyat",
+      "status": "Durum",
+      "newOrders": "Yeni Siparişler",
+      "thisMonth": "Bu ay",
+      "activeCustomers": "Aktif Müşteriler",
+      "totalActive": "Toplam aktif",
+      "salesOverview": "Satış Genel Görünümü",
+      "monthlySalesPerformance": "Aylık satış performansı",
+      "recentOrders": "Son Siparişler",
+      "latestCustomerOrders": "Son müşteri siparişleri",
+      "monthlyRevenue": "Aylık Gelir",
+      "conversionRate": "Dönüşüm Oranı",
+      "averageOrderValue": "Ortalama Sipariş Değeri",
+      "fromLastMonth": "geçen aydan",
+      "revenueBreakdown": "Gelir Dağılımı",
+      "revenueByProductCategory": "Ürün kategorisine göre gelir",
+      "customerAcquisition": "Müşteri Kazanımı",
+      "newVsReturning": "Yeni vs geri dönen müşteriler",
+      "totalProducts": "Toplam Ürün",
+      "lowStockItems": "Düşük Stoklu Ürünler",
+      "inventoryValue": "Stok Değeri",
+      "inventoryStatus": "Stok Durumu",
+      "stockLevelsByCategory": "Kategorilere göre stok seviyeleri",
+      "totalRevenue": "Toplam Gelir",
+      "expenses": "Giderler",
+      "netProfit": "Net Kar",
+      "ytd": "Yıl Başından Bu Yana (YTD)",
+      "financialPerformance": "Finansal Performans",
+      "revenueVsExpenses": "Gelir vs Gider",
+      "financialChartsPlaceholder": "Ayrıntılı finansal grafikler burada görüntülenecektir..."
+    },
+    "projectManager": {
+      "kanban": {
+        "columns": {
+          "todo": "Yapılacak",
+          "inProgress": "Devam Eden",
+          "review": "İnceleme",
+          "done": "Tamamlandı"
+        },
+        "issueTypes": {
+          "task": "Görev",
+          "story": "Hikaye",
+          "bug": "Hata"
+        },
+        "priorities": {
+          "high": "Yüksek",
+          "medium": "Orta",
+          "low": "Düşük"
+        },
+        "issues": {
+          "implementAuth": "Kullanıcı kimlik doğrulama uygula",
+          "designMockups": "Açılış sayfası taslaklarını tasarla",
+          "researchPayments": "Ödeme ağ geçidi seçeneklerini araştır",
+          "fixResponsiveness": "Giriş sayfası duyarlılığını düzelt",
+          "implementFiltering": "Ürün filtrelemeyi uygula",
+          "addSearch": "Ürün arama işlevselliği ekle",
+          "setupRepo": "Proje deposunu ayarla",
+          "createSchema": "Veritabanı şeması oluştur",
+          "implementRegistration": "Temel kullanıcı kaydını uygula"
+        },
+        "ui": {
+          "issuesCount": "{count} görev",
+          "addIssue": "Görev Ekle",
+          "editColumn": "Sütunu Düzenle",
+          "clearColumn": "Sütunu Temizle",
+          "moreOptions": "Daha fazla seçenek"
+        }
+      },
+      "title": "Kanban Panosu",
+      "description": "Sorunlarınızı kanban panosu ile yönetin",
+      "siteHeaderTitle": "Pano",
+      "currentSprintLabel": "Mevcut Sprint: Sprint #24 (5 Nisan - 19 Nisan)",
+      "createIssue": "Görev Oluştur",
+      "searchPlaceholder": "Görevlerde ara...",
+      "selectSprintPlaceholder": "Sprint Seç",
+      "currentSprint": "Mevcut Sprint",
+      "backlog": "Bekleyenler",
+      "previousSprint": "Önceki Sprint",
+      "filterByAssignee": "Atananlara Göre Filtrele",
+      "allAssignees": "Tüm Atamalar",
+      "assignedToMe": "Bana Atananlar",
+      "unassigned": "Atanmamış",
+      "dashboard": {
+        "currentSprint": "Mevcut Sprint",
+        "createIssue": "Görev Oluştur",
+        "tabs": {
+          "overview": "Genel Bakış",
+          "sprints": "Sprintler",
+          "reports": "Raporlar"
+        },
+        "cards": {
+          "openIssues": "Açık Görevler",
+          "inProgress": "Devam Eden",
+          "completed": "Tamamlanan",
+          "sprintProgress": "Sprint İlerleme",
+          "sinceYesterday": "Dünden bu yana +{count}",
+          "thisWeek": "Bu hafta +{count}",
+          "sprintEnds": "Sprint {days} gün sonra bitiyor"
+        },
+        "currentSprintCard": {
+          "title": "Mevcut Sprint",
+          "description": "Sprint #{number} - {start} - {end}",
+          "viewBoard": "Panoyu Görüntüle"
+        },
+        "recentActivity": {
+          "title": "Son Etkinlikler",
+          "description": "Takımınızdaki son güncellemeler",
+          "viewAll": "Tüm Etkinlikleri Görüntüle"
+        },
+        "teamMembers": {
+          "title": "Takım Üyeleri",
+          "description": "Takımınızı ve erişimlerini yönetin",
+          "viewAll": "Tüm Üyeleri Görüntüle"
+        },
+        "projects": {
+          "title": "Projeler",
+          "description": "Aktif projeleriniz",
+          "viewAll": "Tüm Projeleri Görüntüle",
+          "cards": {
+            "websiteRedesign": {
+              "title": "Web Sitesi Yeniden Tasarımı",
+              "description": "Şirket web sitesini yeni marka kimliğiyle yeniden tasarla"
+            },
+            "mobileApp": {
+              "title": "Mobil Uygulama Geliştirme",
+              "description": "Müşteriler için yeni bir mobil uygulama oluştur"
+            }
+          }
+        },
+        "sprints": {
+          "title": "Sprint Yönetimi",
+          "description": "Sprintlerinizi görüntüleyin ve yönetin",
+          "current": {
+            "title": "Mevcut Sprint: Sprint #{number}",
+            "dateRange": "{start} - {end}, {year}",
+            "manage": "Yönet",
+            "viewBoard": "Panoyu Görüntüle",
+            "progress": "İlerleme",
+            "totalIssues": "Toplam Görev",
+            "completed": "Tamamlanan",
+            "remaining": "Kalan"
+          },
+          "next": {
+            "title": "Sonraki Sprint: Sprint #{number}",
+            "plan": "Sprint Planla",
+            "notStarted": "Sprint planlaması henüz başlamadı"
+          },
+          "previous": {
+            "title": "Önceki Sprint: Sprint #{number}",
+            "viewReport": "Raporu Görüntüle",
+            "carriedOver": "Devreden"
+          }
+        },
+        "reports": {
+          "title": "Raporlar",
+          "description": "Projeleriniz için rapor oluşturun ve görüntüleyin",
+          "burndown": {
+            "title": "Burndown Grafiği",
+            "visualization": "Burndown grafik görseli"
+          },
+          "velocity": {
+            "title": "Velocity Grafiği",
+            "visualization": "Velocity grafik görseli"
+          },
+          "cumulative": {
+            "title": "Kümülatif Akış",
+            "visualization": "Kümülatif akış görseli"
+          },
+          "custom": {
+            "title": "Özel Raporlar",
+            "retrospective": "Sprint Retrospektif Raporu",
+            "resolution": "Görev Çözüm Süresi Raporu",
+            "workload": "Takım İş Yükü Raporu",
+            "generate": "Oluştur"
+          },
+          "view": "Görüntüle"
+        }
+      }
+    },
+    "crm": {
+      "customerSatisfaction": {
+        "title": "Müşteri Memnuniyeti",
+        "description": "Yıllara göre memnuniyet metriklerinin karşılaştırması",
+        "tooltip": {
+          "metric": "Metrik",
+          "thisYear": "Bu Yıl",
+          "lastYear": "Geçen Yıl"
+        },
+        "legend": {
+          "thisYear": "Bu Yıl",
+          "lastYear": "Geçen Yıl"
+        },
+        "metrics": {
+          "productQuality": "Ürün Kalitesi",
+          "customerService": "Müşteri Hizmetleri",
+          "pricing": "Fiyatlandırma",
+          "userExperience": "Kullanıcı Deneyimi",
+          "reliability": "Güvenilirlik",
+          "features": "Özellikler"
+        }
+      },
+      "salesTarget": {
+        "title": "Satış Hedefi",
+        "description": "Çeyreklik satış hedefine ilerleme",
+        "percentageLabel": "çeyreklik hedefin",
+        "labels": {
+          "achieved": "Başarılan",
+          "remaining": "Kalan"
+        },
+        "metrics": {
+          "target": "Hedef",
+          "achieved": "Başarılan"
+        },
+        "currency": "₺"
+      },
+      "leadSources": {
+        "title": "Lead Kaynakları",
+        "dateRange": "Ocak - Haziran 2024",
+        "totalLeads": "Lead",
+        "trendingUp": "Bu ay %{percentage} artış",
+        "trendingIcon": "↑",
+        "description": "Son 6 aylık toplam lead kaynakları gösteriliyor"
+      }
+    }
+  },
+  "sidebar": {
+    "companyName": "Kozmos A.Ş.",
+    "navMain": {
+      "dashboard": "Gösterge Paneli",
+      "lifecycle": "Yaşam Döngüsü",
+      "analytics": "Analizler",
+      "projects": "Projeler",
+      "team": "Takım"
+    },
+    "navClouds": {
+      "capture": "Yakalama",
+      "proposal": "Teklif",
+      "prompts": "İstemler",
+      "activeProposals": "Aktif Teklifler",
+      "archived": "Arşivlenmiş"
+    },
+    "documents": {
+      "dataLibrary": "Veri Kütüphanesi",
+      "reports": "Raporlar",
+      "wordAssistant": "Kelime Asistanı"
+    },
+    "navSecondary": {
+      "settings": "Ayarlar",
+      "getHelp": "Yardım Al",
+      "search": "Ara"
     }
   }
 }

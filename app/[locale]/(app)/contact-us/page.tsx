@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AiIntegractionPage() {
+export default function ContactPage() {
   return (
     <div>
       

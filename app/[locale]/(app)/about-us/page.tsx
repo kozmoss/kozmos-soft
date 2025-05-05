@@ -42,7 +42,7 @@ const AboutUsPage = () => {
             {statsData.map((card, index) => (
               <div
                 key={index}
-                className="flex flex-row rounded-none h-96 sticky transition-all duration-[1000ms] bg-card"
+                className="flex flex-row rounded-none h-24 overflow-scroll md:h-64 sticky transition-all duration-[1000ms] bg-card"
                 style={{
                   top: `${4 + index * 3}rem`,
                   zIndex: 10 + index,
@@ -51,7 +51,7 @@ const AboutUsPage = () => {
                 <div
                   className={`${
                     index !== 0 ? "border-t-2" : ""
-                  } h-full w-1/3 text-xl italic`}
+                  } h-full w-1/3 text-md md:text-xl italic`}
                 >
                   {card.text
                     ? card.text.charAt(0) + card.text.slice(1).toLowerCase()
@@ -66,7 +66,7 @@ const AboutUsPage = () => {
                     <p
                       className={`${
                         card.description
-                          ? "italic text-base sm:text-lg md:text-2xl mb-4 sm:mb-0 sm:p-4 md:p-6 lg:p-24"
+                          ? "italic text-base sm:text-lg md:text-2xl text-center sm:mb-0 sm:p-4 md:p-6 lg:p-24"
                           : "hidden"
                       }`}
                     >

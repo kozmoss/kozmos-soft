@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Clock, ListTodo } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +22,8 @@ import { AppSidebar } from "@/__registry__/components/app-sidebar";
 import { SiteHeader } from "@/__registry__/components/site-header";
 
 export default function DashboardPage() {
+  const t = useTranslations('Web.projectManager.dashboard');
+
   return (
     <SidebarProvider>
       <AppSidebar variant="inset" />
@@ -36,68 +39,68 @@ export default function DashboardPage() {
                     <div className="flex items-center gap-2">
                       <Button variant="outline">
                         <Clock className="mr-2 h-4 w-4" />
-                        Current Sprint
+                        {t('currentSprint')}
                       </Button>
                       <Button>
                         <ListTodo className="mr-2 h-4 w-4" />
-                        Create Issue
+                        {t('createIssue')}
                       </Button>
                     </div>
                   </div>
                   <Tabs defaultValue="overview" className="space-y-4">
                     <TabsList>
-                      <TabsTrigger value="overview">Overview</TabsTrigger>
-                      <TabsTrigger value="sprints">Sprints</TabsTrigger>
-                      <TabsTrigger value="reports">Reports</TabsTrigger>
+                      <TabsTrigger value="overview">{t('tabs.overview')}</TabsTrigger>
+                      <TabsTrigger value="sprints">{t('tabs.sprints')}</TabsTrigger>
+                      <TabsTrigger value="reports">{t('tabs.reports')}</TabsTrigger>
                     </TabsList>
                     <TabsContent value="overview" className="space-y-4">
                       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         <Card>
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
-                              Open Issues
+                              {t('cards.openIssues')}
                             </CardTitle>
                             <ListTodo className="h-4 w-4 text-muted-foreground" />
                           </CardHeader>
                           <CardContent>
                             <div className="text-2xl font-bold">24</div>
                             <p className="text-xs text-muted-foreground">
-                              +3 since yesterday
+                              {t('cards.sinceYesterday', { count: 3 })}
                             </p>
                           </CardContent>
                         </Card>
                         <Card>
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
-                              In Progress
+                              {t('cards.inProgress')}
                             </CardTitle>
                             <Clock className="h-4 w-4 text-muted-foreground" />
                           </CardHeader>
                           <CardContent>
                             <div className="text-2xl font-bold">8</div>
                             <p className="text-xs text-muted-foreground">
-                              +2 since yesterday
+                              {t('cards.sinceYesterday', { count: 2 })}
                             </p>
                           </CardContent>
                         </Card>
                         <Card>
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
-                              Completed
+                              {t('cards.completed')}
                             </CardTitle>
                             <CheckCircle className="h-4 w-4 text-muted-foreground" />
                           </CardHeader>
                           <CardContent>
                             <div className="text-2xl font-bold">16</div>
                             <p className="text-xs text-muted-foreground">
-                              +5 this week
+                              {t('cards.thisWeek', { count: 5 })}
                             </p>
                           </CardContent>
                         </Card>
                         <Card>
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
-                              Sprint Progress
+                              {t('cards.sprintProgress')}
                             </CardTitle>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +120,7 @@ export default function DashboardPage() {
                           <CardContent>
                             <div className="text-2xl font-bold">65%</div>
                             <p className="text-xs text-muted-foreground">
-                              Sprint ends in 5 days
+                              {t('cards.sprintEnds', { days: 5 })}
                             </p>
                           </CardContent>
                         </Card>
@@ -125,22 +128,22 @@ export default function DashboardPage() {
                       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                         <Card className="col-span-4">
                           <CardHeader>
-                            <CardTitle>Current Sprint</CardTitle>
+                            <CardTitle>{t('currentSprintCard.title')}</CardTitle>
                             <CardDescription>
-                              Sprint #24 - April 5 to April 19
+                              {t('currentSprintCard.description', {
+                                number: 24,
+                                start: "April 5",
+                                end: "April 19"
+                              })}
                             </CardDescription>
                           </CardHeader>
                           <CardContent>
                             <SprintProgress />
                           </CardContent>
                           <CardFooter>
-                            <Button
-                              variant="outline"
-                              className="w-full"
-                              asChild
-                            >
+                            <Button variant="outline" className="w-full" asChild>
                               <Link href="#">
-                                View Board
+                                {t('currentSprintCard.viewBoard')}
                                 <ArrowRight className="ml-2 h-4 w-4" />
                               </Link>
                             </Button>
@@ -148,9 +151,9 @@ export default function DashboardPage() {
                         </Card>
                         <Card className="sm:col-span-4 lg:col-span-3">
                           <CardHeader>
-                            <CardTitle>Recent Activity</CardTitle>
+                            <CardTitle>{t('recentActivity.title')}</CardTitle>
                             <CardDescription>
-                              Latest updates from your team
+                              {t('recentActivity.description')}
                             </CardDescription>
                           </CardHeader>
                           <CardContent>
@@ -158,7 +161,7 @@ export default function DashboardPage() {
                           </CardContent>
                           <CardFooter>
                             <Button variant="outline" className="w-full">
-                              View All Activity
+                              {t('recentActivity.viewAll')}
                             </Button>
                           </CardFooter>
                         </Card>
@@ -166,9 +169,9 @@ export default function DashboardPage() {
                       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                         <Card className="col-span-4 lg:col-span-3">
                           <CardHeader>
-                            <CardTitle>Team Members</CardTitle>
+                            <CardTitle>{t('teamMembers.title')}</CardTitle>
                             <CardDescription>
-                              Manage your team and their access
+                              {t('teamMembers.description')}
                             </CardDescription>
                           </CardHeader>
                           <CardContent>
@@ -176,41 +179,37 @@ export default function DashboardPage() {
                           </CardContent>
                           <CardFooter>
                             <Button variant="outline" className="w-full">
-                              View All Members
+                              {t('teamMembers.viewAll')}
                             </Button>
                           </CardFooter>
                         </Card>
                         <Card className="col-span-4">
                           <CardHeader>
-                            <CardTitle>Projects</CardTitle>
+                            <CardTitle>{t('projects.title')}</CardTitle>
                             <CardDescription>
-                              Your active projects
+                              {t('projects.description')}
                             </CardDescription>
                           </CardHeader>
                           <CardContent className="grid gap-4">
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                               <ProjectCard
-                                title="Website Redesign"
-                                description="Redesign the company website with new branding"
+                                title={t('projects.cards.websiteRedesign.title')}
+                                description={t('projects.cards.websiteRedesign.description')}
                                 progress={75}
                                 dueDate="Apr 15, 2025"
                                 team={["JD", "AS", "TK"]}
                               />
                               <ProjectCard
-                                title="Mobile App Development"
-                                description="Create a new mobile app for customers"
+                                title={t('projects.cards.mobileApp.title')}
+                                description={t('projects.cards.mobileApp.description')}
                                 progress={45}
                                 dueDate="May 20, 2025"
                                 team={["JD", "AS"]}
                               />
                             </div>
-                            <Button
-                              variant="outline"
-                              className="w-full"
-                              asChild
-                            >
+                            <Button variant="outline" className="w-full" asChild>
                               <Link href="#">
-                                View All Projects
+                                {t('projects.viewAll')}
                                 <ArrowRight className="ml-2 h-4 w-4" />
                               </Link>
                             </Button>
@@ -221,9 +220,9 @@ export default function DashboardPage() {
                     <TabsContent value="sprints" className="space-y-4">
                       <Card>
                         <CardHeader>
-                          <CardTitle>Sprint Management</CardTitle>
+                          <CardTitle>{t('sprints.title')}</CardTitle>
                           <CardDescription>
-                            View and manage your sprints
+                            {t('sprints.description')}
                           </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -232,23 +231,29 @@ export default function DashboardPage() {
                               <div className="flex items-center justify-between p-4">
                                 <div>
                                   <h3 className="font-medium">
-                                    Current Sprint: Sprint #24
+                                    {t('sprints.current.title', { number: 24 })}
                                   </h3>
                                   <p className="text-sm text-muted-foreground">
-                                    April 5 - April 19, 2025
+                                    {t('sprints.current.dateRange', {
+                                      start: "April 5",
+                                      end: "April 19",
+                                      year: "2025"
+                                    })}
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                   <Button variant="outline" size="sm">
-                                    Manage
+                                    {t('sprints.current.manage')}
                                   </Button>
-                                  <Button size="sm">View Board</Button>
+                                  <Button size="sm">
+                                    {t('sprints.current.viewBoard')}
+                                  </Button>
                                 </div>
                               </div>
                               <div className="border-t p-4">
                                 <div className="space-y-2">
                                   <div className="flex items-center justify-between text-sm">
-                                    <span>Progress</span>
+                                    <span>{t('sprints.current.progress')}</span>
                                     <span className="font-medium">65%</span>
                                   </div>
                                   <Progress value={65} />
@@ -257,19 +262,19 @@ export default function DashboardPage() {
                                   <div>
                                     <div className="font-medium">24</div>
                                     <div className="text-muted-foreground">
-                                      Total Issues
+                                      {t('sprints.current.totalIssues')}
                                     </div>
                                   </div>
                                   <div>
                                     <div className="font-medium">16</div>
                                     <div className="text-muted-foreground">
-                                      Completed
+                                      {t('sprints.current.completed')}
                                     </div>
                                   </div>
                                   <div>
                                     <div className="font-medium">8</div>
                                     <div className="text-muted-foreground">
-                                      Remaining
+                                      {t('sprints.current.remaining')}
                                     </div>
                                   </div>
                                 </div>
@@ -280,22 +285,26 @@ export default function DashboardPage() {
                               <div className="flex items-center justify-between p-4">
                                 <div>
                                   <h3 className="font-medium">
-                                    Next Sprint: Sprint #25
+                                    {t('sprints.next.title', { number: 25 })}
                                   </h3>
                                   <p className="text-sm text-muted-foreground">
-                                    April 20 - May 3, 2025
+                                    {t('sprints.current.dateRange', {
+                                      start: "April 20",
+                                      end: "May 3",
+                                      year: "2025"
+                                    })}
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                   <Button variant="outline" size="sm">
-                                    Plan Sprint
+                                    {t('sprints.next.plan')}
                                   </Button>
                                 </div>
                               </div>
                               <div className="border-t p-4">
                                 <div className="text-center text-sm">
                                   <p className="text-muted-foreground">
-                                    Sprint planning not started yet
+                                    {t('sprints.next.notStarted')}
                                   </p>
                                 </div>
                               </div>
@@ -305,22 +314,26 @@ export default function DashboardPage() {
                               <div className="flex items-center justify-between p-4">
                                 <div>
                                   <h3 className="font-medium">
-                                    Previous Sprint: Sprint #23
+                                    {t('sprints.previous.title', { number: 23 })}
                                   </h3>
                                   <p className="text-sm text-muted-foreground">
-                                    March 22 - April 4, 2025
+                                    {t('sprints.current.dateRange', {
+                                      start: "March 22",
+                                      end: "April 4",
+                                      year: "2025"
+                                    })}
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                   <Button variant="outline" size="sm">
-                                    View Report
+                                    {t('sprints.previous.viewReport')}
                                   </Button>
                                 </div>
                               </div>
                               <div className="border-t p-4">
                                 <div className="space-y-2">
                                   <div className="flex items-center justify-between text-sm">
-                                    <span>Completed</span>
+                                    <span>{t('sprints.current.completed')}</span>
                                     <span className="font-medium">92%</span>
                                   </div>
                                   <Progress value={92} />
@@ -329,19 +342,19 @@ export default function DashboardPage() {
                                   <div>
                                     <div className="font-medium">26</div>
                                     <div className="text-muted-foreground">
-                                      Total Issues
+                                      {t('sprints.current.totalIssues')}
                                     </div>
                                   </div>
                                   <div>
                                     <div className="font-medium">24</div>
                                     <div className="text-muted-foreground">
-                                      Completed
+                                      {t('sprints.current.completed')}
                                     </div>
                                   </div>
                                   <div>
                                     <div className="font-medium">2</div>
                                     <div className="text-muted-foreground">
-                                      Carried Over
+                                      {t('sprints.previous.carriedOver')}
                                     </div>
                                   </div>
                                 </div>
@@ -354,9 +367,9 @@ export default function DashboardPage() {
                     <TabsContent value="reports" className="space-y-4">
                       <Card>
                         <CardHeader>
-                          <CardTitle>Reports</CardTitle>
+                          <CardTitle>{t('reports.title')}</CardTitle>
                           <CardDescription>
-                            Generate and view reports for your projects
+                            {t('reports.description')}
                           </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -365,13 +378,13 @@ export default function DashboardPage() {
                               <Card>
                                 <CardHeader className="pb-2">
                                   <CardTitle className="text-base">
-                                    Burndown Chart
+                                    {t('reports.burndown.title')}
                                   </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                   <div className="h-[150px] flex items-center justify-center border rounded-md">
                                     <p className="text-xs text-muted-foreground">
-                                      Burndown chart visualization
+                                      {t('reports.burndown.visualization')}
                                     </p>
                                   </div>
                                 </CardContent>
@@ -381,20 +394,20 @@ export default function DashboardPage() {
                                     size="sm"
                                     className="w-full"
                                   >
-                                    View
+                                    {t('reports.view')}
                                   </Button>
                                 </CardFooter>
                               </Card>
                               <Card>
                                 <CardHeader className="pb-2">
                                   <CardTitle className="text-base">
-                                    Velocity Chart
+                                    {t('reports.velocity.title')}
                                   </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                   <div className="h-[150px] flex items-center justify-center border rounded-md">
                                     <p className="text-xs text-muted-foreground">
-                                      Velocity chart visualization
+                                      {t('reports.velocity.visualization')}
                                     </p>
                                   </div>
                                 </CardContent>
@@ -404,20 +417,20 @@ export default function DashboardPage() {
                                     size="sm"
                                     className="w-full"
                                   >
-                                    View
+                                    {t('reports.view')}
                                   </Button>
                                 </CardFooter>
                               </Card>
                               <Card>
                                 <CardHeader className="pb-2">
                                   <CardTitle className="text-base">
-                                    Cumulative Flow
+                                    {t('reports.cumulative.title')}
                                   </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                   <div className="h-[150px] flex items-center justify-center border rounded-md">
                                     <p className="text-xs text-muted-foreground">
-                                      Cumulative flow visualization
+                                      {t('reports.cumulative.visualization')}
                                     </p>
                                   </div>
                                 </CardContent>
@@ -427,7 +440,7 @@ export default function DashboardPage() {
                                     size="sm"
                                     className="w-full"
                                   >
-                                    View
+                                    {t('reports.view')}
                                   </Button>
                                 </CardFooter>
                               </Card>
@@ -435,31 +448,31 @@ export default function DashboardPage() {
 
                             <div className="rounded-md border p-4">
                               <h3 className="font-medium mb-2">
-                                Custom Reports
+                                {t('reports.custom.title')}
                               </h3>
                               <div className="space-y-2">
                                 <div className="flex items-center justify-between">
                                   <span className="text-sm">
-                                    Sprint Retrospective Report
+                                    {t('reports.custom.retrospective')}
                                   </span>
                                   <Button variant="outline" size="sm">
-                                    Generate
+                                    {t('reports.custom.generate')}
                                   </Button>
                                 </div>
                                 <div className="flex items-center justify-between">
                                   <span className="text-sm">
-                                    Issue Resolution Time Report
+                                    {t('reports.custom.resolution')}
                                   </span>
                                   <Button variant="outline" size="sm">
-                                    Generate
+                                    {t('reports.custom.generate')}
                                   </Button>
                                 </div>
                                 <div className="flex items-center justify-between">
                                   <span className="text-sm">
-                                    Team Workload Report
+                                    {t('reports.custom.workload')}
                                   </span>
                                   <Button variant="outline" size="sm">
-                                    Generate
+                                    {t('reports.custom.generate')}
                                   </Button>
                                 </div>
                               </div>
