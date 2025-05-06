@@ -18,13 +18,14 @@ import {
   CommandList,
   CommandSeparator,
 } from "./ui/command"
+import { useTranslations } from "next-intl"
 
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
   const { setTheme } = useTheme()
-
+  const t = useTranslations("Navigation")
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || e.key === "/") {
@@ -61,17 +62,17 @@ export function CommandMenu({ ...props }: DialogProps) {
         onClick={() => setOpen(true)}
         {...props}
       >
-        <span className="hidden lg:inline-flex">Search documentation...</span>
+        <span className="hidden lg:inline-flex">{t("searchDocumentation")}</span>
         <span className="inline-flex lg:hidden">Search...</span>
         <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder={t("typeCommand")} />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Links">
+          <CommandEmpty>{t("noResultsFound")}</CommandEmpty>
+          <CommandGroup heading={t("Links")}>
             {docsConfig.mainNav
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
@@ -83,13 +84,13 @@ export function CommandMenu({ ...props }: DialogProps) {
                   }}
                 >
                   <File />
-                  {navItem.title}
+                  {t(navItem.title)}
                 </CommandItem>
               ))}
           </CommandGroup>
       
           <CommandSeparator />
-          <CommandGroup heading="Theme">
+          <CommandGroup heading={"Theme"}>
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
               <Sun />
               Light

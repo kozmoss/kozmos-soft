@@ -992,11 +992,15 @@
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
   },
   "Navigation": {
-    "dashboard":"Dashboard",
+    "dashboard": "Dashboard",
     "web": "Web",
     "mobile": "Mobile",
     "ai": "AI & AI Agent",
     "aboutUs": "About Us",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "searchDocumentation": "Search Documentation",
+    "noResultsFound": "No Results Found",
+    "Links": "Links",
+    "Theme": "Themes"
   }
 }

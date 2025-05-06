@@ -983,6 +983,11 @@
     "mobile": "Mobil",
     "ai": "Yapay Zeka & AI Ajanı",
     "aboutUs": "Hakkımızda",
-    "contactUs": "İletişim"
+    "contactUs": "İletişim",
+    "typeCommand":"Bir komut yazın veya arayın...",
+    "searchDocumentation":"Ara",
+    "noResultsFound":"Sonuç Bulunamadı",
+    "Links": "Linkler",
+    "Theme":"Temalar"
   }
 }
