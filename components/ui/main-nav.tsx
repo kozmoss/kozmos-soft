@@ -5,9 +5,11 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import kozmosPNG from "@/public/static/image/kozmos.png";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export function MainNav() {
   const pathname = usePathname();
+  const t = useTranslations("Navigation");
 
   return (
     <div className="mr-4 hidden md:flex">
@@ -22,10 +24,10 @@ export function MainNav() {
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/products/web")
               ? "text-foreground"
-              : "text-foreground/80",
+              : "text-foreground/80"
           )}
         >
-          Web
+          {t("web")}
         </Link>
         <Link
           href="/mobile"
@@ -34,23 +36,21 @@ export function MainNav() {
             pathname?.startsWith("/products/mobile") ||
               pathname?.startsWith("/mobile")
               ? "text-foreground"
-              : "text-foreground/80",
+              : "text-foreground/80"
           )}
         >
-          Mobile
+          {t("mobile")}
         </Link>
-    
-     
         <Link
           href="/ai"
           className={cn(
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/ai")
               ? "text-foreground"
-              : "text-foreground/80",
+              : "text-foreground/80"
           )}
         >
-          AI & AI Agent
+          {t("ai")}
         </Link>
         <Link
           href="/about-us"
@@ -58,10 +58,21 @@ export function MainNav() {
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/about-us")
               ? "text-foreground"
-              : "text-foreground/80",
+              : "text-foreground/80"
           )}
         >
-          About Us
+          {t("aboutUs")}
+        </Link>
+        <Link
+          href="/contact-us"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname?.startsWith("/contact-us")
+              ? "text-foreground"
+              : "text-foreground/80"
+          )}
+        >
+          {t("contactUs")}
         </Link>
       </nav>
     </div>

@@ -952,5 +952,37 @@
       "getHelp": "Yardım Al",
       "search": "Ara"
     }
+  },
+  "contact-us": {
+    "title": "Bize Ulaşın",
+    "fullName": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "message": "Mesaj",
+    "submit": "Gönder",
+    "projectInformation": "Projelerinizle ilgili bilgi almak, detayları görüşmek ya da teklif talep etmek için bize ulaşabilirsiniz. Ekibimiz, sizinle tanışmaktan ve ihtiyaçlarınıza çözüm sunmaktan mutluluk duyacaktır.",
+    "fullNamePlaceholder": "Adınızı ve soyadınızı giriniz",
+    "emailPlaceholder": "E-posta adresinizi giriniz",
+    "phonePlaceholder": "Telefon numaranızı giriniz",
+    "messagePlaceholder": "Mesajınızı buraya yazınız",
+    "errors": {
+      "fullNameMin": "Ad en az 2 karakter olmalıdır",
+      "invalidEmail": "Geçerli bir e-posta adresi giriniz",
+      "phoneDigits": "Telefon numarası sadece rakam içermelidir",
+      "messageMin": "Mesaj en az 10 karakter olmalıdır",
+      "messageMax": "Mesaj en fazla 500 karakter olabilir"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Navigation": {
+    "dashboard":"Dashboard",
+    "web": "Web",
+    "mobile": "Mobil",
+    "ai": "Yapay Zeka & AI Ajanı",
+    "aboutUs": "Hakkımızda",
+    "contactUs": "İletişim"
   }
 }

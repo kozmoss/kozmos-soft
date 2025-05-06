@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { type DialogProps } from "@radix-ui/react-dialog"
-import { Circle, File, Laptop, Moon, Sun } from "lucide-react"
+import {  File, Laptop, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { docsConfig } from "@/config/docs"
@@ -18,6 +18,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "./ui/command"
+
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -86,24 +87,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
-            <CommandGroup key={group.title} heading={group.title}>
-              {group.items.map((navItem) => (
-                <CommandItem
-                  key={navItem.href}
-                  value={navItem.title}
-                  onSelect={() => {
-                    runCommand(() => router.push(navItem.href as string))
-                  }}
-                >
-                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
-                    <Circle className="h-3 w-3" />
-                  </div>
-                  {navItem.title}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          ))}
+      
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>

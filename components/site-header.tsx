@@ -1,13 +1,8 @@
-import Link from "next/link"
-
-import { CommandMenu } from "@/components/command-menu"
-import { Icons } from "@/components/ui/icons"
-import { MainNav } from "./ui/main-nav"
-
-import { MobileNav } from "./ui/mobile-nav"
-import { ThemeToggle } from "./model-toggle"
-import { Button } from "./ui/button"
-
+import { CommandMenu } from "@/components/command-menu";
+import { MainNav } from "./ui/main-nav";
+import { MobileNav } from "./ui/mobile-nav";
+import { ThemeToggle } from "./model-toggle";
+import { LocaleSwitcherSelect } from "./ui/select-lang";
 
 export function SiteHeader() {
   return (
@@ -20,27 +15,13 @@ export function SiteHeader() {
             <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
               <CommandMenu />
             </div>
-            <nav className="flex items-center gap-0.5">
-              <Button
-                asChild
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 px-0"
-              >
-                <Link
-                  href={""}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Icons.gitHub className="h-4 w-4" />
-                  <span className="sr-only">GitHub</span>
-                </Link>
-              </Button>
+            <nav className="flex items-center gap-2">
+              <LocaleSwitcherSelect />
               <ThemeToggle />
             </nav>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }

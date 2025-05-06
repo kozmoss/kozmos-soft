@@ -1,26 +1,28 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link, { LinkProps } from "next/link"
-import { useRouter } from "next/navigation"
+import * as React from "react";
+import Link, { LinkProps } from "next/link";
+import { useRouter } from "next/navigation";
 
-import { docsConfig } from "@/config/docs"
-import { cn } from "@/lib/utils"
-import { useMetaColor } from "@/hooks/use-meta-color"
-import { Drawer, DrawerContent, DrawerTrigger } from "./drawer"
-import { Button } from "./button"
+import { docsConfig } from "@/config/docs";
+import { cn } from "@/lib/utils";
+import { useMetaColor } from "@/hooks/use-meta-color";
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "./drawer";
+import { Button } from "./button";
+import { useTranslations } from "next-intl";
 
 export function MobileNav() {
-  const [open, setOpen] = React.useState(false)
-  const { setMetaColor, metaColor } = useMetaColor()
+  const [open, setOpen] = React.useState(false);
+  const { setMetaColor, metaColor } = useMetaColor();
+  const t = useTranslations("Navigation")
 
   const onOpenChange = React.useCallback(
     (open: boolean) => {
-      setOpen(open)
-      setMetaColor(open ? "#09090b" : metaColor)
+      setOpen(open);
+      setMetaColor(open ? "#09090b" : metaColor);
     },
-    [setMetaColor, metaColor]
-  )
+    [setMetaColor, metaColor],
+  );
 
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
@@ -49,6 +51,11 @@ export function MobileNav() {
           </span>
         </Button>
       </DrawerTrigger>
+      <DrawerHeader>
+        <DrawerTitle></DrawerTitle>
+    
+    
+      </DrawerHeader>
       <DrawerContent className="max-h-[80svh] p-0">
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
@@ -60,50 +67,22 @@ export function MobileNav() {
                     href={item.href}
                     onOpenChange={setOpen}
                   >
-                    {item.title}
+                    {t(item.title)}
                   </MobileLink>
-                )
+                ),
             )}
           </div>
-          <div className="flex flex-col space-y-2">
-            {docsConfig.sidebarNav.map((item, index) => (
-              <div key={index} className="flex flex-col gap-4 pt-6">
-                <h4 className="text-xl font-medium">{item.title}</h4>
-                {item?.items?.length &&
-                  item.items.map((item) => (
-                    <React.Fragment key={item.href}>
-                      {!item.disabled &&
-                        (item.href ? (
-                          <MobileLink
-                            href={item.href}
-                            onOpenChange={setOpen}
-                            className="opacity-80"
-                          >
-                            {item.title}
-                            {item.label && (
-                              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
-                                {item.label}
-                              </span>
-                            )}
-                          </MobileLink>
-                        ) : (
-                          item.title
-                        ))}
-                    </React.Fragment>
-                  ))}
-              </div>
-            ))}
-          </div>
+         
         </div>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }
 
 interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void
-  children: React.ReactNode
-  className?: string
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  className?: string;
 }
 
 function MobileLink({
@@ -113,18 +92,18 @@ function MobileLink({
   children,
   ...props
 }: MobileLinkProps) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString())
-        onOpenChange?.(false)
+        router.push(href.toString());
+        onOpenChange?.(false);
       }}
       className={cn("text-[1.15rem]", className)}
       {...props}
     >
       {children}
     </Link>
-  )
+  );
 }

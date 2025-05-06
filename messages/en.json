@@ -966,5 +966,37 @@
         "search": "Search"
       }
     }
+  },
+  "contact-us": {
+    "title": "Contact Us",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "submit": "Send",
+    "projectInformation": "You can contact us to get information about your projects, discuss the details or request a quote. Our team will be happy to meet you and offer solutions to your needs.",
+    "fullNamePlaceholder": "Enter your full name",
+    "emailPlaceholder": "Enter your email address",
+    "phonePlaceholder": "Enter your phone number",
+    "messagePlaceholder": "Type your message here",
+    "errors": {
+      "fullNameMin": "Full name must be at least 2 characters",
+      "invalidEmail": "Please enter a valid email address",
+      "phoneDigits": "Phone number must contain only digits",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message cannot exceed 500 characters"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Navigation": {
+    "dashboard":"Dashboard",
+    "web": "Web",
+    "mobile": "Mobile",
+    "ai": "AI & AI Agent",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us"
   }
 }
