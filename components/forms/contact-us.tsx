@@ -13,44 +13,71 @@ import {
 import { Input } from "@/components/ui/input";
 import { useTranslations } from "next-intl";
 import { Textarea } from "@/components/ui/textarea";
+import { ContactFormData } from "@/types/contact-us";
+import { addContactInquiryAction } from "@/app/action";
+import { toast } from "sonner";
 
-export function ContactUs() {
+interface ContactFormProps {
+  onFormSubmitSuccess?: () => void
+}
+
+export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
   const t = useTranslations("contact-us");
+ 
   
-  // Define schema with translations
-  const formSchema = z.object({
+  const contactFormSchema = z.object({
     fullName: z.string().min(2, {
-      message: `${t("errors.fullNameMin")}`,
+      message: "Username must be at least 2 characters.",
     }),
     email: z.string().email({
-      message: `${t("errors.invalidEmail")}`,
+      message: "Please enter a valid email address.",
     }),
-    phone: z.string().refine((val) => /^\d+$/.test(val), {
-      message: `${t("errors.phoneDigits")}`,
+    phone: z.string().min(10, { // Basic phone validation
+      message: "Phone number must be at least 10 digits.",
+    }).regex(/^\+?[1-9]\d{1,14}$/, {
+      message: "Please enter a valid phone number (e.g., +1234567890)."
     }),
-    message: z.string()
-      .min(10, {
-        message: `${t("errors.messageMin")}`,
-      })
-      .max(500, {
-        message: `${t("errors.messageMax")}`,
-      }),
+    message: z.string().min(10, {
+      message: "Message must be at least 10 characters.",
+    }).max(500, {
+      message: "Message must not exceed 500 characters."
+    }),
   });
 
   // Initialize form with validation
-  const form = useForm({
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       fullName: "",
       email: "",
       phone: "",
       message: "",
     },
-    resolver: zodResolver(formSchema),
   });
 
-  function onSubmit(values) {
-    console.log(values);
-    // İletişim formu gönderme işlemi burada yapılır
+  async function onSubmit(values: ContactFormData) {
+    try {
+      const result = await addContactInquiryAction(values)
+      if (result.success) {
+        toast.success("Inquiry Submitted!", {
+          description: "Thank you for contacting us. We will get back to you shortly.",
+         
+        })
+        form.reset();
+        if(onFormSubmitSuccess) {
+          onFormSubmitSuccess()
+        }
+      } else {
+        toast.error("Submission Error" ,{
+         description: result.error || "Failed to submit your inquiry. Please try again."
+         
+        })
+      }
+    } catch (error) {
+      toast.error("Unexpected Error", {
+      description: `An unexpected error occurred. ${error instanceof Error ? error.message : ''}`,
+      })
+    }
   }
 
   return (

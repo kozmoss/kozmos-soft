@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
+
 
 export default async function LocaleLayout({
   children,
@@ -21,9 +23,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn(
-          "bg-background overscroll-none font-sans antialiased",
-        )}
+        className={cn("bg-background overscroll-none font-sans antialiased")}
       >
         <NextIntlClientProvider>
           <ThemeProvider
@@ -37,6 +37,7 @@ export default async function LocaleLayout({
                 {children}
               </div>
             </div>
+            <Toaster richColors position="top-left" />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

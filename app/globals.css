@@ -94,7 +94,7 @@
 @theme {
   --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
   @keyframes orbit {
-    
+
     100% {
       transform: rotate(0deg) translateY(calc(var(--radius) * 1px));
     }
@@ -103,7 +103,6 @@
     }
   }
 }
-
 
 .dark {
   --background: oklch(0.141 0.005 285.823);
@@ -239,5 +238,14 @@
   }
   100% {
     transform: translateX(200px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

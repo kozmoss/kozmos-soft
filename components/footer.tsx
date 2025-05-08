@@ -15,16 +15,7 @@ export function SiteFooter() {
             >
               KozmosSoft
             </a>
-            . The source code is available on{" "}
-            <a
-              href="https://github.com/kozmoss"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              GitHub
-            </a>
-            .
+          
           </div>
         </div>
       </div>

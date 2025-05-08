@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "__registry__/new-york/web/project-managment-dashboard"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "__registry__/new-york/web/project-managment-dashboard", "app/api/auth/[...nextauth]", "lib/auth.js"],
   "exclude": ["node_modules"]
 }

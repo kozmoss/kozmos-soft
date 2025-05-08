@@ -3,103 +3,125 @@
 import * as React from "react";
 import {
   BookOpen,
-  Globe,
-  LifeBuoy,
-  Send,
-  Palette,
-  Smartphone,
   Bot,
+  Settings2,
+  SquareTerminal,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavSecondary } from "@/components/nav-secondary";
+import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { Button } from "./ui/button";
 
 const data = {
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
   navMain: [
     {
-      title: "Wep Aplications",
-      url: "",
-      icon: Globe,
+      title: "Playground",
+      url: "#",
+      icon: SquareTerminal,
       isActive: true,
+    },
+    {
+      title: "Models",
+      url: "#",
+      icon: Bot,
       items: [
         {
-          title: "3ddesign",
-          url: "/products/web/design",
-        },
-
-        {
-          title: "projectmanagment",
-          url: "/products/web/projectmanagment",
+          title: "Genesis",
+          url: "#",
         },
         {
-          title: "ecommerce",
-          url: "/products/web/e-commerce",
+          title: "Explorer",
+          url: "#",
         },
         {
-          title: "crm",
-          url: "/products/web/crm",
-        },
-        {
-          title: "erp",
-          url: "/products/web/erp",
+          title: "Quantum",
+          url: "#",
         },
       ],
     },
     {
-      title: "Mobile",
-      url: "/products/mobile",
-      icon: Smartphone,
-    },
-    {
-      title: "AI integration",
-      url: "/products/ai-entegration",
+      title: "Documentation",
+      url: "#",
       icon: BookOpen,
+      items: [
+        {
+          title: "Introduction",
+          url: "#",
+        },
+        {
+          title: "Get Started",
+          url: "#",
+        },
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
+        },
+      ],
     },
     {
-      title: "UI/UX Design",
-      url: "/products/ui-ux",
-      icon: Palette,
-    },
-    {
-      title: "AI Agent",
-      url: "/products/ai-agent",
-      icon: Bot,
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Contact",
-      url: "contact",
-      icon: Send,
-    },
-    {
-      title: "Support",
+      title: "Settings",
       url: "#",
-      icon: LifeBuoy,
-    },
-    {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
+      icon: Settings2,
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
     },
   ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar
-      className="top-(--header-height) h-[calc(100svh-var(--header-height))]!"
-      {...props}
-    >
-    
+    <Sidebar variant="inset" {...props}>
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Button variant={"outline"} size={"sm"}>
+                New Chat
+              </Button>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
+      <SidebarFooter>
+        <NavUser user={data.user} />
+      </SidebarFooter>
     </Sidebar>
   );
 }
