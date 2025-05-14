@@ -88,6 +88,7 @@
   --sky-400: #38bdf8;
   --sky-500: #0ea5e9;
   --duration: 20;
+  --header-height: 64px
 
 }
 
@@ -143,6 +144,7 @@
   --chart-5: 212 97% 87%;
   --sky-400: #38bdf8;
   --sky-500: #0ea5e9;
+  --header-height: 64px
 }
 
 @layer base {
@@ -181,6 +183,7 @@
     scrollbar-color: hsl(var(--border)) transparent;
   }
 }
+
 
 @layer utilities {
   .step {

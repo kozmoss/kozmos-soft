@@ -3,20 +3,23 @@ import { InferenceClient } from "@huggingface/inference";
 
 export async function POST(request: NextRequest) {
   try {
-    const { message } = await request.json();
+    const { value } = await request.json();
 
     const client = new InferenceClient(`${process.env.HUGGINGFACE_API_KEY}`);
 
     const chatCompletion = await client.chatCompletion({
-      provider: "novita",
-      model: "deepseek-ai/DeepSeek-V3-0324",
+      provider: "hf-inference",
+      model: "meta-llama/Llama-3.3-70B-Instruct",
       messages: [
         {
           role: "user",
-          content: message,
+          content: value,
         },
       ],
+      max_tokens: 512,
     });
+
+    
 
     const assistantResponse = chatCompletion.choices[0].message;
 

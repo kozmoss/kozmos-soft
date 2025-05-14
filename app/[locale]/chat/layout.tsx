@@ -1,26 +1,25 @@
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar2 } from "@/components/chat/chat-sidebar";
 
-
-import { Separator } from "@/components/ui/separator";
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import {
+  Sidebar2Inset,
+  Sidebar2Provider,
+  Sidebar2Trigger,
+} from "@/components/chat/chat-sideprovider";
 import { ReactNode } from "react";
 
 export default function ChatLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex  w-full overflow-x-hidden">
-      <SidebarProvider>
-        <AppSidebar />
-        <SidebarInset className="bg-background rounded-lg w-full relative">
-          <header className="flex h-16 shrink-0 items-center gap-2">
-            <div className="flex items-center gap-2 px-4">
-              <SidebarTrigger className="-ml-1 " />
-              <Separator orientation="vertical" className="mr-2 h-4" />
-            </div>
-        
-          </header>
+    <Sidebar2Provider>
+      <AppSidebar2 />
+      <Sidebar2Inset>
+        <Sidebar2Trigger className="p-4 m-3"/>
+      </Sidebar2Inset>
+
+      <div className="h-screen flex flex-col overflow-hidden w-full">
+        <div className="flex min-h-screen w-full overflow-x-hidden">
           {children}
-        </SidebarInset>
-      </SidebarProvider>
-    </div>
+        </div>
+      </div>
+    </Sidebar2Provider>
   );
 }

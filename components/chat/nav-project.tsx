@@ -1,6 +1,6 @@
 "use client";
 
-import { MoreHorizontal, Trash2, type LucideIcon } from "lucide-react";
+import { MoreHorizontal, Trash2 } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -9,60 +9,57 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  useSidebar,
-} from "@/components/ui/sidebar";
+  Sidebar2Group,
+  Sidebar2GroupLabel,
+  Sidebar2Menu,
+  Sidebar2MenuAction,
+  Sidebar2MenuItem,
+  useSidebar2,
+  Sidebar2MenuButton,
+} from "./chat-sideprovider";
 
-export function NavProjects({
+export function NavProjects2({
   projects,
 }: {
   projects: {
     name: string;
     url: string;
-    icon: LucideIcon;
   }[];
 }) {
-  const { isMobile } = useSidebar();
+  const { isMobile } = useSidebar2();
 
   return (
-    <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
-      <SidebarMenu>
+    <Sidebar2Group className="group-data-[collapsible=icon]:hidden">
+      <Sidebar2GroupLabel>Recent</Sidebar2GroupLabel>
+      <Sidebar2Menu>
         {projects.map((item) => (
-          <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton asChild>
+          <Sidebar2MenuItem key={item.name}>
+            <Sidebar2MenuButton asChild>
               <a href={item.url}>
-                <item.icon />
                 <span>{item.name}</span>
               </a>
-            </SidebarMenuButton>
+            </Sidebar2MenuButton>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuAction showOnHover>
+                <Sidebar2MenuAction showOnHover>
                   <MoreHorizontal />
                   <span className="sr-only">More</span>
-                </SidebarMenuAction>
+                </Sidebar2MenuAction>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                className="w-48"
+                className="w-48 rounded-lg"
                 side={isMobile ? "bottom" : "right"}
                 align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuItem>
                   <Trash2 className="text-muted-foreground" />
-                  <span>Delete Project</span>
+                  <span>Delete </span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-          </SidebarMenuItem>
+          </Sidebar2MenuItem>
         ))}
-     
-      </SidebarMenu>
-    </SidebarGroup>
+      </Sidebar2Menu>
+    </Sidebar2Group>
   );
 }

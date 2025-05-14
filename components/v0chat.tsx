@@ -5,11 +5,7 @@ import type React from "react";
 import { useEffect, useRef, useCallback } from "react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowUpIcon, Paperclip } from "lucide-react";
-import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-
+import { ArrowUp, Paperclip } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage } from "./ui/avatar";
 
@@ -154,136 +150,104 @@ export function KozmosChat() {
     }
   };
 
-  const CodeBlock = ({
-    language,
-    value,
-  }: {
-    language: string;
-    value: string;
-  }) => {
-    return (
-      <SyntaxHighlighter
-        language={language || "javascript"}
-        style={vscDarkPlus}
-        className="rounded-md my-2"
-      >
-        {value}
-      </SyntaxHighlighter>
-    );
-  };
-
   return (
-    <div
-      className={cn(
-        "flex h-screen",
-        messages.length === 0 ? "items-center justify-center" : "flex-col",
-      )}
-    >
-      {messages.length > 0 && (
-        <div className="flex-1 overflow-y-auto p-4 w-full">
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={cn(
-                  "p-4 rounded-lg shadow-sm flex gap-5 ",
-                  message.role === "user"
-                    ? "bg-card items-center text-black dark:text-white"
-                    : "bg-white dark:bg-neutral-900 text-black dark:text-white",
-                )}
-              >
-                <Avatar>
-                  <AvatarImage
-                    src={
-                      message.role === "user"
-                        ? "/static/image/aiUser.svg"
-                        : "/static/image/kozmos.png"
-                    }
-                  />
-                </Avatar>
-
-                {message.role === "assistant" ? (
-                  <ReactMarkdown
-                    components={{
-                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      code: ({ inline, className, children, ...props }: any) => {
-                        const match = /language-(\w+)/.exec(className || "");
-                        return !inline && match ? (
-                          <CodeBlock
-                            language={match[1]}
-                            value={String(children).replace(/\n$/, "")}
-                            {...props}
-                          />
-                        ) : (
-                          <code
-                            className="bg-gray-200 px-1 py-0.5 rounded"
-                            {...props}
-                          >
-                            {children}
-                          </code>
-                        );
-                      },
-                    }}
+    <div className="relative h-full flex-1 flex overflow-x-hidden overflow-y-scroll pt-6">
+      <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
+        {messages.length > 0 ? (
+          /* Messages area with scroll inside the bordered container */
+          <div className="flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1">
+            <div style={{ height: "auto" }}>
+              <div className="flex flex-col gap-4">
+                {messages.map((message, index) => (
+                  <div
+                    key={index}
+                    className={cn(
+                      "py-2 px-4 mb-2 w-fit rounded-lg flex flex-row gap-5 items-center text-sm",
+                      message.role === "user" ? "bg-card" : "",
+                    )}
                   >
-                    {message.content}
-                  </ReactMarkdown>
-                ) : (
-                  <p className="whitespace-pre-wrap">{message.content}</p>
-                )}
-              </div>
-            ))}
-            <div ref={messagesEndRef} />
-          </div>
-        </div>
-      )}
+                    {message.role === "user" ? (
+                      <Avatar>
+                        <AvatarImage
+                          src="/static/image/aiUser.svg"
+                          alt="user"
+                        />
+                      </Avatar>
+                    ) : (
+                      <Avatar>
+                        <AvatarImage
+                          src="/static/image/kozmos.png"
+                          alt="@shadcn"
+                        />
+                      </Avatar>
+                    )}
 
-      {/* Input area */}
-      <div className={"p-4 w-full mx-auto max-w-4xl"}>
-        {messages.length === 0 && (
-          <div className="text-center mb-4 text-gray-400">
-            Nasıl yardımcı olabilirim?
-          </div>
-        )}
-        <form
-          onSubmit={handleSubmit}
-          className="bg-background-subtle border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm"
-        >
-          <div className=" bg-background-subtle relative z-10 grid min-h-[100px] rounded-xl">
-            <textarea
-              ref={textareaRef}
-              value={value}
-              onChange={(e) => {
-                setValue(e.target.value);
-                adjustHeight();
-              }}
-              onKeyDown={handleKeyDown}
-              placeholder="Ask Kozmos a question..."
-              className="resize-none w-full h-full bg-transparent p-3 text-sm outline-none ring-0 placeholder:text-gray-500"
-              disabled={loading}
-            />
-            <div className="flex items-center justify-end p-3">
-              <button
-                type="button"
-                disabled={loading}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-lg transition-colors"
-              >
-                <Paperclip className="w-4 h-4 text-gray-500 dark:text-white" />
-              </button>
-              <Button
-                className="ml-2"
-                size="icon"
-                disabled={loading || !value.trim()}
-                type="submit"
-              >
-                {loading ? (
-                  <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                ) : (
-                  <ArrowUpIcon className="w-4 h-4" />
-                )}
-              </Button>
+                    {message.content}
+                  </div>
+                ))}
+                <div ref={messagesEndRef} className="h-4" />
+              </div>
             </div>
           </div>
-        </form>
+        ) : (
+          ""
+        )}
+
+        <div
+          className={cn(
+            "mx-auto w-full z-[5]",
+            messages.length === 0
+              ? "flex flex-col items-center justify-center flex-1 pb-32"
+              : "sticky bottom-0 pt-6",
+          )}
+        >
+          <fieldset className="flex w-full min-w-0 flex-col">
+            {messages.length === 0 && (
+              <div className="text-center mb-6">
+                <h2 className="text-xl font-medium mb-2">Welcome Samet</h2>
+                <p className="text-gray-500 mb-6">
+                  Sana nasıl yardımcı olabilirim?
+                </p>
+              </div>
+            )}
+            <div className="flex flex-col bg-card border-0.5 border mx-2 md:mx-0 items-stretch transition-all duration-200 relative shadow-[0_0.25rem_1.25rem_hsl(var(--always-black)/3.5%)] focus-within:shadow-[0_0.25rem_1.25rem_hsl(var(--always-black)/7.5%)] hover:border-border-200 focus-within:border-border-200 z-10 rounded-2xl">
+              <div className="relative">
+                {" "}
+                <textarea
+                  ref={textareaRef}
+                  value={value}
+                  onChange={(e) => {
+                    setValue(e.target.value);
+                    adjustHeight();
+                  }}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Kozmos'a bir soru sorun..."
+                  className="resize-none w-full h-full bg-transparent p-3 text-sm outline-none ring-0 placeholder:text-gray-500"
+                  disabled={loading}
+                />
+              </div>
+
+              <div className="flex items-center justify-end p-3">
+                <Button type="button" variant={"ghost"} disabled={loading}>
+                  <Paperclip className="w-4 h-4 text-gray-500 dark:text-white" />
+                </Button>
+                <Button
+                  size={"sm"}
+                  disabled={loading || !value.trim()}
+                  onClick={handleSubmit}
+                  type="button"
+                >
+                  {loading ? (
+                    <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                  ) : (
+                    <ArrowUp className="w-4 h-4" />
+                  )}
+                </Button>
+              </div>
+            </div>
+            <div className="h-2 w-full"></div>
+          </fieldset>
+        </div>
       </div>
     </div>
   );
