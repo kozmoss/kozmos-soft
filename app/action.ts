@@ -1,5 +1,5 @@
 "use server";
-import { db } from "@/lib/firabase";
+import { db } from "@/lib/firebase";
 import type { ContactFormData } from "@/types/contact-us";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { revalidatePath } from "next/cache";

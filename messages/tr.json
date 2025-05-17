@@ -978,16 +978,29 @@
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
   },
   "Navigation": {
-    "dashboard":"Dashboard",
+    "dashboard": "Dashboard",
     "web": "Web",
     "mobile": "Mobil",
     "ai": "Yapay Zeka & AI Ajanı",
     "aboutUs": "Hakkımızda",
     "contactUs": "İletişim",
-    "typeCommand":"Bir komut yazın veya arayın...",
-    "searchDocumentation":"Ara",
-    "noResultsFound":"Sonuç Bulunamadı",
+    "typeCommand": "Bir komut yazın veya arayın...",
+    "searchDocumentation": "Ara",
+    "noResultsFound": "Sonuç Bulunamadı",
     "Links": "Linkler",
-    "Theme":"Temalar"
+    "Theme": "Temalar"
+  },
+  "loginDialog": {
+    "title": "Kozmos Soft'a Kaydol",
+    "description": "Başlamak için sadece birkaç bilgiye ihtiyacımız var.",
+    "or": "veya",
+    "continueWithGoogle": "Google ile Devam Et",
+    "terms": "Kaydolarak",
+    "termsLink": "Şartlarımızı kabul etmiş olursunuz"
+  },
+  "Chat": {
+    "welcome": "Hoşgeldin",
+    "helpyou": "Sana nasıl yardımcı olabilirim?",
+    "question": "Kozmos'a bir soru sorun... "
   }
 }

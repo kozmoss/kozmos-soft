@@ -14,13 +14,9 @@ import {
 import { NavUser } from "./nav-user-chat";
 import { NavProjects2 } from "./nav-project";
 import { TeamSwitcher } from "./teamSwitcher";
+import { useSession } from "next-auth/react";
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   teams: {
     name: "Kozmos",
     logo: GalleryVerticalEnd,
@@ -29,38 +25,10 @@ const data = {
 
   navMain: [
     {
-      title: "New Chat",
-      url: "#",
+      title: "newChat",
+      url: "/chat",
       icon: CirclePlus,
       isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-    },
-    {
-      name: "Travel",
-      url: "#",
     },
   ],
 };
@@ -68,6 +36,8 @@ const data = {
 export function AppSidebar2({
   ...props
 }: React.ComponentProps<typeof Sidebar2>) {
+  const { data: session } = useSession();
+
   return (
     <Sidebar2 collapsible="icon" {...props}>
       <Sidebar2Header>
@@ -75,10 +45,10 @@ export function AppSidebar2({
       </Sidebar2Header>
       <Sidebar2Content>
         <NavMain items={data.navMain} />
-        <NavProjects2 projects={data.projects} />
+        <NavProjects2 />
       </Sidebar2Content>
       <Sidebar2Footer>
-        <NavUser user={data.user} />
+        {session?.user && <NavUser user={session.user} />}
       </Sidebar2Footer>
     </Sidebar2>
   );

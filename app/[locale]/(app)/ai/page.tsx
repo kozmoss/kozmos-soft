@@ -28,6 +28,7 @@ type Category = "sales" | "research" | "featured" | "marketing";
 export default function AIPage() {
   const t = useTranslations("AIPage");
   const [activeTab, setActiveTab] = useState("marketing");
+ 
 
   const images = Array.from(
     { length: 9 },
@@ -75,6 +76,8 @@ export default function AIPage() {
 
   return (
     <div className=" mx-auto max-w-screen-2xl flex flex-col border-x border-dashed h-full">
+
+     
       <section className="flex w-full flex-col md:flex-row h-full ">
         <div className="border-dashed dark:border-border w-full space-y-4 border-0 md:w-1/2 md:border-r">
           <div className="text-foreground flex flex-col gap-4 p-8 text-left md:gap-8 md:p-10 lg:p-16">

@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
+import AuthProvider from "@/components/AuthProvider";
 
 
 export default async function LocaleLayout({
@@ -32,12 +33,14 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <AuthProvider>
             <div vaul-drawer-wrapper="">
               <div className="relative flex min-h-svh flex-col bg-background">
                 {children}
               </div>
             </div>
             <Toaster richColors position="top-left" />
+            </AuthProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

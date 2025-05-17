@@ -1002,5 +1002,18 @@
     "noResultsFound": "No Results Found",
     "Links": "Links",
     "Theme": "Themes"
+  },
+  "loginDialog": {
+    "title": "Sign up Kozmos Soft",
+    "description": "We just need a few details to get you started.",
+    "or": "Or",
+    "continueWithGoogle": "Continue with Google",
+    "terms": "By signing up you agree to our",
+    "termsLink": "Terms"
+  },
+  "Chat": {
+    "helpyou": "How can I help you?",
+    "welcome": "Welcome",
+    "question": "Ask the Kosmos a question..."
   }
 }
