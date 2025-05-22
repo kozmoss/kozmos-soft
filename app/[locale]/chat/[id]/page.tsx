@@ -1,56 +1,76 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import ChatInput from "@/components/chat/chatInput";
-import ChatMessages from "@/components/chat/chatMessages";
-import { authOptions } from "@/lib/auth";
-import { db } from "@/lib/firebase";
-import { Message } from "@/types/chat";
-import { collection, doc, getDoc, getDocs, orderBy, query } from "firebase/firestore";
-import { getServerSession } from "next-auth/next";
-import { notFound, redirect } from "next/navigation";
-import React from "react";
+import { cookies } from 'next/headers';
+import { notFound, redirect } from 'next/navigation';
+import { auth } from '@/app/api/(auth)/auth';
+import { Chat } from '@/components/chat/chat';
+import { getChatById, getMessagesByChatId } from '@/lib/db/queries';
+import { DataStreamHandler } from '@/components/data-stream-handler';
+import { DEFAULT_CHAT_MODEL } from '@/lib/ai/models';
+import type { DBMessage } from '@/lib/db/schema';
+import type { Attachment, UIMessage } from 'ai';
 
-interface ChatPageProps {
-  params: {
-    id: string;
-  };
-}
+export default async function Page(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+  const { id } = params;
+  const chat = await getChatById({ id });
 
-export default async function ChatPage({ params }: ChatPageProps) {
-  const session = await getServerSession(authOptions);
-  const { id } = await params;
-
-  if (!session?.user) {
-    redirect("/");
-  }
-
-  // Get the chat document
-  const chatRef = doc(db, `users/${session.user.id}/chats`, id);
-  const chatSnap = await getDoc(chatRef);
-
-  if (!chatSnap.exists()) {
+  if (!chat) {
     notFound();
   }
 
-  // Get messages from subcollection
-  const messagesRef = collection(db, `users/${session.user.id}/chats/${id}/messages`);
-  const messagesQuery = query(messagesRef, orderBy("createdAt", "asc"));
-  const messagesSnap = await getDocs(messagesQuery);
-  
-  // Map the message documents to your Message type
-  const messages: Message[] = messagesSnap.docs.map(doc => {
-    const data = doc.data();
-    return {
-      ...data,
-      createdAt: data.createdAt?.toDate() || new Date(),
-    } as Message;
+  const session = await auth();
+
+  if (!session) {
+    redirect('/api/auth/guest');
+  }
+
+
+
+  const messagesFromDb = await getMessagesByChatId({
+    id,
   });
 
+  function convertToUIMessages(messages: Array<DBMessage>): Array<UIMessage> {
+    return messages.map((message) => ({
+      id: message.id,
+      parts: message.parts as UIMessage['parts'],
+      role: message.role as UIMessage['role'],
+      content: '',
+      createdAt: message.createdAt,
+      experimental_attachments:
+        (message.attachments as Array<Attachment>) ?? [],
+    }));
+  }
+
+  const cookieStore = await cookies();
+  const chatModelFromCookie = cookieStore.get('chat-model');
+
+  if (!chatModelFromCookie) {
+    return (
+      <>
+        <Chat
+          id={chat.id}
+          initialMessages={convertToUIMessages(messagesFromDb)}
+          initialChatModel={DEFAULT_CHAT_MODEL}
+          isReadonly={session?.user?.id !== chat.userId}
+          session={session}
+          autoResume={true}
+        />
+        <DataStreamHandler id={id} />
+      </>
+    );
+  }
+
   return (
-    <div className="relative h-full flex-1 flex overflow-x-hidden overflow-y-scroll pt-6">
-      <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
-        <ChatMessages messages={messages} />
-        <ChatInput chatId={id} messages={messages} />
-      </div>
-    </div>
+    <>
+      <Chat
+        id={chat.id}
+        initialMessages={convertToUIMessages(messagesFromDb)}
+        initialChatModel={chatModelFromCookie.value}
+        isReadonly={session?.user?.id !== chat.userId}
+        session={session}
+        autoResume={true}
+      />
+      <DataStreamHandler id={id} />
+    </>
   );
 }

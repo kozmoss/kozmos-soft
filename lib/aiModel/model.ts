@@ -1,4 +1,5 @@
 import OpenAI from "openai";
+;
 
 const openai = new OpenAI({
   apiKey: process.env.GROK3_MODEL_ID,
@@ -8,7 +9,7 @@ const openai = new OpenAI({
 export async function generateResponse(prompt: string) {
   try {
     const stream = await openai.chat.completions.create({
-      model: "grok-3-mini-beta",
+      model: "grok-3-mini",
       messages: [
         {
           role: "user",
@@ -23,7 +24,7 @@ export async function generateResponse(prompt: string) {
 
     // Stream'den gelen tüm parçaları toplama
     for await (const chunk of stream) {
-      // Her chunk'ta gelen içeriği ana yanıta ekle
+     
       const content = chunk.choices[0]?.delta?.content || "";
       fullResponse += content;
     }

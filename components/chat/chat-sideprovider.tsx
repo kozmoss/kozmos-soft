@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
-import { PanelLeftIcon } from "lucide-react"
+import { PanelLeft, PanelLeftIcon } from "lucide-react"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -24,6 +24,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { ComponentProps } from "react"
+import { SidebarTrigger } from "../ui/sidebar"
 
 const SIDEBAR_COOKIE_NAME = "sidebar2_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -139,7 +141,7 @@ function Sidebar2Provider({
             } as React.CSSProperties
           }
           className={cn(
-            "group/sidebar2-wrapper has-data-[variant=inset]:bg-background flex min-h-svh w-full",
+            'group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar',
             className
           )}
           {...props}
@@ -170,7 +172,7 @@ function Sidebar2({
       <div
         data-slot="sidebar2"
         className={cn(
-          "bg-background text-sidebar-foreground flex h-full w-(--sidebar-width) flex-col",
+          'flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground',
           className
         )}
         {...props}
@@ -374,7 +376,7 @@ function Sidebar2Content({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="sidebar-content"
       data-sidebar="content"
       className={cn(
-        "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+        'flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden',
         className
       )}
       {...props}
@@ -444,7 +446,7 @@ function Sidebar2GroupContent({
   return (
     <div
       data-slot="sidebar-group-content"
-      data-sidebar="group2-content"
+      data-sidebar="group-content"
       className={cn("w-full text-sm", className)}
       {...props}
     />
@@ -474,26 +476,26 @@ function Sidebar2MenuItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 const sidebar2MenuButtonVariants = cva(
-  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu2-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  'peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-none ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0',
   {
     variants: {
       variant: {
-        default: "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+        default: 'hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
         outline:
-          "bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
+          'bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]',
       },
       size: {
-        default: "h-8 text-sm",
-        sm: "h-7 text-xs",
-        lg: "h-12 text-sm group-data-[collapsible=icon]:p-0!",
+        default: 'h-8 text-sm',
+        sm: 'h-7 text-xs',
+        lg: 'h-12 text-sm group-data-[collapsible=icon]:!p-0',
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: 'default',
+      size: 'default',
     },
-  }
-)
+  },
+);
 
 function Sidebar2MenuButton({
   asChild = false,
@@ -698,6 +700,29 @@ function Sidebar2MenuSubButton({
   )
 }
 
+
+
+ function Sidebar2Toggle({}: ComponentProps<typeof SidebarTrigger>) {
+  const { toggleSidebar } = useSidebar2();
+
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button
+          data-testid="sidebar-toggle-button"
+          onClick={toggleSidebar}
+          variant="outline"
+          className="md:px-2 md:h-fit"
+        >
+          <PanelLeft size={16} />
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent align="start">Toggle Sidebar</TooltipContent>
+    </Tooltip>
+  );
+}
+
+
 export {
   Sidebar2,
   Sidebar2Content,
@@ -723,4 +748,5 @@ export {
   Sidebar2Separator,
   Sidebar2Trigger,
   useSidebar2,
+  Sidebar2Toggle
 }

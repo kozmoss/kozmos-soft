@@ -12,9 +12,9 @@ import {
   Sidebar2Header,
 } from "./chat-sideprovider";
 import { NavUser } from "./nav-user-chat";
-import { NavProjects2 } from "./nav-project";
+import { SidebarHistory } from "../sidebar-history";
 import { TeamSwitcher } from "./teamSwitcher";
-import { useSession } from "next-auth/react";
+import { User } from "next-auth";
 
 const data = {
   teams: {
@@ -25,7 +25,7 @@ const data = {
 
   navMain: [
     {
-      title: "newChat",
+      title: "New Chat",
       url: "/chat",
       icon: CirclePlus,
       isActive: true,
@@ -33,22 +33,20 @@ const data = {
   ],
 };
 
-export function AppSidebar2({
-  ...props
-}: React.ComponentProps<typeof Sidebar2>) {
-  const { data: session } = useSession();
+export function AppSidebar2({ user }: { user: User | undefined }) {
+
 
   return (
-    <Sidebar2 collapsible="icon" {...props}>
+    <Sidebar2 className="group-data-[side=left]:border-r-1 border border-dashed" >
       <Sidebar2Header>
         <TeamSwitcher teams={data.teams} />
       </Sidebar2Header>
       <Sidebar2Content>
         <NavMain items={data.navMain} />
-        <NavProjects2 />
+        <SidebarHistory user={user}/>
       </Sidebar2Content>
       <Sidebar2Footer>
-        {session?.user && <NavUser user={session.user} />}
+        {user && <NavUser user={user} />}
       </Sidebar2Footer>
     </Sidebar2>
   );

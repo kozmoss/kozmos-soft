@@ -22,16 +22,10 @@ import {
 } from "./chat-sideprovider";
 
 import { signOut } from "next-auth/react";
+import { User } from "next-auth";
 
-export function NavUser({
-  user,
-}: {
-  user: {
-    name?: string | null;
-    email?: string | null;
-    image?: string | null;
-  };
-}) {
+export function NavUser(
+  { user }: { user: User }) {
   const { isMobile } = useSidebar2();
 
   return (

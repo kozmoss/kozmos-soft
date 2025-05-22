@@ -2,30 +2,20 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowUp, Paperclip } from "lucide-react";
+import { Paperclip } from "lucide-react";
 import { BorderTrail } from "./border-beam";
 import { useRouter } from "@/i18n/navigation";
 import { LoginDialog } from "./chat/login-google-dialog";
-import { getSession } from "next-auth/react";
 
 export default function ChatPage() {
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const [showLoginDialog, setShowLoginDialog] = useState(false);
-  
 
   const router = useRouter();
 
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
-    setIsLoading(true);
-    const session = await getSession();
-    if (session) {
-      router.push("chat");
-    } else {
-      setShowLoginDialog(true);
-      setIsLoading(false)
-    }
+    router.push("chat");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -61,26 +51,14 @@ export default function ChatPage() {
               onKeyDown={handleKeyDown}
               placeholder="Kozmos'a bir soru sorun..."
               className="resize-none w-full h-full bg-transparent p-3 text-sm outline-none ring-0 placeholder:text-gray-500"
-              disabled={isLoading}
             />
           </div>
 
           <div className="flex items-center justify-end p-3">
-            <Button type="button" variant={"ghost"} disabled={isLoading}>
+            <Button type="button" variant={"ghost"}>
               <Paperclip className="w-4 h-4 text-gray-500 dark:text-white" />
             </Button>
-            <Button
-              size={"sm"}
-              disabled={isLoading}
-              onClick={handleSubmit}
-              type="button"
-            >
-              {isLoading ? (
-                <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-              ) : (
-                <ArrowUp className="w-4 h-4" />
-              )}
-            </Button>
+            <Button size={"sm"} onClick={handleSubmit} type="button"></Button>
           </div>
         </div>
       </form>

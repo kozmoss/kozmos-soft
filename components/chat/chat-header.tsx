@@ -1,37 +1,66 @@
 "use client";
+import { useRouter } from "next/navigation";
+import { useWindowSize } from "usehooks-ts";
 
-import Image from "next/image"; // For the company logo
-import { Button } from "../ui/button";
+import { ModelSelector } from "@/components/model-selector";
 
-export function SiteHeader() {
+
+import { Button } from "@/components/ui/button";
+import { PlusIcon } from "lucide-react";
+import { useSidebar2 } from "./chat-sideprovider";
+import { memo } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import type { Session } from "next-auth";
+import { Sidebar2Toggle } from "./chat-sideprovider";
+
+function PureChatHeader({
+  selectedModelId,
+  isReadonly,
+  session,
+}: {
+  selectedModelId: string;
+  isReadonly: boolean;
+  session: Session;
+}) {
+  const router = useRouter();
+  const { open } = useSidebar2();
+
+  const { width: windowWidth } = useWindowSize();
+
   return (
-    <header className="flex h-14 shrink-0 z-50 items-center justify-between gap-3 px-3 py-2 mt-2 sm:h-11 sm:px-2">
-      {/* Company Logo on the left */}
-      <div className="flex min-w-0 flex-1 items-center pl-4">
-        <Image
-          src="/static/image/kozmos.png" // Replace with the actual path to your logo
-          alt="Company Logo"
-          width={32}
-          height={36}
-          className="object-contain"
-        />
-      </div>
+    <header className="flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2">
+      <Sidebar2Toggle />
 
-      {/* Avatar on the right */}
-      <div className="flex flex-1 items-center justify-end gap-2 pr-3">
-        <Button
-          size="sm"
-          className="relative overflow-hidden w-7 h-7 rounded-full p-0"
-          variant="ghost"
-        >
-          <Image
-            fill
-            src="/static/image/aiUser.svg"
-            alt="User Avatar"
-            className="object-cover"
-          />
-        </Button>
-      </div>
+      {(!open || windowWidth < 768) && (
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              variant="outline"
+              className="order-2 md:order-1 md:px-2 px-2 md:h-fit ml-auto md:ml-0"
+              onClick={() => {
+                router.push("/chat");
+                router.refresh();
+              }}
+            >
+              <PlusIcon />
+              <span className="md:sr-only">New Chat</span>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>New Chat</TooltipContent>
+        </Tooltip>
+      )}
+
+      {!isReadonly && (
+        <ModelSelector
+          session={session}
+          selectedModelId={selectedModelId}
+          className="order-1 md:order-2"
+        />
+      )}
     </header>
   );
 }
+
+export const ChatHeader = memo(PureChatHeader, (prevProps, nextProps) => {
+  return prevProps.selectedModelId === nextProps.selectedModelId;
+});

@@ -6,7 +6,6 @@ import Image from "next/image";
 
 import {
   Sidebar2Menu,
-  Sidebar2MenuButton,
   Sidebar2MenuItem,
 } from "./chat-sideprovider";
 
@@ -26,17 +25,17 @@ export function TeamSwitcher({
   return (
     <Sidebar2Menu>
       <Sidebar2MenuItem>
-        <Sidebar2MenuButton
-          size="lg"
-          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+        <div
+       
+          className="flex flex-row items-center justify-center gap-1"
         >
-          <div className="flex aspect-square size-8 items-center justify-center rounded-lg text-sidebar-primary-foreground">
-            <Image src={teams.src} height={24} width={24} alt={"kozmos"} />
+          <div className="flex aspect-square  items-center justify-center rounded-lg text-sidebar-primary-foreground">
+            <Image src={teams.src} height={48} width={48} alt={"kozmos"} />
           </div>
-          <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold">{teams.name}</span>
+          <div className="grid flex-1 text-left font-extrabold ">
+            <span className="truncate ">{teams.name}</span>
           </div>
-        </Sidebar2MenuButton>
+        </div>
       </Sidebar2MenuItem>
     </Sidebar2Menu>
   );

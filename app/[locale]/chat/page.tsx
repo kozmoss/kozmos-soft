@@ -1,16 +1,53 @@
-"use client"
+import { cookies } from 'next/headers';
 
-import ChatInput from '@/components/chat/chatInput'
-import ChatMessages from '@/components/chat/chatMessages'
-import React from 'react'
+import { Chat } from '@/components/chat/chat';
+import { DEFAULT_CHAT_MODEL } from '@/lib/ai/models';
+import { generateUUID } from '@/lib/utils';
+import { DataStreamHandler } from '@/components/data-stream-handler';
+import { auth } from '@/app/api/(auth)/auth';
+import { redirect } from 'next/navigation';
 
-export default function ChatPageMain() {
+export default async function Page() {
+  const session = await auth();
+
+  if (!session) {
+    redirect('/api/auth/guest');
+  }
+
+  const id = generateUUID();
+
+  const cookieStore = await cookies();
+  const modelIdFromCookie = cookieStore.get('chat-model');
+
+  if (!modelIdFromCookie) {
+    return (
+      <>
+        <Chat
+          key={id}
+          id={id}
+          initialMessages={[]}
+          initialChatModel={DEFAULT_CHAT_MODEL}
+          isReadonly={false}
+          session={session}
+          autoResume={false}
+        />
+        <DataStreamHandler id={id} />
+      </>
+    );
+  }
+
   return (
-    <div className="relative h-full flex-1 flex overflow-x-hidden overflow-y-scroll pt-6">
-    <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
-      <ChatMessages messages={[]} />
-      <ChatInput messages={[]} />
-    </div>
-  </div>
-  )
+    <>
+      <Chat
+        key={id}
+        id={id}
+        initialMessages={[]}
+        initialChatModel={modelIdFromCookie.value}
+        isReadonly={false}
+        session={session}
+        autoResume={false}
+      />
+      <DataStreamHandler id={id} />
+    </>
+  );
 }

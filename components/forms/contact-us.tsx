@@ -14,7 +14,6 @@ import { Input } from "@/components/ui/input";
 import { useTranslations } from "next-intl";
 import { Textarea } from "@/components/ui/textarea";
 import { ContactFormData } from "@/types/contact-us";
-import { addContactInquiryAction } from "@/app/action";
 import { toast } from "sonner";
 
 interface ContactFormProps {
@@ -59,8 +58,8 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
 
   async function onSubmit(values: ContactFormData) {
     try {
-      const result = await addContactInquiryAction(values)
-      if (result.success) {
+      
+      if (values) {
         toast.success("Inquiry Submitted!", {
           description: "Thank you for contacting us. We will get back to you shortly.",
          
@@ -69,12 +68,7 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
         if(onFormSubmitSuccess) {
           onFormSubmitSuccess()
         }
-      } else {
-        toast.error("Submission Error" ,{
-         description: result.error || "Failed to submit your inquiry. Please try again."
-         
-        })
-      }
+      } 
     } catch (error) {
       toast.error("Unexpected Error", {
       description: `An unexpected error occurred. ${error instanceof Error ? error.message : ''}`,
