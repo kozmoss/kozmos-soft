@@ -16,18 +16,15 @@ import {
 import { toast } from "sonner";
 import { useLocalStorage, useWindowSize } from "usehooks-ts";
 
-
 import { ArrowUpIcon, PaperclipIcon, CirclePause } from "lucide-react";
 import { PreviewAttachment } from "./preview-attachment";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
-import { SuggestedActions } from "./suggested-actions";
 import equal from "fast-deep-equal";
 import type { UseChatHelpers } from "@ai-sdk/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useScrollToBottom } from "@/hooks/use-scroll-to-bottom";
-
 
 function PureMultimodalInput({
   chatId,
@@ -37,9 +34,9 @@ function PureMultimodalInput({
   stop,
   attachments,
   setAttachments,
-  messages,
+
   setMessages,
-  append,
+
   handleSubmit,
   className,
 }: {
@@ -156,7 +153,7 @@ function PureMultimodalInput({
       const { error } = await response.json();
       toast.error(error);
     } catch (error) {
-      console.error(error)
+      console.error(error);
       toast.error("Failed to upload file, please try again!");
     }
   };
@@ -221,12 +218,6 @@ function PureMultimodalInput({
           </motion.div>
         )}
       </AnimatePresence>
-
-      {messages.length === 0 &&
-        attachments.length === 0 &&
-        uploadQueue.length === 0 && (
-          <SuggestedActions append={append} chatId={chatId} />
-        )}
 
       <input
         type="file"
@@ -314,7 +305,6 @@ export const MultimodalInput = memo(
     if (prevProps.input !== nextProps.input) return false;
     if (prevProps.status !== nextProps.status) return false;
     if (!equal(prevProps.attachments, nextProps.attachments)) return false;
-
 
     return true;
   },

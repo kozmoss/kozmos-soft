@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import cx from 'classnames';
 import {
@@ -312,7 +313,7 @@ const PureToolbar = ({
   setMessages: UseChatHelpers['setMessages'];
   artifactKind: ArtifactKind;
 }) => {
-  const toolbarRef = useRef<HTMLDivElement>(null);
+  const toolbarRef = useRef<any>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
   const [selectedTool, setSelectedTool] = useState<string | null>(null);

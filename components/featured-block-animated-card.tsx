@@ -1,37 +1,42 @@
-"use client"
-import { motion, useAnimate } from "framer-motion"
-import React, { useState, useEffect } from "react"
-import { cn } from "@/lib/utils"
+"use client";
+import { motion, useAnimate } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 export interface AnimatedCardProps {
-  className?: string
-  title?: React.ReactNode
-  description?: React.ReactNode
+  className?: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
   icons?: Array<{
-    icon: React.ReactNode
-    size?: "sm" | "md" | "lg"
-    className?: string
-  }>
+    icon: React.ReactNode;
+    size?: "sm" | "md" | "lg";
+    className?: string;
+  }>;
 }
 
 const sizeMap = {
   sm: "h-8 w-8",
   md: "h-12 w-12",
   lg: "h-16 w-16",
-}
+};
 
-export function AnimatedCard({ className, title, description, icons = [] }: AnimatedCardProps) {
+export function AnimatedCard({
+  className,
+  title,
+  description,
+  icons = [],
+}: AnimatedCardProps) {
   return (
     <div
       className={cn(
         " w-full mx-auto p-8 h-full border border-[rgba(255,255,255,0.10)] dark:bg-[rgba(40,40,40,0.70)] bg-gray-100 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group",
-        className
+        className,
       )}
     >
       <div
         className={cn(
           "h-[15rem] md:h-[20rem] rounded-xl z-40",
-          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] [mask-image:radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]"
+          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] [mask-image:radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]",
         )}
       >
         <AnimatedIcons icons={icons} />
@@ -47,38 +52,37 @@ export function AnimatedCard({ className, title, description, icons = [] }: Anim
         </p>
       )}
     </div>
-  )
+  );
 }
 
 function AnimatedIcons({ icons }: { icons: AnimatedCardProps["icons"] }) {
-  const scale = [1, 1.1, 1]
-  const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"]
-  
-  // useAnimate hook'u kullanarak useEffect'ten kurtuluyoruz
-  const [scope, animate] = useAnimate()
-  
-  // Bu komponent client-side'da render edilince otomatik olarak çalışacak
-  const sequence = icons?.map((_, index) => [
-    `.circle-${index + 1}`,
-    { scale, transform },
-    { duration: 0.8 },
-  ])
+  const scale = [1, 1.1, 1];
+  const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
 
-  // setTimeout kullanarak animasyonu başlatıyoruz (komponent mount olduktan hemen sonra)
+  // useAnimate hook'u kullanarak useEffect'ten kurtuluyoruz
+  const [scope, animate] = useAnimate();
+
   React.useEffect(() => {
-    // Tek bir useEffect kullanmak zorundayız burada, ancak bunun dışında diğer yerler temiz
+    if (!icons || icons.length === 0) return;
+  
+    const sequence: Parameters<typeof animate>[0] = icons.map((_, index) => [
+      `.circle-${index + 1}`,
+      { scale, transform },
+      { duration: 0.8 },
+    ]);
+  
     const timer = setTimeout(() => {
       animate(sequence, {
         repeat: Infinity,
         repeatDelay: 1,
-      })
-    }, 0)
-    
-    return () => clearTimeout(timer)
-  }, [])
+      });
+    }, 0);
+  
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div 
+    <div
       className="p-8 overflow-hidden h-full relative flex items-center justify-center"
       ref={scope} // Animasyon scope'u
     >
@@ -89,7 +93,7 @@ function AnimatedIcons({ icons }: { icons: AnimatedCardProps["icons"] }) {
             className={cn(
               sizeMap[icon.size || "lg"],
               `circle-${index + 1}`,
-              icon.className
+              icon.className,
             )}
           >
             {icon.icon}
@@ -98,7 +102,7 @@ function AnimatedIcons({ icons }: { icons: AnimatedCardProps["icons"] }) {
       </div>
       <ClientOnlySparkles />
     </div>
-  )
+  );
 }
 
 const Container = React.forwardRef<
@@ -110,41 +114,41 @@ const Container = React.forwardRef<
     className={cn(
       `rounded-full flex items-center justify-center bg-[rgba(248,248,248,0.01)]
       shadow-[0px_0px_8px_0px_rgba(248,248,248,0.25)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)]`,
-      className
+      className,
     )}
     {...props}
   />
-))
-Container.displayName = "Container"
+));
+Container.displayName = "Container";
 
 // Client-only wrapper component
 function ClientOnlySparkles() {
-  const [isClient, setIsClient] = useState(false)
-  
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    setIsClient(true)
-  }, [])
-  
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="h-40 w-px absolute top-20 m-auto z-40 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-move">
       <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
         {isClient ? <Sparkles /> : null}
       </div>
     </div>
-  )
+  );
 }
 
 // Generate static random values to use in sparkles
 // Statik rastgele değerler oluşturuyoruz
 const staticSparkles = Array.from({ length: 12 }, (_, i) => ({
   id: `star-${i}`,
-  initialTop: 50,  // Sabit başlangıç değerleri
+  initialTop: 50, // Sabit başlangıç değerleri
   initialLeft: 50,
   topOffset: Math.floor(Math.random() * 100),
   leftOffset: Math.floor(Math.random() * 100),
   duration: 4 + Math.floor(Math.random() * 4),
   delay: Math.floor(Math.random() * 2),
-}))
+}));
 
 const Sparkles = () => {
   return (
@@ -152,9 +156,9 @@ const Sparkles = () => {
       {staticSparkles.map((spark) => (
         <motion.span
           key={spark.id}
-          initial={{ 
+          initial={{
             opacity: 0,
-            top: `${spark.topOffset}%`, 
+            top: `${spark.topOffset}%`,
             left: `${spark.leftOffset}%`,
           }}
           animate={{
@@ -181,5 +185,5 @@ const Sparkles = () => {
         />
       ))}
     </div>
-  )
-}
+  );
+};

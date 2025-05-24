@@ -1,13 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-
 
 import { getAllBlockIds } from "@/lib/blocks";
 import { absoluteUrl, cn } from "@/lib/utils";
 import { Style, styles } from "@/contants/styles";
 
 import { getRegistryComponent, getRegistryItem } from "@/lib/registry";
+
+interface PageProps {
+  params: Promise<{
+    style: Style["name"];
+    name: string;
+  } | any>;
+}
 
 const getCachedRegistryItem = React.cache(
   async (name: string, style: Style["name"]) => {
@@ -19,15 +26,9 @@ export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
-}: {
-  params: {
-    style: Style["name"];
-    name: string;
-  };
-}): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
   const { name, style } = await params;
   const item = await getCachedRegistryItem(name, style);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
 
   if (!item) {
     return {};
@@ -70,10 +71,10 @@ export async function generateStaticParams() {
 export default async function BlockPage({
   params,
 }: {
-  params: {
+  params: Promise<{
     style: Style["name"];
     name: string;
-  };
+  }>;
 }) {
   const { name, style } = await params;
   const item = await getCachedRegistryItem(name, style);

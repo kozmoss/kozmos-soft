@@ -115,7 +115,6 @@ const PureSpreadsheetEditor = ({
       rows={localRows}
       enableVirtualization
       onRowsChange={handleRowsChange}
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onCellClick={(args:any) => {
         if (args.column.key !== "rowNumber") {
           args.selectCell(true);

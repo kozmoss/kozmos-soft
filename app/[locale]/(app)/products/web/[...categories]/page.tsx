@@ -1,3 +1,5 @@
+// app/[locale]/(app)/products/web/[...categories]/page.tsx
+
 import { getAllBlockIds } from "@/lib/blocks";
 import { BlockDisplay } from "@/components/block-display";
 import { registryCategories } from "@/contants/web";
@@ -10,11 +12,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlocksPage({
-  params,
-}: {
-  params: { categories?: string[] };
-}) {
+interface PageProps {
+  params: Promise<{
+    categories?: string[];
+  }>;
+}
+
+export default async function BlocksPage({ params }: PageProps) {
   const { categories } = await params;
   const blocks = await getAllBlockIds(["registry:block"], categories ?? []);
 

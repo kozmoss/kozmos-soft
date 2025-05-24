@@ -7,6 +7,7 @@ import { useActionState, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { SubmitButton } from "@/components/submit-form-button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
     const router = useRouter();
@@ -36,6 +37,7 @@ export default function Page() {
       updateSession();
       router.refresh();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
   const handleSubmit = (formData: FormData) => {
@@ -44,11 +46,11 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#121212] relative overflow-hidden w-full rounded-xl">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#121212] relative overflow-hidden w-full ">
       <div className="relative z-10 w-full max-w-sm rounded-3xl bg-gradient-to-r from-[#ffffff10] to-[#121212] backdrop-blur-sm  shadow-2xl p-8 flex flex-col items-center">
         {/* Logo */}
         <div className="flex items-center justify-center w-24 h-24 rounded-fullmb-6 shadow-lg">
-          <img src="/static/image/kozmos.png" />
+          <Image height={64} width={64} alt="logo" src="/static/image/kozmos.png" />
         </div>
         {/* Title */}
         <h2 className="text-2xl font-semibold text-white mb-6 text-center">

@@ -49,7 +49,9 @@ function BlockViewerProvider({
   const [style, setStyle] =
     React.useState<BlockViewerContext["style"]>("new-york");
 
-  const resizablePanelRef = React.useRef<ImperativePanelHandle>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const resizablePanelRef = React.useRef<any>(null);
+
 
   return (
     <BlockViewerContext.Provider
