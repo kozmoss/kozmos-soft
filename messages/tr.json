@@ -16,7 +16,7 @@
       ]
     },
     "section2": {
-      "title": "Anlamlı Müşteri Bağlantıları Anında Kurulur",
+      "title": "Müşteri Bağlantıları Anında Kurulur",
       "description": "Günümüzün hızlı iş dünyasında, hızlı yanıt vermek her şeydir. Modern girişimci için tasarlanmış iletişim araçlarıyla geçici etkileşimleri kalıcı ilişkilere dönüştürün.",
       "features": [
         "Sezgisel canlı sohbet işlevselliği sayesinde müşterilerle kesintisiz sohbetler gerçekleştirin",
@@ -88,10 +88,10 @@
   },
   "AIPage": {
     "chat": {
-      "userQuestion": "Web sitemi hızlıca nasıl kurabilirim?",
-      "aiResponse1": "Merhaba! 🚀 kişisel yapay zeka ile sadece birkaç adımda modern bir web sitesi oluşturabilirsin.",
-      "aiResponse2": "Bileşenleri sürükleyip bırak, stilleri özelleştir ve yayınla!"
+      "userQuestion": "Web siteme nasıl ai entegre edebilirim?",
+      "aiResponse1": "Merhaba! 🚀 Web sitene sadece birkaç adımda akıllı bir sohbet botu entegre edebilirsin."
     },
+    "helpwith?": "Sana Nasıl Yardımcı Olabilirim?",
     "hero": {
       "title": "AI Agent",
       "subtitle": "İşinizi otomatikleştirmek, verimliliği artırmak ve rekabet avantajı elde etmek için gelişmiş yapay zeka ajanlarımızla tanışın.",
@@ -440,6 +440,11 @@
     }
   },
   "Dashboard": {
+    "chat": {
+      "title": "Web Sitenizi Akıllı Bir Sohbet Botuyla Güçlendirin",
+      "userQuestion": "How can I integrate AI into my website?",
+      "aiResponse1": "Hello! 🚀 You can integrate a smart chatbot into your website in just a few steps."
+    },
     "mobileComponent": {
       "section1": {
         "title": "Kullanıcı Deneyimi ve Arayüz",
@@ -954,6 +959,16 @@
     }
   },
   "contact-us": {
+    "slogan": {
+      "produceTogether": "Birlikte üretelim",
+      "meetKozmosSoft": "Kozmos-Soft ile tanışın",
+      "justOneClickAway": "Size bir tık uzaktayız",
+      "moveDreamsToDigital": "Hayallerinizi dijitale taşıyalım",
+      "haveQuestions": "Sorularınız mı var?",
+      "kozmosSoftWithYou": "Kozmos-Soft yanınızda",
+      "shapeTechTogether": "Teknolojiyi birlikte şekillendirelim",
+      "weAreHere": "Biz buradayız"
+    },
     "title": "Bize Ulaşın",
     "fullName": "Ad Soyad",
     "email": "E-posta",

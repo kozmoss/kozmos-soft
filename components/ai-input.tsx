@@ -6,10 +6,12 @@ import { ArrowUpIcon, Paperclip } from "lucide-react";
 import { BorderTrail } from "./border-beam";
 import { useRouter } from "@/i18n/navigation";
 import { LoginDialog } from "./chat/login-google-dialog";
+import { useTranslations } from "next-intl";
 
 export default function ChatPage() {
   const [input, setInput] = useState("");
   const [showLoginDialog, setShowLoginDialog] = useState(false);
+  const t = useTranslations("AIPage")
 
   const router = useRouter();
 
@@ -29,7 +31,7 @@ export default function ChatPage() {
     <div className="w-full flex flex-col h-full justify-center items-center">
       <LoginDialog open={showLoginDialog} onOpenChange={setShowLoginDialog} />
       <div className="mb-5 text-3xl text-muted-foreground">
-        What can I help with?
+       {t("helpwith?")}
       </div>
 
       <form

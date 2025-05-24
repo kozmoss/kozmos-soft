@@ -89,9 +89,9 @@
   "AIPage": {
     "chat": {
       "userQuestion": "How can I quickly set up my website?",
-      "aiResponse1": "Hello! 🚀 With personal AI, you can create a modern website in just a few steps.",
-      "aiResponse2": "Drag and drop components, customize styles, and publish!"
+      "aiResponse1": "Hello! 🚀 With personal AI, you can create a modern website in just a few steps."
     },
+    "helpwith?": "What can I help with?",
     "hero": {
       "title": "AI Agent Solutions",
       "subtitle": "Meet our advanced artificial intelligence agents designed to automate your business, increase efficiency, and give you a competitive edge.",
@@ -454,6 +454,11 @@
     }
   },
   "Dashboard": {
+    "chat": {
+      "title": "Empower Your Website with a Smart Chatbot",
+      "userQuestion": "How can I integrate AI into my website?",
+      "aiResponse1": "Hello! 🚀 You can integrate a smart chatbot into your website in just a few steps."
+    },
     "mobileComponent": {
       "section1": {
         "title": "User Experience and Interface",
@@ -968,6 +973,16 @@
     }
   },
   "contact-us": {
+    "slogan": {
+      "produceTogether": "Let's produce together",
+      "meetKozmosSoft": "Meet Kozmos-Soft",
+      "justOneClickAway": "We're just one click away",
+      "moveDreamsToDigital": "Let's bring your dreams to digital",
+      "haveQuestions": "Have questions?",
+      "kozmosSoftWithYou": "Kozmos-Soft is with you",
+      "shapeTechTogether": "Let's shape technology together",
+      "weAreHere": "We are here"
+    },
     "title": "Contact Us",
     "fullName": "Full Name",
     "email": "Email",
@@ -1001,7 +1016,8 @@
     "searchDocumentation": "Search Documentation",
     "noResultsFound": "No Results Found",
     "Links": "Links",
-    "Theme": "Themes"
+    "Theme": "Themes",
+    "typeCommand": "Type or search for a command..."
   },
   "loginDialog": {
     "title": "Sign up Kozmos Soft",

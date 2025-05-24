@@ -7,26 +7,22 @@ import { contact } from "../actions";
 import { toast } from "sonner";
 import { ContactFormData } from "@/types/contact-us";
 
-
 export default function ProfileForm() {
-
-
   const t = useTranslations("contact-us");
   const texts = [
-    "Birlikte üretelim",
-    "Kozmos-Soft ile tanışın",
-    "Size bir tık uzaktayız",
-    "Hayallerinizi dijitale taşıyalım",
-    "Sorularınız mı var?",
-    "Kozmos-Soft yanınızda",
-    "Teknolojiyi birlikte şekillendirelim",
-    "Biz buradayız",
+    t("slogan.produceTogether"),
+    t("slogan.meetKozmosSoft"),
+    t("slogan.justOneClickAway"),
+    t("slogan.moveDreamsToDigital"),
+    t("slogan.haveQuestions"),
+    t("slogan.kozmosSoftWithYou"),
+    t("slogan.shapeTechTogether"),
+    t("slogan.weAreHere"),
   ];
-
 
   const handleSubmit = async (data: ContactFormData) => {
     const response = await contact(data);
-  
+
     if (response.status === "success") {
       toast("Form başarıyla gönderildi!");
     } else if (response.status === "invalid_data") {
@@ -45,7 +41,7 @@ export default function ProfileForm() {
         </div>
         <div className="flex flex-1 items-center justify-center border-dashed border rounded-lg">
           <div className="w-full max-w-lg">
-            <ContactUs action={handleSubmit}/>
+            <ContactUs action={handleSubmit} />
           </div>
         </div>
       </div>

@@ -176,7 +176,7 @@ export default function AIPage() {
 
                 <div className="bg-primary text-primary-foreground text-sm p-3 rounded-2xl shadow w-fit max-w-[80%]">
                   <Typewriter
-                    text={[t("chat.aiResponse1"), t("chat.aiResponse2")]}
+                    text={[t("chat.aiResponse1")]}
                     speed={60}
                     loop={true}
                     className="text-sm"
