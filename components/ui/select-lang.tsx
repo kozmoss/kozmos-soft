@@ -29,8 +29,8 @@ export function LocaleSwitcherSelect() {
   }
 
   return (
-    <Select defaultValue={locale} onValueChange={onLocaleChange} disabled={isPending}>
-    <SelectTrigger className="w-[80px] h-9">
+    <Select  defaultValue={locale} onValueChange={onLocaleChange} disabled={isPending}>
+    <SelectTrigger size="sm">
       <SelectValue placeholder={locale.toUpperCase()} />
     </SelectTrigger>
     <SelectContent>

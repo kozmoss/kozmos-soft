@@ -12,13 +12,11 @@ export function SiteHeader() {
           <MainNav />
           <MobileNav />
           <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
-            <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+            <div className="hidden w-full flex-1 gap-3 md:flex md:w-auto md:flex-none">
               <CommandMenu />
-            </div>
-            <nav className="flex items-center gap-2">
               <LocaleSwitcherSelect />
               <ThemeToggle />
-            </nav>
+            </div>
           </div>
         </div>
       </div>

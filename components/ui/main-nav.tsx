@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import kozmosPNG from "@/public/static/image/kozmos.png";
+import kozmosDark from "@/public/static/image/darkKozmos.png"
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
@@ -14,7 +15,8 @@ export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
-        <Image src={kozmosPNG} height={30} width={60} alt="" />
+        <Image src={kozmosDark} className="dark:hidden block" height={30} width={60} alt="" />
+        <Image src={kozmosPNG} className="hidden dark:block" height={30} width={60} alt="" />
         <span className="hidden font-bold lg:inline-block">KozmosSoft</span>
       </Link>
       <nav className="flex items-center gap-4 text-sm xl:gap-6">
