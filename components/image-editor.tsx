@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils';
 import { LoaderIcon } from 'lucide-react';
+import cn from 'classnames';
 
 interface ImageEditorProps {
   title: string;

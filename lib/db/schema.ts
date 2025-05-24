@@ -17,6 +17,17 @@ export const user = pgTable('User', {
   password: varchar('password', { length: 64 }),
 });
 
+export const contactUs = pgTable("ContactUs", {
+  id: uuid("id").primaryKey().notNull().defaultRandom(),
+  email: varchar('email', { length: 64 }).notNull(),
+  fullName: varchar("full_name", {length: 64}).notNull(),
+  phone: varchar("phone", { length: 15 }).notNull(), 
+  message: text("message").notNull(),
+  createdAt: timestamp('createdAt').notNull(),
+})
+
+export type ContactUs = InferSelectModel<typeof contactUs>
+
 export type User = InferSelectModel<typeof user>;
 
 export const chat = pgTable('Chat', {

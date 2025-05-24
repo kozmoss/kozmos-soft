@@ -79,7 +79,7 @@
     "react-data-grid": "^7.0.0-beta.54",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.2",
-    "react-markdown": "^10.1.0",
+    "react-markdown": "^9.0.1",
     "react-resizable-panels": "^2.1.7",
     "react-syntax-highlighter": "^15.6.1",
     "react-textarea-autosize": "^8.5.9",

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { zodResolver } from '@hookform/resolvers/zod';
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
@@ -14,16 +14,15 @@ import { Input } from "@/components/ui/input";
 import { useTranslations } from "next-intl";
 import { Textarea } from "@/components/ui/textarea";
 import { ContactFormData } from "@/types/contact-us";
-import { toast } from "sonner";
 
-interface ContactFormProps {
-  onFormSubmitSuccess?: () => void
-}
 
-export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
+type ContactUsProps = {
+  action: (data: ContactFormData) => Promise<void>;
+};
+
+export function ContactUs({ action }: ContactUsProps) {
   const t = useTranslations("contact-us");
- 
-  
+
   const contactFormSchema = z.object({
     fullName: z.string().min(2, {
       message: "Username must be at least 2 characters.",
@@ -31,16 +30,23 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
     email: z.string().email({
       message: "Please enter a valid email address.",
     }),
-    phone: z.string().min(10, { // Basic phone validation
-      message: "Phone number must be at least 10 digits.",
-    }).regex(/^\+?[1-9]\d{1,14}$/, {
-      message: "Please enter a valid phone number (e.g., +1234567890)."
-    }),
-    message: z.string().min(10, {
-      message: "Message must be at least 10 characters.",
-    }).max(500, {
-      message: "Message must not exceed 500 characters."
-    }),
+    phone: z
+      .string()
+      .min(10, {
+        // Basic phone validation
+        message: "Phone number must be at least 10 digits.",
+      })
+      .regex(/^\+?[1-9]\d{1,14}$/, {
+        message: "Please enter a valid phone number (e.g., +1234567890).",
+      }),
+    message: z
+      .string()
+      .min(10, {
+        message: "Message must be at least 10 characters.",
+      })
+      .max(500, {
+        message: "Message must not exceed 500 characters.",
+      }),
   });
 
   // Initialize form with validation
@@ -54,34 +60,12 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
     },
   });
 
-  
-
-  async function onSubmit(values: ContactFormData) {
-    try {
-      
-      if (values) {
-        toast.success("Inquiry Submitted!", {
-          description: "Thank you for contacting us. We will get back to you shortly.",
-         
-        })
-        form.reset();
-        if(onFormSubmitSuccess) {
-          onFormSubmitSuccess()
-        }
-      } 
-    } catch (error) {
-      toast.error("Unexpected Error", {
-      description: `An unexpected error occurred. ${error instanceof Error ? error.message : ''}`,
-      })
-    }
-  }
-
   return (
     <div className="max-w-md mx-auto p-6">
       <h2 className="text-2xl font-bold mb-6">{t("title")}</h2>
-      
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+
+      <Form {...form} >
+        <form  onSubmit={form.handleSubmit(action)} className="space-y-4">
           <FormField
             control={form.control}
             name="fullName"
@@ -95,7 +79,7 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="email"
@@ -109,7 +93,7 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="phone"
@@ -123,7 +107,7 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="message"
@@ -131,13 +115,17 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
               <FormItem>
                 <FormLabel>{t("message")}</FormLabel>
                 <FormControl>
-                  <Textarea placeholder={t("messagePlaceholder")} className="min-h-24" {...field} />
+                  <Textarea
+                    placeholder={t("messagePlaceholder")}
+                    className="min-h-24"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
+
           <Button type="submit" className="w-full mt-4">
             {t("submit")}
           </Button>
@@ -146,5 +134,3 @@ export function ContactUs({onFormSubmitSuccess}: ContactFormProps) {
     </div>
   );
 }
-
-

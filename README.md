@@ -96,20 +96,20 @@ This project leverages a modern and powerful stack. Below is an overview of the 
 * **usehooks-ts (v3.1.1):** React hooks.
 * **[@vercel/blob (v1.0.2)](https://vercel.com/docs/storage/vercel-blob):** For efficient file storage on Vercel.
 
-## 📁 **`.env.local`** Dosya Örneği
+## 📁 **`.env.local`** 
 
 ```bash
-# 📚 Database Configuration
+#  Database Configuration
 DATABASE_URL="postgresql://username:password@localhost:5432/database_name"
 POSTGRES_URL="postgresql://username:password@localhost:5432/database_name"
 
-# 🔄 Redis Configuration
+# Redis Configuration
 REDIS_URL="redis://localhost:6379"
 
-# 🔐 Authentication (NextAuth)
+#  Authentication (NextAuth)
 NEXTAUTH_SECRET="your-nextauth-secret"
 
-# 🤖 AI Services
+# AI Services
 XAI_API_KEY="your-xai-api-key"
 
 # ☁️ Vercel Integration (optional)

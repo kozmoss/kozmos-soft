@@ -2,7 +2,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Paperclip } from "lucide-react";
+import { ArrowUpIcon, Paperclip } from "lucide-react";
 import { BorderTrail } from "./border-beam";
 import { useRouter } from "@/i18n/navigation";
 import { LoginDialog } from "./chat/login-google-dialog";
@@ -55,10 +55,12 @@ export default function ChatPage() {
           </div>
 
           <div className="flex items-center justify-end p-3">
-            <Button type="button" variant={"ghost"}>
+            <Button onClick={handleSubmit} type="button" variant={"ghost"}>
               <Paperclip className="w-4 h-4 text-gray-500 dark:text-white" />
             </Button>
-            <Button size={"sm"} onClick={handleSubmit} type="button"></Button>
+            <Button size={"sm"} onClick={handleSubmit} type="button">
+            <ArrowUpIcon size={14} />
+            </Button>
           </div>
         </div>
       </form>

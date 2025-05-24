@@ -5,6 +5,7 @@ import {
   Sidebar2Inset,
   Sidebar2Provider,
 } from "@/components/chat/chat-sideprovider";
+import Script from "next/script";
 import { ReactNode } from "react";
 
 export default async function ChatLayout({
@@ -14,9 +15,15 @@ export default async function ChatLayout({
 }) {
   const [session] = await Promise.all([auth()]);
   return (
-    <Sidebar2Provider>
-      <AppSidebar2 user={session?.user} />
-      <Sidebar2Inset>{children}</Sidebar2Inset>
-    </Sidebar2Provider>
+    <>
+      <Script
+        src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"
+        strategy="beforeInteractive"
+      />
+      <Sidebar2Provider>
+        <AppSidebar2 user={session?.user} />
+        <Sidebar2Inset>{children}</Sidebar2Inset>
+      </Sidebar2Provider>
+    </>
   );
 }
