@@ -18,7 +18,7 @@ const intlMiddleware = createMiddleware(routing);
 
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-
+  
   const pathWithoutLocale = pathname.replace(/^\/(en|tr)/, "");
 
   // Public pages regex
@@ -43,21 +43,24 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // Daha basit yaklaşım - path'i normalize et
+  const normalizedPath = pathname.replace(/^\/(en|tr)/, '').replace(/\/$/, '');
+  
   // Dynamic paths that should be public
-  const localePrefix = `/(${routing.locales.join("|")})?`;
-  const productsWebRegex = new RegExp(
-    `^${localePrefix}/products/web(/.*)?$`,
-    "i",
-  );
-  const viewStylesRegex = new RegExp(
-    `^${localePrefix}/view/styles(/.*)?$`,
-    "i",
-  );
-
+  const isProductsWeb = normalizedPath.startsWith('/products/web');
+  const isViewStyles = normalizedPath.startsWith('/view/styles');
+  
   // Check if current path is public
   const isPublicPage = publicPathnameRegex.test(pathname);
-  const isProductsWeb = productsWebRegex.test(pathname);
-  const isViewStyles = viewStylesRegex.test(pathname);
+
+  // Debug için (production'da kaldırabilirsiniz)
+  console.log({
+    pathname,
+    normalizedPath,
+    isPublicPage,
+    isProductsWeb,
+    isViewStyles
+  });
 
   // If it's a public page, allow access
   if (isPublicPage || isProductsWeb || isViewStyles) {
@@ -65,7 +68,6 @@ export default async function middleware(req: NextRequest) {
   }
 
   const isGuest = guestRegex.test(token?.email ?? "");
-
 
   if (token && !isGuest && ["/login", "/register"].includes(pathWithoutLocale)) {
     return NextResponse.redirect(new URL("/chat", req.url));
@@ -79,8 +81,6 @@ export default async function middleware(req: NextRequest) {
         new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, req.url),
       );
     }
-
- 
   }
 
   // If authenticated, continue with intl middleware
