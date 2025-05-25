@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CirclePlus, GalleryVerticalEnd } from "lucide-react";
+import { CirclePlus } from "lucide-react";
 
 import { NavMain } from "../chat/nav-main-chat";
 
@@ -17,12 +17,7 @@ import { TeamSwitcher } from "./teamSwitcher";
 import { User } from "next-auth";
 
 const data = {
-  teams: {
-    name: "Kozmos",
-    logo: GalleryVerticalEnd,
-    src: "/static/image/kozmos.png",
-  },
-
+ 
   navMain: [
     {
       title: "New Chat",
@@ -39,7 +34,7 @@ export function AppSidebar2({ user }: { user: User | undefined }) {
   return (
     <Sidebar2 className="group-data-[side=left]:border-r-1 border border-dashed" >
       <Sidebar2Header>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher />
       </Sidebar2Header>
       <Sidebar2Content>
         <NavMain items={data.navMain} />
