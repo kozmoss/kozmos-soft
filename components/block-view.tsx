@@ -6,6 +6,7 @@ import { Monitor, Smartphone, Tablet } from "lucide-react";
 import { ImperativePanelHandle } from "react-resizable-panels";
 import {  registryItemSchema } from "@/contants/z";
 import { z } from "zod";
+import {useLocale} from 'next-intl';
 
 import { Button } from "./ui/button";
 
@@ -143,6 +144,7 @@ function BlockViewerToolbar() {
 
 function BlockViewerView() {
   const { item, style, resizablePanelRef } = useBlockViewer();
+  const locale = useLocale();
 
   return (
     <div className="group-data-[view=code]/block-view-wrapper:hidden md:h-[--height]">
@@ -171,7 +173,7 @@ function BlockViewerView() {
               className="hidden object-cover dark:block md:hidden md:dark:hidden"
             />
             <iframe
-              src={`/view/styles/${style}/${item.name}`}
+              src={`/${locale}/view/styles/${style}/${item.name}`}
               height={item.meta?.iframeHeight ?? 930}
               className="relative z-20 hidden w-full bg-background md:block"
             />
