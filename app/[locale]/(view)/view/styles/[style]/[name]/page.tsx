@@ -43,7 +43,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: absoluteUrl(`/products/${style}/${item.name}`),
+      url: absoluteUrl(`tr/products/web/${style}/${item.name}`),
       images: [
         {
           url: "",
@@ -79,6 +79,11 @@ export default async function BlockPage({
   const { name, style } = await params;
   const item = await getCachedRegistryItem(name, style);
   const Component = getRegistryComponent(name, style);
+
+
+  console.log(item,"itemmssss")
+  console.log(Component,"compoents")
+
 
   if (!item || !Component) {
     return notFound();

@@ -53,14 +53,6 @@ export default async function middleware(req: NextRequest) {
   // Check if current path is public
   const isPublicPage = publicPathnameRegex.test(pathname);
 
-  // Debug için (production'da kaldırabilirsiniz)
-  console.log({
-    pathname,
-    normalizedPath,
-    isPublicPage,
-    isProductsWeb,
-    isViewStyles
-  });
 
   // If it's a public page, allow access
   if (isPublicPage || isProductsWeb || isViewStyles) {
