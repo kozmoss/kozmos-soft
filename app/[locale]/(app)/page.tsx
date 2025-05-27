@@ -20,7 +20,6 @@ export default function DashboardPage() {
 
   return (
     <div className="@container grid flex-1">
-      {/* Ana Görsel Bölümü */}
       <section className="w-full min-h-screen relative overflow-hidden">
         <div className="absolute inset-0">
           <Image

@@ -498,6 +498,22 @@
       }
     },
     "aiComponent": {
+      "intelligentAgentIntegration": {
+        "title": "Akıllı AI Agent Entegrasyonu",
+        "description": "Uygulamalarınıza entegre ettiğimiz AI agent'ler, kullanıcı deneyimini yeni nesil seviyelere taşır. Doğal dil işleme (NLP) ve makine öğrenimi tabanlı agent'lerimiz, kullanıcı etkileşimlerini anında analiz ederek kişiselleştirilmiş yanıtlar üretir. Multi-agent sistemlerimizle karmaşık iş akışlarını otomatize ediyor, gerçek zamanlı karar destek sistemleri sunuyoruz. Agent'leriniz veri kaynaklarınızla sürekli öğrenerek kendini geliştirir ve iş süreçlerinize akıllı optimizasyonlar getirir."
+      },
+      "customModelsAndFinetuning": {
+        "title": "Özel AI Modelleri ve Finetuning",
+        "description": "Sektörünüze özel fine-tune edilmiş AI modelleri geliştiriyoruz. LLM'lerinizi (Large Language Models) kendi verilerinizle eğiterek şirketinizin bilgi birikimini dijital asistanlarınıza aktarıyoruz. RAG (Retrieval Augmented Generation) mimarileriyle gerçek zamanlı veri erişimi sağlayan, hallüsinasyona düşmeyen akıllı chatbot'lar oluşturuyoruz. Özel embedding'ler ve vektör veritabanları kullanarak kurumsal bilgi yönetiminizi dönüştürüyoruz. Model performansını sürekli izleyerek otomatik retraining pipeline'ları kuruyoruz."
+      },
+      "autonomousProcesses": {
+        "title": "Otonom İş Süreçleri ve Otomasyon",
+        "description": "AI agent'lerimizle rutin iş süreçlerinizi tam otonom hale getiriyoruz. Doküman işleme, veri analizi, müşteri hizmetleri gibi alanlarda kendi kendine karar verebilen dijital çalışanlar yaratıyoruz. Workflow otomasyonu ile insan-AI işbirliğini optimize ediyor, operasyonel verimliliğinizi katlıyoruz. Agent'leriniz API'ler aracılığıyla mevcut sistemlerinizle sorunsuz entegre olurken, güvenli veri paylaşımı için gelişmiş yetkilendirme mekanizmaları sunuyoruz."
+      },
+      "realtimeAnalysis": {
+        "title": "Gerçek Zamanlı Analiz ve Öngörüler",
+        "description": "AI destekli analitik platformumuzla verilerinizden anlamlı öngörüler çıkarıyoruz. Anomali tespiti, trend analizi ve tahminleme modelleriyle proaktif karar alma süreçlerinizi destekliyoruz. Multimodal AI yaklaşımımızla metin, ses ve görüntü verilerinizi birlikte analiz ederek bütünsel bir bakış açısı sunuyoruz. Özelleştirilebilir dashboard'lar ve otomatik raporlama araçlarıyla karmaşık verileri anlaşılır hale getiriyoruz. Agent'leriniz kritik değişiklikleri anında tespit ederek ilgili ekiplere bildirim gönderir."
+      },
       "section1": {
         "title": "Akıllı AI Agent Entegrasyonu",
         "content": "Uygulamalarınıza entegre ettiğimiz AI agent'ler, kullanıcı deneyimini yeni nesil seviyelere taşır. Doğal dil işleme (NLP) ve makine öğrenimi tabanlı agent'lerimiz, kullanıcı etkileşimlerini anında analiz ederek kişiselleştirilmiş yanıtlar üretir. Multi-agent sistemlerimizle karmaşık iş akışlarını otomatize ediyor, gerçek zamanlı karar destek sistemleri sunuyoruz. Agent'leriniz veri kaynaklarınızla sürekli öğrenerek kendini geliştirir ve iş süreçlerinize akıllı optimizasyonlar getirir."
@@ -518,12 +534,12 @@
     "mainImage": {
       "alt": "Görsel"
     },
-    "mainHeading": {
-      "line1": "Ideas",
-      "line2": "Beyond",
-      "line3": "the Horizon",
-      "subtitle": "Dijital varlığınızı dönüştüren fikirler"
-    },
+"mainHeading": {
+  "line3": "Fikirler",
+  "line2": "Ötesinde",
+  "line1": "Ufkun",
+  "subtitle": "Dijital varlığınızı dönüştüren fikirler"
+},
     "mobile": {
       "title": "Mobil",
       "description": "Kullanıcı deneyimini merkeze alan mobil uygulama çözümlerimiz, modern tasarım ilkeleri ve ileri seviye yazılım teknolojileriyle geliştirilmektedir. Hız, güvenlik, kullanıcı odaklılık ve estetik; tüm mobil projelerimizin temel taşlarını oluşturur."
@@ -551,6 +567,33 @@
     }
   },
   "Web": {
+    "sidebar": {
+      "companyName": "Kozmos Inc.",
+      "navMain": {
+        "dashboard": "Dashboard",
+        "lifecycle": "Lifecycle",
+        "analytics": "Analytics",
+        "projects": "Projects",
+        "team": "Team"
+      },
+      "navClouds": {
+        "capture": "Capture",
+        "proposal": "Proposal",
+        "prompts": "Prompts",
+        "activeProposals": "Active Proposals",
+        "archived": "Archived"
+      },
+      "documents": {
+        "dataLibrary": "Data Library",
+        "reports": "Reports",
+        "wordAssistant": "Word Assistant"
+      },
+      "navSecondary": {
+        "settings": "Settings",
+        "getHelp": "Get Help",
+        "search": "Search"
+      }
+    },
     "title": "Ufkun Ötesindeki Fikirler",
     "description": "Şık tasarımlardan akıllı sistemlere kadar, yaratıcılık ve kod gücüyle dijital deneyimler geliştiriyoruz. Web, mobil ve yapay zeka—ilham vermek için tasarlandı.",
     "view": {
@@ -945,33 +988,6 @@
         "trendingIcon": "↑",
         "description": "Son 6 aylık toplam lead kaynakları gösteriliyor"
       }
-    }
-  },
-  "sidebar": {
-    "companyName": "Kozmos A.Ş.",
-    "navMain": {
-      "dashboard": "Gösterge Paneli",
-      "lifecycle": "Yaşam Döngüsü",
-      "analytics": "Analizler",
-      "projects": "Projeler",
-      "team": "Takım"
-    },
-    "navClouds": {
-      "capture": "Yakalama",
-      "proposal": "Teklif",
-      "prompts": "İstemler",
-      "activeProposals": "Aktif Teklifler",
-      "archived": "Arşivlenmiş"
-    },
-    "documents": {
-      "dataLibrary": "Veri Kütüphanesi",
-      "reports": "Raporlar",
-      "wordAssistant": "Kelime Asistanı"
-    },
-    "navSecondary": {
-      "settings": "Ayarlar",
-      "getHelp": "Yardım Al",
-      "search": "Ara"
     }
   },
   "contact-us": {

@@ -26,7 +26,7 @@ import { NavSecondary } from "./nav-secondary"
 import { Sidebar, SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const t = useTranslations("sidebar")
+  const t = useTranslations("Web.sidebar")
 
   const data = {
     navMain: [
