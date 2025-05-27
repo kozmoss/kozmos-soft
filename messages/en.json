@@ -478,6 +478,22 @@
       }
     },
     "webComponent": {
+      "userExperienceAndDesign": {
+        "title": "User Experience and Interface Design",
+        "description": "Our web applications are developed with user-centered design principles and offer an intuitive navigation experience. Interfaces designed in accordance with modern UI/UX standards provide high usability alongside aesthetic appearance. With a responsive design approach, we provide a consistent experience across all devices while being developed in accordance with accessibility standards. User flows are optimized through detailed analysis, ensuring transactions can be completed with minimum clicks. Interface components are positioned taking user habits into account."
+      },
+      "technicalInfrastructure": {
+        "title": "Technical Infrastructure and Performance Optimization",
+        "description": "Our applications developed using Next.js, React, and modern web technologies offer high performance and scalability. Fast loading times are achieved through server-side rendering and static generation features, while resource usage is optimized with lazy loading techniques. Global scale low latency times are targeted through CDN integration and caching mechanisms. Continuous improvements are made based on performance metrics while Lighthouse scores are regularly monitored. Database queries and API calls are optimized to minimize server load."
+      },
+      "securityAndDataManagement": {
+        "title": "Security and Data Management",
+        "description": "Our web applications are developed in accordance with OWASP Top 10 security standards. End-to-end encryption in data transmission, CSRF protection, XSS measures, and other security layers have been implemented. User authorizations are managed with role-based access control (RBAC) while all inputs go through validation. Regular security audits and penetration tests are conducted to detect potential vulnerabilities in advance. GDPR and KVKK compliance is ensured, guaranteeing the security and privacy of user data. Data backup and disaster recovery procedures are automated."
+      },
+      "continuousIntegration": {
+        "title": "Continuous Integration and Development Process",
+        "description": "Our development process managed with Agile methodology aims to quickly reflect user feedback into the product. Thanks to CI/CD pipelines, we have the flexibility to make multiple production deployments per day. The impact of new features is measured with A/B testing mechanisms, while controlled roll-out strategies are applied with feature flags. Application health and usage statistics are monitored in real-time, performance anomalies are reported with automatic alarms. All APIs are standardized with documentation and developer portal. Thanks to microservice architecture, system components can be scaled independently."
+      },
       "section1": {
         "title": "User Experience and Interface Design",
         "content": "Our web applications are developed with user-centered design principles and provide an intuitive navigation experience. Interfaces designed in accordance with modern UI/UX standards provide high usability as well as aesthetic appearance. While providing a consistent experience on all devices with a responsive design approach, it has been developed in accordance with accessibility standards. User flows are optimized with detailed analyses, ensuring that operations can be completed with minimum clicks. Interface components are positioned taking into account user habits."
@@ -496,6 +512,22 @@
       }
     },
     "aiComponent": {
+      "intelligentAgentIntegration": {
+        "title": "Intelligent AI Agent Integration",
+        "description": "AI agents integrated into your applications take user experience to next-generation levels. Our NLP (Natural Language Processing) and machine learning-based agents instantly analyze user interactions to generate personalized responses. With our multi-agent systems, we automate complex workflows and provide real-time decision support systems. Your agents continuously learn from your data sources, improving themselves and bringing intelligent optimizations to your business processes."
+      },
+      "customModelsAndFinetuning": {
+        "title": "Custom AI Models and Fine-tuning",
+        "description": "We develop AI models fine-tuned specifically for your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create intelligent chatbots that provide real-time data access through RAG (Retrieval Augmented Generation) architectures without hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We continuously monitor model performance and establish automatic retraining pipelines."
+      },
+      "autonomousProcesses": {
+        "title": "Autonomous Business Processes and Automation",
+        "description": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make independent decisions in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration through workflow automation, multiplying your operational efficiency. Your agents integrate seamlessly with your existing systems via APIs while providing advanced authorization mechanisms for secure data sharing."
+      },
+      "realtimeAnalysis": {
+        "title": "Real-time Analysis and Insights",
+        "description": "We extract meaningful insights from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automated reporting tools. Your agents instantly detect critical changes and send notifications to relevant teams."
+      },
       "section1": {
         "title": "Intelligent AI Agent Integration",
         "content": "AI agents integrated into your applications take the user experience to next-generation levels. Our natural language processing (NLP) and machine learning-based agents instantly analyze user interactions to produce personalized responses. We automate complex workflows with our multi-agent systems and provide real-time decision support systems. Your agents continually learn from your data sources to improve themselves and bring intelligent optimizations to your business processes."
@@ -535,6 +567,22 @@
       "description": "Make your business processes smarter with artificial intelligence. We maximize your business efficiency with data analysis, automation, and decision support systems."
     },
     "ai": {
+      "intelligentAgentIntegration": {
+        "title": "Intelligent AI Agent Integration",
+        "description": "AI agents integrated into your applications take user experience to next-generation levels. Our NLP (Natural Language Processing) and machine learning-based agents instantly analyze user interactions to generate personalized responses. With our multi-agent systems, we automate complex workflows and provide real-time decision support systems. Your agents continuously learn from your data sources, improving themselves and bringing intelligent optimizations to your business processes."
+      },
+      "customModelsAndFinetuning": {
+        "title": "Custom AI Models and Fine-tuning",
+        "description": "We develop AI models fine-tuned specifically for your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create intelligent chatbots that provide real-time data access through RAG (Retrieval Augmented Generation) architectures without hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We continuously monitor model performance and establish automatic retraining pipelines."
+      },
+      "autonomousProcesses": {
+        "title": "Autonomous Business Processes and Automation",
+        "description": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make independent decisions in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration through workflow automation, multiplying your operational efficiency. Your agents integrate seamlessly with your existing systems via APIs while providing advanced authorization mechanisms for secure data sharing."
+      },
+      "realtimeAnalysis": {
+        "title": "Real-time Analysis and Insights",
+        "description": "We extract meaningful insights from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automated reporting tools. Your agents instantly detect critical changes and send notifications to relevant teams."
+      },
       "title": "AI & AI Agent",
       "description": "From automating repetitive tasks to revolutionizing complex workflows, AI agents are redefining productivity and innovation for the businesses of tomorrow."
     },

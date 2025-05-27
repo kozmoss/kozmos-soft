@@ -3,13 +3,22 @@
 import { getAllBlockIds } from "@/lib/blocks";
 import { BlockDisplay } from "@/components/block-display";
 import { registryCategories } from "@/contants/web";
+import { routing } from "@/i18n/routing";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return registryCategories.map((category) => ({
-    categories: [category.slug],
-  }));
+  const params = [];
+  for (const locale of routing.locales) {
+    for (const category of registryCategories) {
+      params.push({
+        locale: locale, // Add the locale parameter
+        categories: [category.slug],
+      });
+    }
+  }
+
+  return params;
 }
 
 interface PageProps {

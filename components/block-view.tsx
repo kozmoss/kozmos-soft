@@ -4,9 +4,8 @@ import * as React from "react";
 import Image from "next/image";
 import { Monitor, Smartphone, Tablet } from "lucide-react";
 import { ImperativePanelHandle } from "react-resizable-panels";
-import {  registryItemSchema } from "@/contants/z";
+import { registryItemSchema } from "@/contants/z";
 import { z } from "zod";
-import {useLocale} from 'next-intl';
 
 import { Button } from "./ui/button";
 
@@ -19,13 +18,13 @@ import { Separator } from "./ui/separator";
 
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 import { Style } from "@/contants/styles";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>;
   view: "preview";
   style?: Style["name"];
-  setStyle: (style: Style["name"]) => void
+  setStyle: (style: Style["name"]) => void;
   resizablePanelRef: React.RefObject<ImperativePanelHandle> | null;
 };
 
@@ -50,9 +49,8 @@ function BlockViewerProvider({
   const [style, setStyle] =
     React.useState<BlockViewerContext["style"]>("new-york");
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const resizablePanelRef = React.useRef<any>(null);
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const resizablePanelRef = React.useRef<any>(null);
 
   return (
     <BlockViewerContext.Provider
@@ -140,12 +138,9 @@ function BlockViewerToolbar() {
   );
 }
 
-
-
 function BlockViewerView() {
   const { item, style, resizablePanelRef } = useBlockViewer();
   const locale = useLocale();
-
   return (
     <div className="group-data-[view=code]/block-view-wrapper:hidden md:h-[--height]">
       <div className="grid w-full gap-4">
@@ -173,9 +168,10 @@ function BlockViewerView() {
               className="hidden object-cover dark:block md:hidden md:dark:hidden"
             />
             <iframe
-              src={`/${locale}/view/styles/${style}/${item.name}`}
+              src={`/${locale}/view/styles/${style}/${item.name}?iframe=true`}
               height={item.meta?.iframeHeight ?? 930}
               className="relative z-20 hidden w-full bg-background md:block"
+               sandbox="allow-scripts allow-same-origin"
             />
           </ResizablePanel>
           <ResizableHandle className="relative hidden w-3 bg-transparent p-0 after:absolute after:right-0 after:top-1/2 after:h-8 after:w-[6px] after:-translate-y-1/2 after:translate-x-[-1px] after:rounded-full after:bg-border after:transition-all after:hover:h-10 md:block" />

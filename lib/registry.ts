@@ -1,5 +1,6 @@
+// lib/registry.ts
 import { Index } from "@/__registry__";
-import {  registryItemSchema } from "@/contants/z";
+import { registryItemSchema } from "@/contants/z";
 import { Style } from "@/contants/styles";
 
 export const DEFAULT_REGISTRY_STYLE = "new-york" satisfies Style["name"];
@@ -12,72 +13,68 @@ export function getRegistryComponent(
   name: string,
   style: Style["name"] = DEFAULT_REGISTRY_STYLE,
 ) {
-  return memoizedIndex[style][name]?.component;
+  try {
+    const component = memoizedIndex[style]?.[name]?.component;
+    
+    if (!component) {
+      console.warn(`Component not found: ${name} in style ${style}`);
+      return null;
+    }
+    
+    return component;
+  } catch (error) {
+    console.error(`Error getting registry component ${name}:`, error);
+    return null;
+  }
 }
 
 export async function getRegistryItem(
   name: string,
   style: Style["name"] = DEFAULT_REGISTRY_STYLE,
 ) {
-  const item = memoizedIndex[style][name];
+  try {
+    // Check if style exists
+    if (!memoizedIndex[style]) {
+      console.error(`Style not found: ${style}`);
+      return null;
+    }
+    
+    const item = memoizedIndex[style][name];
 
-  if (!item) {
-    return null;
-  }
-
-  // Fail early before doing expensive file operations.
-  const result = registryItemSchema.safeParse(item);
-  if (!result.success) {
-    return null;
-  }
-
-  // Get meta.
-  // Assume the first file is the main file.
-  // const meta = await getFileMeta(files[0].path)
-
-  // Fix file paths.
-
-  const parsed = registryItemSchema.safeParse({
-    ...result.data,
-
-  });
-
-  if (!parsed.success) {
-    console.error(parsed.error.message);
-    return null;
-  }
-
-  return parsed.data;
-}
-
-export function fixImport(content: string) {
-  const regex = /@\/(.+?)\/((?:.*?\/)?(?:components|ui|hooks|lib))\/([\w-]+)/g;
-
-  const replacement = (
-    match: string,
-    path: string,
-    type: string,
-    component: string,
-  ) => {
-    if (type.endsWith("components")) {
-      return `@/components/${component}`;
-    } else if (type.endsWith("ui")) {
-      return `@/components/ui/${component}`;
-    } else if (type.endsWith("hooks")) {
-      return `@/hooks/${component}`;
-    } else if (type.endsWith("lib")) {
-      return `@/lib/${component}`;
+    if (!item) {
+      console.warn(`Registry item not found: ${name} in style ${style}`);
+      return null;
     }
 
-    return match;
-  };
+    // Validate schema
+    const result = registryItemSchema.safeParse(item);
+    if (!result.success) {
+      console.error(`Schema validation failed for ${name}:`, result.error.message);
+      return null;
+    }
 
-  return content.replace(regex, replacement);
+    const parsed = registryItemSchema.safeParse({
+      ...result.data,
+    });
+
+    if (!parsed.success) {
+      console.error(`Final parsing failed for ${name}:`, parsed.error.message);
+      return null;
+    }
+
+    return parsed.data;
+  } catch (error) {
+    console.error(`Error getting registry item ${name}:`, error);
+    return null;
+  }
 }
 
-export type FileTree = {
-  name: string;
-  path?: string;
-  children?: FileTree[];
-};
-
+// Debug function
+export function debugRegistry() {
+  console.log("🗂️ Registry Debug Info:");
+  console.log("Available styles:", Object.keys(memoizedIndex));
+  
+  for (const [style, items] of Object.entries(memoizedIndex)) {
+    console.log(`  ${style}:`, Object.keys(items));
+  }
+}

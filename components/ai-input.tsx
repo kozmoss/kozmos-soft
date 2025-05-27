@@ -17,7 +17,7 @@ export default function ChatPage() {
 
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
-    router.push("chat");
+    router.push("/chat");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {

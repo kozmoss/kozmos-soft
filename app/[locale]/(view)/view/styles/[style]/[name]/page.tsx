@@ -8,12 +8,16 @@ import { absoluteUrl, cn } from "@/lib/utils";
 import { Style, styles } from "@/contants/styles";
 
 import { getRegistryComponent, getRegistryItem } from "@/lib/registry";
+import { routing } from "@/i18n/routing";
 
 interface PageProps {
-  params: Promise<{
-    style: Style["name"];
-    name: string;
-  } | any>;
+  params: Promise<
+    | {
+        style: Style["name"];
+        name: string;
+      }
+    | any
+  >;
 }
 
 const getCachedRegistryItem = React.cache(
@@ -22,7 +26,7 @@ const getCachedRegistryItem = React.cache(
   },
 );
 
-export const dynamicParams = false;
+
 
 export async function generateMetadata({
   params,
@@ -43,7 +47,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: absoluteUrl(`tr/products/web/${style}/${item.name}`),
+      url: absoluteUrl(`/products/web/${style}/${item.name}`),
       images: [
         {
           url: "",
@@ -56,16 +60,22 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const blockIds = await getAllBlockIds();
-  return styles
-    .map((style) =>
-      blockIds.map((name) => ({
-        style: style.name,
-        name,
-      })),
-    )
-    .flat();
+export async function generateStaticParams(){
+  const blockIds = await getAllBlockIds(); // Tüm blok ID'lerini alır
+  const allParams  = [];
+
+  for (const locale of routing.locales) {
+    for (const style of styles) {
+      for (const name of blockIds) {
+        allParams.push({
+          locale: locale,
+          style: style.name,
+          name: name,
+        });
+      }
+    }
+  }
+  return allParams;
 }
 
 export default async function BlockPage({
@@ -79,11 +89,6 @@ export default async function BlockPage({
   const { name, style } = await params;
   const item = await getCachedRegistryItem(name, style);
   const Component = getRegistryComponent(name, style);
-
-
-  console.log(item,"itemmssss")
-  console.log(Component,"compoents")
-
 
   if (!item || !Component) {
     return notFound();

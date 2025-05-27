@@ -468,6 +468,22 @@
         "title": "Kullanıcı Deneyimi ve Arayüz Tasarımı",
         "content": "Web uygulamalarımız, kullanıcı odaklı tasarım prensipleriyle geliştirilmiş olup sezgisel gezinme deneyimi sunar. Modern UI/UX standartlarına uygun şekilde tasarlanan arayüzler, estetik görünümün yanı sıra yüksek kullanılabilirlik sağlar. Responsive tasarım yaklaşımıyla tüm cihazlarda tutarlı bir deneyim sunarken, erişilebilirlik standartlarına uygun olarak geliştirilmiştir. Kullanıcı akışları detaylı analizlerle optimize edilerek, işlemlerin minimum tıklamayla tamamlanabilmesi sağlanmıştır. Arayüz bileşenleri, kullanıcı alışkanlıkları dikkate alınarak konumlandırılmıştır."
       },
+      "userExperienceAndDesign": {
+        "title": "Kullanıcı Deneyimi ve Arayüz Tasarımı",
+        "description": "Web uygulamalarımız, kullanıcı odaklı tasarım prensipleriyle geliştirilmiş olup sezgisel gezinme deneyimi sunar. Modern UI/UX standartlarına uygun şekilde tasarlanan arayüzler, estetik görünümün yanı sıra yüksek kullanılabilirlik sağlar. Responsive tasarım yaklaşımıyla tüm cihazlarda tutarlı bir deneyim sunarken, erişilebilirlik standartlarına uygun olarak geliştirilmiştir. Kullanıcı akışları detaylı analizlerle optimize edilerek, işlemlerin minimum tıklamayla tamamlanabilmesi sağlanmıştır. Arayüz bileşenleri, kullanıcı alışkanlıkları dikkate alınarak konumlandırılmıştır."
+      },
+      "technicalInfrastructure": {
+        "title": "Teknolojik Altyapı ve Performans Optimizasyonu",
+        "description": "Next.js, React ve modern web teknolojileri kullanılarak geliştirilen uygulamalarımız, yüksek performans ve ölçeklenebilirlik sunar. Server-side rendering ve static generation özellikleriyle hızlı yüklenme süreleri sağlanırken, lazy loading teknikleriyle kaynak kullanımı optimize edilmiştir. CDN entegrasyonu ve caching mekanizmaları sayesinde global ölçekte düşük gecikme süreleri hedeflenir. Performans metriklere dayalı sürekli iyileştirmeler yapılırken, Lighthouse skorları düzenli olarak takip edilir. Veritabanı sorguları ve API çağrıları optimize edilerek sunucu yükü minimize edilmiştir."
+      },
+      "securityAndDataManagement": {
+        "title": "Güvenlik ve Veri Yönetimi",
+        "description": "Web uygulamalarımız OWASP Top 10 güvenlik standartlarına uygun olarak geliştirilmiştir. Veri iletiminde end-to-end şifreleme, CSRF koruması, XSS önlemleri ve diğer güvenlik katmanları uygulanmıştır. Rol tabanlı erişim kontrolü (RBAC) ile kullanıcı yetkilendirmeleri yönetilirken, tüm girişler validation'dan geçirilir. Düzenli güvenlik denetimleri ve penetrasyon testleri yapılarak olası açıklar önceden tespit edilir. GDPR ve KVKK uyumluluğu sağlanarak kullanıcı verilerinin güvenliği ve mahremiyeti garanti altına alınmıştır. Veri yedekleme ve felaket kurtarma prosedürleri otomatize edilmiştir."
+      },
+      "continuousIntegration": {
+        "title": "Sürekli Entegrasyon ve Geliştirme Süreci",
+        "description": "Agile metodolojisiyle yönetilen geliştirme sürecimiz, kullanıcı geri bildirimlerini hızla ürüne yansıtmayı hedefler. CI/CD pipeline'ları sayesinde günde birden fazla production deploy'ı yapabilme esnekliğine sahibiz. A/B testing mekanizmalarıyla yeni özelliklerin etkisi ölçülürken, feature flag'ler ile kontrollü roll-out stratejileri uygulanır. Uygulama sağlığı ve kullanım istatistikleri gerçek zamanlı olarak izlenir, performans anomalileri otomatik alarmlarla bildirilir. Dokümantasyon ve developer portalı ile tüm API'ler standartlaştırılmıştır. Mikroservis mimarisi sayesinde sistem bileşenleri bağımsız olarak ölçeklendirilebilir."
+      },
       "section2": {
         "title": "Teknolojik Altyapı ve Performans Optimizasyonu",
         "content": "Next.js, React ve modern web teknolojileri kullanılarak geliştirilen uygulamalarımız, yüksek performans ve ölçeklenebilirlik sunar. Server-side rendering ve static generation özellikleriyle hızlı yüklenme süreleri sağlanırken, lazy loading teknikleriyle kaynak kullanımı optimize edilmiştir. CDN entegrasyonu ve caching mekanizmaları sayesinde global ölçekte düşük gecikme süreleri hedeflenir. Performans metriklere dayalı sürekli iyileştirmeler yapılırken, Lighthouse skorları düzenli olarak takip edilir. Veritabanı sorguları ve API çağrıları optimize edilerek sunucu yükü minimize edilmiştir."

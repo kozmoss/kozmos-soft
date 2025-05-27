@@ -1,69 +1,52 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function DashboardAiSection() {
+  const t = useTranslations('Dashboard.aiComponent');
   return (
-    <div className="min-h-screen w-full flex flex-col md:flex-row relative">
-      <div className="w-full md:w-2/5 p-6 md:p-12 z-10 relative">
-        <div className="space-y-16 snap-y snap-mandatory">
-          <div className="snap-start h-screen items-center flex p-6 md:p-12">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold mb-4">
-                Akıllı AI Agent Entegrasyonu
+    <div className="min-h-screen w-full flex flex-col lg:flex-row relative">
+    <div className="w-full lg:w-2/5 p-4 sm:p-6 lg:p-12 z-10 relative order-2 lg:order-1">
+      <div className="space-y-8 sm:space-y-12 lg:space-y-16 lg:snap-y lg:snap-mandatory">
+        <div className="lg:snap-start min-h-[60vh] lg:h-screen items-center flex p-2 sm:p-4 lg:p-12">
+          <div className="space-y-3 sm:space-y-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
+            {t('intelligentAgentIntegration.title')}
               </h2>
-              <p className="text-xl">
-                Uygulamalarınıza entegre ettiğimiz AI agent&apos;ler, kullanıcı deneyimini yeni nesil seviyelere taşır. 
-                Doğal dil işleme (NLP) ve makine öğrenimi tabanlı agent&apos;lerimiz, kullanıcı etkileşimlerini anında analiz ederek 
-                kişiselleştirilmiş yanıtlar üretir. Multi-agent sistemlerimizle karmaşık iş akışlarını otomatize ediyor, 
-                gerçek zamanlı karar destek sistemleri sunuyoruz. Agent&apos;leriniz veri kaynaklarınızla sürekli öğrenerek 
-                kendini geliştirir ve iş süreçlerinize akıllı optimizasyonlar getirir.
+              <p className="text-sm sm:text-base lg:text-xl leading-relaxed">
+              {t('intelligentAgentIntegration.description')}
               </p>
             </div>
           </div>
 
-          <div className="snap-start h-screen items-center flex p-6 md:p-12">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold mb-4">
-                Özel AI Modelleri ve Finetuning
+          <div className="lg:snap-start min-h-[60vh] lg:h-screen items-center flex p-2 sm:p-4 lg:p-12">
+          <div className="space-y-3 sm:space-y-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
+            {t('customModelsAndFinetuning.title')}
               </h2>
               <p className="text-md lg:text-xl">
-                Sektörünüze özel fine-tune edilmiş AI modelleri geliştiriyoruz. LLM&apos;lerinizi (Large Language Models) 
-                kendi verilerinizle eğiterek şirketinizin bilgi birikimini dijital asistanlarınıza aktarıyoruz. 
-                RAG (Retrieval Augmented Generation) mimarileriyle gerçek zamanlı veri erişimi sağlayan, 
-                hallüsinasyona düşmeyen akıllı chatbot&apos;lar oluşturuyoruz. Özel embedding&apos;ler ve vektör veritabanları 
-                kullanarak kurumsal bilgi yönetiminizi dönüştürüyoruz. Model performansını sürekli izleyerek 
-                otomatik retraining pipeline&apos;ları kuruyoruz.
+              {t('customModelsAndFinetuning.description')}
               </p>
             </div>
           </div>
 
-          <div className="snap-start h-screen items-center flex p-6 md:p-12">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold mb-4">
-                Otonom İş Süreçleri ve Otomasyon
+          <div className="lg:snap-start min-h-[60vh] lg:h-screen items-center flex p-2 sm:p-4 lg:p-12">
+          <div className="space-y-3 sm:space-y-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
+          {t('autonomousProcesses.title')}
               </h2>
-              <p className="text-md lg:text-xl">
-                AI agent&apos;lerimizle rutin iş süreçlerinizi tam otonom hale getiriyoruz. Doküman işleme, veri analizi, 
-                müşteri hizmetleri gibi alanlarda kendi kendine karar verebilen dijital çalışanlar yaratıyoruz. 
-                Workflow otomasyonu ile insan-AI işbirliğini optimize ediyor, operasyonel verimliliğinizi katlıyoruz. 
-                Agent&apos;leriniz API&apos;ler aracılığıyla mevcut sistemlerinizle sorunsuz entegre olurken, 
-                güvenli veri paylaşımı için gelişmiş yetkilendirme mekanizmaları sunuyoruz.
+              <p className="text-sm sm:text-base lg:text-xl leading-relaxed">
+              {t('autonomousProcesses.description')}
               </p>
             </div>
           </div>
 
-          <div className="snap-start h-screen items-center flex p-6 md:p-12">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold mb-4">
-                Gerçek Zamanlı Analiz ve Öngörüler
+          <div className="lg:snap-start min-h-[60vh] lg:h-screen items-center flex p-2 sm:p-4 lg:p-12">
+          <div className="space-y-3 sm:space-y-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
+            {t('realtimeAnalysis.title')}
               </h2>
-              <p className="text-md lg:text-xl
-              ">
-                AI destekli analitik platformumuzla verilerinizden anlamlı öngörüler çıkarıyoruz. Anomali tespiti, 
-                trend analizi ve tahminleme modelleriyle proaktif karar alma süreçlerinizi destekliyoruz. 
-                Multimodal AI yaklaşımımızla metin, ses ve görüntü verilerinizi birlikte analiz ederek 
-                bütünsel bir bakış açısı sunuyoruz. Özelleştirilebilir dashboard&apos;lar ve otomatik raporlama araçlarıyla 
-                karmaşık verileri anlaşılır hale getiriyoruz. Agent&apos;leriniz kritik değişiklikleri anında tespit ederek 
-                ilgili ekiplere bildirim gönderir.
+              <p className="text-sm sm:text-base lg:text-xl leading-relaxed">
+              {t('realtimeAnalysis.description')}
               </p>
             </div>
           </div>

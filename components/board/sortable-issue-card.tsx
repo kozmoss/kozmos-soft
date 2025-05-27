@@ -33,7 +33,7 @@ export function SortableIssueCard({ issue }: SortableIssueCardProps) {
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
+    <div suppressHydrationWarning ref={setNodeRef} style={style} {...attributes} {...listeners}>
       <IssueCard issue={issue} />
     </div>
   );
