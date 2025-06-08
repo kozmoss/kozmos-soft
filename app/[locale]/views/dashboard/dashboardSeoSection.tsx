@@ -15,12 +15,12 @@ export default function DashboardSeoSection() {
         <div className="space-y-8 sm:space-y-12 lg:space-y-16 lg:snap-y lg:snap-mandatory">
           <div className="flex min-h-[60vh] items-center p-2 lg:h-screen lg:snap-start sm:p-4 lg:p-12">
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex justify-center mb-4 lg:hidden bg-zinc-950  ">
-                <Image
+              <div className="flex justify-center mb-4 lg:hidden">
+                <OptimizedImage
                   src="/static/image/seo.png"
                   alt={""}
-                  fill
-                  className="w-full h-full object-contain"
+                  className="h-auto w-full max-w-md rounded-md object-contain sm:max-w-lg md:max-w-xl"
+                  priority={true}
                 />
               </div>
 
@@ -34,12 +34,12 @@ export default function DashboardSeoSection() {
 
       <div className="hidden h-[30vh] w-full sm:h-[50vh] lg:sticky lg:top-20 lg:order-2 lg:flex lg:h-screen lg:w-3/5">
         <div className="flex h-full w-full items-center justify-center px-4 lg:px-8">
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="h-auto w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl">
             <Suspense fallback={<SkeletonCard />}>
               <OptimizedImage
                 src={"/static/image/seo.png"}
                 alt={t(`description`)}
-                className="w-full h-full object-contain  rounded-lg"
+                className="h-auto w-full max-w-md rounded-md object-contain sm:max-w-lg md:max-w-xl"
                 priority={true}
               />
             </Suspense>

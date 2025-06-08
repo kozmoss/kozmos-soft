@@ -152,7 +152,7 @@ function BlockViewerView() {
             minSize={30}
           >
             <Image
-              src={`/r/styles/${style}/${item.name}-light.png`}
+              src={`/static/image/web/${item.name}.png`}
               alt={item.name}
               data-block={item.name}
               width={1440}
@@ -160,7 +160,7 @@ function BlockViewerView() {
               className="object-cover dark:hidden md:hidden md:dark:hidden"
             />
             <Image
-              src={`/r/styles/${style}/${item.name}-dark.png`}
+              src={`/static/image/web/${item.name}-dark.png`}
               alt={item.name}
               data-block={item.name}
               width={1440}
@@ -171,7 +171,7 @@ function BlockViewerView() {
               src={`/${locale}/view/styles/${style}/${item.name}?iframe=true`}
               height={item.meta?.iframeHeight ?? 930}
               className="relative z-20 hidden w-full bg-background md:block"
-               sandbox="allow-scripts allow-same-origin"
+              sandbox="allow-scripts allow-same-origin"
             />
           </ResizablePanel>
           <ResizableHandle className="relative hidden w-3 bg-transparent p-0 after:absolute after:right-0 after:top-1/2 after:h-8 after:w-[6px] after:-translate-y-1/2 after:translate-x-[-1px] after:rounded-full after:bg-border after:transition-all after:hover:h-10 md:block" />

@@ -11,12 +11,12 @@ export const OptimizedImage = ({
     priority: boolean;
   }) => {
     return (
-      <div className="relative">
+      <div className="relative w-full flex justify-center mb-5">
         <Image
           src={src}
           alt={alt}
           width={400}
-          height={300}
+          height={400}
           className={`${className}  opacity-100 transition-opacity duration-300`}
           priority={priority}
           quality={75}

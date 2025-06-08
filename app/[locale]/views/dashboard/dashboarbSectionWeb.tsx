@@ -1,12 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-"use client";
-import { useTranslations } from "next-intl";
-import React, { Suspense } from "react";
-import Image from "next/image";
-import { SkeletonCard } from "@/components/skeleton-card";
+"use client"
 import { OptimizedImage, OptimizedVideo } from "@/components/optimized-item";
-
-
+import { SkeletonCard } from "@/components/skeleton-card";
+import { useTranslations } from "next-intl";
+import { Suspense } from "react";
 
 export default function DashboarbWebSection() {
   const t = useTranslations("Dashboard.webComponent");
@@ -49,11 +45,12 @@ export default function DashboarbWebSection() {
                   <OptimizedImage
                     src={image}
                     alt={t(`${key}.title`)}
-                    className="h-auto w-full max-w-xs rounded-md object-contain sm:max-w-sm"
+                    
+                  className="h-auto w-full max-w-md rounded-md object-contain sm:max-w-lg md:max-w-xl"
                     priority={priority}
                   />
                 </div>
-
+                
                 <h2 className="text-xl font-bold sm:text-2xl lg:text-3xl mb-3 sm:mb-4">
                   {t(`${key}.title`)}
                 </h2>
