@@ -25,7 +25,7 @@ export const MobileSections = [
       ],
       media: {
         type: "video",
-        src: "/static/videos/mobile/mobile-video-2.mov",
+        src: "/static/videos/mobile/mobile-video-2.mp4",
         poster: "/static/image/mobile/video-poster-1.jpg",
       },
     },
@@ -55,7 +55,7 @@ export const MobileSections = [
       ],
       media: {
         type: "video",
-        src: "/static/videos/mobile/mobile-video-4.mov",
+        src: "/static/videos/mobile/mobile-video-4.mp4",
         poster: "/static/image/mobile/video-poster-2.jpg",
       },
     },

@@ -42,7 +42,7 @@ export const cards = [
     content: (
       <Image
         className="w-full h-full object-contain"
-        src="/static/image/stickimage.png"
+        src="/static/image/mobile-mobile-1.png"
         width={600}
         height={300}
         alt="Website Screenshot"
@@ -54,7 +54,7 @@ export const cards = [
     content: (
       <Image
         className="w-full h-full object-contain "
-        src="/static/image/mobilesection2.png"
+        src="/static/image/mobile-mobile-2.png"
         width={600}
         height={300}
         alt="Mobile App Interface Screenshot"
@@ -66,7 +66,19 @@ export const cards = [
     content: (
       <Image
         className="w-full h-full object-fill"
-        src="/static/image/bitcoin.png"
+        src="/static/image/mobile-mobile-3.png"
+        width={600}
+        height={300}
+        alt="Website Screenshot"
+      />
+    ),
+  },
+  {
+    id: 7,
+    content: (
+      <Image
+        className="w-full h-full object-contain"
+        src="/static/image/mobile-mobile-4.png"
         width={600}
         height={300}
         alt="Website Screenshot"

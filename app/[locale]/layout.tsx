@@ -5,8 +5,9 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
-import { SessionProvider } from 'next-auth/react';
-
+import { SessionProvider } from "next-auth/react";
+import { META_THEME_COLORS } from "@/lib/config";
+import { fontVariables } from "@/lib/fonts";
 
 export default async function LocaleLayout({
   children,
@@ -23,25 +24,44 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+          <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+                if (localStorage.layout) {
+                  document.documentElement.classList.add('layout-' + localStorage.layout)
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+        <meta name="theme-color" content={META_THEME_COLORS.light} />
+      </head>
       <body
-        className={cn("bg-background overscroll-none font-sans antialiased")}
+        className={cn(
+          "text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)]",
+          fontVariables
+        )}
       >
         <NextIntlClientProvider>
+        <SessionProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-          <SessionProvider>
-            <div vaul-drawer-wrapper="">
-              <div className="relative flex min-h-svh flex-col bg-background">
-                {children}
-              </div>
-            </div>
-            <Toaster richColors position="top-left" />
-            </SessionProvider>
+   
+              {children}
+
+              <Toaster richColors position="top-left" />
+  
           </ThemeProvider>
+          </SessionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

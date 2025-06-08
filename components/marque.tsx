@@ -1,72 +1,101 @@
 "use client";
-import React, { useRef, useEffect } from "react";
-
+import React, { useRef, useEffect, useCallback } from "react";
 
 type CardMarqueeProps = {
   items: { id: string | number; content: React.ReactNode }[];
   speed?: number;
   direction?: "left" | "right";
   gap?: number;
+  pauseOnHover?: boolean;
   className?: string;
   cardClassName?: string;
 };
 
-
 export function CardMarquee({
   items = [],
-  speed = 40,
+  speed = 50,
   direction = "left",
-  gap = 24,
+  gap = 16, // Daha modern bir görünüm için varsayılan boşluğu azalttım.
+  pauseOnHover = true,
   className = "",
   cardClassName = "",
 }: CardMarqueeProps) {
+  const marqueeRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
   const requestIdRef = useRef<number | null>(null);
-  const positionRef = useRef(0);
-  const contentWidthRef = useRef(0);
 
-  useEffect(() => {
+  // Animasyonu useCallback ile sarmalayarak gereksiz yeniden oluşturmaları engelliyoruz.
+  const animate = useCallback(() => {
     if (!contentRef.current) return;
 
     const content = contentRef.current;
-    const updateContentWidth = () => {
-      contentWidthRef.current = content.scrollWidth / 2;
-    };
+    const scrollWidth = content.scrollWidth / 2; // Orijinal içeriğin genişliği
+    const currentTransform =
+      new DOMMatrix(getComputedStyle(content).transform).e || 0;
 
-    updateContentWidth();
+    let newPosition =
+      direction === "left"
+        ? currentTransform - speed / 100
+        : currentTransform + speed / 100;
 
-    const resizeObserver = new ResizeObserver(updateContentWidth);
-    resizeObserver.observe(content);
+    // Pürüzsüz ve sonsuz döngü mantığı
+    if (direction === "left" && Math.abs(newPosition) >= scrollWidth) {
+      newPosition += scrollWidth;
+    } else if (direction === "right" && newPosition >= 0) {
+      // Sağa doğru giderken başlangıç pozisyonuna döner
+      newPosition -= scrollWidth;
+    }
 
-    // Animation function
-    const animate = () => {
-      const speedFactor = direction === "right" ? -speed / 50 : speed / 50;
-      positionRef.current -= speedFactor;
-
-      if (Math.abs(positionRef.current) >= contentWidthRef.current) {
-        positionRef.current = 0;
-      }
-
-      content.style.transform = `translateX(${positionRef.current}px)`;
-      requestIdRef.current = requestAnimationFrame(animate);
-    };
-
-    // Start animation
+    content.style.transform = `translateX(${newPosition}px)`;
     requestIdRef.current = requestAnimationFrame(animate);
+  }, [speed, direction]);
+
+  useEffect(() => {
+    if (!marqueeRef.current || !contentRef.current) return;
+
+    // Başlangıç pozisyonunu ayarlama (sağa gidiş için)
+    if (direction === "right") {
+      const scrollWidth = contentRef.current.scrollWidth / 2;
+      contentRef.current.style.transform = `translateX(-${scrollWidth}px)`;
+    }
+
+    // Animasyonu başlat
+    requestIdRef.current = requestAnimationFrame(animate);
+
+    // Hover (üzerine gelince durma) olayları
+    const marqueeEl = marqueeRef.current;
+    const startAnimation = () => {
+      if (!requestIdRef.current) {
+        requestIdRef.current = requestAnimationFrame(animate);
+      }
+    };
+    const stopAnimation = () => {
+      if (requestIdRef.current) {
+        cancelAnimationFrame(requestIdRef.current);
+        requestIdRef.current = null;
+      }
+    };
+
+    if (pauseOnHover) {
+      marqueeEl.addEventListener("mouseenter", stopAnimation);
+      marqueeEl.addEventListener("mouseleave", startAnimation);
+    }
 
     // Cleanup
     return () => {
-      if (requestIdRef.current) {
-        cancelAnimationFrame(requestIdRef.current);
+      stopAnimation();
+      if (pauseOnHover) {
+        marqueeEl.removeEventListener("mouseenter", stopAnimation);
+        marqueeEl.removeEventListener("mouseleave", startAnimation);
       }
-      resizeObserver.disconnect();
     };
-  }, [speed, direction]);
+  }, [animate, direction, pauseOnHover]);
 
+  // Sonsuz döngü için içeriği iki kez render ediyoruz
   const duplicatedItems = [...items, ...items];
 
   return (
-    <div className={`w-full overflow-hidden ${className}`}>
+    <div     ref={marqueeRef} className={`w-full overflow-hidden ${className}`}>
       <div
         ref={contentRef}
         className="flex"

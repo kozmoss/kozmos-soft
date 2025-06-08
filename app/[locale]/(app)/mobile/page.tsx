@@ -1,7 +1,8 @@
+import { OptimizedImage, OptimizedVideo } from "@/components/optimized-item";
+import { SkeletonCard } from "@/components/skeleton-card";
 import { MobileSections } from "@/data/mobile";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function MobilePage() {
   const t = useTranslations("mobile");
@@ -16,13 +17,12 @@ export default function MobilePage() {
             <p className="text-xl mt-6">{t("hero.description")}</p>
           </div>
           <div className="lg:w-2/5 flex h-full relative w-full overflow-hidden">
-            <video
-              src="/static/videos/mobile/mobile-video-1.mov"
-              loop
-              autoPlay
-              muted
-              className="lg:h-full object-cover w-full"
-            />
+            <Suspense fallback={<SkeletonCard />}>
+              <OptimizedVideo
+                src={"/static/videos/mobile/mobile-video-1.mp4"}
+                className="lg:h-full object-cover w-full"
+              />
+            </Suspense>
           </div>
         </div>
       </section>
@@ -39,19 +39,14 @@ export default function MobilePage() {
               <div className="w-full lg:w-1/2 order-2 lg:order-none px-6 lg:px-12 lg:h-auto relative flex items-center justify-center">
                 {section.media.type === "image" ? (
                   <div className="relative w-full h-full flex items-center justify-center">
-                    <Image
-                      src={section.media.src}
-                      alt={section.media.alt || ""}
-                      width={1200}
-                      height={800}
-                      className="w-full h-full object-contain"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                      style={{
-                        objectFit: "contain",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    />
+                    <Suspense fallback={<SkeletonCard />}>
+                      <OptimizedImage
+                        src={section.media.src}
+                        alt={""}
+                         className="w-full h-full object-contain"
+                        priority={true}
+                      />
+                    </Suspense>
                   </div>
                 ) : (
                   <video
@@ -105,29 +100,22 @@ export default function MobilePage() {
               <div className="w-full lg:w-1/2 order-2 lg:order-none px-6 lg:px-12  lg:h-auto relative flex items-center justify-center">
                 {section.media.type === "image" ? (
                   <div className="relative w-full h-full flex items-center justify-center">
-                    <Image
-                      src={section.media.src}
-                      alt={section.media.alt || ""}
-                      width={1200}
-                      height={800}
-                      className="w-full h-full object-contain"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                      style={{
-                        objectFit: "contain",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    />
+                    <Suspense fallback={<SkeletonCard />}>
+                      <OptimizedImage
+                        src={section.media.src}
+                        alt={""}
+                         className="w-full h-full object-contain"
+                        priority={true}
+                      />
+                    </Suspense>
                   </div>
                 ) : (
-                  <video
-                    loop
-                    autoPlay
-                    muted
-                    playsInline
-                    src={section.media.src}
-                    className="w-full h-full object-contain"
-                  />
+                  <Suspense fallback={<SkeletonCard />}>
+                    <OptimizedVideo
+                      src={section.media.src}
+                      className="w-full h-full object-contain"
+                    />
+                  </Suspense>
                 )}
               </div>
             </>

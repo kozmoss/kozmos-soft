@@ -6,9 +6,9 @@ import { LocaleSwitcherSelect } from "./ui/select-lang";
 
 export function SiteHeader() {
   return (
-    <header className="border-dashed sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container-wrapper">
-        <div className="container flex h-14 items-center gap-2 md:gap-4">
+    <header className="border-grid sticky top-0 z-50 border-b bg-background ">
+      <div className="container-wrapper 3xl:fixed:px-0 px-6">
+      <div className="3xl:fixed:container flex h-14 items-center gap-2 **:data-[slot=separator]:!h-4">
           <MainNav />
           <MobileNav />
           <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">

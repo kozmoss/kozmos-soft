@@ -457,627 +457,644 @@
     "chat": {
       "title": "Empower Your Website with a Smart Chatbot",
       "userQuestion": "How can I integrate AI into my website?",
-      "aiResponse1": "Hello! 🚀 You can integrate a smart chatbot into your website in just a few steps."
+      "demoSubtitle": "Experience the power of AI in a live demonstration.",
+      "userQuestion1": "Hi, I'm looking for a chatbot solution for my website. How can you help me?",
+      "aiResponse1": "Of course! We develop smart, 24/7 chatbots tailored to your business needs. We can automate customer support and increase your sales.",
+      "userQuestion2": "Great! Can it be integrated with our existing systems, for example, our CRM?",
+      "aiResponse2": "Absolutely. We seamlessly integrate our chatbots with your CRM, ERP, and any other API services you use, enabling them to generate data-driven, intelligent responses."
+    
+  },
+  "mobileComponent": {
+    "section1": {
+      "title": "User Experience and Interface",
+      "content": "Our mobile applications offer an intuitive navigation structure specially designed for user needs. Interfaces created in accordance with modern UI/UX principles provide both aesthetically pleasing and highly functional use. Thanks to menu structures developed by analyzing user habits, all features are easily accessible. Our interfaces, optimized for every screen size and resolution with a responsive design understanding, offer a consistent experience."
     },
-    "mobileComponent": {
-      "section1": {
-        "title": "User Experience and Interface",
-        "content": "Our mobile applications offer an intuitive navigation structure specially designed for user needs. Interfaces created in accordance with modern UI/UX principles provide both aesthetically pleasing and highly functional use. Thanks to menu structures developed by analyzing user habits, all features are easily accessible. Our interfaces, optimized for every screen size and resolution with a responsive design understanding, offer a consistent experience."
-      },
-      "section2": {
-        "title": "Technical Infrastructure and Performance",
-        "content": "Our applications, developed using current technologies such as React Native, Flutter, and Swift, offer optimum performance by efficiently using device resources. Thanks to advanced optimization techniques running in the background, we offer high performance with low power consumption. Our applications maintain smooth performance even in intensive usage scenarios, while extending battery life by keeping background processes to a minimum. We continuously maintain this standard with periodic performance tests and updates."
-      },
-      "section3": {
-        "title": "Customization and Security",
-        "content": "Thanks to the wide customization options we offer to our users, everyone can create an experience according to their preferences. We offer flexible configuration options in many areas such as theme colors, notification settings, and recommendations based on usage habits. In terms of security, our applications developed in accordance with OWASP standards have many layers of protection such as data encryption, two-factor authentication, and session management. We conduct regular security audits and updates to ensure the security of user data."
-      },
-      "section4": {
-        "title": "Continuous Development and Support",
-        "content": "We continuously improve our applications in line with user feedback and technological developments. We add new features, make performance improvements, and close security vulnerabilities with the updates we release at regular intervals. Our live support team provides 24/7 service to quickly resolve issues encountered by our users. We also ensure that users get the maximum efficiency from our applications with comprehensive documentation and how-to guides."
-      }
+    "section2": {
+      "title": "Technical Infrastructure and Performance",
+      "content": "Our applications, developed using current technologies such as React Native, Flutter, and Swift, offer optimum performance by efficiently using device resources. Thanks to advanced optimization techniques running in the background, we offer high performance with low power consumption. Our applications maintain smooth performance even in intensive usage scenarios, while extending battery life by keeping background processes to a minimum. We continuously maintain this standard with periodic performance tests and updates."
     },
-    "webComponent": {
-      "userExperienceAndDesign": {
-        "title": "User Experience and Interface Design",
-        "description": "Our web applications are developed with user-centered design principles and offer an intuitive navigation experience. Interfaces designed in accordance with modern UI/UX standards provide high usability alongside aesthetic appearance. With a responsive design approach, we provide a consistent experience across all devices while being developed in accordance with accessibility standards. User flows are optimized through detailed analysis, ensuring transactions can be completed with minimum clicks. Interface components are positioned taking user habits into account."
-      },
-      "technicalInfrastructure": {
-        "title": "Technical Infrastructure and Performance Optimization",
-        "description": "Our applications developed using Next.js, React, and modern web technologies offer high performance and scalability. Fast loading times are achieved through server-side rendering and static generation features, while resource usage is optimized with lazy loading techniques. Global scale low latency times are targeted through CDN integration and caching mechanisms. Continuous improvements are made based on performance metrics while Lighthouse scores are regularly monitored. Database queries and API calls are optimized to minimize server load."
-      },
-      "securityAndDataManagement": {
-        "title": "Security and Data Management",
-        "description": "Our web applications are developed in accordance with OWASP Top 10 security standards. End-to-end encryption in data transmission, CSRF protection, XSS measures, and other security layers have been implemented. User authorizations are managed with role-based access control (RBAC) while all inputs go through validation. Regular security audits and penetration tests are conducted to detect potential vulnerabilities in advance. GDPR and KVKK compliance is ensured, guaranteeing the security and privacy of user data. Data backup and disaster recovery procedures are automated."
-      },
-      "continuousIntegration": {
-        "title": "Continuous Integration and Development Process",
-        "description": "Our development process managed with Agile methodology aims to quickly reflect user feedback into the product. Thanks to CI/CD pipelines, we have the flexibility to make multiple production deployments per day. The impact of new features is measured with A/B testing mechanisms, while controlled roll-out strategies are applied with feature flags. Application health and usage statistics are monitored in real-time, performance anomalies are reported with automatic alarms. All APIs are standardized with documentation and developer portal. Thanks to microservice architecture, system components can be scaled independently."
-      },
-      "section1": {
-        "title": "User Experience and Interface Design",
-        "content": "Our web applications are developed with user-centered design principles and provide an intuitive navigation experience. Interfaces designed in accordance with modern UI/UX standards provide high usability as well as aesthetic appearance. While providing a consistent experience on all devices with a responsive design approach, it has been developed in accordance with accessibility standards. User flows are optimized with detailed analyses, ensuring that operations can be completed with minimum clicks. Interface components are positioned taking into account user habits."
-      },
-      "section2": {
-        "title": "Technological Infrastructure and Performance Optimization",
-        "content": "Our applications, developed using Next.js, React, and modern web technologies, offer high performance and scalability. While server-side rendering and static generation features provide fast loading times, resource usage is optimized with lazy loading techniques. CDN integration and caching mechanisms aim for low latency on a global scale. Continuous improvements are made based on performance metrics, while Lighthouse scores are regularly monitored. Database queries and API calls are optimized to minimize server load."
-      },
-      "section3": {
-        "title": "Security and Data Management",
-        "content": "Our web applications are developed in accordance with OWASP Top 10 security standards. End-to-end encryption, CSRF protection, XSS measures, and other security layers are implemented in data transmission. While user authorizations are managed with role-based access control (RBAC), all inputs are validated. Possible vulnerabilities are detected in advance with regular security audits and penetration tests. GDPR and KVKK compliance ensures the security and privacy of user data. Data backup and disaster recovery procedures are automated."
-      },
-      "section4": {
-        "title": "Continuous Integration and Development Process",
-        "content": "Our development process, managed with Agile methodology, aims to quickly reflect user feedback into the product. Thanks to CI/CD pipelines, we have the flexibility to make multiple production deployments per day. While the impact of new features is measured with A/B testing mechanisms, controlled roll-out strategies are implemented with feature flags. Application health and usage statistics are monitored in real-time, and performance anomalies are reported with automatic alarms. All APIs are standardized with documentation and a developer portal. Thanks to microservice architecture, system components can be scaled independently."
-      }
+    "section3": {
+      "title": "Customization and Security",
+      "content": "Thanks to the wide customization options we offer to our users, everyone can create an experience according to their preferences. We offer flexible configuration options in many areas such as theme colors, notification settings, and recommendations based on usage habits. In terms of security, our applications developed in accordance with OWASP standards have many layers of protection such as data encryption, two-factor authentication, and session management. We conduct regular security audits and updates to ensure the security of user data."
     },
-    "aiComponent": {
-      "intelligentAgentIntegration": {
-        "title": "Intelligent AI Agent Integration",
-        "description": "AI agents integrated into your applications take user experience to next-generation levels. Our NLP (Natural Language Processing) and machine learning-based agents instantly analyze user interactions to generate personalized responses. With our multi-agent systems, we automate complex workflows and provide real-time decision support systems. Your agents continuously learn from your data sources, improving themselves and bringing intelligent optimizations to your business processes."
-      },
-      "customModelsAndFinetuning": {
-        "title": "Custom AI Models and Fine-tuning",
-        "description": "We develop AI models fine-tuned specifically for your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create intelligent chatbots that provide real-time data access through RAG (Retrieval Augmented Generation) architectures without hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We continuously monitor model performance and establish automatic retraining pipelines."
-      },
-      "autonomousProcesses": {
-        "title": "Autonomous Business Processes and Automation",
-        "description": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make independent decisions in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration through workflow automation, multiplying your operational efficiency. Your agents integrate seamlessly with your existing systems via APIs while providing advanced authorization mechanisms for secure data sharing."
-      },
-      "realtimeAnalysis": {
-        "title": "Real-time Analysis and Insights",
-        "description": "We extract meaningful insights from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automated reporting tools. Your agents instantly detect critical changes and send notifications to relevant teams."
-      },
-      "section1": {
-        "title": "Intelligent AI Agent Integration",
-        "content": "AI agents integrated into your applications take the user experience to next-generation levels. Our natural language processing (NLP) and machine learning-based agents instantly analyze user interactions to produce personalized responses. We automate complex workflows with our multi-agent systems and provide real-time decision support systems. Your agents continually learn from your data sources to improve themselves and bring intelligent optimizations to your business processes."
-      },
-      "section2": {
-        "title": "Custom AI Models and Finetuning",
-        "content": "We develop fine-tuned AI models specific to your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create smart chatbots with RAG (Retrieval Augmented Generation) architectures that provide real-time data access and avoid hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We establish automatic retraining pipelines by continuously monitoring model performance."
-      },
-      "section3": {
-        "title": "Autonomous Business Processes and Automation",
-        "content": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make decisions on their own in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration with workflow automation and multiply your operational efficiency. While your agents seamlessly integrate with your existing systems through APIs, we provide advanced authorization mechanisms for secure data sharing."
-      },
-      "section4": {
-        "title": "Real-Time Analysis and Predictions",
-        "content": "We extract meaningful predictions from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automatic reporting tools. Your agents instantly detect critical changes and send notifications to the relevant teams."
-      }
-    },
-    "mainImage": {
-      "alt": "Image"
-    },
-    "mainHeading": {
-      "line1": "Ideas",
-      "line2": "Beyond",
-      "line3": "the Horizon",
-      "subtitle": "Ideas that transform your digital presence"
-    },
-    "mobile": {
-      "title": "Mobile",
-      "description": "Our mobile application solutions that center on user experience are developed with modern design principles and advanced software technologies. Speed, security, user focus, and aesthetics form the cornerstones of all our mobile projects."
-    },
-    "web": {
-      "title": "Web",
-      "description": "Our modern web solutions combine performance, security, and user experience by pushing the boundaries of technology. With our Next.js and React-based architecture, we offer scalable, fast, and impressive digital experiences."
-    },
-    "3d": {
-      "title": "3D Design",
-      "description": "Make your business processes smarter with artificial intelligence. We maximize your business efficiency with data analysis, automation, and decision support systems."
-    },
-    "ai": {
-      "intelligentAgentIntegration": {
-        "title": "Intelligent AI Agent Integration",
-        "description": "AI agents integrated into your applications take user experience to next-generation levels. Our NLP (Natural Language Processing) and machine learning-based agents instantly analyze user interactions to generate personalized responses. With our multi-agent systems, we automate complex workflows and provide real-time decision support systems. Your agents continuously learn from your data sources, improving themselves and bringing intelligent optimizations to your business processes."
-      },
-      "customModelsAndFinetuning": {
-        "title": "Custom AI Models and Fine-tuning",
-        "description": "We develop AI models fine-tuned specifically for your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create intelligent chatbots that provide real-time data access through RAG (Retrieval Augmented Generation) architectures without hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We continuously monitor model performance and establish automatic retraining pipelines."
-      },
-      "autonomousProcesses": {
-        "title": "Autonomous Business Processes and Automation",
-        "description": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make independent decisions in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration through workflow automation, multiplying your operational efficiency. Your agents integrate seamlessly with your existing systems via APIs while providing advanced authorization mechanisms for secure data sharing."
-      },
-      "realtimeAnalysis": {
-        "title": "Real-time Analysis and Insights",
-        "description": "We extract meaningful insights from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automated reporting tools. Your agents instantly detect critical changes and send notifications to relevant teams."
-      },
-      "title": "AI & AI Agent",
-      "description": "From automating repetitive tasks to revolutionizing complex workflows, AI agents are redefining productivity and innovation for the businesses of tomorrow."
-    },
-    "colors": {
-      "title": "Alternative Colors",
-      "description": "We believe that each color tone reflects an emotion. The alternative color palettes we've carefully created for you are designed to reflect the spirit of your brand in the most accurate way. Whether you're looking for a bold and dynamic touch or a simple and elegant one, you'll find a color story here that appeals to every taste and every vision. Step into the magic of colors now and breathe new life into your brand."
-    },
-    "seo": {
-      "title": "SEO controls",
-      "description": "Just existing digitally is not enough, you need to be discoverable! We not only make your web applications aesthetically impressive but also build them with an infrastructure that is easily discoverable in search engines. Thanks to our SEO-friendly structures, your potential customers can reach you exactly when they need you. Let's increase your visibility and grow your business!",
-      "imageAlt": "SEO Illustration"
+    "section4": {
+      "title": "Continuous Development and Support",
+      "content": "We continuously improve our applications in line with user feedback and technological developments. We add new features, make performance improvements, and close security vulnerabilities with the updates we release at regular intervals. Our live support team provides 24/7 service to quickly resolve issues encountered by our users. We also ensure that users get the maximum efficiency from our applications with comprehensive documentation and how-to guides."
     }
   },
-  "Web": {
-    "title": "Ideas Beyond the Horizon",
-    "description": "From sleek designs to intelligent systems, we craft digital experiences powered by creativity and code. Web, mobile, and AI—built to inspire.",
-    "view": {
-      "description1": "A modern e-commerce dashboard with charts, tables, and navigation components.",
-      "description2": "Detailed product view with specifications, pricing, and inventory information.",
-      "description3": "A live dashboard to monitor the status and progress of customer orders.",
-      "description4": "Displays confirmation and payment details after successful order placement.",
-      "description5": "A comprehensive CRM dashboard designed to manage customer relationships efficiently.",
-      "description6": "A project management panel to track tasks, milestones, and team collaboration.",
-      "description7": "A user-friendly project management dashboard to track tasks and timelines.",
-      "description8": "An integrated ERP dashboard for managing enterprise resources effectively.",
-      "description9": "Inventory management interface for tracking stock levels, items, and warehouses.",
-      "description10": "Human Resources dashboard to manage employee data, hiring, and organizational structure."
+  "webComponent": {
+    "userExperienceAndDesign": {
+      "title": "User Experience and Interface Design",
+      "description": "Our web applications are developed with user-centered design principles and offer an intuitive navigation experience. Interfaces designed in accordance with modern UI/UX standards provide high usability alongside aesthetic appearance. With a responsive design approach, we provide a consistent experience across all devices while being developed in accordance with accessibility standards. User flows are optimized through detailed analysis, ensuring transactions can be completed with minimum clicks. Interface components are positioned taking user habits into account."
     },
-    "e-commerce": {
-      "common": {
-        "search": "Search products...",
-        "signIn": "Sign In",
-        "addToCart": "Add to Cart",
-        "cart": "Cart",
-        "terms": "Terms",
-        "privacy": "Privacy",
-        "contact": "Contact",
-        "copyright": "© {year} KosmozShop. All rights reserved."
+    "technicalInfrastructure": {
+      "title": "Technical Infrastructure and Performance Optimization",
+      "description": "Our applications developed using Next.js, React, and modern web technologies offer high performance and scalability. Fast loading times are achieved through server-side rendering and static generation features, while resource usage is optimized with lazy loading techniques. Global scale low latency times are targeted through CDN integration and caching mechanisms. Continuous improvements are made based on performance metrics while Lighthouse scores are regularly monitored. Database queries and API calls are optimized to minimize server load."
+    },
+    "securityAndDataManagement": {
+      "title": "Security and Data Management",
+      "description": "Our web applications are developed in accordance with OWASP Top 10 security standards. End-to-end encryption in data transmission, CSRF protection, XSS measures, and other security layers have been implemented. User authorizations are managed with role-based access control (RBAC) while all inputs go through validation. Regular security audits and penetration tests are conducted to detect potential vulnerabilities in advance. GDPR and KVKK compliance is ensured, guaranteeing the security and privacy of user data. Data backup and disaster recovery procedures are automated."
+    },
+    "continuousIntegration": {
+      "title": "Continuous Integration and Development Process",
+      "description": "Our development process managed with Agile methodology aims to quickly reflect user feedback into the product. Thanks to CI/CD pipelines, we have the flexibility to make multiple production deployments per day. The impact of new features is measured with A/B testing mechanisms, while controlled roll-out strategies are applied with feature flags. Application health and usage statistics are monitored in real-time, performance anomalies are reported with automatic alarms. All APIs are standardized with documentation and developer portal. Thanks to microservice architecture, system components can be scaled independently."
+    },
+    "section1": {
+      "title": "User Experience and Interface Design",
+      "content": "Our web applications are developed with user-centered design principles and provide an intuitive navigation experience. Interfaces designed in accordance with modern UI/UX standards provide high usability as well as aesthetic appearance. While providing a consistent experience on all devices with a responsive design approach, it has been developed in accordance with accessibility standards. User flows are optimized with detailed analyses, ensuring that operations can be completed with minimum clicks. Interface components are positioned taking into account user habits."
+    },
+    "section2": {
+      "title": "Technological Infrastructure and Performance Optimization",
+      "content": "Our applications, developed using Next.js, React, and modern web technologies, offer high performance and scalability. While server-side rendering and static generation features provide fast loading times, resource usage is optimized with lazy loading techniques. CDN integration and caching mechanisms aim for low latency on a global scale. Continuous improvements are made based on performance metrics, while Lighthouse scores are regularly monitored. Database queries and API calls are optimized to minimize server load."
+    },
+    "section3": {
+      "title": "Security and Data Management",
+      "content": "Our web applications are developed in accordance with OWASP Top 10 security standards. End-to-end encryption, CSRF protection, XSS measures, and other security layers are implemented in data transmission. While user authorizations are managed with role-based access control (RBAC), all inputs are validated. Possible vulnerabilities are detected in advance with regular security audits and penetration tests. GDPR and KVKK compliance ensures the security and privacy of user data. Data backup and disaster recovery procedures are automated."
+    },
+    "section4": {
+      "title": "Continuous Integration and Development Process",
+      "content": "Our development process, managed with Agile methodology, aims to quickly reflect user feedback into the product. Thanks to CI/CD pipelines, we have the flexibility to make multiple production deployments per day. While the impact of new features is measured with A/B testing mechanisms, controlled roll-out strategies are implemented with feature flags. Application health and usage statistics are monitored in real-time, and performance anomalies are reported with automatic alarms. All APIs are standardized with documentation and a developer portal. Thanks to microservice architecture, system components can be scaled independently."
+    }
+  },
+  "aiComponent": {
+    "intelligentAgentIntegration": {
+      "title": "Intelligent AI Agent Integration",
+      "description": "AI agents integrated into your applications take user experience to next-generation levels. Our NLP (Natural Language Processing) and machine learning-based agents instantly analyze user interactions to generate personalized responses. With our multi-agent systems, we automate complex workflows and provide real-time decision support systems. Your agents continuously learn from your data sources, improving themselves and bringing intelligent optimizations to your business processes."
+    },
+    "customModelsAndFinetuning": {
+      "title": "Custom AI Models and Fine-tuning",
+      "description": "We develop AI models fine-tuned specifically for your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create intelligent chatbots that provide real-time data access through RAG (Retrieval Augmented Generation) architectures without hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We continuously monitor model performance and establish automatic retraining pipelines."
+    },
+    "autonomousProcesses": {
+      "title": "Autonomous Business Processes and Automation",
+      "description": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make independent decisions in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration through workflow automation, multiplying your operational efficiency. Your agents integrate seamlessly with your existing systems via APIs while providing advanced authorization mechanisms for secure data sharing."
+    },
+    "realtimeAnalysis": {
+      "title": "Real-time Analysis and Insights",
+      "description": "We extract meaningful insights from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automated reporting tools. Your agents instantly detect critical changes and send notifications to relevant teams."
+    },
+    "section1": {
+      "title": "Intelligent AI Agent Integration",
+      "content": "AI agents integrated into your applications take the user experience to next-generation levels. Our natural language processing (NLP) and machine learning-based agents instantly analyze user interactions to produce personalized responses. We automate complex workflows with our multi-agent systems and provide real-time decision support systems. Your agents continually learn from your data sources to improve themselves and bring intelligent optimizations to your business processes."
+    },
+    "section2": {
+      "title": "Custom AI Models and Finetuning",
+      "content": "We develop fine-tuned AI models specific to your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create smart chatbots with RAG (Retrieval Augmented Generation) architectures that provide real-time data access and avoid hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We establish automatic retraining pipelines by continuously monitoring model performance."
+    },
+    "section3": {
+      "title": "Autonomous Business Processes and Automation",
+      "content": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make decisions on their own in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration with workflow automation and multiply your operational efficiency. While your agents seamlessly integrate with your existing systems through APIs, we provide advanced authorization mechanisms for secure data sharing."
+    },
+    "section4": {
+      "title": "Real-Time Analysis and Predictions",
+      "content": "We extract meaningful predictions from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automatic reporting tools. Your agents instantly detect critical changes and send notifications to the relevant teams."
+    }
+  },
+  "mainImage": {
+    "alt": "Image"
+  },
+  "mainHeading": {
+    "line1": "Ideas Beyond the Horizon",
+    "subtitle": "Ideas that transform your digital presence"
+  },
+  "mobile": {
+    "title": "Mobile",
+    "description": "Our mobile application solutions that center on user experience are developed with modern design principles and advanced software technologies. Speed, security, user focus, and aesthetics form the cornerstones of all our mobile projects."
+  },
+  "web": {
+    "title": "Web",
+    "description": "Our modern web solutions combine performance, security, and user experience by pushing the boundaries of technology. With our Next.js and React-based architecture, we offer scalable, fast, and impressive digital experiences."
+  },
+  "3d": {
+    "title": "3D Design",
+    "description": "Make your business processes smarter with artificial intelligence. We maximize your business efficiency with data analysis, automation, and decision support systems."
+  },
+  "ai": {
+    "intelligentAgentIntegration": {
+      "title": "Intelligent AI Agent Integration",
+      "description": "AI agents integrated into your applications take user experience to next-generation levels. Our NLP (Natural Language Processing) and machine learning-based agents instantly analyze user interactions to generate personalized responses. With our multi-agent systems, we automate complex workflows and provide real-time decision support systems. Your agents continuously learn from your data sources, improving themselves and bringing intelligent optimizations to your business processes."
+    },
+    "customModelsAndFinetuning": {
+      "title": "Custom AI Models and Fine-tuning",
+      "description": "We develop AI models fine-tuned specifically for your industry. By training your LLMs (Large Language Models) with your own data, we transfer your company's knowledge base to your digital assistants. We create intelligent chatbots that provide real-time data access through RAG (Retrieval Augmented Generation) architectures without hallucinations. We transform your corporate knowledge management using custom embeddings and vector databases. We continuously monitor model performance and establish automatic retraining pipelines."
+    },
+    "autonomousProcesses": {
+      "title": "Autonomous Business Processes and Automation",
+      "description": "We make your routine business processes fully autonomous with our AI agents. We create digital employees that can make independent decisions in areas such as document processing, data analysis, and customer service. We optimize human-AI collaboration through workflow automation, multiplying your operational efficiency. Your agents integrate seamlessly with your existing systems via APIs while providing advanced authorization mechanisms for secure data sharing."
+    },
+    "realtimeAnalysis": {
+      "title": "Real-time Analysis and Insights",
+      "description": "We extract meaningful insights from your data with our AI-powered analytics platform. We support your proactive decision-making processes with anomaly detection, trend analysis, and forecasting models. With our multimodal AI approach, we analyze your text, audio, and image data together to provide a holistic perspective. We make complex data understandable with customizable dashboards and automated reporting tools. Your agents instantly detect critical changes and send notifications to relevant teams."
+    },
+    "title": "AI & AI Agent",
+    "description": "From automating repetitive tasks to revolutionizing complex workflows, AI agents are redefining productivity and innovation for the businesses of tomorrow.",
+    "subAi": {
+      "title": "Transform Your Website into an Intelligent Sales and Support Channel",
+      "subtitle": "Discover our AI-powered chatbot solutions. Boost customer engagement, maximize operational efficiency, and automate your sales 24/7.",
+      "headline1": "Seamless Customer Experience",
+      "desc1": "Let your visitors find the information they need instantly. Our advanced chatbots provide uninterrupted communication and support on your website, around the clock.",
+      "headline2": "Smart API Integrations",
+      "desc2": "We work in perfect harmony with your existing systems. Intelligently leverage your data by integrating our chatbot with your CRM, ERP, or any external service.",
+      "headline3": "Automated Sales Funnels",
+      "desc3": "Identify potential customers, offer product recommendations, and manage sales processes on autopilot. Our chatbots direct qualified leads straight to you.",
+      "headline4": "Effortless Setup and Management",
+      "desc4": "Don't bother with complex coding. We rapidly integrate your custom-developed chatbot into your website and simplify its management for you.",
+      "headline5": "Future-Ready Solutions",
+      "desc5": "Start with a simple chatbot today and scale your business with more complex and customized AI solutions tomorrow. We are always here as your technology partner."
+    }
+  },
+  "colors": {
+    "title": "Alternative Colors",
+    "description": "We believe that each color tone reflects an emotion. The alternative color palettes we've carefully created for you are designed to reflect the spirit of your brand in the most accurate way. Whether you're looking for a bold and dynamic touch or a simple and elegant one, you'll find a color story here that appeals to every taste and every vision. Step into the magic of colors now and breathe new life into your brand."
+  },
+  "seo": {
+    "title": "SEO controls",
+    "description": "Just existing digitally is not enough, you need to be discoverable! We not only make your web applications aesthetically impressive but also build them with an infrastructure that is easily discoverable in search engines. Thanks to our SEO-friendly structures, your potential customers can reach you exactly when they need you. Let's increase your visibility and grow your business!",
+    "imageAlt": "SEO Illustration"
+  }
+},
+"Web": {
+  "title": "Ideas Beyond the Horizon",
+  "description": "From sleek designs to intelligent systems, we craft digital experiences powered by creativity and code. Web, mobile, and AI—built to inspire.",
+  "view": {
+    "description1": "A modern e-commerce dashboard with charts, tables, and navigation components.",
+    "description2": "Detailed product view with specifications, pricing, and inventory information.",
+    "description3": "A live dashboard to monitor the status and progress of customer orders.",
+    "description4": "Displays confirmation and payment details after successful order placement.",
+    "description5": "A comprehensive CRM dashboard designed to manage customer relationships efficiently.",
+    "description6": "A project management panel to track tasks, milestones, and team collaboration.",
+    "description7": "A user-friendly project management dashboard to track tasks and timelines.",
+    "description8": "An integrated ERP dashboard for managing enterprise resources effectively.",
+    "description9": "Inventory management interface for tracking stock levels, items, and warehouses.",
+    "description10": "Human Resources dashboard to manage employee data, hiring, and organizational structure."
+  },
+  "e-commerce": {
+    "common": {
+      "search": "Search products...",
+      "signIn": "Sign In",
+      "addToCart": "Add to Cart",
+      "cart": "Cart",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "contact": "Contact",
+      "copyright": "© {year} KosmozShop. All rights reserved."
+    },
+    "header": {
+      "title": "KosmozShop"
+    },
+    "home": {
+      "featuredProducts": "Featured Products",
+      "categories": "Categories"
+    },
+    "products": {
+      "wirelessHeadphones": "Wireless Headphones",
+      "smartWatch": "Smart Watch",
+      "runningShoes": "Running Shoes",
+      "coffeeMaker": "Coffee Maker",
+      "backpack": "Backpack",
+      "smartphone": "Smartphone",
+      "yogaMat": "Yoga Mat",
+      "deskLamp": "Desk Lamp",
+      "bluetoothSpeaker": "Bluetooth Speaker",
+      "wirelessEarbuds": "Wireless Earbuds"
+    },
+    "categories": {
+      "electronics": "Electronics",
+      "fashion": "Fashion",
+      "homeKitchen": "Home & Kitchen",
+      "sportsOutdoors": "Sports & Outdoors"
+    },
+    "cart": {
+      "yourCart": "Your Cart",
+      "emptyCart": "Your cart is empty",
+      "continueShopping": "Continue Shopping",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "total": "Total",
+      "checkout": "Checkout",
+      "remove": "Remove"
+    },
+    "checkout": {
+      "shippingAddress": "Shipping Address",
+      "billingAddress": "Billing Address",
+      "paymentMethod": "Payment Method",
+      "placeOrder": "Place Order",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "address": "Address",
+      "city": "City",
+      "country": "Country",
+      "postalCode": "Postal Code",
+      "phoneNumber": "Phone Number"
+    },
+    "account": {
+      "profile": "Profile",
+      "orders": "Orders",
+      "wishlist": "Wishlist",
+      "settings": "Settings",
+      "signOut": "Sign Out"
+    },
+    "error": {
+      "pageNotFound": "Page Not Found",
+      "backToHome": "Back to Home"
+    }
+  },
+  "erp": {
+    "hr": {
+      "title": "Human Resources",
+      "subtitle": "Manage employees, departments, and HR processes",
+      "export": "Export",
+      "add_employee": "Add Employee",
+      "total_employees": "Total Employees",
+      "from_last_year": "from last year",
+      "departmentsJust": "Departments",
+      "new_hires": "New Hires",
+      "this_quarter": "This quarter",
+      "turnover_rate": "Turnover Rate",
+      "annual_rate": "Annual rate",
+      "tabs": {
+        "employees": "Employees",
+        "departments": "Departments",
+        "recruitment": "Recruitment",
+        "payroll": "Payroll"
       },
-      "header": {
-        "title": "KosmozShop"
+      "directory": {
+        "title": "Employee Directory",
+        "description": "Manage your company's employees",
+        "search_placeholder": "Search employees..."
       },
-      "home": {
-        "featuredProducts": "Featured Products",
-        "categories": "Categories"
+      "table": {
+        "employee": "Employee",
+        "position": "Position",
+        "department": "Department",
+        "join_date": "Join Date",
+        "status": "Status"
       },
-      "products": {
-        "wirelessHeadphones": "Wireless Headphones",
-        "smartWatch": "Smart Watch",
-        "runningShoes": "Running Shoes",
-        "coffeeMaker": "Coffee Maker",
-        "backpack": "Backpack",
-        "smartphone": "Smartphone",
-        "yogaMat": "Yoga Mat",
-        "deskLamp": "Desk Lamp",
-        "bluetoothSpeaker": "Bluetooth Speaker",
-        "wirelessEarbuds": "Wireless Earbuds"
+      "status": {
+        "active": "Active",
+        "on-leave": "On Leave",
+        "inactive": "Inactive"
       },
-      "categories": {
-        "electronics": "Electronics",
-        "fashion": "Fashion",
-        "homeKitchen": "Home & Kitchen",
-        "sportsOutdoors": "Sports & Outdoors"
+      "departments": {
+        "title": "Department Management",
+        "description": "Manage company departments and structure",
+        "heading": "Department Structure",
+        "body": "Create and manage departments, assign managers, and organize company structure."
       },
-      "cart": {
-        "yourCart": "Your Cart",
-        "emptyCart": "Your cart is empty",
-        "continueShopping": "Continue Shopping",
-        "subtotal": "Subtotal",
-        "shipping": "Shipping",
-        "tax": "Tax",
-        "total": "Total",
-        "checkout": "Checkout",
-        "remove": "Remove"
+      "recruitment": {
+        "title": "Recruitment",
+        "description": "Manage job openings and applications",
+        "heading": "Recruitment Pipeline",
+        "body": "Post job openings, track applications, schedule interviews, and manage the hiring process."
       },
-      "checkout": {
-        "shippingAddress": "Shipping Address",
-        "billingAddress": "Billing Address",
-        "paymentMethod": "Payment Method",
-        "placeOrder": "Place Order",
-        "firstName": "First Name",
-        "lastName": "Last Name",
-        "address": "Address",
-        "city": "City",
-        "country": "Country",
-        "postalCode": "Postal Code",
-        "phoneNumber": "Phone Number"
-      },
-      "account": {
-        "profile": "Profile",
-        "orders": "Orders",
-        "wishlist": "Wishlist",
-        "settings": "Settings",
-        "signOut": "Sign Out"
-      },
-      "error": {
-        "pageNotFound": "Page Not Found",
-        "backToHome": "Back to Home"
+      "payroll": {
+        "title": "Payroll Management",
+        "description": "Manage employee compensation and benefits",
+        "heading": "Payroll Processing",
+        "body": "Process payroll, manage benefits, track time off, and generate payroll reports."
       }
     },
-    "erp": {
-      "hr": {
-        "title": "Human Resources",
-        "subtitle": "Manage employees, departments, and HR processes",
-        "export": "Export",
-        "add_employee": "Add Employee",
-        "total_employees": "Total Employees",
-        "from_last_year": "from last year",
-        "departmentsJust": "Departments",
-        "new_hires": "New Hires",
-        "this_quarter": "This quarter",
-        "turnover_rate": "Turnover Rate",
-        "annual_rate": "Annual rate",
-        "tabs": {
-          "employees": "Employees",
-          "departments": "Departments",
-          "recruitment": "Recruitment",
-          "payroll": "Payroll"
-        },
-        "directory": {
-          "title": "Employee Directory",
-          "description": "Manage your company's employees",
-          "search_placeholder": "Search employees..."
-        },
-        "table": {
-          "employee": "Employee",
-          "position": "Position",
-          "department": "Department",
-          "join_date": "Join Date",
-          "status": "Status"
-        },
-        "status": {
-          "active": "Active",
-          "on-leave": "On Leave",
-          "inactive": "Inactive"
-        },
-        "departments": {
-          "title": "Department Management",
-          "description": "Manage company departments and structure",
-          "heading": "Department Structure",
-          "body": "Create and manage departments, assign managers, and organize company structure."
-        },
-        "recruitment": {
-          "title": "Recruitment",
-          "description": "Manage job openings and applications",
-          "heading": "Recruitment Pipeline",
-          "body": "Post job openings, track applications, schedule interviews, and manage the hiring process."
-        },
-        "payroll": {
-          "title": "Payroll Management",
-          "description": "Manage employee compensation and benefits",
-          "heading": "Payroll Processing",
-          "body": "Process payroll, manage benefits, track time off, and generate payroll reports."
-        }
-      },
-      "dashboard": "Dashboard",
-      "overviewDescription": "Overview of your business performance and metrics",
+    "dashboard": "Dashboard",
+    "overviewDescription": "Overview of your business performance and metrics",
+    "tabs": {
+      "overview": "Overview",
+      "sales": "Sales",
+      "inventory": "Inventory",
+      "finance": "Finance"
+    },
+    "inventoryManagement": "Inventory Management",
+    "inventoryDescription": "Manage your product inventory and stock levels",
+    "addProduct": "Add Product",
+    "outOfStock": "Out of Stock",
+    "products": "Products",
+    "analytics": "Analytics",
+    "warehouses": "Warehouses",
+    "searchInventory": "Search inventory...",
+    "inventoryItems": "Inventory Items",
+    "inventoryItemDescription": "Manage your product inventory and stock levels",
+    "inventoryTrends": "Inventory Trends",
+    "inventoryTrendsDesc": "Stock level trends over time",
+    "inventoryCategory": "Inventory by Category",
+    "inventoryCategoryDesc": "Distribution across categories",
+    "warehouseManagement": "Warehouse Management",
+    "warehouseManagementDesc": "Manage warehouse locations and inventory distribution",
+    "warehousePlaceholder": "Manage warehouse locations, track inventory across locations, and optimize storage.",
+    "id": "ID",
+    "name": "Name",
+    "category": "Category",
+    "location": "Location",
+    "stock": "Stock",
+    "price": "Price",
+    "status": "Status",
+    "newOrders": "New Orders",
+    "thisMonth": "This month",
+    "activeCustomers": "Active Customers",
+    "totalActive": "Total active",
+    "salesOverview": "Sales Overview",
+    "monthlySalesPerformance": "Monthly sales performance",
+    "recentOrders": "Recent Orders",
+    "latestCustomerOrders": "Latest customer orders",
+    "monthlyRevenue": "Monthly Revenue",
+    "conversionRate": "Conversion Rate",
+    "averageOrderValue": "Average Order Value",
+    "fromLastMonth": "from last month",
+    "revenueBreakdown": "Revenue Breakdown",
+    "revenueByProductCategory": "Revenue by product category",
+    "customerAcquisition": "Customer Acquisition",
+    "newVsReturning": "New vs returning customers",
+    "totalProducts": "Total Products",
+    "lowStockItems": "Low Stock Items",
+    "inventoryValue": "Inventory Value",
+    "inventoryStatus": "Inventory Status",
+    "stockLevelsByCategory": "Stock levels by category",
+    "totalRevenue": "Total Revenue",
+    "expenses": "Expenses",
+    "netProfit": "Net Profit",
+    "ytd": "YTD (Year to Date)",
+    "financialPerformance": "Financial Performance",
+    "revenueVsExpenses": "Revenue vs Expenses",
+    "financialChartsPlaceholder": "Detailed financial charts will be displayed here..."
+  },
+  "projectManager": {
+    "title": "Kanban Board",
+    "description": "Manage your issues with a kanban board",
+    "siteHeaderTitle": "Board",
+    "currentSprintLabel": "Current Sprint: Sprint #24 (April 5 - April 19)",
+    "createIssue": "Create Issue",
+    "searchPlaceholder": "Search issues...",
+    "selectSprintPlaceholder": "Select Sprint",
+    "currentSprint": "Current Sprint",
+    "backlog": "Backlog",
+    "previousSprint": "Previous Sprint",
+    "filterByAssignee": "Filter by Assignee",
+    "allAssignees": "All Assignees",
+    "assignedToMe": "Assigned to Me",
+    "unassigned": "Unassigned",
+    "dashboard": {
+      "currentSprint": "Current Sprint",
+      "createIssue": "Create Issue",
       "tabs": {
         "overview": "Overview",
-        "sales": "Sales",
-        "inventory": "Inventory",
-        "finance": "Finance"
+        "sprints": "Sprints",
+        "reports": "Reports"
       },
-      "inventoryManagement": "Inventory Management",
-      "inventoryDescription": "Manage your product inventory and stock levels",
-      "addProduct": "Add Product",
-      "outOfStock": "Out of Stock",
-      "products": "Products",
-      "analytics": "Analytics",
-      "warehouses": "Warehouses",
-      "searchInventory": "Search inventory...",
-      "inventoryItems": "Inventory Items",
-      "inventoryItemDescription": "Manage your product inventory and stock levels",
-      "inventoryTrends": "Inventory Trends",
-      "inventoryTrendsDesc": "Stock level trends over time",
-      "inventoryCategory": "Inventory by Category",
-      "inventoryCategoryDesc": "Distribution across categories",
-      "warehouseManagement": "Warehouse Management",
-      "warehouseManagementDesc": "Manage warehouse locations and inventory distribution",
-      "warehousePlaceholder": "Manage warehouse locations, track inventory across locations, and optimize storage.",
-      "id": "ID",
-      "name": "Name",
-      "category": "Category",
-      "location": "Location",
-      "stock": "Stock",
-      "price": "Price",
-      "status": "Status",
-      "newOrders": "New Orders",
-      "thisMonth": "This month",
-      "activeCustomers": "Active Customers",
-      "totalActive": "Total active",
-      "salesOverview": "Sales Overview",
-      "monthlySalesPerformance": "Monthly sales performance",
-      "recentOrders": "Recent Orders",
-      "latestCustomerOrders": "Latest customer orders",
-      "monthlyRevenue": "Monthly Revenue",
-      "conversionRate": "Conversion Rate",
-      "averageOrderValue": "Average Order Value",
-      "fromLastMonth": "from last month",
-      "revenueBreakdown": "Revenue Breakdown",
-      "revenueByProductCategory": "Revenue by product category",
-      "customerAcquisition": "Customer Acquisition",
-      "newVsReturning": "New vs returning customers",
-      "totalProducts": "Total Products",
-      "lowStockItems": "Low Stock Items",
-      "inventoryValue": "Inventory Value",
-      "inventoryStatus": "Inventory Status",
-      "stockLevelsByCategory": "Stock levels by category",
-      "totalRevenue": "Total Revenue",
-      "expenses": "Expenses",
-      "netProfit": "Net Profit",
-      "ytd": "YTD (Year to Date)",
-      "financialPerformance": "Financial Performance",
-      "revenueVsExpenses": "Revenue vs Expenses",
-      "financialChartsPlaceholder": "Detailed financial charts will be displayed here..."
-    },
-    "projectManager": {
-      "title": "Kanban Board",
-      "description": "Manage your issues with a kanban board",
-      "siteHeaderTitle": "Board",
-      "currentSprintLabel": "Current Sprint: Sprint #24 (April 5 - April 19)",
-      "createIssue": "Create Issue",
-      "searchPlaceholder": "Search issues...",
-      "selectSprintPlaceholder": "Select Sprint",
-      "currentSprint": "Current Sprint",
-      "backlog": "Backlog",
-      "previousSprint": "Previous Sprint",
-      "filterByAssignee": "Filter by Assignee",
-      "allAssignees": "All Assignees",
-      "assignedToMe": "Assigned to Me",
-      "unassigned": "Unassigned",
-      "dashboard": {
-        "currentSprint": "Current Sprint",
-        "createIssue": "Create Issue",
-        "tabs": {
-          "overview": "Overview",
-          "sprints": "Sprints",
-          "reports": "Reports"
-        },
+      "cards": {
+        "openIssues": "Open Issues",
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "sprintProgress": "Sprint Progress",
+        "sinceYesterday": "+{count} since yesterday",
+        "thisWeek": "+{count} this week",
+        "sprintEnds": "Sprint ends in {days} days"
+      },
+      "currentSprintCard": {
+        "title": "Current Sprint",
+        "description": "Sprint #{number} - {start} to {end}",
+        "viewBoard": "View Board"
+      },
+      "recentActivity": {
+        "title": "Recent Activity",
+        "description": "Latest updates from your team",
+        "viewAll": "View All Activity"
+      },
+      "teamMembers": {
+        "title": "Team Members",
+        "description": "Manage your team and their access",
+        "viewAll": "View All Members"
+      },
+      "projects": {
+        "title": "Projects",
+        "description": "Your active projects",
+        "viewAll": "View All Projects",
         "cards": {
-          "openIssues": "Open Issues",
-          "inProgress": "In Progress",
+          "websiteRedesign": {
+            "title": "Website Redesign",
+            "description": "Redesign the company website with new branding"
+          },
+          "mobileApp": {
+            "title": "Mobile App Development",
+            "description": "Create a new mobile app for customers"
+          }
+        }
+      },
+      "sprints": {
+        "title": "Sprint Management",
+        "description": "View and manage your sprints",
+        "current": {
+          "title": "Current Sprint: Sprint #{number}",
+          "dateRange": "{start} - {end}, {year}",
+          "manage": "Manage",
+          "viewBoard": "View Board",
+          "progress": "Progress",
+          "totalIssues": "Total Issues",
           "completed": "Completed",
-          "sprintProgress": "Sprint Progress",
-          "sinceYesterday": "+{count} since yesterday",
-          "thisWeek": "+{count} this week",
-          "sprintEnds": "Sprint ends in {days} days"
-        },
-        "currentSprintCard": {
-          "title": "Current Sprint",
-          "description": "Sprint #{number} - {start} to {end}",
-          "viewBoard": "View Board"
-        },
-        "recentActivity": {
-          "title": "Recent Activity",
-          "description": "Latest updates from your team",
-          "viewAll": "View All Activity"
-        },
-        "teamMembers": {
-          "title": "Team Members",
-          "description": "Manage your team and their access",
-          "viewAll": "View All Members"
-        },
-        "projects": {
-          "title": "Projects",
-          "description": "Your active projects",
-          "viewAll": "View All Projects",
-          "cards": {
-            "websiteRedesign": {
-              "title": "Website Redesign",
-              "description": "Redesign the company website with new branding"
-            },
-            "mobileApp": {
-              "title": "Mobile App Development",
-              "description": "Create a new mobile app for customers"
-            }
-          }
-        },
-        "sprints": {
-          "title": "Sprint Management",
-          "description": "View and manage your sprints",
-          "current": {
-            "title": "Current Sprint: Sprint #{number}",
-            "dateRange": "{start} - {end}, {year}",
-            "manage": "Manage",
-            "viewBoard": "View Board",
-            "progress": "Progress",
-            "totalIssues": "Total Issues",
-            "completed": "Completed",
-            "remaining": "Remaining"
-          },
-          "next": {
-            "title": "Next Sprint: Sprint #{number}",
-            "plan": "Plan Sprint",
-            "notStarted": "Sprint planning not started yet"
-          },
-          "previous": {
-            "title": "Previous Sprint: Sprint #{number}",
-            "viewReport": "View Report",
-            "carriedOver": "Carried Over"
-          }
-        },
-        "reports": {
-          "title": "Reports",
-          "description": "Generate and view reports for your projects",
-          "burndown": {
-            "title": "Burndown Chart",
-            "visualization": "Burndown chart visualization"
-          },
-          "velocity": {
-            "title": "Velocity Chart",
-            "visualization": "Velocity chart visualization"
-          },
-          "cumulative": {
-            "title": "Cumulative Flow",
-            "visualization": "Cumulative flow visualization"
-          },
-          "custom": {
-            "title": "Custom Reports",
-            "retrospective": "Sprint Retrospective Report",
-            "resolution": "Issue Resolution Time Report",
-            "workload": "Team Workload Report",
-            "generate": "Generate"
-          },
-          "view": "View"
-        }
-      },
-      "kanban": {
-        "ui": {
-          "issuesCount": "{count} issues",
-          "addIssue": "Add Issue",
-          "editColumn": "Edit Column",
-          "clearColumn": "Clear Column",
-          "moreOptions": "More options"
-        },
-        "columns": {
-          "todo": "To Do",
-          "inProgress": "In Progress",
-          "review": "Review",
-          "done": "Done"
-        },
-        "issueTypes": {
-          "task": "Task",
-          "story": "Story",
-          "bug": "Bug"
-        },
-        "priorities": {
-          "high": "High",
-          "medium": "Medium",
-          "low": "Low"
-        },
-        "issues": {
-          "implementAuth": "Implement user authentication",
-          "designMockups": "Design landing page mockups",
-          "researchPayments": "Research payment gateway options",
-          "fixResponsiveness": "Fix login page responsiveness",
-          "implementFiltering": "Implement product filtering",
-          "addSearch": "Add product search functionality",
-          "setupRepo": "Setup project repository",
-          "createSchema": "Create database schema",
-          "implementRegistration": "Implement basic user registration"
-        }
-      }
-    },
-    "crm": {
-      "customerSatisfaction": {
-        "title": "Customer Satisfaction",
-        "description": "Comparison of satisfaction metrics year over year",
-        "tooltip": {
-          "metric": "Metric",
-          "thisYear": "This Year",
-          "lastYear": "Last Year"
-        },
-        "legend": {
-          "thisYear": "This Year",
-          "lastYear": "Last Year"
-        },
-        "metrics": {
-          "productQuality": "Product Quality",
-          "customerService": "Customer Service",
-          "pricing": "Pricing",
-          "userExperience": "User Experience",
-          "reliability": "Reliability",
-          "features": "Features"
-        }
-      },
-      "salesTarget": {
-        "title": "Sales Target",
-        "description": "Progress towards quarterly sales goal",
-        "percentageLabel": "of quarterly target",
-        "labels": {
-          "achieved": "Achieved",
           "remaining": "Remaining"
         },
-        "metrics": {
-          "target": "Target",
-          "achieved": "Achieved"
+        "next": {
+          "title": "Next Sprint: Sprint #{number}",
+          "plan": "Plan Sprint",
+          "notStarted": "Sprint planning not started yet"
         },
-        "currency": "$"
+        "previous": {
+          "title": "Previous Sprint: Sprint #{number}",
+          "viewReport": "View Report",
+          "carriedOver": "Carried Over"
+        }
       },
-      "leadSources": {
-        "title": "Lead Sources",
-        "dateRange": "January - June 2024",
-        "totalLeads": "Leads",
-        "trendingUp": "Trending up by {percentage} this month",
-        "trendingIcon": "↑",
-        "description": "Showing total lead sources for the last 6 months"
+      "reports": {
+        "title": "Reports",
+        "description": "Generate and view reports for your projects",
+        "burndown": {
+          "title": "Burndown Chart",
+          "visualization": "Burndown chart visualization"
+        },
+        "velocity": {
+          "title": "Velocity Chart",
+          "visualization": "Velocity chart visualization"
+        },
+        "cumulative": {
+          "title": "Cumulative Flow",
+          "visualization": "Cumulative flow visualization"
+        },
+        "custom": {
+          "title": "Custom Reports",
+          "retrospective": "Sprint Retrospective Report",
+          "resolution": "Issue Resolution Time Report",
+          "workload": "Team Workload Report",
+          "generate": "Generate"
+        },
+        "view": "View"
       }
     },
-    "sidebar": {
-      "companyName": "Kozmos Inc.",
-      "navMain": {
-        "dashboard": "Dashboard",
-        "lifecycle": "Lifecycle",
-        "analytics": "Analytics",
-        "projects": "Projects",
-        "team": "Team"
+    "kanban": {
+      "ui": {
+        "issuesCount": "{count} issues",
+        "addIssue": "Add Issue",
+        "editColumn": "Edit Column",
+        "clearColumn": "Clear Column",
+        "moreOptions": "More options"
       },
-      "navClouds": {
-        "capture": "Capture",
-        "proposal": "Proposal",
-        "prompts": "Prompts",
-        "activeProposals": "Active Proposals",
-        "archived": "Archived"
+      "columns": {
+        "todo": "To Do",
+        "inProgress": "In Progress",
+        "review": "Review",
+        "done": "Done"
       },
-      "documents": {
-        "dataLibrary": "Data Library",
-        "reports": "Reports",
-        "wordAssistant": "Word Assistant"
+      "issueTypes": {
+        "task": "Task",
+        "story": "Story",
+        "bug": "Bug"
       },
-      "navSecondary": {
-        "settings": "Settings",
-        "getHelp": "Get Help",
-        "search": "Search"
+      "priorities": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "issues": {
+        "implementAuth": "Implement user authentication",
+        "designMockups": "Design landing page mockups",
+        "researchPayments": "Research payment gateway options",
+        "fixResponsiveness": "Fix login page responsiveness",
+        "implementFiltering": "Implement product filtering",
+        "addSearch": "Add product search functionality",
+        "setupRepo": "Setup project repository",
+        "createSchema": "Create database schema",
+        "implementRegistration": "Implement basic user registration"
       }
     }
   },
-  "contact-us": {
-    "slogan": {
-      "produceTogether": "Let's produce together",
-      "meetKozmosSoft": "Meet Kozmos-Soft",
-      "justOneClickAway": "We're just one click away",
-      "moveDreamsToDigital": "Let's bring your dreams to digital",
-      "haveQuestions": "Have questions?",
-      "kozmosSoftWithYou": "Kozmos-Soft is with you",
-      "shapeTechTogether": "Let's shape technology together",
-      "weAreHere": "We are here"
+  "crm": {
+    "customerSatisfaction": {
+      "title": "Customer Satisfaction",
+      "description": "Comparison of satisfaction metrics year over year",
+      "tooltip": {
+        "metric": "Metric",
+        "thisYear": "This Year",
+        "lastYear": "Last Year"
+      },
+      "legend": {
+        "thisYear": "This Year",
+        "lastYear": "Last Year"
+      },
+      "metrics": {
+        "productQuality": "Product Quality",
+        "customerService": "Customer Service",
+        "pricing": "Pricing",
+        "userExperience": "User Experience",
+        "reliability": "Reliability",
+        "features": "Features"
+      }
     },
-    "title": "Contact Us",
-    "fullName": "Full Name",
-    "email": "Email",
-    "phone": "Phone",
-    "message": "Message",
-    "submit": "Send",
-    "projectInformation": "You can contact us to get information about your projects, discuss the details or request a quote. Our team will be happy to meet you and offer solutions to your needs.",
-    "fullNamePlaceholder": "Enter your full name",
-    "emailPlaceholder": "Enter your email address",
-    "phonePlaceholder": "Enter your phone number",
-    "messagePlaceholder": "Type your message here",
-    "errors": {
-      "fullNameMin": "Full name must be at least 2 characters",
-      "invalidEmail": "Please enter a valid email address",
-      "phoneDigits": "Phone number must contain only digits",
-      "messageMin": "Message must be at least 10 characters",
-      "messageMax": "Message cannot exceed 500 characters"
+    "salesTarget": {
+      "title": "Sales Target",
+      "description": "Progress towards quarterly sales goal",
+      "percentageLabel": "of quarterly target",
+      "labels": {
+        "achieved": "Achieved",
+        "remaining": "Remaining"
+      },
+      "metrics": {
+        "target": "Target",
+        "achieved": "Achieved"
+      },
+      "currency": "$"
+    },
+    "leadSources": {
+      "title": "Lead Sources",
+      "dateRange": "January - June 2024",
+      "totalLeads": "Leads",
+      "trendingUp": "Trending up by {percentage} this month",
+      "trendingIcon": "↑",
+      "description": "Showing total lead sources for the last 6 months"
     }
   },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
-  },
-  "Navigation": {
-    "dashboard": "Dashboard",
-    "web": "Web",
-    "mobile": "Mobile",
-    "ai": "AI & AI Agent",
-    "aboutUs": "About Us",
-    "contactUs": "Contact Us",
-    "searchDocumentation": "Search Documentation",
-    "noResultsFound": "No Results Found",
-    "Links": "Links",
-    "Theme": "Themes",
-    "typeCommand": "Type or search for a command..."
-  },
-  "loginDialog": {
-    "title": "Sign up Kozmos Soft",
-    "description": "We just need a few details to get you started.",
-    "or": "Or",
-    "continueWithGoogle": "Continue with Google",
-    "terms": "By signing up you agree to our",
-    "termsLink": "Terms"
-  },
-  "Chat": {
-    "helpyou": "How can I help you?",
-    "welcome": "Welcome",
-    "question": "Ask the Kosmos a question..."
+  "sidebar": {
+    "companyName": "Kozmos Inc.",
+    "navMain": {
+      "dashboard": "Dashboard",
+      "lifecycle": "Lifecycle",
+      "analytics": "Analytics",
+      "projects": "Projects",
+      "team": "Team"
+    },
+    "navClouds": {
+      "capture": "Capture",
+      "proposal": "Proposal",
+      "prompts": "Prompts",
+      "activeProposals": "Active Proposals",
+      "archived": "Archived"
+    },
+    "documents": {
+      "dataLibrary": "Data Library",
+      "reports": "Reports",
+      "wordAssistant": "Word Assistant"
+    },
+    "navSecondary": {
+      "settings": "Settings",
+      "getHelp": "Get Help",
+      "search": "Search"
+    }
   }
+},
+"contact-us": {
+  "slogan": {
+    "produceTogether": "Let's produce together",
+    "meetKozmosSoft": "Meet Kozmos-Soft",
+    "justOneClickAway": "We're just one click away",
+    "moveDreamsToDigital": "Let's bring your dreams to digital",
+    "haveQuestions": "Have questions?",
+    "kozmosSoftWithYou": "Kozmos-Soft is with you",
+    "shapeTechTogether": "Let's shape technology together",
+    "weAreHere": "We are here"
+  },
+  "title": "Contact Us",
+  "fullName": "Full Name",
+  "email": "Email",
+  "phone": "Phone",
+  "message": "Message",
+  "submit": "Send",
+  "projectInformation": "You can contact us to get information about your projects, discuss the details or request a quote. Our team will be happy to meet you and offer solutions to your needs.",
+  "fullNamePlaceholder": "Enter your full name",
+  "emailPlaceholder": "Enter your email address",
+  "phonePlaceholder": "Enter your phone number",
+  "messagePlaceholder": "Type your message here",
+  "errors": {
+    "fullNameMin": "Full name must be at least 2 characters",
+    "invalidEmail": "Please enter a valid email address",
+    "phoneDigits": "Phone number must contain only digits",
+    "messageMin": "Message must be at least 10 characters",
+    "messageMax": "Message cannot exceed 500 characters"
+  }
+},
+"LocaleSwitcher": {
+  "label": "Change language",
+  "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+},
+"Navigation": {
+  "dashboard": "Dashboard",
+  "web": "Web",
+  "mobile": "Mobile",
+  "ai": "AI & AI Agent",
+  "aboutUs": "About Us",
+  "contactUs": "Contact Us",
+  "searchDocumentation": "Search Documentation",
+  "noResultsFound": "No Results Found",
+  "Links": "Links",
+  "Theme": "Themes",
+  "typeCommand": "Type or search for a command..."
+},
+"loginDialog": {
+  "title": "Sign up Kozmos Soft",
+  "description": "We just need a few details to get you started.",
+  "or": "Or",
+  "continueWithGoogle": "Continue with Google",
+  "terms": "By signing up you agree to our",
+  "termsLink": "Terms"
+},
+"Chat": {
+  "helpyou": "How can I help you?",
+  "welcome": "Welcome",
+  "question": "Ask the Kosmos a question..."
+}
 }

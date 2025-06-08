@@ -442,8 +442,11 @@
   "Dashboard": {
     "chat": {
       "title": "Web Sitenizi Akıllı Bir Sohbet Botuyla Güçlendirin",
-      "userQuestion": "How can I integrate AI into my website?",
-      "aiResponse1": "Hello! 🚀 You can integrate a smart chatbot into your website in just a few steps."
+      "demoSubtitle": "Yapay zekanın gücünü canlı olarak deneyimleyin.",
+      "userQuestion1": "Merhaba, web sitem için bir chatbot çözümü arıyorum. Bana nasıl yardımcı olabilirsiniz?",
+      "aiResponse1": "Elbette! İşletmenizin ihtiyaçlarına özel, akıllı ve 7/24 çalışan chatbotlar geliştiriyoruz. Müşteri desteğini otomatikleştirebilir ve satışlarınızı artırabiliriz.",
+      "userQuestion2": "Harika! Peki mevcut sistemlerimizle, örneğin CRM ile entegre olabilir mi?",
+      "aiResponse2": "Kesinlikle. Geliştirdiğimiz chatbot'ları, kullandığınız CRM, ERP ve diğer tüm API servisleriyle sorunsuz bir şekilde entegre ederek veriye dayalı akıllı yanıtlar üretmesini sağlıyoruz."
     },
     "mobileComponent": {
       "section1": {
@@ -534,12 +537,10 @@
     "mainImage": {
       "alt": "Görsel"
     },
-"mainHeading": {
-  "line3": "Fikirler",
-  "line2": "Ötesinde",
-  "line1": "Ufkun",
-  "subtitle": "Dijital varlığınızı dönüştüren fikirler"
-},
+    "mainHeading": {
+      "line1": "Ufkun Ötesinde Fikirler",
+      "subtitle": "Dijital varlığınızı dönüştüren fikirler"
+    },
     "mobile": {
       "title": "Mobil",
       "description": "Kullanıcı deneyimini merkeze alan mobil uygulama çözümlerimiz, modern tasarım ilkeleri ve ileri seviye yazılım teknolojileriyle geliştirilmektedir. Hız, güvenlik, kullanıcı odaklılık ve estetik; tüm mobil projelerimizin temel taşlarını oluşturur."
@@ -554,7 +555,21 @@
     },
     "ai": {
       "title": "AI & AI Agent",
-      "description": "Tekrarlayan görevleri otomatikleştirmekten karmaşık iş akışlarını devrimleştirmeye kadar, yapay zeka ajanları yarının işletmeleri için verimliliği ve yeniliği yeniden tanımlıyor."
+      "description": "Tekrarlayan görevleri otomatikleştirmekten karmaşık iş akışlarını devrimleştirmeye kadar, yapay zeka ajanları yarının işletmeleri için verimliliği ve yeniliği yeniden tanımlıyor.",
+      "subAi": {
+        "title": "Web Sitenizi Akıllı Bir Satış ve Destek Kanalına Dönüştürün",
+        "subtitle": "Yapay zeka destekli chatbot çözümlerimizle tanışın. Müşteri etkileşimini artırın, operasyonel verimliliği en üst düzeye çıkarın ve satışlarınızı 7/24 otomatikleştirin.",
+        "headline1": "Kesintisiz Müşteri Deneyimi",
+        "desc1": "Ziyaretçileriniz aradıkları bilgilere anında ulaşsın. Gelişmiş chatbotlarımız, web sitenizde günün her saati kesintisiz bir iletişim ve destek sağlar.",
+        "headline2": "Akıllı API Entegrasyonları",
+        "desc2": "Mevcut sistemlerinizle tam uyum içinde çalışıyoruz. CRM, ERP veya herhangi bir harici servisinizle chatbot'umuzu entegre ederek verilerinizi akıllıca kullanın.",
+        "headline3": "Otomatikleştirilmiş Satış Süreçleri",
+        "desc3": "Potansiyel müşterileri belirleyin, ürün önerileri sunun ve satış süreçlerini otomatik pilotta yönetin. Chatbotlarımız, nitelikli müşteri adaylarını (lead) size yönlendirir.",
+        "headline4": "Kolay Kurulum ve Yönetim",
+        "desc4": "Karmaşık kodlama süreçleriyle uğraşmayın. Size özel olarak geliştirdiğimiz chatbot'u, web sitenize hızla entegre ediyor ve yönetimini sizin için basitleştiriyoruz.",
+        "headline5": "Geleceğe Hazır Çözümler",
+        "desc5": "Bugün basit bir chatbot ile başlayın, yarın daha karmaşık ve özelleştirilmiş yapay zeka çözümleriyle işinizi büyütün. Teknoloji ortağınız olarak daima yanınızdayız."
+      }
     },
     "colors": {
       "title": "Alternatif Renkler",
