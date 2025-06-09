@@ -1,4 +1,4 @@
-import "../../app/globals.css";
+import "@/styles/globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -8,6 +8,7 @@ import { Toaster } from "sonner";
 import { SessionProvider } from "next-auth/react";
 import { META_THEME_COLORS } from "@/lib/config";
 import { fontVariables } from "@/lib/fonts";
+import { LayoutProvider } from "@/hooks/use-layout";
 
 export default async function LocaleLayout({
   children,
@@ -24,7 +25,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-          <head>
+      <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -39,28 +40,26 @@ export default async function LocaleLayout({
             `,
           }}
         />
-        <meta name="theme-color" content={META_THEME_COLORS.light} />
+        
       </head>
       <body
         className={cn(
           "text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)]",
-          fontVariables
+          fontVariables,
         )}
       >
         <NextIntlClientProvider>
-        <SessionProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-   
-              {children}
+          <SessionProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <LayoutProvider>{children}</LayoutProvider>
 
               <Toaster richColors position="top-left" />
-  
-          </ThemeProvider>
+            </ThemeProvider>
           </SessionProvider>
         </NextIntlClientProvider>
       </body>

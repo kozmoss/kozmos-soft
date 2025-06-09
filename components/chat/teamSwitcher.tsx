@@ -5,13 +5,15 @@ import * as React from "react";
 import Image from "next/image";
 
 import { Sidebar2Menu, Sidebar2MenuItem } from "./chat-sideprovider";
+import { useRouter } from "next/navigation";
 
 export function TeamSwitcher() {
+  const router = useRouter();
   return (
     <Sidebar2Menu>
       <Sidebar2MenuItem>
         <div className="flex flex-row items-center justify-center gap-1">
-          <div className="flex aspect-square  items-center justify-center rounded-lg text-sidebar-primary-foreground">
+          <div onClick={() => router.push("/")} className="flex aspect-square  items-center justify-center rounded-lg text-sidebar-primary-foreground">
             <Image
               src={"/static/image/kozmos.png"}
               height={48}

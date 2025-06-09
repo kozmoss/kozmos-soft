@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@import "../styles/themes.css";
+@import "../styles//themes.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -161,10 +161,14 @@
   }
   html {
     @apply scroll-smooth;
+    touch-action: manipulation;
   }
   body {
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
+    min-width: 100vw;
+    /* iOS Safari için alt bar sorununu çöz */
+    min-height: -webkit-fill-available;
   }
 
   @supports (font: -apple-system-body) and (-webkit-appearance: none) {

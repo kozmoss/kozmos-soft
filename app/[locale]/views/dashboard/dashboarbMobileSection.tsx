@@ -131,7 +131,7 @@ export default function DashboardMobileSection() {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 lg:sticky lg:top-20 h-[80vh] sm:h-[60vh] lg:h-screen order-1 lg:order-2">
+      <div className="w-full hidden lg:block lg:w-1/2 lg:sticky lg:top-20 h-[80vh] sm:h-[60vh] lg:h-screen order-1 lg:order-2">
         <div className="w-full h-full justify-center flex items-center">
           <DashboarbMobileSection1 />
         </div>

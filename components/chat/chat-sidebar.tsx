@@ -17,7 +17,6 @@ import { TeamSwitcher } from "./teamSwitcher";
 import { User } from "next-auth";
 
 const data = {
- 
   navMain: [
     {
       title: "New Chat",
@@ -29,20 +28,16 @@ const data = {
 };
 
 export function AppSidebar2({ user }: { user: User | undefined }) {
-
-
   return (
-    <Sidebar2 className="group-data-[side=left]:border-r-1 border border-dashed" >
+    <Sidebar2 className="group-data-[side=left]:border-r-1 border border-dashed">
       <Sidebar2Header>
         <TeamSwitcher />
       </Sidebar2Header>
       <Sidebar2Content>
         <NavMain items={data.navMain} />
-        <SidebarHistory user={user}/>
+        <SidebarHistory user={user} />
       </Sidebar2Content>
-      <Sidebar2Footer>
-        {user && <NavUser user={user} />}
-      </Sidebar2Footer>
+      <Sidebar2Footer>{user && <NavUser user={user} />}</Sidebar2Footer>
     </Sidebar2>
   );
 }
