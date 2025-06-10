@@ -49,6 +49,7 @@ export function ContactUs({ action }: ContactUsProps) {
       }),
   });
 
+
   // Initialize form with validation
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -65,7 +66,10 @@ export function ContactUs({ action }: ContactUsProps) {
       <h2 className="text-2xl font-bold mb-6">{t("title")}</h2>
 
       <Form {...form} >
-        <form  onSubmit={form.handleSubmit(action)} className="space-y-4">
+        <form  onSubmit={form.handleSubmit(async (data) => {
+          await action(data)
+          form.reset()
+        })} className="space-y-4">
           <FormField
             control={form.control}
             name="fullName"
