@@ -71,320 +71,145 @@
     }
   },
   "AboutUs": {
-    "title": "HAKKIMIZDA",
-    "companyDescription": "Kozmos Soft olarak 3 yılı aşkın süredir yazılım dünyasında; web geliştirme, mobil uygulama ve yapay zeka çözümleri sunuyoruz. Yaratıcılığı, güvenilirliği ve sürekli gelişimi esas alarak, müşterilerimizin iş hedeflerine ulaşmalarını sağlıyoruz.",
-    "projects": "PROJE",
-    "clients": "MÜŞTERİ",
-    "experience": "YIL DENEYİM",
-    "satisfaction": "MEMNUNİYET",
-    "technologies": "TEKNOLOJİ",
-    "support": "DESTEK",
-    "repeatClients": "TEKRAR MÜŞTERİ",
-    "deliveryTime": "ORT. TESLİMAT SÜRESİ",
-    "countries": "ÜLKE",
-    "openSource": "AÇIK KAYNAK KATKI",
-    "uptime": "ÇALIŞMA SÜRESİ",
-    "responseTime": "CEVAP SÜRESİ"
+    "introduction": "Kendini sürekli geliştiren, yapay zeka, derin öğrenme ve teknolojiyi kullanarak gerçek dünya problemlerine çözümler üretmeye tutkulu bir geliştiriciyim.",
+    "title": "Hakkımda",
+    "AI&MLProjects": "Yapay Zeka ve Makine Öğrenimi Projeleri",
+    "Web&MobileProjects": "Web ve Mobil Projeler",
+    "YearsofLearning": "Öğrenme Yılları",
+    "FullStackExperience": "Full Stack Deneyimi",
+    "ComputerVision": "Bitki Hastalığı Tespiti (Görüntü İşleme)",
+    "NLP&Conversational AI": "Doğal Dil İşleme ve Sohbet Botları",
+    "DeepLearningTools": "Derin Öğrenme Araçları"
   },
   "AIPage": {
     "chat": {
-      "userQuestion": "Web siteme nasıl ai entegre edebilirim?",
-      "aiResponse1": "Merhaba! 🚀 Web sitene sadece birkaç adımda akıllı bir sohbet botu entegre edebilirsin."
+      "userQuestion": "Web sitelerine yapay zeka entegrasyonu hangi prensiplere dayanır?",
+      "aiResponse1": "Merhaba! 🚀 Entegrasyonlar genellikle API'lar, açık kaynak kütüphaneleri ve modüler bileşenler aracılığıyla gerçekleştirilir."
     },
-    "helpwith?": "Sana Nasıl Yardımcı Olabilirim?",
+    "helpwith?": "AI Ajanı Kavramını Keşfedin",
     "hero": {
-      "title": "AI Agent",
-      "subtitle": "İşinizi otomatikleştirmek, verimliliği artırmak ve rekabet avantajı elde etmek için gelişmiş yapay zeka ajanlarımızla tanışın.",
-      "demoButton": "Demo İzle",
-      "learnMoreButton": "Daha Fazla Bilgi",
-      "demoTitle": "AI Agent Demo",
-      "userQuery": "Geçen ayki satış raporunu analiz et ve önemli noktaları özetle.",
-      "agentResponse": "Geçen ay satışlarınız %12 artış gösterdi. En çok satılan ürün X olurken, Y bölgesinde %15 düşüş yaşandı. Müşteri memnuniyeti puanı 4.8/5 ile rekor kırdı.",
-      "responseTime": "Yanıt süresi: 3.2 saniye",
-      "fullDemo": "Tam demo gör",
-      "headline1": "İçerik, araştırma ve strateji için hazır AI ajanları",
-      "desc1": "Anında sonuç, öğrenme süreci yok — sadece çalışmaya başla.",
-      "headline2": "Mevcut altyapınıza sorunsuz entegrasyon",
-      "desc2": "Kod yazmadan hızlı kurulum ve anında kullanım.",
-      "headline3": "Yetenek açığını yapay zeka ile kapatın",
-      "desc3": "SEO içerikten pazar analizine kadar tüm yazı ve araştırma ihtiyaçlarınız için akıllı çözümler.",
-      "headline4": "7/24 çalışan akıllı ajanlar",
-      "desc4": "Onboarding derdi yok, kesinti yok — her zaman üretken.",
-      "headline5": "Ölçeklenebilir ve güvenli otomasyon",
-      "desc5": "Kurumsal güvenlik standartlarına uygun, gizliliğe öncelik veren AI çözümleri."
+      "title": "Yapay Zeka Agentları: Kavramsal Çerçeve",
+      "subtitle": "Karmaşık görevleri bağımsız yerine getiren, öğrenen ve iş süreçlerini dönüştüren Yapay Zeka Ajanları kavramı ve potansiyeli.",
+      "demoTitle": "AI Agent Çalışma Prensibi Örneği",
+      "userQuery": "Geçen ayki satış raporunu analiz etme sürecini ve önemli noktaları özetleme prensibini açıkla.",
+      "agentResponse": "Agent, 'veri analizi' ve 'özetleme' araçlarını kullanarak veriyi işler. Geçen ay satış verilerinde %12 artış gözlemlenirken, Y bölgesi verilerinde %15'lik düşüşün nedenleri araştırılmalıdır.",
+      "responseTime": "Analiz Süresi: 3.2 saniye",
+      "headline1": "İçerik, araştırma ve stratejide AI ajanlarının rolü",
+      "desc1": "Anında bilgi işleme ve sonuç çıkarma yeteneği — uygulama sürecini başlatma.",
+      "headline2": "Mevcut altyapılarla entegrasyon prensipleri",
+      "desc2": "Yazılım geliştirme gerektirmeyen, hızlı kurulum ve anında kullanım için modüler entegrasyon yaklaşımları.",
+      "headline3": "Yetenek açığını yapay zeka ile kapatma mekanizması",
+      "desc3": "SEO içerik üretiminden pazar analizine kadar tüm bilgi ve araştırma ihtiyaçları için akıllı çözümlerin uygulanması.",
+      "headline4": "7/24 kesintisiz çalışan akıllı ajanların yapısı",
+      "desc4": "Kesintisiz görev döngüsü ve sürekli üretkenlik sağlayan otonom ajan mimarisi.",
+      "headline5": "Ölçeklenebilirlik ve güvenli otomasyon standartları",
+      "desc5": "Kurumsal güvenlik protokollerine uygun, gizliliğe öncelik veren AI çözümlerinin teknik temelleri."
     },
     "whatIs": {
-      "title": "AI Agent Nedir?",
-      "subtitle": "AI ajanları, karmaşık görevleri bağımsız olarak yerine getirebilen, verilerinizden öğrenen ve işlerinizi otomatikleştiren akıllı yazılım sistemleridir.",
+      "title": "AI Agent (Yapay Zeka Ajanı) Tanımı",
+      "subtitle": "AI ajanları, karmaşık görevleri bağımsız olarak yerine getirebilen, verilerinizden öğrenen ve işlerinizi otomatikleştiren akıllı yazılım sistemlerinin kavramsal açıklamasıdır.",
       "point1": "AI ajanları, doğal dil işleme, makine öğrenimi ve yapay zeka teknolojilerini kullanarak işletmenizin verimliliğini artıran gelişmiş yazılım çözümleridir.",
-      "point2": "Mevcut sistemlerinize sorunsuz entegre olur, veri tabanlarınızla ve iş akışlarınızla etkileşime girerek gerçek zamanlı kararlar alabilir.",
+      "point2": "Mevcut sistemlere entegrasyonu, veri tabanları ve iş akışları ile etkileşim kurarak gerçek zamanlı kararlar alma prensibine dayanır.",
       "point3": "Müşteri hizmetleri, satış, pazarlama ve operasyonel süreçler dahil olmak üzere çeşitli alanlarda görevleri otomatikleştirebilir.",
       "point4": "Zaman içinde işletmenizin benzersiz ihtiyaçlarına göre öğrenir ve adapte olur, sürekli iyileşen performans ve sonuçlar sağlar."
     },
     "features": {
       "intelligence": {
-        "title": "Gelişmiş Yapay Zeka",
-        "description": "Ajanlarımız, en son doğal dil işleme ve makine öğrenimi teknolojileriyle donatılmış olup, karmaşık sorunları çözebilir ve zamanla öğrenebilir."
+        "title": "Gelişmiş Yapay Zeka Mekanizması",
+        "description": "Ajanların temelinde, en son doğal dil işleme ve makine öğrenimi teknolojileri yatar; karmaşık sorunları çözme ve zamanla öğrenme yeteneği bu mekanizmadan gelir."
       },
       "integration": {
-        "title": "Kolay Entegrasyon",
-        "description": "Mevcut iş uygulamalarınızla sorunsuz entegrasyon için tasarlanmış, minimum kurulum ve bakım gerektiren çözümler."
+        "title": "Modüler Entegrasyon Prensibi",
+        "description": "Mevcut iş uygulamalarıyla sorunsuz entegrasyon için tasarlanmış, minimum kurulum ve bakım gerektiren modüler çözümlerin yapısı."
       },
       "automation": {
-        "title": "Gerçek Zamanlı Yapay Zeka İşbirliği",
-        "description": "Gerçek zamanlı yardım deneyimi yaşayın. AI Temsilcinizden görevleri koordine etmesini, soruları yanıtlamasını ve ekip uyumunu korumasını isteyin."
+        "title": "Gerçek Zamanlı Yapay Zeka İşbirliği Modeli",
+        "description": "Gerçek zamanlı yardım deneyimini mümkün kılan model. AI Agent'ın görevleri koordine etme, soruları yanıtlamak ve ekip uyumunu koruma yeteneği."
       },
       "communication": {
-        "title": "Akıllı İletişim",
-        "description": "Müşteriler ve ekip üyeleriyle doğal ve etkili iletişim kuran, iletişim süreçlerinizi geliştiren ajanlar."
+        "title": "Akıllı İletişim Protokolleri",
+        "description": "Müşteriler ve ekip üyeleriyle doğal ve etkili iletişim kuran, iletişim süreçlerini geliştiren ajanların çalışma şekli."
       }
     },
     "capabilities": {
-      "title": "AI Ajanları Neler Yapabilir?",
-      "subtitle": "Ajanlarımız, işletmenizin tüm departmanlarında verimlilik ve etkinliği artırmak için tasarlanmıştır.",
+      "title": "Yapay Zeka Ajanlarının Kapsamlı Uygulama Alanları",
+      "subtitle": "Ajanlar, işletmenizin tüm departmanlarında verimlilik ve etkinliği artırmak için tasarlanmış uygulama alanlarına sahiptir.",
       "tabs": {
         "sales": {
           "label": "Satış",
-          "title": "Satış Süreçlerinizi Güçlendirin",
+          "title": "Satış Süreçlerinde AI'ın Rolü ve Uygulama Örnekleri",
           "aitools": {
             "hrResumeComparer": {
-              "title": "İK: Özgeçmiş/İş Tanımı Karşılaştırıcı",
-              "description": "İK: Özgeçmiş/İş Tanımı Karşılaştırıcı aracı, bir adayın özgeçmişinin iş tanımıyla ne kadar uyuştuğunu analiz etmenize yardımcı olur."
-            },
-            "hrLinkedinComparer": {
-              "title": "İK: LinkedIn/İş Tanımı Karşılaştırıcı",
-              "description": "İK: LinkedIn/İş Tanımı Karşılaştırıcı aracı, bir adayın LinkedIn profilinin iş tanımıyla ne kadar uyuştuğunu analiz etmenize yardımcı olur."
-            },
-            "personalizedMsgGenerator": {
-              "title": "Kişiselleştirilmiş Mesaj Oluşturucu - Yıllık Rapor",
-              "description": "Kişiselleştirilmiş Mesaj Oluşturucu - Yıllık Rapor aracı, yıllık raporunuz için kişiselleştirilmiş bir açılış cümlesi oluşturmanıza yardımcı olur."
-            },
-            "extractTranscriptData": {
-              "title": "Transkriptlerden Belirli Verileri Çıkar",
-              "description": "Transkriptlerden Belirli Verileri Çıkar aracı, toplantı transkriptlerinden önemli bilgileri çekmenize yardımcı olur."
+              "title": "İK: Özgeçmiş/İş Tanımı Karşılaştırma Tekniği",
+              "description": "Bu teknik, bir adayın özgeçmişinin iş tanımıyla ne kadar uyuştuğunu analiz etmeye yardımcı olur."
             },
             "spinSelling": {
-              "title": "SPIN Satış Tekniği",
-              "description": "SPIN Satış Tekniği aracı, SPIN satış çerçevesini kullanarak etkili satış soruları oluşturmanıza yardımcı olur."
-            },
-            "keyBenefits": {
-              "title": "3 Ana Fayda - LinkedIn Profiliyle Kişiselleştirilmiş",
-              "description": "3 Ana Fayda - LinkedIn Profiliyle Kişiselleştirilmiş aracı, kişiselleştirilmiş tanıtım mesajları oluşturmanıza yardımcı olur."
-            },
-            "improveCopy": {
-              "title": "Yazınızı Geliştirin",
-              "description": "\"Yazınızı Geliştirin\" aracı, satış ve pazarlama metinlerinizi geliştirmeniz için beş uygulanabilir öneri sunar."
-            },
-            "industryResearch": {
-              "title": "Sektör Araştırması",
-              "description": "Sektör Araştırması aracı, belirli bir sektördeki en son trendleri toplamanıza ve özetlemenize yardımcı olur."
+              "title": "SPIN Satış Çerçevesi Uygulaması",
+              "description": "SPIN satış çerçevesini kullanarak etkili satış soruları oluşturma yöntemleri."
             },
             "leadEnrichment": {
-              "title": "Aday Zenginleştirme Aracı",
-              "description": "Aday Zenginleştirme Aracı, bir aday veya potansiyel müşteri hakkında ayrıntılı bilgi bulmanıza ve çıkarmanıza yardımcı olur."
-            },
-            "researchCompany": {
-              "title": "Bir Şirketi Araştır ve Potansiyel Müşteri Bul",
-              "description": "\"Bir Şirketi Araştır ve Potansiyel Müşteri Bul\" aracı, tanıtım için bir şirketteki önemli kişileri belirlemenize yardımcı olur."
-            },
-            "companyResearchWebsite": {
-              "title": "Web Sitesi ile Şirket Araştırması",
-              "description": "Web Sitesi ile Şirket Araştırması aracı, bir şirketin web sitesinden temel bilgileri toplamanıza ve özetlemenize yardımcı olur."
-            },
-            "summarizeMeeting": {
-              "title": "Toplantı Transkriptini Özetle",
-              "description": "Toplantı Transkriptini Özetle aracı, toplantı transkriptlerinden hızlıca önemli bilgileri çıkarmanıza yardımcı olur."
+              "title": "Aday Bilgisi Zenginleştirme Yöntemi",
+              "description": "Bir potansiyel müşteri hakkında ayrıntılı bilgi bulma ve çıkarma prensibi."
             },
             "coldCallScript": {
-              "title": "Soğuk Arama Senaryosu",
-              "description": "Soğuk Arama Senaryosu aracı, şirket bilgilerini kullanarak kişiselleştirilmiş soğuk arama senaryoları oluşturmanıza yardımcı olur."
-            },
-            "leadScoring": {
-              "title": "Basit Aday Skorlama Aracı",
-              "description": "Basit Aday Skorlama Aracı, potansiyel iş adaylarını bulmanıza ve değerlendirmenize yardımcı olur."
-            },
-            "companyResearchLinkedin": {
-              "title": "LinkedIn ile Şirket Araştırması",
-              "description": "LinkedIn ile Şirket Araştırması aracı, bir şirketin LinkedIn profilinden temel bilgileri toplamanıza ve özetlemenize yardımcı olur."
+              "title": "Soğuk Arama Senaryosu Oluşturma Mekanizması",
+              "description": "Şirket bilgilerini kullanarak kişiselleştirilmiş soğuk arama senaryolarının oluşturulma prensibi."
             }
           }
         },
         "marketing": {
           "label": "Pazarlama",
-          "title": "Pazarlama Stratejilerinizi Geliştirin",
-          "description": "Pazarlama kampanyalarınızı optimize eden ve daha fazla potansiyel müşteri üreten akıllı ajanlar.",
+          "title": "Pazarlama Stratejilerinde AI Kullanımı",
+          "description": "Pazarlama kampanyalarını optimize eden ve daha fazla potansiyel müşteri üreten akıllı ajanların uygulama alanları.",
           "aitools": {
-            "linkedinPosts": {
-              "title": "LinkedIn Gönderilerini Geliştir",
-              "description": "LinkedIn Gönderilerini Geliştir aracı, hedef kitlenize ve iş hedeflerinize göre gönderilerinizi geliştirmenize yardımcı olur."
-            },
-            "compareWebpages": {
-              "title": "Web Sitelerini Karşılaştır",
-              "description": "Web Sitelerini Karşılaştır aracı, iki farklı web sitesinin içeriğini analiz edip karşılaştırarak güçlü ve zayıf yönleri belirlemenize yardımcı olur."
-            },
             "youtubeVideo": {
-              "title": "YouTube videosu -> Blog",
-              "description": "YouTube videosu → Blog aracı, YouTube video içeriğini SEO'ya uygun, yapılandırılmış bir blog yazısına dönüştürmenize yardımcı olur."
-            },
-            "propertyListing": {
-              "title": "Emlak İlanı Oluşturucu",
-              "description": "Emlak İlanı Oluşturucu aracı, temel özelliklere ve faydalara göre detaylı ve etkileyici emlak ilanları oluşturmanıza yardımcı olur."
-            },
-            "getFeedback": {
-              "title": "Web Sayfası Metnine Geri Bildirim Al",
-              "description": "Web Sayfası Metnine Geri Bildirim Al aracı, web sayfası içeriğiniz hakkında yapıcı geri bildirim toplayarak etkinliğini artırmanıza yardımcı olur."
-            },
-            "socialShare": {
-              "title": "GPT İçin Özel Eylemlerle Sosyal Paylaşım",
-              "description": "GPT İçin Özel Eylemlerle Sosyal Paylaşım aracı, GPT özel eylemlerinizi tanıtmak için etkileyici sosyal medya gönderileri oluşturmanıza yardımcı olur."
+              "title": "YouTube videosu → Blog Dönüştürme Prensibi",
+              "description": "YouTube video içeriğini SEO'ya uygun, yapılandırılmış bir blog yazısına dönüştürme mantığı."
             },
             "brandIdentity": {
-              "title": "Web Sitesinden Marka Kimliği",
-              "description": "Web Sitesinden Marka Kimliği aracı, bir web sitesinin marka yönergelerini çıkararak tutarlılığı korumanıza yardımcı olur."
+              "title": "Web Sitesinden Marka Kimliği Çıkarma Yöntemi",
+              "description": "Bir web sitesinin marka yönergelerini çıkararak tutarlılığı koruma prensipleri."
             },
             "aidaFramework": {
-              "title": "AIDA Çerçevesi",
-              "description": "AIDA Çerçevesi aracı, Dikkat, İlgi, Arzu ve Eylem adımlarına ayrılmış etkili pazarlama içerikleri oluşturmanıza yardımcı olur."
-            },
-            "wordpressToolkit": {
-              "title": "WordPress Araç Seti",
-              "description": "WordPress Araç Seti, blog yazılarını yönetmenize, mevcut içerikleri listelemenize ve yeni içerik planlamanıza olanak tanır."
-            },
-            "pasFramework": {
-              "title": "PAS Çerçevesi",
-              "description": "PAS Çerçevesi aracı, Mesele-Yoğunlaştırma-Çözüm modelini kullanarak etkili pazarlama içerikleri oluşturmanıza yardımcı olur."
-            },
-            "webflowToolkit": {
-              "title": "Webflow Araç Seti",
-              "description": "Webflow Araç Seti, Webflow sitenizdeki blog yazılarını yönetmenizi sağlar. Mevcut yazıları listeleyebilir ve yeni içerikler planlayabilirsiniz."
-            },
-            "babFramework": {
-              "title": "BAB Çerçevesi",
-              "description": "BAB Çerçevesi aracı, Önce-Sonra-Köprü modeliyle dönüşümü vurgulayan etkili pazarlama içerikleri oluşturmanıza yardımcı olur."
+              "title": "AIDA Pazarlama Çerçevesi Uygulaması",
+              "description": "AIDA adımlarına ayrılmış etkili pazarlama içerikleri oluşturma yöntemi."
             }
           }
         },
         "research": {
           "label": "Araştırma",
-          "title": "Veri Analizi ve Araştırma",
-          "description": "Büyük veri kümelerini analiz eden ve değerli içgörüler üreten güçlü araştırma araçları.",
+          "title": "Veri Analizi ve Araştırmada AI Metotları",
+          "description": "Büyük veri kümelerini analiz eden ve değerli içgörüler üreten güçlü araştırma metotları.",
           "aitools": {
             "googleSearch": {
-              "title": "Google Arama",
-              "description": "Google Arama aracı, bir arama sorgusu girerek internet üzerinde bilgi bulmanıza yardımcı olur.",
-              "category": "araştırma"
-            },
-            "categorizeText": {
-              "title": "Metni Kategorize Et",
-              "description": "Metni Kategorize Et aracı, metni önceden tanımlanmış bir konu listesiyle etiketlemenize yardımcı olarak bilgiyi düzenlemeyi kolaylaştırır.",
-              "category": "araştırma"
-            },
-            "steamReviewAnalysis": {
-              "title": "Steam Oyun Yorumları Analizi",
-              "description": "Steam Oyun Yorumları Analizi aracı, Steam'deki herhangi bir oyun için kullanıcı yorumlarını analiz ederek ortak temaları ve duygu durumunu belirlemenize yardımcı olur.",
-              "category": "araştırma"
-            },
-            "surveyGenerator": {
-              "title": "Anket Oluşturucu",
-              "description": "Anket Oluşturucu aracı, verilen bir bağlam ve hedefe göre anket soruları oluşturmanıza yardımcı olur.",
-              "category": "araştırma"
-            },
-            "audioTranscription": {
-              "title": "Ses Transkripsiyonu + Yüksek Seviye Analiz",
-              "description": "Ses Transkripsiyonu + Yüksek Seviye Analiz aracı, ses dosyalarını metne dönüştürmenizi ve yüksek seviyede analiz yapmanızı sağlar.",
-              "category": "araştırma"
-            },
-            "detectSurveyBiases": {
-              "title": "Anket Yanlılıklarını Tespit Et",
-              "description": "Anket Yanlılıklarını Tespit Et aracı, anket sorularındaki herhangi bir yanlılıkları tespit etmenize ve açıklamanıza yardımcı olur.",
-              "category": "araştırma"
+              "title": "Google Arama Entegrasyonu",
+              "description": "Bir arama sorgusu girerek internet üzerinde bilgi bulma prensibi."
             },
             "gptOnFiles": {
-              "title": "Dosyalarımda GPT",
-              "description": "Dosyalarımda GPT aracı, yüklediğiniz belirli dosyaların içeriğiyle ilgili soruları cevaplamanızı sağlar.",
-              "category": "araştırma"
-            },
-            "syntheticUserResearch": {
-              "title": "Sentetik Kullanıcı Araştırması",
-              "description": "Sentetik Kullanıcı Araştırması aracı, belirli kullanıcı profillerine dayalı anket yanıtları üreterek geri bildirim simülasyonu yapmanıza yardımcı olur.",
-              "category": "araştırma"
+              "title": "Dosyalarda GPT Kullanımı",
+              "description": "Yüklenen belirli dosyaların içeriğiyle ilgili soruları cevaplama mekanizması."
             },
             "emotionAnalysis": {
-              "title": "Duygu Analizi",
-              "description": "Duygu Analizi aracı, metindeki duyguları önceden belirlenmiş bir duygu kategorileri listesine göre tespit etmenize ve etiketlemenize yardımcı olur.",
-              "category": "araştırma"
-            },
-            "convertSpelling": {
-              "title": "Amerikan İngilizcesi ile Britanya İngilizcesi Arasında Yazım Değiştirme",
-              "description": "Amerikan İngilizcesi ile Britanya İngilizcesi arasında yazım değiştirme aracı, kelimelerin Amerikan ve Britanya İngilizcesi yazım kuralları arasında dönüşümünü sağlar.",
-              "category": "araştırma"
-            },
-            "extractTopics": {
-              "title": "Görüşme Transkriptlerinden Konuları Çıkar",
-              "description": "Görüşme Transkriptlerinden Konuları Çıkar aracı, görüşme transkriptlerinden ana temaları ve konuları tespit etmenize yardımcı olur.",
-              "category": "araştırma"
-            },
-            "iOSReviewAnalysis": {
-              "title": "iOS App Store Yorumları Analizi",
-              "description": "iOS App Store Yorumları Analizi aracı, Apple App Store'daki herhangi bir uygulamanın kullanıcı yorumlarını analiz etmenize yardımcı olur.",
-              "category": "araştırma"
-            },
-            "extractCategories": {
-              "title": "Verilerde Kategoriler Çıkar",
-              "description": "Verilerde Kategoriler Çıkar aracı, bir veri kümesinden ana temaları ve kategorileri tespit etmenize yardımcı olur.",
-              "category": "araştırma"
-            },
-            "googlePlaystoreAnalysis": {
-              "title": "Google Play Store Yorumları Analizi",
-              "description": "Google Play Store Yorumları Analizi aracı, belirli bir uygulama hakkında Google Play Store'daki kullanıcı geri bildirimlerini anlamanıza yardımcı olur.",
-              "category": "araştırma"
-            },
-            "anonymizeText": {
-              "title": "Metin Anonimleştirme",
-              "description": "Metin Anonimleştirme aracı, verilen bir metindeki hassas kişisel bilgileri gizleyerek gizliliği korumanıza yardımcı olur.",
-              "category": "araştırma"
+              "title": "Duygu Analizi Yöntemi",
+              "description": "Metindeki duyguları önceden belirlenmiş bir duygu kategorileri listesine göre tespit etme ve etiketleme."
             }
           }
         },
         "featured": {
           "label": "Destek",
-          "title": "Müşteri Desteğini Otomatikleştirin",
+          "title": "Operasyonel Destek ve Entegrasyon Örnekleri",
           "aitools": {
-            "youtubeVideoFile": {
-              "title": "YouTube: Video Dosyası",
-              "description": "YouTube: Video Dosyası aracı, bir YouTube videosunun doğrudan video dosyası bağlantısını kolayca almanızı sağlar."
-            },
             "youtubeVideoTranscript": {
-              "title": "YouTube: Video Transkripti",
-              "description": "YouTube: Video Transkripti aracı, bir YouTube videosunun konuşma içeriğini okunabilir metne dönüştürmenize yardımcı olur."
-            },
-            "linearTickets": {
-              "title": "Linear: Son Biletleri Getir",
-              "description": "Linear: Son Biletleri Getir aracı, Linear’daki belirli bir ekipten en son biletleri almanıza yardımcı olur."
-            },
-            "azureFormRecognizer": {
-              "title": "Microsoft Azure: Form Tanıma OCR",
-              "description": "Microsoft Azure: Form Tanıma OCR aracı, belgelerden metin ve veri çıkarmanıza yardımcı olur."
+              "title": "YouTube: Video Transkripti Çıkarma Prensibi",
+              "description": "Bir YouTube videosunun konuşma içeriğini okunabilir metne dönüştürme yöntemi."
             },
             "snowflakeSql": {
-              "title": "Snowflake: SQL Sorgusu",
-              "description": "Snowflake: SQL Sorgusu aracı, bir Snowflake veritabanında doğrudan SQL sorguları çalıştırmanızı sağlar."
-            },
-            "escalateSlack": {
-              "title": "Slack Üzerinden Yöneticilere Bildir",
-              "description": "Slack Üzerinden Yöneticilere Bildir aracı, önemli e-postaları veya konuları hızlıca yöneticilere bildirmenizi sağlar."
+              "title": "Snowflake: SQL Sorgusu Çalıştırma Entegrasyonu",
+              "description": "Bir Snowflake veritabanında doğrudan SQL sorguları çalıştırma prensibi."
             },
             "googleCloudVision": {
-              "title": "Google Cloud: Cloud Vision OCR",
-              "description": "Google Cloud: Cloud Vision OCR aracı, PDF dosyalarındaki metinleri Google Cloud Vision API kullanarak çıkarmanıza yardımcı olur."
-            },
-            "airtableToolkit": {
-              "title": "Airtable Araç Seti",
-              "description": "Airtable Araç Seti, Airtable veritabanınızdaki kayıtları yönetmenize yardımcı olur. Mevcut kayıtları listeleyebilir veya yenilerini ekleyebilirsiniz."
-            },
-            "postToSlack": {
-              "title": "Slack'e Mesaj Gönder",
-              "description": "Slack'e Mesaj Gönder aracı, doğrudan bir Slack kanalına mesaj göndermenizi sağlar. Otomatik bildirimler için kullanışlıdır."
+              "title": "Google Cloud: Cloud Vision OCR Uygulaması",
+              "description": "PDF dosyalarındaki metinleri Google Cloud Vision API kullanarak çıkarma yöntemi."
             }
           }
         }
@@ -392,50 +217,42 @@
     },
     "howWorks": {
       "title": "AI Ajanları Nasıl Çalışır?",
-      "subtitle": "AI ajanlarımızın gücünü ve iş akışınızı nasıl dönüştürdüğünü keşfedin.",
+      "subtitle": "AI ajanlarının gücünü ve iş akışını nasıl dönüştürdüğünü keşfedin.",
       "step1": {
         "title": "Hafıza",
-        "description": "Ajan genel olarak kısa vadeli, uzun vadeli, fikir birliği ve epizodik hafıza ile donatılmıştır. Anlık etkileşimler için kısa vadeli hafıza, tarihsel veriler ve konuşmalar için uzun vadeli hafıza, geçmiş etkileşimler için epizodik hafıza ve ajanlar arasında paylaşılan bilgiler için fikir birliği hafızası. Ajan bağlamı koruyabilir, deneyimlerden ders çıkarabilir ve geçmiş etkileşimleri hatırlayarak ve yeni durumlara uyum sağlayarak performansı iyileştirebilir."
+        "description": "Ajan genel olarak kısa vadeli, uzun vadeli, fikir birliği ve epizodik hafıza ile donatılmıştır. Ajan bağlamı koruyabilir, deneyimlerden ders çıkarabilir ve geçmiş etkileşimleri hatırlayarak yeni durumlara uyum sağlayarak performansı iyileştirebilir."
       },
       "tools": {
-        "title": "Tools",
-        "description": "Araçlar, bir etkenin çevresiyle etkileşime girmek ve yeteneklerini geliştirmek için kullanabileceği işlevler veya harici kaynaklardır. Etkenlerin bilgiye erişerek, verileri işleyerek veya harici sistemleri kontrol ederek karmaşık görevleri gerçekleştirmelerine olanak tanırlar ve fiziksel, grafiksel ve program tabanlı arayüzler dahil olmak üzere kullanıcı arayüzlerine göre kategorize edilebilirler. Araç öğrenimi, etkene bu araçların işlevselliklerini ve uygulanmaları gereken bağlamı anlayarak etkili bir şekilde nasıl kullanılacağını öğretmeyi içerir."
+        "title": "Araçlar (Tools)",
+        "description": "Araçlar, bir ajanın çevresiyle etkileşime girmek ve yeteneklerini geliştirmek için kullanabileceği işlevler veya harici kaynaklardır. Bu, karmaşık görevleri gerçekleştirmelerine olanak tanır."
       },
       "step3": {
-        "title": "Model",
-        "description": "Büyük dil modelleri (LLM'ler), AI ajanları oluşturmak için temel görevi görür ve onlara anlama, akıl yürütme ve hareket etme yeteneği sağlar. LLM'ler, bir ajanın 'beyni' gibi davranarak dili işlemesini ve üretmesini sağlarken, diğer bileşenler akıl yürütmeyi ve hareketi kolaylaştırır."
+        "title": "Model (LLM)",
+        "description": "Büyük dil modelleri (LLM'ler), AI ajanları oluşturmak için temel görevi görür ve onlara anlama, akıl yürütme ve hareket etme yeteneği sağlar. LLM'ler, bir ajanın 'beyni' gibi davranır."
       },
       "persona": {
-        "title": "Kişilik",
-        "description": "İyi tanımlanmış bir kişilik, bir etkenin tutarlı bir karaktere sahip olmasını ve kendisine atanan role uygun bir şekilde davranmasını, etkenin deneyim kazanması ve çevresiyle etkileşime girmesiyle birlikte gelişmesini sağlar."
+        "title": "Kişilik (Persona)",
+        "description": "İyi tanımlanmış bir kişilik, bir ajanın tutarlı bir karaktere sahip olmasını ve kendisine atanan role uygun bir şekilde davranmasını sağlar."
       }
     },
     "faq": {
-      "title": "AI Ajanları Hakkında Sık Sorulan Sorular",
-      "subtitle": "AI ajanlarımız ve iş akışınızı nasıl dönüştürebilecekleri hakkında bilmeniz gereken her şey.",
+      "title": "Yapay Zeka Agentları Hakkında Sık Sorulan Bilgiler",
+      "subtitle": "AI ajanlarının teknik altyapısı ve iş akışını nasıl dönüştürebilecekleri hakkında bilmeniz gerekenler.",
       "left": {
-        "q1": "AI ajanlarınız hangi dilleri destekliyor?",
-        "a1": "AI ajanlarımız, Türkçe, İngilizce, Almanca, Fransızca, İspanyolca ve daha birçok dili destekler. Çoklu dil desteği, global müşterilerinize hizmet vermenizi kolaylaştırır.",
-        "q2": "AI ajanlarınızı kullanmak için teknik bilgi gerekiyor mu?",
-        "a2": "Hayır, kullanıcı dostu arayüzümüz sayesinde teknik bilgi gerekmez. Kurulum ve entegrasyon süreçlerinde teknik ekibimiz size destek olacaktır.",
-        "q3": "AI ajanlarınız özel verileri nasıl korur?",
-        "a3": "En yüksek düzeyde güvenlik protokolleri uyguluyoruz. Tüm veriler şifrelenir, güvenli sunucularda saklanır ve KVKK ile GDPR gibi düzenlemelere tam uyumluluk sağlanır.",
-        "q4": "Ajanlarınız zamanla öğrenebilir mi?",
-        "a4": "Evet, AI ajanlarımız makine öğrenimi teknolojisini kullanarak zamanla öğrenir ve adapte olur. İşletmenizin benzersiz ihtiyaçlarına göre giderek daha akıllı hale gelir.",
-        "q5": "Şirketim için özelleştirilmiş çözümler sunuyor musunuz?",
-        "a5": "Kesinlikle. Her işletmenin benzersiz ihtiyaçlarını karşılamak için AI ajanlarımızı özelleştiriyoruz. Uzman ekibimiz, ihtiyaçlarınıza en uygun çözümü tasarlamak için sizinle yakın çalışır."
+        "q1": "AI ajanları hangi dilleri destekler?",
+        "a1": "AI ajanları, Türkçe, İngilizce, Almanca, Fransızca, İspanyolca ve daha birçok dili destekleme yeteneğine sahiptir. Çoklu dil desteği, global kullanım için önemlidir.",
+        "q2": "AI ajanlarını kullanmak için teknik bilgi gerekiyor mu?",
+        "a2": "Kullanıcı dostu arayüzler, AI agent'ların teknik bilgi gerektirmeden nasıl kullanıldığını gösterir. Temel AI prensiplerini anlamak, verimliliği artırır.",
+        "q3": "AI ajanları özel verileri nasıl korur?",
+        "a3": "En yüksek düzeyde güvenlik protokolleri (şifreleme, güvenli depolama) uygulanarak, KVKK ve GDPR gibi düzenlemelere tam uyumluluk sağlanır.",
+        "q4": "Ajanlar zamanla öğrenebilir mi?",
+        "a4": "Evet, AI ajanları makine öğrenimi teknolojisini kullanarak zamanla öğrenir ve adapte olur. Bu, sistemin giderek daha akıllı hale gelmesini sağlar."
       },
       "right": {
-        "q1": "Hizmetlerinizin fiyatlandırması nasıl?",
-        "a1": "Farklı işletme büyüklükleri ve ihtiyaçlar için çeşitli fiyatlandırma planlarımız mevcuttur. Temel, Profesyonel ve Kurumsal paketlerimiz hakkında detaylı bilgi için satış ekibimizle iletişime geçebilirsiniz.",
-        "q2": "Ajanlarınızın kurulumu ne kadar sürer?",
-        "a2": "Entegrasyon karmaşıklığına bağlı olarak kurulum genellikle 2-4 hafta sürer. Hızlı başlangıç paketlerimizle, bazı çözümlerimizi birkaç gün içinde çalışır hale getirebilirsiniz.",
-        "q3": "AI ajanlarınız hangi sektörlerde kullanılabilir?",
-        "a3": "Ajanlarımız, perakende, finans, sağlık, eğitim, üretim ve daha birçok sektöre uyarlanabilir. Her sektöre özel çözümler sunuyoruz.",
-        "q4": "7/24 teknik destek sunuyor musunuz?",
-        "a4": "Evet, tüm müşterilerimize 7/24 teknik destek sağlıyoruz. Acil durumlarda her zaman yanınızdayız ve sorunlarınızı hızlı bir şekilde çözüyoruz.",
-        "q5": "Ajanlarınızı deneme imkanı var mı?",
-        "a5": "Evet, potansiyel müşterilerimize 14 günlük ücretsiz deneme süresi sunuyoruz. Bu süre içinde AI ajanlarımızın tüm özelliklerini test edebilir ve işletmenize nasıl fayda sağlayacağını görebilirsiniz."
+        "q1": "AI ajanları hangi sektörlerde kullanılabilir?",
+        "a1": "Ajanlar; perakende, finans, sağlık, eğitim, üretim ve daha birçok sektöre uyarlanabilir. Her sektöre özel optimizasyon yapılabilir.",
+        "q2": "Şirketler için özelleştirilmiş çözümlerin prensibi nedir?",
+        "a2": "Her işletmenin benzersiz ihtiyaçlarını karşılamak için AI ajanlarının modüler yapısı özelleştirilebilir. Bu, ihtiyaçlara en uygun çözümün tasarlanmasına olanak tanır."
       }
     }
   },
@@ -450,42 +267,43 @@
     },
     "mobileComponent": {
       "section1": {
-        "title": "Kullanıcı Deneyimi ve Arayüz",
-        "content": "Mobil uygulamalarımız, kullanıcıların ihtiyaçlarına özel olarak tasarlan sezgisel bir gezinme yapısı sunar. Modern UI/UX prensipleri doğrultusunda oluşturulan arayüzler, hem estetik açıdan çekici hem de son derece fonksiyonel bir kullanım sağlar. Kullanıcı alışkanlıklarını analiz ederek geliştirdiğimiz menü yapıları sayesinde tüm özelliklere kolayca ulaşılabilir. Responsive tasarım anlayışıyla her ekran boyutuna ve çözünürlüğe uyumlu şekilde optimize edilen arayüzlerimiz, tutarlı bir deneyim sunar."
+        "title": "Swift Geliştirme",
+        "content": "Basit ve işlevsel iOS uygulamaları geliştiriyor ve Swift becerilerimi geliştiriyorum."
       },
       "section2": {
-        "title": "Teknik Altyapı ve Performans",
-        "content": "React Native, Flutter ve Swift gibi güncel teknolojiler kullanarak geliştirdiğimiz uygulamalar, cihaz kaynaklarını verimli kullanarak optimum performans sunar. Arka planda çalışan gelişmiş optimizasyon teknikleri sayesinde düşük güç tüketimi ile yüksek performansı bir arada sunuyoruz. Uygulamalarımız, yoğun kullanım senaryolarında bile akıcı çalışma performansını korurken, arka plan işlemlerini minimum düzeyde tutarak pil ömrünü uzatır. Periyodik performans testleri ve güncellemelerle bu standardı sürekli olarak koruyoruz."
+        "title": "Uygulama Arayüzleri",
+        "content": "Daha iyi bir kullanıcı deneyimi için anlaşılır ve sezgisel mobil arayüzler oluşturuyorum."
       },
       "section3": {
-        "title": "Kişiselleştirme ve Güvenlik",
-        "content": "Kullanıcılarımıza sunduğumuz geniş kişiselleştirme seçenekleri sayesinde herkes kendi tercihlerine göre bir deneyim oluşturabilir. Tema renkleri, bildirim ayarları, kullanım alışkanlıklarına yönelik öneriler gibi birçok alanda esnek yapılandırma imkanı sunuyoruz. Güvenlik konusunda ise OWASP standartlarına uygun olarak geliştirilen uygulamalarımızda veri şifreleme, çift faktörlü kimlik doğrulama, oturum yönetimi gibi birçok koruma katmanı bulunur. Kullanıcı verilerinin güvenliği için düzenli güvenlik denetimleri ve güncellemeler yapıyoruz."
+        "title": "Performans Bilinci",
+        "content": "Uygulama performansını optimize etmeyi ve akıcı işleyiş sağlamayı öğreniyorum."
       },
       "section4": {
-        "title": "Sürekli Gelişim ve Destek",
-        "content": "Uygulamalarımızı kullanıcı geri bildirimleri ve teknolojik gelişmeler doğrultusunda sürekli olarak iyileştiriyoruz. Düzenli aralıklarla yayınladığımız güncellemelerle yeni özellikler ekliyor, performans iyileştirmeleri yapıyor ve güvenlik açıklarını kapatıyoruz. Canlı destek ekibimiz, kullanıcılarımızın karşılaştığı sorunları hızlıca çözmek için 7/24 hizmet veriyor. Ayrıca kapsamlı dokümantasyon ve nasıl yapılır rehberleriyle kullanıcıların uygulamalarımızdan maksimum verim almalarını sağlıyoruz."
+        "title": "Sürekli Öğrenme",
+        "content": "Swift’in yeni özelliklerini ve iOS gelişmelerini keşfederek mobil geliştirici olarak büyüyorum."
       }
     },
+    "sendMessage": "Kozmos'a bir soru sorun...",
     "webComponent": {
       "section1": {
         "title": "Kullanıcı Deneyimi ve Arayüz Tasarımı",
         "content": "Web uygulamalarımız, kullanıcı odaklı tasarım prensipleriyle geliştirilmiş olup sezgisel gezinme deneyimi sunar. Modern UI/UX standartlarına uygun şekilde tasarlanan arayüzler, estetik görünümün yanı sıra yüksek kullanılabilirlik sağlar. Responsive tasarım yaklaşımıyla tüm cihazlarda tutarlı bir deneyim sunarken, erişilebilirlik standartlarına uygun olarak geliştirilmiştir. Kullanıcı akışları detaylı analizlerle optimize edilerek, işlemlerin minimum tıklamayla tamamlanabilmesi sağlanmıştır. Arayüz bileşenleri, kullanıcı alışkanlıkları dikkate alınarak konumlandırılmıştır."
       },
       "userExperienceAndDesign": {
-        "title": "Kullanıcı Deneyimi ve Arayüz Tasarımı",
-        "description": "Web uygulamalarımız, kullanıcı odaklı tasarım prensipleriyle geliştirilmiş olup sezgisel gezinme deneyimi sunar. Modern UI/UX standartlarına uygun şekilde tasarlanan arayüzler, estetik görünümün yanı sıra yüksek kullanılabilirlik sağlar. Responsive tasarım yaklaşımıyla tüm cihazlarda tutarlı bir deneyim sunarken, erişilebilirlik standartlarına uygun olarak geliştirilmiştir. Kullanıcı akışları detaylı analizlerle optimize edilerek, işlemlerin minimum tıklamayla tamamlanabilmesi sağlanmıştır. Arayüz bileşenleri, kullanıcı alışkanlıkları dikkate alınarak konumlandırılmıştır."
+        "title": "Kullanıcı Deneyimi ve Tasarım",
+        "description": "React, Next.js ve TypeScript kullanarak sezgisel, duyarlı ve görsel olarak etkileyici arayüzler geliştiriyorum. Amacım, işlevsellik ile tasarım sadeliğini dengeleyen akıcı kullanıcı deneyimleri sunmak. Figma, Tailwind CSS, MUI ve Shadcn gibi araçlarla cihazlar arasında ölçeklenebilir zarif arayüz sistemleri oluşturuyorum."
       },
       "technicalInfrastructure": {
-        "title": "Teknolojik Altyapı ve Performans Optimizasyonu",
-        "description": "Next.js, React ve modern web teknolojileri kullanılarak geliştirilen uygulamalarımız, yüksek performans ve ölçeklenebilirlik sunar. Server-side rendering ve static generation özellikleriyle hızlı yüklenme süreleri sağlanırken, lazy loading teknikleriyle kaynak kullanımı optimize edilmiştir. CDN entegrasyonu ve caching mekanizmaları sayesinde global ölçekte düşük gecikme süreleri hedeflenir. Performans metriklere dayalı sürekli iyileştirmeler yapılırken, Lighthouse skorları düzenli olarak takip edilir. Veritabanı sorguları ve API çağrıları optimize edilerek sunucu yükü minimize edilmiştir."
+        "title": "Teknik Altyapı",
+        "description": "Next.js ve NestJS gibi modern framework’lerle ölçeklenebilir ve yüksek performanslı uygulamalar geliştiriyorum. RESTful ve GraphQL API’lerinden, PostgreSQL, MongoDB ve Drizzle ORM ile güçlü veritabanı yapısına kadar tam kapsamlı fullstack mimariler kuruyorum."
       },
       "securityAndDataManagement": {
         "title": "Güvenlik ve Veri Yönetimi",
-        "description": "Web uygulamalarımız OWASP Top 10 güvenlik standartlarına uygun olarak geliştirilmiştir. Veri iletiminde end-to-end şifreleme, CSRF koruması, XSS önlemleri ve diğer güvenlik katmanları uygulanmıştır. Rol tabanlı erişim kontrolü (RBAC) ile kullanıcı yetkilendirmeleri yönetilirken, tüm girişler validation'dan geçirilir. Düzenli güvenlik denetimleri ve penetrasyon testleri yapılarak olası açıklar önceden tespit edilir. GDPR ve KVKK uyumluluğu sağlanarak kullanıcı verilerinin güvenliği ve mahremiyeti garanti altına alınmıştır. Veri yedekleme ve felaket kurtarma prosedürleri otomatize edilmiştir."
+        "description": "Geliştirdiğim her projede güvenlik ve veri bütünlüğü en öncelikli konulardır. Supabase ve PostgreSQL kullanarak güvenli kimlik doğrulama akışları oluşturuyor, TypeScript’in katı tip kontrolleriyle hataları minimize ederek %99,9 sistem sürekliliği sağlıyorum."
       },
       "continuousIntegration": {
-        "title": "Sürekli Entegrasyon ve Geliştirme Süreci",
-        "description": "Agile metodolojisiyle yönetilen geliştirme sürecimiz, kullanıcı geri bildirimlerini hızla ürüne yansıtmayı hedefler. CI/CD pipeline'ları sayesinde günde birden fazla production deploy'ı yapabilme esnekliğine sahibiz. A/B testing mekanizmalarıyla yeni özelliklerin etkisi ölçülürken, feature flag'ler ile kontrollü roll-out stratejileri uygulanır. Uygulama sağlığı ve kullanım istatistikleri gerçek zamanlı olarak izlenir, performans anomalileri otomatik alarmlarla bildirilir. Dokümantasyon ve developer portalı ile tüm API'ler standartlaştırılmıştır. Mikroservis mimarisi sayesinde sistem bileşenleri bağımsız olarak ölçeklendirilebilir."
+        "title": "Sürekli Entegrasyon ve Geliştirme",
+        "description": "Docker ve CI/CD süreçlerini kullanarak dağıtımları otomatikleştiriyor, sistem kararlılığını artırıyorum. Kod performansını düzenli olarak test edip optimize ederek ürünlerin minimum kesintiyle verimli şekilde gelişmesini sağlıyorum."
       },
       "section2": {
         "title": "Teknolojik Altyapı ve Performans Optimizasyonu",
@@ -501,37 +319,21 @@
       }
     },
     "aiComponent": {
-      "intelligentAgentIntegration": {
-        "title": "Akıllı AI Agent Entegrasyonu",
-        "description": "Uygulamalarınıza entegre ettiğimiz AI agent'ler, kullanıcı deneyimini yeni nesil seviyelere taşır. Doğal dil işleme (NLP) ve makine öğrenimi tabanlı agent'lerimiz, kullanıcı etkileşimlerini anında analiz ederek kişiselleştirilmiş yanıtlar üretir. Multi-agent sistemlerimizle karmaşık iş akışlarını otomatize ediyor, gerçek zamanlı karar destek sistemleri sunuyoruz. Agent'leriniz veri kaynaklarınızla sürekli öğrenerek kendini geliştirir ve iş süreçlerinize akıllı optimizasyonlar getirir."
-      },
-      "customModelsAndFinetuning": {
-        "title": "Özel AI Modelleri ve Finetuning",
-        "description": "Sektörünüze özel fine-tune edilmiş AI modelleri geliştiriyoruz. LLM'lerinizi (Large Language Models) kendi verilerinizle eğiterek şirketinizin bilgi birikimini dijital asistanlarınıza aktarıyoruz. RAG (Retrieval Augmented Generation) mimarileriyle gerçek zamanlı veri erişimi sağlayan, hallüsinasyona düşmeyen akıllı chatbot'lar oluşturuyoruz. Özel embedding'ler ve vektör veritabanları kullanarak kurumsal bilgi yönetiminizi dönüştürüyoruz. Model performansını sürekli izleyerek otomatik retraining pipeline'ları kuruyoruz."
-      },
-      "autonomousProcesses": {
-        "title": "Otonom İş Süreçleri ve Otomasyon",
-        "description": "AI agent'lerimizle rutin iş süreçlerinizi tam otonom hale getiriyoruz. Doküman işleme, veri analizi, müşteri hizmetleri gibi alanlarda kendi kendine karar verebilen dijital çalışanlar yaratıyoruz. Workflow otomasyonu ile insan-AI işbirliğini optimize ediyor, operasyonel verimliliğinizi katlıyoruz. Agent'leriniz API'ler aracılığıyla mevcut sistemlerinizle sorunsuz entegre olurken, güvenli veri paylaşımı için gelişmiş yetkilendirme mekanizmaları sunuyoruz."
-      },
-      "realtimeAnalysis": {
-        "title": "Gerçek Zamanlı Analiz ve Öngörüler",
-        "description": "AI destekli analitik platformumuzla verilerinizden anlamlı öngörüler çıkarıyoruz. Anomali tespiti, trend analizi ve tahminleme modelleriyle proaktif karar alma süreçlerinizi destekliyoruz. Multimodal AI yaklaşımımızla metin, ses ve görüntü verilerinizi birlikte analiz ederek bütünsel bir bakış açısı sunuyoruz. Özelleştirilebilir dashboard'lar ve otomatik raporlama araçlarıyla karmaşık verileri anlaşılır hale getiriyoruz. Agent'leriniz kritik değişiklikleri anında tespit ederek ilgili ekiplere bildirim gönderir."
-      },
       "section1": {
-        "title": "Akıllı AI Agent Entegrasyonu",
-        "content": "Uygulamalarınıza entegre ettiğimiz AI agent'ler, kullanıcı deneyimini yeni nesil seviyelere taşır. Doğal dil işleme (NLP) ve makine öğrenimi tabanlı agent'lerimiz, kullanıcı etkileşimlerini anında analiz ederek kişiselleştirilmiş yanıtlar üretir. Multi-agent sistemlerimizle karmaşık iş akışlarını otomatize ediyor, gerçek zamanlı karar destek sistemleri sunuyoruz. Agent'leriniz veri kaynaklarınızla sürekli öğrenerek kendini geliştirir ve iş süreçlerinize akıllı optimizasyonlar getirir."
+        "title": "Yapay Zekaya Olan Tutkum",
+        "description": "Son dönemlerde yoğun şekilde yapay zeka ve makine öğrenmesi alanlarına odaklanıyorum. TensorFlow ve Keras gibi kütüphanelerle modeller eğitiyor, derin öğrenme mimarilerini keşfediyorum. Yapay zekanın sadece koddan ibaret olmadığını, düşünme biçimimizi dönüştüren bir alan olduğunu düşünüyorum. Öğrendiklerimi gerçek dünya problemlerine uygulayarak sürekli deney yapmaya çalışıyorum."
       },
       "section2": {
-        "title": "Özel AI Modelleri ve Finetuning",
-        "content": "Sektörünüze özel fine-tune edilmiş AI modelleri geliştiriyoruz. LLM'lerinizi (Large Language Models) kendi verilerinizle eğiterek şirketinizin bilgi birikimini dijital asistanlarınıza aktarıyoruz. RAG (Retrieval Augmented Generation) mimarileriyle gerçek zamanlı veri erişimi sağlayan, hallüsinasyona düşmeyen akıllı chatbot'lar oluşturuyoruz. Özel embedding'ler ve vektör veritabanları kullanarak kurumsal bilgi yönetiminizi dönüştürüyoruz. Model performansını sürekli izleyerek otomatik retraining pipeline'ları kuruyoruz."
+        "title": "Model Eğitimi ve Deneyler",
+        "description": "Makine öğrenmesi ve derin öğrenme modelleri üzerinde farklı veri setleriyle çalışıyorum. Görüntü sınıflandırma, doğal dil işleme (NLP) ve zaman serisi tahminleme gibi konularda modeller geliştiriyor ve optimize ediyorum. TensorFlow ve Keras dışında scikit-learn, NumPy ve Pandas gibi araçlarla veri analizi süreçlerini güçlendiriyorum."
       },
       "section3": {
-        "title": "Otonom İş Süreçleri ve Otomasyon",
-        "content": "AI agent'lerimizle rutin iş süreçlerinizi tam otonom hale getiriyoruz. Doküman işleme, veri analizi, müşteri hizmetleri gibi alanlarda kendi kendine karar verebilen dijital çalışanlar yaratıyoruz. Workflow otomasyonu ile insan-AI işbirliğini optimize ediyor, operasyonel verimliliğinizi katlıyoruz. Agent'leriniz API'ler aracılığıyla mevcut sistemlerinizle sorunsuz entegre olurken, güvenli veri paylaşımı için gelişmiş yetkilendirme mekanizmaları sunuyoruz."
+        "title": "Kişisel Projeler ve Araştırmalar",
+        "description": "Son zamanlarda kendi AI projelerimi geliştiriyor, LLM (Large Language Model) tabanlı deneyler yapıyorum. Özellikle fine-tuning, RAG (Retrieval-Augmented Generation) ve embedding teknikleriyle ilgileniyorum. Amacım, yapay zekayı daha erişilebilir ve faydalı hale getirecek kişisel çözümler üretmek."
       },
       "section4": {
-        "title": "Gerçek Zamanlı Analiz ve Öngörüler",
-        "content": "AI destekli analitik platformumuzla verilerinizden anlamlı öngörüler çıkarıyoruz. Anomali tespiti, trend analizi ve tahminleme modelleriyle proaktif karar alma süreçlerinizi destekliyoruz. Multimodal AI yaklaşımımızla metin, ses ve görüntü verilerinizi birlikte analiz ederek bütünsel bir bakış açısı sunuyoruz. Özelleştirilebilir dashboard'lar ve otomatik raporlama araçlarıyla karmaşık verileri anlaşılır hale getiriyoruz. Agent'leriniz kritik değişiklikleri anında tespit ederek ilgili ekiplere bildirim gönderir."
+        "title": "Sürekli Öğrenme ve Gelecek Hedeflerim",
+        "description": "Yapay zeka alanında sürekli yeni şeyler öğrenmeye ve denemeye çalışıyorum. Akademik makaleleri takip ediyor, topluluklarda aktif olarak yer alıyorum. Gelecekte, kendi modelimi sıfırdan eğitmek ve farklı alanlarda (örneğin sağlık, finans veya eğitim) fayda sağlayabilecek yapay zeka çözümleri geliştirmek istiyorum."
       }
     },
     "mainImage": {
@@ -542,33 +344,34 @@
       "subtitle": "Dijital varlığınızı dönüştüren fikirler"
     },
     "mobile": {
-      "title": "Mobil",
-      "description": "Kullanıcı deneyimini merkeze alan mobil uygulama çözümlerimiz, modern tasarım ilkeleri ve ileri seviye yazılım teknolojileriyle geliştirilmektedir. Hız, güvenlik, kullanıcı odaklılık ve estetik; tüm mobil projelerimizin temel taşlarını oluşturur."
+      "title": "Mobil Geliştirme",
+      "description": "Swift kullanarak native mobil uygulamalar geliştiriyorum; en iyi uygulamaları öğrenmeye ve kullanıcı dostu uygulamalar yapmaya odaklanıyorum."
     },
     "web": {
       "title": "Web",
-      "description": "Modern web çözümlerimiz; performans, güvenlik ve kullanıcı deneyimini teknolojinin sınırlarını zorlayarak bir araya getiriyor. Next.js ve React tabanlı mimarimizle ölçeklenebilir, hızlı ve etkileyici dijital deneyimler sunuyoruz."
+      "description": "Frontend tarafında Next.js ve React, backend tarafında ise Nest.js ve Express.js kullanarak full-stack web uygulamaları geliştiriyorum. Performans, ölçeklenebilirlik ve temiz koda odaklanarak, hem teknik olarak sağlam hem de kullanıcı deneyimi açısından sorunsuz çözümler üretiyorum."
     },
     "3d": {
-      "title": "3D Design",
-      "description": "İş süreçlerinizi yapay zekâ ile daha akıllı hale getirin. Veri analizi, otomasyon ve karar destek sistemleriyle işletmenizin verimliliğini en üst düzeye taşıyoruz."
+      "title": "3D & Etkileşimli Tasarım",
+      "description": "React tabanlı 3D kütüphaneler kullanarak etkileşimli 3D deneyimler tasarlıyorum. Yaratıcılığımı ve teknik becerilerimi birleştirerek, kullanıcı etkileşimini artıran ve dijital projeleri hayat veren özel 3D bileşenler ve görselleştirmeler üretiyorum."
     },
     "ai": {
-      "title": "AI & AI Agent",
-      "description": "Tekrarlayan görevleri otomatikleştirmekten karmaşık iş akışlarını devrimleştirmeye kadar, yapay zeka ajanları yarının işletmeleri için verimliliği ve yeniliği yeniden tanımlıyor.",
+      "title": "AI",
+      "description": "Yapay zekaya olan ilgim, sistemlerin nasıl öğrendiğini ve düşündüğünü keşfetme isteğiyle başladı. Şimdi TensorFlow ve Keras ile kendi modellerimi eğitiyor, denemeler yaparak her gün biraz daha öğreniyorum.",
       "subAi": {
-        "title": "Web Sitenizi Akıllı Bir Satış ve Destek Kanalına Dönüştürün",
-        "subtitle": "Yapay zeka destekli chatbot çözümlerimizle tanışın. Müşteri etkileşimini artırın, operasyonel verimliliği en üst düzeye çıkarın ve satışlarınızı 7/24 otomatikleştirin.",
-        "headline1": "Kesintisiz Müşteri Deneyimi",
-        "desc1": "Ziyaretçileriniz aradıkları bilgilere anında ulaşsın. Gelişmiş chatbotlarımız, web sitenizde günün her saati kesintisiz bir iletişim ve destek sağlar.",
-        "headline2": "Akıllı API Entegrasyonları",
-        "desc2": "Mevcut sistemlerinizle tam uyum içinde çalışıyoruz. CRM, ERP veya herhangi bir harici servisinizle chatbot'umuzu entegre ederek verilerinizi akıllıca kullanın.",
-        "headline3": "Otomatikleştirilmiş Satış Süreçleri",
-        "desc3": "Potansiyel müşterileri belirleyin, ürün önerileri sunun ve satış süreçlerini otomatik pilotta yönetin. Chatbotlarımız, nitelikli müşteri adaylarını (lead) size yönlendirir.",
+        "title": "Küçük bir fikirle başlayan her proje, doğru emekle büyük bir dönüşüme yol açabilir.",
+        "subtitle": "Kariyerime full-stack geliştirici olarak başladım. Next.js ve Nest.js ile projeler geliştirirken, sistemlerin yalnızca çalışmakla kalmayıp öğrenebildiği fikri beni büyüledi. Şimdi, web teknolojilerini makine öğrenimiyle birleştirerek gerçek dünyaya etki eden projeler üretmeye odaklanıyorum.",
+        "headline1": "Odak Alanlarım",
+        "desc1": "Makine öğrenimi ve derin öğrenme modelleri (TensorFlow, Keras, scikit-learn), veri analizi ve model optimizasyonu, Next.js ve Nest.js ile full-stack uygulamalar, bilgisayarla görü ve tarım odaklı yapay zeka projeleri.",
+        "headline2": "Projelerim",
+        "headline2sub": "Bitki Hastalığı Tespiti",
+        "headline2description": "Bu projede, farklı bitki yapraklarının görüntü verilerini toplayarak bitki hastalıklarını tespit edebilen bir model eğitiyorum. Amacım, çiftçilere erken teşhis imkânı sunan ve verimliliği artıran yapay zeka destekli bir araç geliştirmek.",
+        "headline3": "Zararlı Böcek Tespiti (Devam Ediyor)",
+        "desc3": "Potansiyel zararlı böcekleri tespit etmek için görüntü sınıflandırma ve nesne tanıma teknikleri kullanıyorum. Bu proje ile sürdürülebilir tarıma katkı sağlamayı hedefliyorum.",
         "headline4": "Kolay Kurulum ve Yönetim",
-        "desc4": "Karmaşık kodlama süreçleriyle uğraşmayın. Size özel olarak geliştirdiğimiz chatbot'u, web sitenize hızla entegre ediyor ve yönetimini sizin için basitleştiriyoruz.",
-        "headline5": "Geleceğe Hazır Çözümler",
-        "desc5": "Bugün basit bir chatbot ile başlayın, yarın daha karmaşık ve özelleştirilmiş yapay zeka çözümleriyle işinizi büyütün. Teknoloji ortağınız olarak daima yanınızdayız."
+        "desc4": "Bir sonraki hedefim, tarımsal ortamlarda zararlı böcekleri tespit edebilen bir yapay zeka sistemi geliştirmek. Görüntü sınıflandırma ve nesne tanıma teknikleriyle, tarımda verimliliği artıran çözümler üretmeyi amaçlıyorum.",
+        "headline5": "Yapay Zeka Felsefem",
+        "desc5": "Yapay zekayı sadece bir teknoloji değil, aynı zamanda öğrenme ve üretme biçimimizi dönüştüren bir düşünce tarzı olarak görüyorum. Benim için kodlama, deneyip öğrenmenin ve bu süreçte gerçekten değerli bir şey ortaya koymanın en anlamlı yoludur."
       }
     },
     "colors": {
@@ -1016,7 +819,7 @@
       "shapeTechTogether": "Teknolojiyi birlikte şekillendirelim",
       "weAreHere": "Biz buradayız"
     },
-    "title": "Bize Ulaşın",
+    "title": "Bana Ulaşın",
     "fullName": "Ad Soyad",
     "email": "E-posta",
     "phone": "Telefon",
@@ -1043,8 +846,9 @@
     "dashboard": "Dashboard",
     "web": "Web",
     "mobile": "Mobil",
-    "ai": "Yapay Zeka & AI Ajanı",
-    "aboutUs": "Hakkımızda",
+    "ai": "AI",
+    "plantDiseaseDetection": "Bitki Hastalığı Tespiti",
+    "aboutUs": "Hakkımda",
     "contactUs": "İletişim",
     "typeCommand": "Bir komut yazın veya arayın...",
     "searchDocumentation": "Ara",
@@ -1064,5 +868,26 @@
     "welcome": "Hoşgeldin",
     "helpyou": "Sana nasıl yardımcı olabilirim?",
     "question": "Kozmos'a bir soru sorun... "
+  },
+  "PlantDiseaseDetection": {
+    "image_upload": "Resim Yükle",
+    "title": "Bitki Hastalığı Tespiti",
+    "description": "Yapay zeka destekli analiz kullanarak potansiyel hastalıkları belirlemek için bitkinizin bir görüntüsünü yükleyin.",
+    "subDescription": "Bu tahminler yapay zeka tarafından oluşturulmuştur. Kesin teşhis için lütfen bir tarım uzmanına danışın.",
+    "uploadImage": "Bir resim yükleyin",
+    "detectDisease": "Hastalığı Tespit Et",
+    "capturedImage": "Yakalanan Resim",
+    "result": "Sonuç",
+    "supported_formarts": "Desteklenen Formatlar: JPG, PNG",
+    "diseaseDetected": "Hastalık Tespit Edildi:",
+    "healthyPlant": "Bitki Sağlıklı",
+    "alternative_diagnoses": " Alternatif Tespitler",
+    "alternative_detections": "Diğer olası tanılar güvenirliliğe göre sıralanmıştır",
+    "ranked_by_confidence": "Diğer olası tanılar güvenirliliğe göre sıralanmıştır",
+    "primary_diagnosis": "Birincil Tespit",
+    "confidence": "Güven",
+    "tryAnother": "Başka Birini Deneyin",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu. Lütfen tekrar deneyin."
   }
 }

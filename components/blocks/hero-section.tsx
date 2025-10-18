@@ -2,12 +2,13 @@
 
 import { Badge } from "@/components/ui/badge";
 import { ArrowRightIcon, ArrowUp, Paperclip } from "lucide-react";
-import {  MockupFrame } from "@/components/ui/mockup";
+import { MockupFrame } from "@/components/ui/mockup";
 import { Glow } from "@/components/ui/glow";
 import { cn } from "@/lib/utils";
 import { BorderTrail } from "../border-beam";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface HeroProps {
   badge?: {
@@ -18,7 +19,7 @@ interface HeroProps {
     };
   };
   title: string;
-  description: string;
+
   image: {
     light: string;
     dark: string;
@@ -26,8 +27,9 @@ interface HeroProps {
   };
 }
 
-export function HeroSection({ badge, title, description }: HeroProps) {
+export function HeroSection({ badge, title }: HeroProps) {
   const router = useRouter();
+  const t  = useTranslations("Dashboard");
 
   const handleClick = () => {
     router.push("chat");
@@ -59,11 +61,6 @@ export function HeroSection({ badge, title, description }: HeroProps) {
             {title}
           </h1>
 
-          {/* Description */}
-          <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground opacity-0 delay-100 sm:text-xl">
-            {description}
-          </p>
-
           {/* Actions */}
           <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
             <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300"></div>
@@ -86,7 +83,7 @@ export function HeroSection({ badge, title, description }: HeroProps) {
                   />
                   <div className="flex-1 p-4">
                     <div className="resize-none w-full h-full bg-transparent text-base outline-none ring-0 text-gray-500 flex items-start">
-                      Kozmos&apos;a bir soru sorun...
+                      {t("sendMessage")}
                     </div>
                   </div>
 

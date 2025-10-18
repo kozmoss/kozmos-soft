@@ -1,11 +1,9 @@
-"use client";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
 import { AnimatedCardDemo } from "@/components/animation-card";
 import ChatPage from "@/components/ai-input";
@@ -20,64 +18,17 @@ import {
   CardDescription,
   CardFooter,
 } from "@/components/ui/card";
-import { toolRegistry } from "@/contants/tabContant";
-import { useState } from "react";
-
-type Category = "sales" | "research" | "featured" | "marketing";
 
 export default function AIPage() {
   const t = useTranslations("AIPage");
-  const [activeTab, setActiveTab] = useState("marketing");
- 
 
   const images = Array.from(
     { length: 9 },
     (_, i) => `/static/image/ai/ai-${i + 1}.svg`,
   );
 
-  const generateToolKeysByCategory = (): { [key: string]: string[] } => {
-    const categories: { [key: string]: string[] } = {
-      sales: [],
-      research: [],
-      featured: [],
-      marketing: [],
-    };
-
-    Object.entries(toolRegistry).forEach(([key, details]) => {
-      if (categories[details.category]) {
-        categories[details.category].push(key);
-      }
-    });
-
-    return categories;
-  };
-
-  const getIconForTool = (key: string): string => {
-    return toolRegistry[key]?.icon || "❓"; // Araç bulunamazsa varsayılan ikon
-  };
-
-  const getCategoryDisplayName = (category: Category): string => {
-    const displayNames: Record<Category, string> = {
-      sales: "Sales",
-      research: "Research",
-      featured: "Featured",
-      marketing: "Marketing",
-    };
-    return displayNames[category] || category; // Burada "category" her zaman geçerli olacak, ancak fallback olarak da "category" dönebiliriz.
-  };
-
-  const categories = generateToolKeysByCategory();
-  const categoryKeys: Category[] = [
-    "sales",
-    "research",
-    "featured",
-    "marketing",
-  ];
-
   return (
     <div className=" mx-auto max-w-screen-2xl flex flex-col border-x border-dashed h-full">
-
-     
       <section className="flex w-full flex-col md:flex-row h-full ">
         <div className="border-dashed dark:border-border w-full space-y-4 border-0 md:w-1/2 md:border-r">
           <div className="text-foreground flex flex-col gap-4 p-8 text-left md:gap-8 md:p-10 lg:p-16">
@@ -171,7 +122,9 @@ export default function AIPage() {
             <div className="w-full  space-y-4">
               <Card className="p-4 md:p-8 min-h-[300px]">
                 <div className="bg-muted text-sm p-3 rounded-2xl shadow border w-fit max-w-[80%] ml-auto">
-                  <p className="text-muted-foreground">{t("chat.userQuestion")}</p>
+                  <p className="text-muted-foreground">
+                    {t("chat.userQuestion")}
+                  </p>
                 </div>
 
                 <div className="bg-primary text-primary-foreground text-sm p-3 rounded-2xl shadow w-fit max-w-[80%]">
@@ -210,70 +163,6 @@ export default function AIPage() {
               {t("features.communication.description")}
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="w-full">
-        <div className="flex flex-col gap-4 border-dashed border-y px-8 py-32 text-center">
-          <h2 className="text-foreground leading-tight text-3xl font-semibold text-balance">
-            {t("capabilities.title")}
-          </h2>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-balance mb-12">
-            {t("capabilities.subtitle")}
-          </p>
-        </div>
-
-        <div className="mt-10">
-          <Tabs
-            defaultValue={activeTab}
-            onValueChange={setActiveTab}
-            className="w-full"
-          >
-            <div className="flex justify-center mb-6">
-              <TabsList>
-                {categoryKeys.map((category) => (
-                  <TabsTrigger key={category} value={category}>
-                    {getCategoryDisplayName(category)}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-
-            {categoryKeys.map((category) => (
-              <TabsContent
-                key={category}
-                value={category}
-                className="p-4 text-center text-xs text-muted-foreground"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {categories[category].map((toolKey) => (
-                    <Card
-                      key={toolKey}
-                      className="hover:border-gray-500 transition-colors"
-                    >
-                      <CardHeader className="flex flex-row items-center gap-2 pb-2">
-                        <span className="text-xl">
-                          {getIconForTool(toolKey)}
-                        </span>
-                        <CardTitle className="text-lg">
-                          {t(
-                            `capabilities.tabs.${category}.aitools.${toolKey}.title`,
-                          )}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        <p className="text-sm text-gray-600">
-                          {t(
-                            `capabilities.tabs.${category}.aitools.${toolKey}.description`,
-                          )}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
         </div>
       </section>
 
@@ -425,22 +314,6 @@ export default function AIPage() {
                 {t("faq.left.a3")}
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="px-6">
-                {t("faq.left.q4")}
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                {t("faq.left.a4")}
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="px-6">
-                {t("faq.left.q5")}
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                {t("faq.left.a5")}
-              </AccordionContent>
-            </AccordionItem>
           </Accordion>
 
           <Accordion type="single" collapsible className="w-full">
@@ -460,28 +333,12 @@ export default function AIPage() {
                 {t("faq.right.a2")}
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="px-6">
-                {t("faq.right.q3")}
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                {t("faq.right.a3")}
-              </AccordionContent>
-            </AccordionItem>
             <AccordionItem value="item-4">
               <AccordionTrigger className="px-6">
-                {t("faq.right.q4")}
+                {t("faq.left.q4")}
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                {t("faq.right.a4")}
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="px-6">
-                {t("faq.right.q5")}
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                {t("faq.right.a5")}
+                {t("faq.left.a4")}
               </AccordionContent>
             </AccordionItem>
           </Accordion>

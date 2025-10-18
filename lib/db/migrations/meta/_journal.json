@@ -57,6 +57,20 @@
       "when": 1749578590402,
       "tag": "0007_pink_molecule_man",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1760016571931,
+      "tag": "0008_chubby_scrambler",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1760089675178,
+      "tag": "0009_workable_blade",
+      "breakpoints": true
     }
   ]
 }

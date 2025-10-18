@@ -12,22 +12,22 @@ export default function DashboardAiSection() {
 
   const sections = [
     {
-      key: "intelligentAgentIntegration",
+      key: "section1",
       image: "/static/image/mobile-ai-2.png",
       priority: true,
     },
     {
-      key: "customModelsAndFinetuning",
+      key: "section2",
       image: "/static/image/mobile-ai-1.png",
       priority: false,
     },
     {
-      key: "autonomousProcesses",
+      key: "section3",
       image: "/static/image/mobile-ai-3.png",
       priority: false,
     },
     {
-      key: "realtimeAnalysis",
+      key: "section4",
       image: "/static/image/mobile-ai-4.png",
       priority: false,
     },

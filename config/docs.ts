@@ -5,8 +5,6 @@ export interface DocsConfig {
   sidebarNav: SidebarNavItem[];
 }
 
-
-
 export const docsConfig: DocsConfig = {
   mainNav: [
     {
@@ -14,16 +12,12 @@ export const docsConfig: DocsConfig = {
       href: "/",
     },
     {
-      title: "web",
-      href: "/products/web",
-    },
-    {
-      title: "mobile",
-      href: "/mobile",
-    },
-    {
       title: "ai",
       href: "/ai",
+    },
+    {
+      title: "plantDiseaseDetection",
+      href: "/plant-disease-detection",
     },
     {
       title: "aboutUs",
