@@ -44,12 +44,11 @@ export async function POST(request: NextRequest) {
       },
     );
 
-    const backendUrl =
-      process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+
     const backendFormData = new FormData();
     backendFormData.append("file", file);
 
-    const response = await fetch(`${backendUrl}/prediction/analyze`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/prediction/analyze`, {
       method: "POST",
       body: backendFormData,
     });
