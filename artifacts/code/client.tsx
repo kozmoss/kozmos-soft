@@ -1,16 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Artifact } from "@/components/create-artifact";
-import { CodeEditor } from "@/components/code-editor";
-import { CopyIcon, LogsIcon, PlayIcon, RedoIcon, UndoIcon, MessageCircle } from "lucide-react";
-
 import { toast } from "sonner";
-import { generateUUID } from "@/lib/utils";
-
+import { CodeEditor } from "@/components/code-editor";
 import {
   Console,
-  ConsoleOutput,
-  ConsoleOutputContent,
+  type ConsoleOutput,
+  type ConsoleOutputContent,
 } from "@/components/console";
+import { Artifact } from "@/components/create-artifact";
+import { CopyIcon, LogsIcon, PlayIcon, RedoIcon, UndoIcon, MessageCircle } from "lucide-react";
+import { generateUUID } from "@/lib/utils";
 
 const OUTPUT_HANDLERS = {
   matplotlib: `
@@ -58,24 +56,24 @@ function detectRequiredHandlers(code: string): string[] {
   return handlers;
 }
 
-interface Metadata {
-  outputs: Array<ConsoleOutput>;
-}
+type Metadata = {
+  outputs: ConsoleOutput[];
+};
 
 export const codeArtifact = new Artifact<"code", Metadata>({
   kind: "code",
   description:
     "Useful for code generation; Code execution is only available for python code.",
-  initialize: async ({ setMetadata }) => {
+  initialize: ({ setMetadata }) => {
     setMetadata({
       outputs: [],
     });
   },
   onStreamPart: ({ streamPart, setArtifact }) => {
-    if (streamPart.type === "code-delta") {
+    if (streamPart.type === "data-codeDelta") {
       setArtifact((draftArtifact) => ({
         ...draftArtifact,
-        content: streamPart.content as string,
+        content: streamPart.data,
         isVisible:
           draftArtifact.status === "streaming" &&
           draftArtifact.content.length > 300 &&
@@ -114,7 +112,7 @@ export const codeArtifact = new Artifact<"code", Metadata>({
       description: "Execute code",
       onClick: async ({ content, setMetadata }) => {
         const runId = generateUUID();
-        const outputContent: Array<ConsoleOutputContent> = [];
+        const outputContent: ConsoleOutputContent[] = [];
 
         setMetadata((metadata) => ({
           ...metadata,
@@ -165,12 +163,12 @@ export const codeArtifact = new Artifact<"code", Metadata>({
           for (const handler of requiredHandlers) {
             if (OUTPUT_HANDLERS[handler as keyof typeof OUTPUT_HANDLERS]) {
               await currentPyodideInstance.runPythonAsync(
-                OUTPUT_HANDLERS[handler as keyof typeof OUTPUT_HANDLERS],
+                OUTPUT_HANDLERS[handler as keyof typeof OUTPUT_HANDLERS]
               );
 
               if (handler === "matplotlib") {
                 await currentPyodideInstance.runPythonAsync(
-                  "setup_matplotlib_output()",
+                  "setup_matplotlib_output()"
                 );
               }
             }
@@ -245,20 +243,30 @@ export const codeArtifact = new Artifact<"code", Metadata>({
     {
       icon: <MessageCircle />,
       description: "Add comments",
-      onClick: ({ appendMessage }) => {
-        appendMessage({
+      onClick: ({ sendMessage }) => {
+        sendMessage({
           role: "user",
-          content: "Add comments to the code snippet for understanding",
+          parts: [
+            {
+              type: "text",
+              text: "Add comments to the code snippet for understanding",
+            },
+          ],
         });
       },
     },
     {
       icon: <LogsIcon />,
       description: "Add logs",
-      onClick: ({ appendMessage }) => {
-        appendMessage({
+      onClick: ({ sendMessage }) => {
+        sendMessage({
           role: "user",
-          content: "Add logs to the code snippet for debugging",
+          parts: [
+            {
+              type: "text",
+              text: "Add logs to the code snippet for debugging",
+            },
+          ],
         });
       },
     },

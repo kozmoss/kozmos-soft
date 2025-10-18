@@ -32,8 +32,10 @@ import {
   type User,
   user,
   vote,
+  contactUs,
 } from "./schema";
 import { generateHashedPassword } from "./utils";
+import { ContactFormData } from "@/types/contact-us";
 
 // Optionally, if not using email/pass login, you can
 // use the Drizzle adapter for Auth.js / NextAuth
@@ -121,6 +123,22 @@ export async function deleteChatById({ id }: { id: string }) {
       "bad_request:database",
       "Failed to delete chat by id"
     );
+  }
+}
+
+export async function saveContact({
+  fullName,
+  email,
+  phone,
+  message,
+}: ContactFormData) {
+  const id = generateUUID()
+  try {
+    return await db
+      .insert(contactUs)
+      .values({ fullName, email, phone, message, id, createdAt: new Date() });
+  } catch {
+    throw new ChatSDKError("bad_request:database", "Failed to contact-us");
   }
 }
 

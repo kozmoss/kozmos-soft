@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import type { UseChatHelpers } from "@ai-sdk/react";
 import cx from "classnames";
@@ -13,6 +12,7 @@ import {
   type Dispatch,
   memo,
   type ReactNode,
+  RefObject,
   type SetStateAction,
   useEffect,
   useRef,
@@ -28,7 +28,7 @@ import {
 import type { ChatMessage } from "@/lib/types";
 import { type ArtifactKind, artifactDefinitions } from "./artifact";
 import type { ArtifactToolbarItem } from "./create-artifact";
-import { ArrowUpIcon, Pause, ScrollText } from "lucide-react";
+import { ArrowUpIcon, Pause, ClipboardPen } from 'lucide-react';
 
 type ToolProps = {
   description: string;
@@ -132,7 +132,7 @@ const Tool = ({
   );
 };
 
-const randomArr = [...new Array(6)].map((_x) => nanoid(5));
+const randomArr = [...new Array(6)].map(() => nanoid(5));
 
 const ReadingLevelSelector = ({
   setSelectedTool,
@@ -229,7 +229,7 @@ const ReadingLevelSelector = ({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {currentLevel === 2 ? <ScrollText /> : <ArrowUpIcon />}
+              {currentLevel === 2 ? <ClipboardPen /> : <ArrowUpIcon />}
             </motion.div>
           </TooltipTrigger>
           <TooltipContent
@@ -325,10 +325,10 @@ const PureToolbar = ({
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  useOnClickOutside(toolbarRef, () => {
-    setIsToolbarVisible(false);
-    setSelectedTool(null);
-  });
+useOnClickOutside(toolbarRef as RefObject<HTMLElement>, () => {
+  setIsToolbarVisible(false);
+  setSelectedTool(null);
+});
 
   const startCloseTimer = () => {
     if (timeoutRef.current) {

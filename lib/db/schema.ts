@@ -171,3 +171,15 @@ export const stream = pgTable(
 );
 
 export type Stream = InferSelectModel<typeof stream>;
+
+
+export const contactUs = pgTable("ContactUs", {
+  id: uuid("id").primaryKey().notNull().defaultRandom(),
+  email: varchar('email', { length: 64 }).notNull(),
+  fullName: varchar("full_name", {length: 64}).notNull(),
+  phone: varchar("phone", { length: 15 }).notNull(), 
+  message: text("message").notNull(),
+  createdAt: timestamp('createdAt').notNull(),
+})
+
+export type ContactUs = InferSelectModel<typeof contactUs>

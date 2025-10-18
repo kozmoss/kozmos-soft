@@ -28,12 +28,13 @@ export interface ContactUsActionState {
     try {
       const validatedData = contactFormSchema.parse(data);
   
-      await saveContact(
-        validatedData.email,
-        validatedData.fullName,
-        validatedData.phone,
-        validatedData.message
-      );
+      await saveContact({
+        fullName: validatedData.fullName,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        message: validatedData.message,
+      }
+        );
   
       return { status: "success" };
     } catch (error) {

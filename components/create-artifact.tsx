@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Suggestion } from "@/lib/db/schema";
-import { UseChatHelpers } from "@ai-sdk/react";
-import { ComponentType, Dispatch, ReactNode, SetStateAction } from "react";
-import { DataStreamDelta } from "./data-stream-handler";
-import { UIArtifact } from "./artifact";
+import type { UseChatHelpers } from "@ai-sdk/react";
+import type { DataUIPart } from "ai";
+import type { ComponentType, Dispatch, ReactNode, SetStateAction } from "react";
+import type { Suggestion } from "@/lib/db/schema";
+import type { ChatMessage, CustomUIDataTypes } from "@/lib/types";
+import type { UIArtifact } from "./artifact";
 
 export type ArtifactActionContext<M = any> = {
   content: string;
@@ -24,7 +25,7 @@ type ArtifactAction<M = any> = {
 };
 
 export type ArtifactToolbarContext = {
-  appendMessage: UseChatHelpers["append"];
+  sendMessage: UseChatHelpers<ChatMessage>["sendMessage"];
 };
 
 export type ArtifactToolbarItem = {
@@ -33,39 +34,38 @@ export type ArtifactToolbarItem = {
   onClick: (context: ArtifactToolbarContext) => void;
 };
 
-interface ArtifactContent<M = any> {
+type ArtifactContent<M = any> = {
   title: string;
   content: string;
   mode: "edit" | "diff";
   isCurrentVersion: boolean;
   currentVersionIndex: number;
   status: "streaming" | "idle";
-  suggestions: Array<Suggestion>;
+  suggestions: Suggestion[];
   onSaveContent: (updatedContent: string, debounce: boolean) => void;
   isInline: boolean;
   getDocumentContentById: (index: number) => string;
   isLoading: boolean;
   metadata: M;
   setMetadata: Dispatch<SetStateAction<M>>;
-}
+};
 
-
-interface InitializeParameters<M = any> {
+type InitializeParameters<M = any> = {
   documentId: string;
   setMetadata: Dispatch<SetStateAction<M>>;
-}
+};
 
 type ArtifactConfig<T extends string, M = any> = {
   kind: T;
   description: string;
   content: ComponentType<ArtifactContent<M>>;
-  actions: Array<ArtifactAction<M>>;
+  actions: ArtifactAction<M>[];
   toolbar: ArtifactToolbarItem[];
   initialize?: (parameters: InitializeParameters<M>) => void;
   onStreamPart: (args: {
     setMetadata: Dispatch<SetStateAction<M>>;
     setArtifact: Dispatch<SetStateAction<UIArtifact>>;
-    streamPart: DataStreamDelta;
+    streamPart: DataUIPart<CustomUIDataTypes>;
   }) => void;
 };
 
@@ -73,13 +73,13 @@ export class Artifact<T extends string, M = any> {
   readonly kind: T;
   readonly description: string;
   readonly content: ComponentType<ArtifactContent<M>>;
-  readonly actions: Array<ArtifactAction<M>>;
+  readonly actions: ArtifactAction<M>[];
   readonly toolbar: ArtifactToolbarItem[];
   readonly initialize?: (parameters: InitializeParameters) => void;
   readonly onStreamPart: (args: {
     setMetadata: Dispatch<SetStateAction<M>>;
     setArtifact: Dispatch<SetStateAction<UIArtifact>>;
-    streamPart: DataStreamDelta;
+    streamPart: DataUIPart<CustomUIDataTypes>;
   }) => void;
 
   constructor(config: ArtifactConfig<T, M>) {
