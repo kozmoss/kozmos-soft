@@ -17,5 +17,7 @@ export async function GET(request: Request) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
+  console.log(redirectUrl," redirectUrl");
+
   return signIn("guest", { redirect: true, redirectTo: redirectUrl });
 }

@@ -28,11 +28,18 @@ interface HeroProps {
 }
 
 export function HeroSection({ badge, title }: HeroProps) {
+  const t = useTranslations("Dashboard");
   const router = useRouter();
-  const t  = useTranslations("Dashboard");
 
-  const handleClick = () => {
-    router.push("chat");
+  const handleClick = async () => {
+    const response = await fetch("/api/auth/session");
+    const session = await response.json();
+
+    if (session?.user) {
+      router.push("/chat");
+    } else {
+      window.location.href = "/api/auth/guest?redirectUrl=/chat";
+    }
   };
 
   return (

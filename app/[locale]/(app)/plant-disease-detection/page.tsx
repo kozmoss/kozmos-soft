@@ -116,14 +116,14 @@ export default function ImageUpload() {
 
     setIsUploading(true);
     try {
-  const result = await uploadFile(currentFile);
+      const result = await uploadFile(currentFile);
 
-  setResults(result ?? null);
-  if (result) {
-    toast.success(
-      `Image uploaded successfully! URL: ${result.url.substring(0, 30)}...`,
-    );
-  }
+      setResults(result ?? null);
+      if (result) {
+        toast.success(
+          `Image uploaded successfully! URL: ${result.url.substring(0, 30)}...`,
+        );
+      }
     } catch {
       // Error handling is already in uploadFile
     } finally {
@@ -143,9 +143,11 @@ export default function ImageUpload() {
       </div>
       <div className="space-y-4 sm:space-y-6 w-full max-w-2xl rounded-xl border border-border bg-card p-4 sm:p-5 md:p-6 shadow-sm">
         <div className="space-y-1 sm:space-y-2">
-          <h3 className="text-base sm:text-lg font-medium">{t('image_upload')}</h3>
+          <h3 className="text-base sm:text-lg font-medium">
+            {t("image_upload")}
+          </h3>
           <p className="text-xs sm:text-sm text-muted-foreground">
-            {t('supported_formarts')}
+            {t("supported_formarts")}
           </p>
         </div>
 
@@ -260,7 +262,7 @@ export default function ImageUpload() {
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6" />
                   <CardTitle className="text-base sm:text-lg font-medium opacity-90">
-                  {t('primary_diagnosis')}
+                    {t("primary_diagnosis")}
                   </CardTitle>
                 </div>
               </CardHeader>
@@ -271,7 +273,7 @@ export default function ImageUpload() {
                   </h3>
                   <div className="flex items-center gap-2 sm:gap-3">
                     <div className="text-xs sm:text-sm opacity-90">
-                     {t('confidence')}:
+                      {t("confidence")}:
                     </div>
                     <div className="text-xl sm:text-2xl font-bold">
                       {results.prediction.confidence.toFixed(2)}%
@@ -290,15 +292,14 @@ export default function ImageUpload() {
                   </CardTitle>
                   <CardDescription className="text-xs sm:text-sm">
                     {t("ranked_by_confidence")}
-                    
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-3 sm:p-6">
                   <div className="space-y-2 sm:space-y-3">
                     {results.prediction.top_5_predictions
                       .slice(1)
-                      .map((alt:any, index:number) => {
-                        const confidencePercentage = alt.confidence * 100;
+                      .map((alt: any, index: number) => {
+                        const confidencePercentage = alt.confidence;
                         const barWidth = Math.min(confidencePercentage, 100);
 
                         return (
@@ -341,7 +342,7 @@ export default function ImageUpload() {
             <Alert className="shadow-lg p-3 sm:p-4">
               <AlertCircle color="red" className="h-4 w-4 sm:h-5 sm:w-5" />
               <AlertDescription className="text-red-400 font-medium text-xs sm:text-sm">
-               {t('subDescription')}
+                {t("subDescription")}
               </AlertDescription>
             </Alert>
           </>
