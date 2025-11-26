@@ -1,6 +1,7 @@
 import { put } from "@vercel/blob";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { Client } from "@gradio/client";
 const FileSchema = z.object({
   file: z
     .instanceof(Blob)
@@ -35,7 +36,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: errorMessage }, { status: 400 });
     }
 
-    const blob = await put(
+    await put(
       `plant-disease-detection/${file.name}`, // Klasör yolu
       file,
       {
@@ -44,33 +45,27 @@ export async function POST(request: NextRequest) {
       },
     );
 
-
     const backendFormData = new FormData();
     backendFormData.append("file", file);
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/prediction/analyze`, {
-      method: "POST",
-      body: backendFormData,
+    console.log("Dosya alındı:", file.name, file.type, file.size);
+
+    const client = await Client.connect("Sbzc/plant-model-api");
+
+    const arrayBuffer = await file.arrayBuffer();
+    const blob = new Blob([arrayBuffer], { type: file.type });
+
+    // Tahmin yap
+    const result = await client.predict("/predict", {
+      image: blob,
     });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      return NextResponse.json(
-        { error: errorData.message || "Failed to analyze image" },
-        { status: response.status },
-      );
-    }
-
-    const result = await response.json();
-
-    // Başarılı yanıt
     return NextResponse.json({
-      blobUrl: blob.url,
-      url: result.data?.url || file.name, // Backend'den URL geliyorsa kullan
-      pathname: file.name,
+      success: true,
+      url: URL.createObjectURL(blob), // Preview için URL
+      name: file.name,
       contentType: file.type,
-      prediction: result.data, // Tahmin sonuçları
-      message: result.message,
+      prediction: result.data,
     });
   } catch (error) {
     console.error("Upload error:", error);

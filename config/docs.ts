@@ -16,8 +16,8 @@ export const docsConfig: DocsConfig = {
       href: "/ai",
     },
     {
-      title: "plantDiseaseDetection",
-      href: "/plant-disease-detection",
+      title: "plant-disease&pest-detection",
+      href: "/plant-disease&pest-detection",
     },
     {
       title: "aboutUs",

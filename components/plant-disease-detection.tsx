@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,6 +33,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import { ApiResponse } from "./insect-pest-detection";
 
 const formSchema = z.object({
   image: z.string().min(1, {
@@ -42,7 +43,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export default function ImageUpload() {
+export default function PlantImageUpload() {
   const {
     previewUrl,
     fileName,
@@ -60,7 +61,7 @@ export default function ImageUpload() {
     },
   });
 
-  const t = useTranslations("PlantDiseaseDetection");
+  const t = useTranslations("PlantDisease&PestDetection.PlantDiseaseDetection");
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -71,12 +72,7 @@ export default function ImageUpload() {
   });
 
   const [isUploading, setIsUploading] = useState(false);
-  const [results, setResults] = useState<{
-    prediction: any;
-    url: any;
-    name: any;
-    contentType: any;
-  } | null>(null);
+  const [results, setResults] = useState<ApiResponse | null>(null);
 
   const uploadFile = async (file: File) => {
     const formData = new FormData();
@@ -88,20 +84,14 @@ export default function ImageUpload() {
         body: formData,
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        const { url, pathname, contentType } = data;
+      const data = await response.json();
 
-        return {
-          prediction: data.prediction,
-          url,
-          name: pathname,
-          contentType: contentType,
-        };
+      if (response.ok) {
+        return data;
+      } else {
+        console.error("Upload failed:", response.statusText);
+        toast.error(data.error || "Failed to upload file, please try again!");
       }
-      const { error } = await response.json();
-      toast.error(error);
     } catch (error) {
       console.error(error);
       toast.error("Failed to upload file, please try again!");
@@ -130,6 +120,22 @@ export default function ImageUpload() {
       setIsUploading(false);
     }
   };
+
+  const getPredictions = () => {
+    if (
+      !results?.prediction ||
+      !Array.isArray(results.prediction) ||
+      results.prediction.length === 0
+    ) {
+      return [];
+    }
+
+    return results.prediction[0]?.confidences || [];
+  };
+
+  const predictions = getPredictions();
+  const primaryPrediction = predictions[0];
+  const alternatePredictions = predictions.slice(1);
 
   return (
     <div className="min-h-screen items-center justify-center bg-background p-3 sm:p-4 md:p-6 overflow-hidden flex flex-col gap-4 sm:gap-5">
@@ -254,7 +260,7 @@ export default function ImageUpload() {
       </div>
 
       <div className="space-y-4 sm:space-y-6 w-full max-w-2xl">
-        {results && (
+        {results && primaryPrediction && (
           <>
             {/* Primary Result */}
             <Card className="bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-2xl border-0">
@@ -269,14 +275,14 @@ export default function ImageUpload() {
               <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6 pt-2 sm:pt-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
-                    {results.prediction.prediction.replace(/___/g, " - ")}
+                    {primaryPrediction.label}
                   </h3>
                   <div className="flex items-center gap-2 sm:gap-3">
                     <div className="text-xs sm:text-sm opacity-90">
                       {t("confidence")}:
                     </div>
                     <div className="text-xl sm:text-2xl font-bold">
-                      {results.prediction.confidence.toFixed(2)}%
+                      {(primaryPrediction.confidence * 100).toFixed(2)}%
                     </div>
                   </div>
                 </div>
@@ -284,7 +290,7 @@ export default function ImageUpload() {
             </Card>
 
             {/* Alternative Results */}
-            {results.prediction.top_5_predictions.length > 0 && (
+            {alternatePredictions.length > 0 && (
               <Card className="shadow-xl border">
                 <CardHeader className="p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-semibold">
@@ -296,44 +302,61 @@ export default function ImageUpload() {
                 </CardHeader>
                 <CardContent className="p-3 sm:p-6">
                   <div className="space-y-2 sm:space-y-3">
-                    {results.prediction.top_5_predictions
-                      .slice(1)
-                      .map((alt: any, index: number) => {
-                        const confidencePercentage = alt.confidence;
-                        const barWidth = Math.min(confidencePercentage, 100);
+                    {alternatePredictions.length > 0 && (
+                      <Card className="shadow-xl border">
+                        <CardHeader className="p-4 sm:p-6">
+                          <CardTitle className="text-lg sm:text-xl font-semibold">
+                            {t("alternative_diagnoses")}
+                          </CardTitle>
+                          <CardDescription className="text-xs sm:text-sm">
+                            {t("ranked_by_confidence")}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="p-3 sm:p-6">
+                          <div className="space-y-2 sm:space-y-3">
+                            {alternatePredictions.map((alt, index) => {
+                              const confidencePercentage = alt.confidence * 100;
+                              const barWidth = Math.min(
+                                confidencePercentage,
+                                100,
+                              );
 
-                        return (
-                          <div
-                            key={index}
-                            className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 sm:p-4 rounded-xl border border-dashed transition-colors"
-                          >
-                            <div className="flex items-center gap-3 sm:gap-4 flex-1">
-                              <div className="w-7 h-7 sm:w-8 sm:h-8 border-2 rounded-lg flex items-center justify-center text-xs sm:text-sm font-bold flex-shrink-0">
-                                {index + 2}
-                              </div>
-                              <span className="font-medium text-sm sm:text-base">
-                                {alt.class.replace(/___/g, " - ")}
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2 sm:gap-3 ml-10 sm:ml-0">
-                              <div className="w-20 sm:w-24 bg-gray-200 rounded-full h-2">
+                              return (
                                 <div
-                                  className="bg-slate-600 h-full rounded-full transition-all duration-500"
-                                  style={{
-                                    width: `${barWidth}%`,
-                                  }}
-                                ></div>
-                              </div>
-                              <span className="text-xs sm:text-sm font-semibold min-w-[3rem] text-right">
-                                {confidencePercentage > 0.01
-                                  ? confidencePercentage.toFixed(2)
-                                  : confidencePercentage.toExponential(1)}
-                                %
-                              </span>
-                            </div>
+                                  key={index}
+                                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 sm:p-4 rounded-xl border border-dashed transition-colors"
+                                >
+                                  <div className="flex items-center gap-3 sm:gap-4 flex-1">
+                                    <div className="w-7 h-7 sm:w-8 sm:h-8 border-2 rounded-lg flex items-center justify-center text-xs sm:text-sm font-bold flex-shrink-0">
+                                      {index + 2}
+                                    </div>
+                                    <span className="font-medium text-sm sm:text-base">
+                                      {alt.label}
+                                    </span>
+                                  </div>
+                                  <div className="flex items-center gap-2 sm:gap-3 ml-10 sm:ml-0">
+                                    <div className="w-20 sm:w-24 bg-gray-200 rounded-full h-2">
+                                      <div
+                                        className="bg-slate-600 h-full rounded-full transition-all duration-500"
+                                        style={{
+                                          width: `${barWidth}%`,
+                                        }}
+                                      ></div>
+                                    </div>
+                                    <span className="text-xs sm:text-sm font-semibold min-w-[3rem] text-right">
+                                      {confidencePercentage > 0.01
+                                        ? confidencePercentage.toFixed(2)
+                                        : confidencePercentage.toExponential(1)}
+                                      %
+                                    </span>
+                                  </div>
+                                </div>
+                              );
+                            })}
                           </div>
-                        );
-                      })}
+                        </CardContent>
+                      </Card>
+                    )}
                   </div>
                 </CardContent>
               </Card>
